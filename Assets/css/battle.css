@@ -1,0 +1,17 @@
+.battle{
+  position: absolute;
+  display: none;
+  height: 70px;
+}
+
+.happs {
+    top: 260px;
+    left: 4350px;
+  }
+
+  .kressle {
+    top: 680px;
+    left: 4150px;
+  }
+
+  

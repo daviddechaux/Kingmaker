@@ -1,0 +1,134 @@
+.misc{ 
+  position: absolute; 
+  display: none;
+}
+
+.tombe{ height: 50px; }
+.tree{ height: 70px; }
+.path{ height: 50px; }
+.sign{ height: 65px; }
+.ruine{ height: 65px; }
+.ruinecyclop{ height: 50px; }
+.dragon{ height: 50px; }
+.swamp{ height: 50px; }
+.cottage{ height: 50px; }
+.grotte{ height: 50px; }
+.spider{ height: 70px; }
+.dolmen{ height: 60px; }
+.colline{ height: 60px; }
+
+/* Ligne A */
+.tigre {
+  top: 300px;
+  left: 3420px;
+}
+
+.ruinecyclopA{
+  top: 300px;
+  left: 3700px;
+}
+
+.marreDragon{
+  top: 330px;
+  left: 3880px;
+}
+
+.collineDragon{
+  top: 290px;
+  left: 3900px;
+}
+
+.dolmenCyclop{
+  top: 310px;
+  left: 4580px;
+}
+
+/* Ligne B */
+.cottage {
+  top: 500px;
+  left: 3300px;
+}
+
+.ruineCottage{
+  top: 500px;
+  left: 3350px;
+}
+
+.tristesse{
+  top: 445px;
+  left: 3760px;
+}
+
+.trappeur {
+  top: 550px;
+  left: 3780px;
+}
+
+.pathForest{
+  top: 550px;
+  left: 4000px;
+}
+
+.telluric{
+  top: 480px;
+  left: 4000px;
+}
+
+.grotteKobold{
+  top: 550px;
+  left: 4160px;
+}
+
+.armure{
+  top: 570px;
+  left: 4240px;
+}
+
+.bosquetAraignees{
+  top: 490px;
+  left: 4450px;
+}
+
+
+/* Ligne C */
+.tresor{
+  top: 700px;
+  left: 4580px;
+}
+
+.pathElan{
+  top: 640px;
+  left: 3880px;
+}
+
+.crepuscule{
+  top: 750px;
+  left: 3820px;
+}
+
+.ruineTaldorienne{
+  top: 740px;
+  left: 3950px;
+}
+
+/* Ligne D */
+.marreMagique{
+  top: 780px;
+  left: 4140px;
+}
+
+.mite{
+  top: 900px;
+  left: 4450px;
+}
+
+.ruinecyclopB{
+  top: 910px;
+  left: 4500px;
+}
+
+/* Ligne E */
+.marecage{
+  top: 1150px;
+  left: 4320px;
+}

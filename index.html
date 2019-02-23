@@ -1,0 +1,125 @@
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+        <link rel="stylesheet" type="text/css" href="Assets/css/map.css">
+        <link rel="stylesheet" type="text/css" href="Assets/css/building.css">
+        <link rel="stylesheet" type="text/css" href="Assets/css/battle.css">
+        <link rel="stylesheet" type="text/css" href="Assets/css/ressources.css">
+        <link rel="stylesheet" type="text/css" href="Assets/css/misc.css">
+        <link rel="stylesheet" type="text/css" href="Assets/scripts/tooltipster/dist/css/tooltipster.bundle.min.css" />
+
+        <script type="text/javascript" src="http://code.jquery.com/jquery-1.10.0.min.js"></script>
+        <script type="text/javascript" src="Assets/scripts/tooltipster/dist/js/tooltipster.bundle.min.js"></script>
+    </head>
+    <body>
+        <div class="wrapper">
+            <div class="displayer">
+                <input type="checkbox" id="building" name="display-building" checked><label for="building">Bâtiments</label><br/>
+                <input type="checkbox" id="battle" name="display-battle"><label for="battle">Batailles</label><br/>
+                <input type="checkbox" id="ressource" name="display-ressource"><label for="ressource">Ressources</label><br/>
+                <input type="checkbox" id="misc" name="display-misc"><label for="misc">Divers</label><br/>
+            </div>
+            <!-- map : 6450 * 2250 -->
+            <!-- tile : 230 * 263 -->
+            <img src="Assets/img/map.jpg" class="background"/>
+        
+            <!-- Building -->
+            <img src="Assets/icons/stag.png" class="fort stag building tooltip" title="Fort ???"/>
+            <img src="Assets/icons/elk.png" class="temple temple-elk building tooltip" title="Temple de l'Elan"/>
+            <img src="Assets/icons/village.png" class="village leningrad building tooltip" title="Leningrad"/>
+            <img src="Assets/icons/cabane.png" class="cabane cabaneHiver building tooltip" title="Abri en attendant la fin de l'hiver"/>
+            <img src="Assets/icons/village.png" class="village stalingrad building tooltip" title="Stalingrad"/>
+            <img src="Assets/icons/village.png" class="village pripyat building tooltip" title="Pripyat"/>
+            <img src="Assets/icons/village.png" class="village levoca building tooltip" title="Levoca"/>
+            <img src="Assets/icons/cabane.png" class="cabane cabaneTrappeur building tooltip" title="Cabane du trappeur"/>
+            <img src="Assets/icons/village.png" class="village moskva building tooltip" title="Moskva"/>
+            <img src="Assets/icons/village.png" class="village volvograd building tooltip" title="Volvograd"/>
+            <img src="Assets/icons/village.png" class="village krasnoïarsk building tooltip" title="Krasnoïarsk"/>
+
+            <img src="Assets/icons/camp.png" class="camp camp-kressle building tooltip" title="Campement de Kressle"/>
+            <img src="Assets/icons/pont.png" class="pont pont-levoca building tooltip" title="Pont"/>
+            <img src="Assets/icons/pont.png" class="pont pont-epine building tooltip" title="Pont"/>
+
+            <img src="Assets/icons/bac.png" class="bac bac-aux-orties building tooltip" title="Bac du Ponts aux Orties"/>
+            <img src="Assets/icons/house.png" class="house rimlin building tooltip" title="Maison de Rimlin"/>
+
+            <!-- Battle -->
+            <img src="Assets/icons/battle.png" class="happs battle tooltip" title="Happs"/>
+            <img src="Assets/icons/battle.png" class="kressle battle tooltip" title="Kressle"/>
+
+            <!-- Ressources -->
+            <img src="Assets/icons/ble.png" class="ble bleOleg ressource tooltip" title="Zone agricole"/>
+            <img src="Assets/icons/ble.png" class="ble blePripyat ressource tooltip" title="Zone agricole"/>
+            <img src="Assets/icons/ble.png" class="ble bleMoskva ressource tooltip" title="Zone agricole"/>
+            <img src="Assets/icons/ble.png" class="ble bleVolvograd ressource tooltip" title="Zone agricole"/>
+            <img src="Assets/icons/ble.png" class="ble bleSource ressource tooltip" title="Zone agricole"/>
+
+            <img src="Assets/icons/mine.png" class="mine goldMine ressource tooltip" title="Mine d'or"/>
+            <img src="Assets/icons/mine.png" class="ble silverMine ressource tooltip" title="Mine d'argent"/>
+
+            <img src="Assets/icons/source.png" class="source sourcesChaudes ressource tooltip" title="Sources chaudes"/>
+            <img src="Assets/icons/ruche.png" class="ruche rucheLila ressource tooltip" title="Ruches"/>
+            <img src="Assets/icons/argile.png" class="argile argileColoree ressource tooltip" title="Argile colorée"/>
+            <img src="Assets/icons/raspberry.png" class="raspberry raspberryStalingrad ressource tooltip" title="Des framboises..."/>
+            <img src="Assets/icons/rock.png" class="rock geode ressource tooltip" title="Géode colossale"/>
+
+            <!-- Misc -->
+            <img src="Assets/icons/tombe.png" class="tombe tigre misc tooltip" title="Tombe du chef du clan du tigre"/>
+            <img src="Assets/icons/tombe.png" class="tombe cottage misc tooltip" title="Cairn près du cottage en ruine"/>
+            <img src="Assets/icons/tombe.png" class="tombe trappeur misc tooltip" title="Tombe du trappeur"/>
+
+            <img src="Assets/icons/tree.png" class="tree armure misc tooltip" title="Arbre en armure"/>
+            <img src="Assets/icons/tree.png" class="tree tresor misc tooltip" title="Arbre au trésor"/>
+            <img src="Assets/icons/tree.png" class="tree mite misc tooltip" title="Arbre aux mites"/>
+
+            <img src="Assets/icons/colline.png" class="colline telluric misc tooltip" title="Collines aux lines telluriques"/>
+            <img src="Assets/icons/path.png" class="path pathElan misc tooltip" title="Vieille route taldorienne"/>
+            <img src="Assets/icons/path.png" class="path pathForest misc tooltip" title="Vieille route taldorienne"/>
+            <img src="Assets/icons/sign.png" class="sign crepuscule misc tooltip" title="Chemin du crépuscule..."/>
+
+            <img src="Assets/icons/ruine.png" class="ruine ruineTaldorienne misc tooltip" title="Forterresse taldorienne en ruine"/>
+            <img src="Assets/icons/ruinecyclop.png" class="ruinecyclop ruinecyclopA misc tooltip" title="Ruine cyclopéènne"/>
+            <img src="Assets/icons/ruinecyclop.png" class="ruinecyclop ruinecyclopB misc tooltip" title="Ruine cyclopéènne"/>
+            <img src="Assets/icons/cottage.png" class="cottage ruineCottage misc tooltip" title="Cottage devasté"/>
+
+            <img src="Assets/icons/dragon.png" class="dragon collineDragon misc tooltip" title="Colline au dragon"/>
+            <img src="Assets/icons/swamp.png" class="swamp marreDragon misc tooltip" title="Marre au dragon"/>
+            <img src="Assets/icons/swamp.png" class="swamp marreMagique misc tooltip" title="Marre magique"/>
+            <img src="Assets/icons/swamp.png" class="swamp marecage misc tooltip" title="Zone marécageuse"/>
+
+            <img src="Assets/icons/grotte.png" class="grotte tristesse misc tooltip" title="Caverne de la Tristesse"/>
+            <img src="Assets/icons/grotte.png" class="grotte grotteKobold misc tooltip" title="Grotte aux kobolds"/>
+            
+            <img src="Assets/icons/spider.png" class="spider bosquetAraignees misc tooltip" title="Bosquet aux araignées"/>
+            <img src="Assets/icons/dolmen.png" class="dolmen dolmenCyclop misc tooltip" title="Pierres cyclopéènnes"/>
+        </div>      
+    </body>
+    <script>
+        $(document).ready(function() {
+            // Tooltips
+            createTooltips();
+            
+            // Checkbox
+            createCheckbox("building");
+            createCheckbox("battle");
+            createCheckbox("ressource");
+            createCheckbox("misc");
+        });
+
+        function createTooltips(){
+            $('.tooltip').tooltipster();
+        };
+
+        function createCheckbox(name){
+            $('input[type="checkbox"][name="display-' + name + '"]').change(function() {
+                if(this.checked) {
+                    $("." + name).show();
+                }
+                else {
+                    $("." + name).hide();
+                }
+            });
+        };
+    </script>
+</html>
