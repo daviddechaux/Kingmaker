@@ -1,6 +1,7 @@
 .misc{ 
   position: absolute; 
   display: none;
+  z-index:5;
 }
 
 .tombe{ height: 50px; }

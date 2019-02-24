@@ -7,6 +7,7 @@
         <link rel="stylesheet" type="text/css" href="Assets/css/battle.css">
         <link rel="stylesheet" type="text/css" href="Assets/css/ressources.css">
         <link rel="stylesheet" type="text/css" href="Assets/css/misc.css">
+        <link rel="stylesheet" type="text/css" href="Assets/css/fog.css">
         <link rel="stylesheet" type="text/css" href="Assets/scripts/tooltipster/dist/css/tooltipster.bundle.min.css" />
 
         <script type="text/javascript" src="http://code.jquery.com/jquery-1.10.0.min.js"></script>
@@ -15,14 +16,27 @@
     <body>
         <div class="wrapper">
             <div class="displayer">
-                <input type="checkbox" id="building" name="display-building" checked><label for="building">Bâtiments</label><br/>
-                <input type="checkbox" id="battle" name="display-battle"><label for="battle">Batailles</label><br/>
-                <input type="checkbox" id="ressource" name="display-ressource"><label for="ressource">Ressources</label><br/>
-                <input type="checkbox" id="misc" name="display-misc"><label for="misc">Divers</label><br/>
+                <div class="checkboxDisplay">
+                    <input type="checkbox" id="building" class="checkbox" name="display-building" checked><label for="building" class="label">Bâtiments</label>
+                </div>
+                <div class="checkboxDisplay">
+                    <input type="checkbox" id="battle" class="checkbox" name="display-battle"><label for="battle" class="label">Batailles</label>
+                </div>
+                <div class="checkboxDisplay">
+                    <input type="checkbox" id="ressource" class="checkbox" name="display-ressource"><label for="ressource" class="label">Ressources</label>
+                </div>
+                <div class="checkboxDisplay">
+                    <input type="checkbox" id="misc" class="checkbox" name="display-misc"><label for="misc" class="label">Divers</label>
+                </div>
+                <!-- <div>
+                    <input type="button" class="zoomIn" value="+">
+                    <input type="button" class="zoomOut" value="-">
+                </div> -->
             </div>
             <!-- map : 6450 * 2250 -->
             <!-- tile : 230 * 263 -->
             <img src="Assets/img/map.jpg" class="background"/>
+            <img src="Assets/img/token.png" class="player"/>
         
             <!-- Building -->
             <img src="Assets/icons/stag.png" class="fort stag building tooltip" title="Fort ???"/>
@@ -93,9 +107,279 @@
             
             <img src="Assets/icons/spider.png" class="spider bosquetAraignees misc tooltip" title="Bosquet aux araignées"/>
             <img src="Assets/icons/dolmen.png" class="dolmen dolmenCyclop misc tooltip" title="Pierres cyclopéènnes"/>
+
+            <div class="fogOfWar">
+                <!-- 236 * 268 -->
+                <div class="a">
+                    <img src="Assets/img/fog.png" class="fog a1"/>
+                    <img src="Assets/img/fog.png" class="fog a2"/>
+                    <img src="Assets/img/fog.png" class="fog a3"/>
+                    <img src="Assets/img/fog.png" class="fog a4"/>
+                    <img src="Assets/img/fog.png" class="fog a5"/>
+                    <img src="Assets/img/fog.png" class="fog a6"/>
+                    <img src="Assets/img/fog.png" class="fog a7"/>
+                    <img src="Assets/img/fog.png" class="fog a8"/>
+                    <img src="Assets/img/fog.png" class="fog a9"/>
+                    <img src="Assets/img/fog.png" class="fog a10"/>
+                    <img src="Assets/img/fog.png" class="fog a11"/>
+                    <img src="Assets/img/fog.png" class="fog a12"/>
+                    <img src="Assets/img/fog.png" class="fog a13"/>
+                    <img src="Assets/img/fog.png" class="fog a14"/>
+                    <img src="Assets/img/fog.png" class="fog visited a15"/>
+                    <img src="Assets/img/fog.png" class="fog visited a16"/>
+                    <img src="Assets/img/fog.png" class="fog visited a17"/>
+                    <img src="Assets/img/fog.png" class="fog visited a18"/>
+                    <img src="Assets/img/fog.png" class="fog visited a19"/>
+                    <img src="Assets/img/fog.png" class="fog visited a20"/>
+                    <img src="Assets/img/fog.png" class="fog visited a21"/>
+                    <img src="Assets/img/fog.png" class="fog a22"/>
+                    <img src="Assets/img/fog.png" class="fog a23"/>
+                    <img src="Assets/img/fog.png" class="fog a24"/>
+                    <img src="Assets/img/fog.png" class="fog a25"/>
+                    <img src="Assets/img/fog.png" class="fog a26"/>
+                    <img src="Assets/img/fog.png" class="fog a27"/>
+                </div>
+                <div class="b">
+                    <img src="Assets/img/fog.png" class="fog b1"/>
+                    <img src="Assets/img/fog.png" class="fog b2"/>
+                    <img src="Assets/img/fog.png" class="fog b3"/>
+                    <img src="Assets/img/fog.png" class="fog b4"/>
+                    <img src="Assets/img/fog.png" class="fog b5"/>
+                    <img src="Assets/img/fog.png" class="fog b6"/>
+                    <img src="Assets/img/fog.png" class="fog b7"/>
+                    <img src="Assets/img/fog.png" class="fog b8"/>
+                    <img src="Assets/img/fog.png" class="fog b9"/>
+                    <img src="Assets/img/fog.png" class="fog b10"/>
+                    <img src="Assets/img/fog.png" class="fog b11"/>
+                    <img src="Assets/img/fog.png" class="fog b12"/>
+                    <img src="Assets/img/fog.png" class="fog b13"/>
+                    <img src="Assets/img/fog.png" class="fog b14"/>
+                    <img src="Assets/img/fog.png" class="fog visited b15"/>
+                    <img src="Assets/img/fog.png" class="fog visited b16"/>
+                    <img src="Assets/img/fog.png" class="fog visited b17"/>
+                    <img src="Assets/img/fog.png" class="fog visited b18"/>
+                    <img src="Assets/img/fog.png" class="fog visited b19"/>
+                    <img src="Assets/img/fog.png" class="fog visited b20"/>
+                    <img src="Assets/img/fog.png" class="fog visited b21"/>
+                    <img src="Assets/img/fog.png" class="fog b22"/>
+                    <img src="Assets/img/fog.png" class="fog b23"/>
+                    <img src="Assets/img/fog.png" class="fog b24"/>
+                    <img src="Assets/img/fog.png" class="fog b25"/>
+                    <img src="Assets/img/fog.png" class="fog b26"/>
+                    <img src="Assets/img/fog.png" class="fog b27"/>
+                    <img src="Assets/img/fog.png" class="fog b28"/>
+                </div>
+                <div class="c">
+                    <img src="Assets/img/fog.png" class="fog c1"/>
+                    <img src="Assets/img/fog.png" class="fog c2"/>
+                    <img src="Assets/img/fog.png" class="fog c3"/>
+                    <img src="Assets/img/fog.png" class="fog c4"/>
+                    <img src="Assets/img/fog.png" class="fog c5"/>
+                    <img src="Assets/img/fog.png" class="fog c6"/>
+                    <img src="Assets/img/fog.png" class="fog c7"/>
+                    <img src="Assets/img/fog.png" class="fog c8"/>
+                    <img src="Assets/img/fog.png" class="fog c9"/>
+                    <img src="Assets/img/fog.png" class="fog c10"/>
+                    <img src="Assets/img/fog.png" class="fog c11"/>
+                    <img src="Assets/img/fog.png" class="fog c12"/>
+                    <img src="Assets/img/fog.png" class="fog c13"/>
+                    <img src="Assets/img/fog.png" class="fog c14"/>
+                    <img src="Assets/img/fog.png" class="fog visited c15"/>
+                    <img src="Assets/img/fog.png" class="fog fogLight c16"/>
+                    <img src="Assets/img/fog.png" class="fog visited c17"/>
+                    <img src="Assets/img/fog.png" class="fog fogLight c18"/>
+                    <img src="Assets/img/fog.png" class="fog visited c19"/>
+                    <img src="Assets/img/fog.png" class="fog visited c20"/>
+                    <img src="Assets/img/fog.png" class="fog visited c21"/>
+                    <img src="Assets/img/fog.png" class="fog c22"/>
+                    <img src="Assets/img/fog.png" class="fog c23"/>
+                    <img src="Assets/img/fog.png" class="fog c24"/>
+                    <img src="Assets/img/fog.png" class="fog c25"/>
+                    <img src="Assets/img/fog.png" class="fog c26"/>
+                    <img src="Assets/img/fog.png" class="fog c27"/>
+                </div>
+                <div class="d">
+                    <img src="Assets/img/fog.png" class="fog d1"/>
+                    <img src="Assets/img/fog.png" class="fog d2"/>
+                    <img src="Assets/img/fog.png" class="fog d3"/>
+                    <img src="Assets/img/fog.png" class="fog d4"/>
+                    <img src="Assets/img/fog.png" class="fog d5"/>
+                    <img src="Assets/img/fog.png" class="fog d6"/>
+                    <img src="Assets/img/fog.png" class="fog d7"/>
+                    <img src="Assets/img/fog.png" class="fog d8"/>
+                    <img src="Assets/img/fog.png" class="fog d9"/>
+                    <img src="Assets/img/fog.png" class="fog d10"/>
+                    <img src="Assets/img/fog.png" class="fog d11"/>
+                    <img src="Assets/img/fog.png" class="fog d12"/>
+                    <img src="Assets/img/fog.png" class="fog d13"/>
+                    <img src="Assets/img/fog.png" class="fog d14"/>
+                    <img src="Assets/img/fog.png" class="fog fogLight d15"/>
+                    <img src="Assets/img/fog.png" class="fog fogLight d16"/>
+                    <img src="Assets/img/fog.png" class="fog fogLight d17"/>
+                    <img src="Assets/img/fog.png" class="fog fogLight d18"/>
+                    <img src="Assets/img/fog.png" class="fog visited d19"/>
+                    <img src="Assets/img/fog.png" class="fog visited d20"/>
+                    <img src="Assets/img/fog.png" class="fog visited d21"/>
+                    <img src="Assets/img/fog.png" class="fog d22"/>
+                    <img src="Assets/img/fog.png" class="fog d23"/>
+                    <img src="Assets/img/fog.png" class="fog d24"/>
+                    <img src="Assets/img/fog.png" class="fog d25"/>
+                    <img src="Assets/img/fog.png" class="fog d26"/>
+                    <img src="Assets/img/fog.png" class="fog d27"/>
+                    <img src="Assets/img/fog.png" class="fog d28"/>
+                </div>
+                <div class="e">
+                    <img src="Assets/img/fog.png" class="fog e1"/>
+                    <img src="Assets/img/fog.png" class="fog e2"/>
+                    <img src="Assets/img/fog.png" class="fog e3"/>
+                    <img src="Assets/img/fog.png" class="fog e4"/>
+                    <img src="Assets/img/fog.png" class="fog e5"/>
+                    <img src="Assets/img/fog.png" class="fog e6"/>
+                    <img src="Assets/img/fog.png" class="fog e7"/>
+                    <img src="Assets/img/fog.png" class="fog e8"/>
+                    <img src="Assets/img/fog.png" class="fog e9"/>
+                    <img src="Assets/img/fog.png" class="fog e10"/>
+                    <img src="Assets/img/fog.png" class="fog e11"/>
+                    <img src="Assets/img/fog.png" class="fog e12"/>
+                    <img src="Assets/img/fog.png" class="fog e13"/>
+                    <img src="Assets/img/fog.png" class="fog e14"/>
+                    <img src="Assets/img/fog.png" class="fog fogLight e15"/>
+                    <img src="Assets/img/fog.png" class="fog fogLight e16"/>
+                    <img src="Assets/img/fog.png" class="fog fogLight e17"/>
+                    <img src="Assets/img/fog.png" class="fog visited e18"/>
+                    <img src="Assets/img/fog.png" class="fog visited e19"/>
+                    <img src="Assets/img/fog.png" class="fog visited e20"/>
+                    <img src="Assets/img/fog.png" class="fog visited e21"/>
+                    <img src="Assets/img/fog.png" class="fog e22"/>
+                    <img src="Assets/img/fog.png" class="fog e23"/>
+                    <img src="Assets/img/fog.png" class="fog e24"/>
+                    <img src="Assets/img/fog.png" class="fog e25"/>
+                    <img src="Assets/img/fog.png" class="fog e26"/>
+                    <img src="Assets/img/fog.png" class="fog e27"/>
+                </div>
+                <div class="f">
+                    <img src="Assets/img/fog.png" class="fog f1"/>
+                    <img src="Assets/img/fog.png" class="fog f2"/>
+                    <img src="Assets/img/fog.png" class="fog f3"/>
+                    <img src="Assets/img/fog.png" class="fog f4"/>
+                    <img src="Assets/img/fog.png" class="fog f5"/>
+                    <img src="Assets/img/fog.png" class="fog f6"/>
+                    <img src="Assets/img/fog.png" class="fog f7"/>
+                    <img src="Assets/img/fog.png" class="fog f8"/>
+                    <img src="Assets/img/fog.png" class="fog f9"/>
+                    <img src="Assets/img/fog.png" class="fog f10"/>
+                    <img src="Assets/img/fog.png" class="fog f11"/>
+                    <img src="Assets/img/fog.png" class="fog f12"/>
+                    <img src="Assets/img/fog.png" class="fog f13"/>
+                    <img src="Assets/img/fog.png" class="fog f14"/>
+                    <img src="Assets/img/fog.png" class="fog fogLight f15"/>
+                    <img src="Assets/img/fog.png" class="fog fogLight f16"/>
+                    <img src="Assets/img/fog.png" class="fog fogLight f17"/>
+                    <img src="Assets/img/fog.png" class="fog fogLight f18"/>
+                    <img src="Assets/img/fog.png" class="fog visited f19"/>
+                    <img src="Assets/img/fog.png" class="fog fogLight f20"/>
+                    <img src="Assets/img/fog.png" class="fog fogLight f21"/>
+                    <img src="Assets/img/fog.png" class="fog f22"/>
+                    <img src="Assets/img/fog.png" class="fog f23"/>
+                    <img src="Assets/img/fog.png" class="fog f24"/>
+                    <img src="Assets/img/fog.png" class="fog f25"/>
+                    <img src="Assets/img/fog.png" class="fog f26"/>
+                    <img src="Assets/img/fog.png" class="fog f27"/>
+                    <img src="Assets/img/fog.png" class="fog f28"/>
+                </div>
+                <div class="g">
+                    <img src="Assets/img/fog.png" class="fog g1"/>
+                    <img src="Assets/img/fog.png" class="fog g2"/>
+                    <img src="Assets/img/fog.png" class="fog g3"/>
+                    <img src="Assets/img/fog.png" class="fog g4"/>
+                    <img src="Assets/img/fog.png" class="fog g5"/>
+                    <img src="Assets/img/fog.png" class="fog g6"/>
+                    <img src="Assets/img/fog.png" class="fog g7"/>
+                    <img src="Assets/img/fog.png" class="fog g8"/>
+                    <img src="Assets/img/fog.png" class="fog g9"/>
+                    <img src="Assets/img/fog.png" class="fog g10"/>
+                    <img src="Assets/img/fog.png" class="fog g11"/>
+                    <img src="Assets/img/fog.png" class="fog g12"/>
+                    <img src="Assets/img/fog.png" class="fog g13"/>
+                    <img src="Assets/img/fog.png" class="fog g14"/>
+                    <img src="Assets/img/fog.png" class="fog g15"/>
+                    <img src="Assets/img/fog.png" class="fog g16"/>
+                    <img src="Assets/img/fog.png" class="fog g17"/>
+                    <img src="Assets/img/fog.png" class="fog g18"/>
+                    <img src="Assets/img/fog.png" class="fog g19"/>
+                    <img src="Assets/img/fog.png" class="fog g20"/>
+                    <img src="Assets/img/fog.png" class="fog g21"/>
+                    <img src="Assets/img/fog.png" class="fog g22"/>
+                    <img src="Assets/img/fog.png" class="fog g23"/>
+                    <img src="Assets/img/fog.png" class="fog g24"/>
+                    <img src="Assets/img/fog.png" class="fog g25"/>
+                    <img src="Assets/img/fog.png" class="fog g26"/>
+                    <img src="Assets/img/fog.png" class="fog g27"/>
+                </div>     
+                <div class="h">
+                    <img src="Assets/img/fog.png" class="fog h1"/>
+                    <img src="Assets/img/fog.png" class="fog h2"/>
+                    <img src="Assets/img/fog.png" class="fog h3"/>
+                    <img src="Assets/img/fog.png" class="fog h4"/>
+                    <img src="Assets/img/fog.png" class="fog h5"/>
+                    <img src="Assets/img/fog.png" class="fog h6"/>
+                    <img src="Assets/img/fog.png" class="fog h7"/>
+                    <img src="Assets/img/fog.png" class="fog h8"/>
+                    <img src="Assets/img/fog.png" class="fog h9"/>
+                    <img src="Assets/img/fog.png" class="fog h10"/>
+                    <img src="Assets/img/fog.png" class="fog h11"/>
+                    <img src="Assets/img/fog.png" class="fog h12"/>
+                    <img src="Assets/img/fog.png" class="fog h13"/>
+                    <img src="Assets/img/fog.png" class="fog h14"/>
+                    <img src="Assets/img/fog.png" class="fog h15"/>
+                    <img src="Assets/img/fog.png" class="fog h16"/>
+                    <img src="Assets/img/fog.png" class="fog h17"/>
+                    <img src="Assets/img/fog.png" class="fog h18"/>
+                    <img src="Assets/img/fog.png" class="fog h19"/>
+                    <img src="Assets/img/fog.png" class="fog h20"/>
+                    <img src="Assets/img/fog.png" class="fog h21"/>
+                    <img src="Assets/img/fog.png" class="fog h22"/>
+                    <img src="Assets/img/fog.png" class="fog h23"/>
+                    <img src="Assets/img/fog.png" class="fog h24"/>
+                    <img src="Assets/img/fog.png" class="fog h25"/>
+                    <img src="Assets/img/fog.png" class="fog h26"/>
+                    <img src="Assets/img/fog.png" class="fog h27"/>
+                    <img src="Assets/img/fog.png" class="fog h28"/>
+                </div>
+                <div class="i">
+                    <img src="Assets/img/fog.png" class="fog i1"/>
+                    <img src="Assets/img/fog.png" class="fog i2"/>
+                    <img src="Assets/img/fog.png" class="fog i3"/>
+                    <img src="Assets/img/fog.png" class="fog i4"/>
+                    <img src="Assets/img/fog.png" class="fog i5"/>
+                    <img src="Assets/img/fog.png" class="fog i6"/>
+                    <img src="Assets/img/fog.png" class="fog i7"/>
+                    <img src="Assets/img/fog.png" class="fog i8"/>
+                    <img src="Assets/img/fog.png" class="fog i9"/>
+                    <img src="Assets/img/fog.png" class="fog i10"/>
+                    <img src="Assets/img/fog.png" class="fog i11"/>
+                    <img src="Assets/img/fog.png" class="fog i12"/>
+                    <img src="Assets/img/fog.png" class="fog i13"/>
+                    <img src="Assets/img/fog.png" class="fog i14"/>
+                    <img src="Assets/img/fog.png" class="fog i15"/>
+                    <img src="Assets/img/fog.png" class="fog i16"/>
+                    <img src="Assets/img/fog.png" class="fog i17"/>
+                    <img src="Assets/img/fog.png" class="fog i18"/>
+                    <img src="Assets/img/fog.png" class="fog i19"/>
+                    <img src="Assets/img/fog.png" class="fog i20"/>
+                    <img src="Assets/img/fog.png" class="fog i21"/>
+                    <img src="Assets/img/fog.png" class="fog i22"/>
+                    <img src="Assets/img/fog.png" class="fog i23"/>
+                    <img src="Assets/img/fog.png" class="fog i24"/>
+                    <img src="Assets/img/fog.png" class="fog i25"/>
+                    <img src="Assets/img/fog.png" class="fog i26"/>
+                    <img src="Assets/img/fog.png" class="fog i27"/>
+                </div>            
+            </div>
         </div>      
     </body>
     <script>
+        var zoomLevel = 100;
         $(document).ready(function() {
             // Tooltips
             createTooltips();
@@ -105,7 +389,49 @@
             createCheckbox("battle");
             createCheckbox("ressource");
             createCheckbox("misc");
+
+            // Zoom
+            //manageZoom();
+            //manageZoom();
         });
+
+        function manageZoom()
+        {
+            $(".zoomOut").click(function() {
+                zoomLevel = zoomLevel * 0.9;
+                $("img").each(function( i ) {
+                    var rect = $(this)[0].getBoundingClientRect(),
+                    scrollLeft = window.pageXOffset || document.documentElement.scrollLeft,
+                    scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+
+                    var top = rect.top + scrollTop;
+                    var left = rect.left + scrollLeft;
+
+                    console.log("top :" + top);
+                    console.log("left :" + left);
+
+                    top = top * zoomLevel / 100;
+                    left = left * zoomLevel / 100;
+                    
+                    // var rect = $(this)[0].getBoundingClientRect();
+                    // console.log(rect.top, rect.right, rect.bottom, rect.left);
+
+                    // var width = $(this)[0].clientWidth;
+                    // var height = $(this)[0].clientHeight;
+                    console.log("top :" + top);
+                    console.log("left :" + left);
+
+
+                    $(this)[0].style.width = top;
+                    $(this)[0].style.height = left;
+
+                    // $(this)[0].style.left = rect.left * zoomLevel / 100 + 'px';
+                    // $(this)[0].style.top = rect.top * zoomLevel / 100 + 'px';
+
+
+                });
+            });
+        };
 
         function createTooltips(){
             $('.tooltip').tooltipster();

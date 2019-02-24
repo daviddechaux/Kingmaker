@@ -1,6 +1,6 @@
 .building{ 
   position: absolute; 
-  /* display: none; */
+  z-index:10;
 }
 .temple{ height: 70px; }
 .village{ height: 60px; }
@@ -9,6 +9,7 @@
 .camp{ height: 40px; }
 .pont{ height: 40px; }
 .bac{ height: 30px; }
+.stag{ height: 100px; }
 
 
 /* Ligne A */
@@ -95,5 +96,4 @@
 .stag {
   top: 1300px;
   left: 4210px;
-  height: 100px;
 }

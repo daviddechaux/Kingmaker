@@ -2,6 +2,7 @@
   position: absolute;
   display: none;
   height: 70px;
+  z-index:2;
 }
 
 .happs {
