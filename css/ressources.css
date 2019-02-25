@@ -1,0 +1,13 @@
+.ressource{ 
+  position: absolute; 
+  display: none;
+  z-index:8;
+}
+.ble{ height: 70px; }
+.mine{ height: 70px; }
+.source{ height: 50px; }
+.ruche{ height: 60px; }
+.argile{ height: 50px; }
+.raspberry{ height: 50px; }
+.rock{ height: 50px; }
+

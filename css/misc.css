@@ -1,0 +1,20 @@
+.misc{ 
+  position: absolute; 
+  display: none;
+  z-index:5;
+}
+
+.tombe{ height: 50px; }
+.tree{ height: 70px; }
+.path{ height: 50px; }
+.sign{ height: 65px; }
+.ruine{ height: 65px; }
+.ruinecyclop{ height: 50px; }
+.dragon{ height: 50px; }
+.swamp{ height: 50px; }
+.cottage{ height: 50px; }
+.grotte{ height: 50px; }
+.spider{ height: 70px; }
+.dolmen{ height: 60px; }
+.colline{ height: 60px; }
+
