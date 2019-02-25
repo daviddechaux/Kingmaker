@@ -1,8 +1,7 @@
-.background
-{
+.background {
     position: relative;
     top: 0;
-    left: 0; 
+    left: 0;
 }
 
 .displayer {
@@ -14,22 +13,26 @@
     font-size: 30px;
     top: 1em;
     right: 1em;
-    z-index:100;
+    z-index: 100;
     opacity: 0.5;
 }
 
-.displayer:hover{
-  opacity: 1;
+.displayer:hover {
+    opacity: 1;
 }
 
-.checkboxDisplay{
-  display:block;
+.hide {
+    display: none;
 }
 
-.player{
-  position: absolute; 
-  top: 1300px;
-  left: 4250px;
-  width: 100px;
-  z-index: 200;
+.checkboxDisplay {
+    display: block;
+}
+
+.player {
+    position: absolute;
+    top: 1300px;
+    left: 4250px;
+    width: 100px;
+    z-index: 200;
 }
