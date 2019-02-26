@@ -6,7 +6,7 @@
     <link rel="stylesheet" type="text/css" href="css/map.css">
     <link rel="stylesheet" type="text/css" href="css/building.css">
     <link rel="stylesheet" type="text/css" href="css/battle.css">
-    <link rel="stylesheet" type="text/css" href="css/ressources.css">
+    <link rel="stylesheet" type="text/css" href="css/resources.css">
     <link rel="stylesheet" type="text/css" href="css/misc.css">
     <link rel="stylesheet" type="text/css" href="css/fog.css">
     <link rel="stylesheet" type="text/css" href="scripts/tooltipster/css/tooltipster.bundle.css" />
@@ -37,9 +37,10 @@
             <div>
                 <input type="file" id="openData">
             </div>
+            <button onclick="saveFile()">Save file</button>
         </div>
 
-        <img src="img/map.jpg" class="background" />
+        <!-- <img src="img/map.jpg" class="background" /> -->
         <img src="img/token.png" class="player" />
 
         <!-- Battle -->
@@ -51,23 +52,91 @@
     </div>
 </body>
 <script>
-    var data = {};
     $(document).ready(function () {
         // Checkbox
         createCheckbox("building");
-        createCheckbox("battle");
+        // createCheckbox("battle");
         createCheckbox("ressource");
         createCheckbox("misc");
 
         // Load data
-        $("#openData").change(function(e) {
+        $("#openData").change(function (e) {
             readData(e);
         });
     });
 
+    function saveFile() {
+        var map = convertMapToObject();
+
+        var file = new Blob([map], { type: "text/ plain" });
+        if (window.navigator.msSaveOrOpenBlob) // IE10+
+            window.navigator.msSaveOrOpenBlob(file, "map.json");
+        else { // Others
+            var a = document.createElement("a"),
+                url = URL.createObjectURL(file);
+            a.href = url;
+            a.download = "map.json";
+            document.body.appendChild(a);
+            a.click();
+            setTimeout(function () {
+                document.body.removeChild(a);
+                window.URL.revokeObjectURL(url);
+            }, 0);
+        }
+    };
+
+    function convertMapToObject() {
+        var mapContainer = $(".mapDecoration").find("img");
+        console.log(mapContainer);
+
+        var building = [];
+        var resources = [];
+        var misc = [];
+        var fog = [];
+        for (var i = 0; i < mapContainer.length; i++) {
+            var newElement = htmlToObject(mapContainer[i]);
+
+            var elementType = getElementType(newElement.class);
+            switch (elementType) {
+                case "fog": fog.push(newElement);
+                    break;
+                case "building": building.push(newElement);
+                    break;
+                case "resources": resources.push(newElement);
+                    break;
+                case "misc": misc.push(newElement);
+                    break;
+            }
+
+            var map = { building, resources, misc, fog };
+        }
+
+        return JSON.stringify(map);
+    };
+
+    function htmlToObject(element) {
+        console.log(element);
+        var myRegexp = /(?<=img\/)(.*)(?=\.png)/g;
+        var img = myRegexp.exec(element.currentSrc)[1];
+        var name = element.name;
+        var className = element.className.replace("tooltipstered", "").replace("tooltip", "").replace(img, "").trim() + " " + img; // remove the plugin class
+        var left = element.x;
+        var top = element.y;
+        var title = element.alt;
+
+        return { "class": className, img, name, top, left, title };
+    }
+
+    function getElementType(className) {
+        return className.includes("fog") ? "fog" :
+            className.includes("building") ? "building" :
+                className.includes("resources") ? "resources" :
+                    className.includes("misc") ? "misc" : "";
+    }
+
     function tooltip() {
         $('.tooltip').tooltipster();
-    }
+    };
 
     function readData(e) {
         var file = e.target.files[0];
@@ -76,13 +145,13 @@
         }
         var reader = new FileReader();
         reader.onload = function (e) {
-            data = JSON.parse(e.target.result);
-            createMapDecoration();
+            var data = JSON.parse(e.target.result);
+            createMapDecoration(data);
         };
         reader.readAsText(file);
-    }
+    };
 
-    function createMapDecoration() {
+    function createMapDecoration(data) {
         addElementToMap(data.fog, "fogOfWar", true);
         addElementToMap(data.building, "buildingSection", false);
         addElementToMap(data.resources, "resourcesSection", false);
@@ -101,22 +170,20 @@
 
                 var visited = obj.visited && obj.visited == true ? "visited" : "";
                 var name = obj.name ? obj.name : "";
+                var cssClass = obj.class ? obj.class : "";
                 var title = obj.title ? obj.title.replace("'", "&#39;") : "";
-                var img = "";
-                if (isFogOfWar) {
-                    img = createImgDiv(obj.img, name, obj.class, visited, "fog", obj.top, obj.left, title);
-                }
-                else {
-                    img = createImgDiv(obj.icon, name, obj.class, visited, "tooltip", obj.top, obj.left, title);
-                }
+                var elementType = isFogOfWar ? "fog" : "tooltip";
+
+                var img = createImgDiv(obj.img, name, cssClass, visited, elementType, obj.top, obj.left, title);
+
                 div.append(img);
             }
         }
     };
 
     function createImgDiv(picName, elementName, cssClass, visited, elementType, top, left, title) {
-        return "<img src='img/" + picName + ".png' class='"+ elementName + " " + cssClass + " " + visited + " " + elementType +  "' style='top:" + top + "px; left:" + left + "px' title='" + title + "' />";
-    }
+        return "<img src='img/" + picName + ".png' name='" + elementName + "' class='" + cssClass + " " + visited + " " + elementType + "' style='top:" + top + "px; left:" + left + "px' title='" + title + "' alt='" + title + "' />";
+    };
 
     function createCheckbox(name) {
         $('input[type="checkbox"][name="display-' + name + '"]').change(function () {
