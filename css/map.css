@@ -31,8 +31,14 @@
 
 .player {
     position: absolute;
-    top: 1300px;
-    left: 4250px;
+    top: 205px;
+    left: 4335px;
     width: 100px;
     z-index: 200;
+
+    user-select: none;
+    /* -webkit-transform: translate(0px, 0px);
+            transform: translate(0px, 0px); */
 }
+
+
