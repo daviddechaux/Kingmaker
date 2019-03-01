@@ -1,0 +1,14 @@
+Todo : 
+- Gérer les catégories dynamiquement.
+- Rendre tous les éléments bougeables
+- Ajouter le principe de faction
+- Mettre les icones dans une police
+- Mettre une couleur par faction
+- Utiliser viewJs ou React ou une autre connerie du genre
+- Faire un build par défaut pour les nouveaux venus
+- Gérer la trasparence du brouillard
+- Gérer la clickabilité du brouillard
+- Ajouter des frontières
+- Trouver un token cool pour la position des joueurs
+- Utiliser des images libres de droits
+- Envoyer un mail au créateur de la carte

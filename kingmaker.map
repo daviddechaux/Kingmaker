@@ -1,0 +1,2133 @@
+{
+	"player": {
+		"x": -37.3334,
+		"y": 272
+	},
+    "building": [
+        {
+            "class": "building village",
+            "img": "village",
+            "name": "leningrad",
+            "top": "300",
+            "left": "3600",
+            "title": "Leningrad"
+        },
+        {
+            "class": "building village",
+            "img": "village",
+            "name": "stalingrad",
+            "top": "350",
+            "left": "4100",
+            "title": "Stalingrad"
+        },
+        {
+            "class": "building village",
+            "img": "village",
+            "name": "pripyat",
+            "top": "300",
+            "left": "4780",
+            "title": "Pripyat"
+        },
+        {
+            "class": "building village",
+            "img": "village",
+            "name": "levoca",
+            "top": "500",
+            "left": "3700",
+            "title": "Levoca"
+        },
+        {
+            "class": "building village",
+            "img": "village",
+            "name": "moskva",
+            "top": "500",
+            "left": "4670",
+            "title": "Moskva"
+        },
+        {
+            "class": "building village",
+            "img": "village",
+            "name": "volvograd",
+            "top": "685",
+            "left": "3410",
+            "title": "Volvograd"
+        },
+        {
+            "class": "building village",
+            "img": "village",
+            "name": "krasnoïarsk",
+            "top": "700",
+            "left": "4800",
+            "title": "Krasnoïarsk"
+        },
+        {
+            "class": "building stag",
+            "img": "stag",
+            "name": "stag",
+            "top": "1300",
+            "left": "4210",
+            "title": "Fort ???"
+        },
+        {
+            "class": "building temple",
+            "img": "elk",
+            "name": "temple-elk",
+            "top": "690",
+            "left": "3880",
+            "title": "Temple de l'Elan"
+        },
+        {
+            "class": "building cabane",
+            "img": "cabane",
+            "name": "cabaneHiver",
+            "top": "350",
+            "left": "3700",
+            "title": "Abri en attendant la fin de l'hiver"
+        },
+        {
+            "class": "building cabane",
+            "img": "cabane",
+            "name": "cabaneTrappeur",
+            "top": "480",
+            "left": "3960",
+            "title": "Cabane du trappeur"
+        },
+        {
+            "class": "building camp",
+            "img": "camp",
+            "name": "camp-kressle",
+            "top": "730",
+            "left": "4130",
+            "title": "Campement de Kressle"
+        },
+        {
+            "class": "building pont",
+            "img": "pont",
+            "name": "pont-levoca",
+            "top": "500",
+            "left": "3800",
+            "title": "Pont de Levoca"
+        },
+        {
+            "class": "building pont",
+            "img": "pont",
+            "name": "pont-epine",
+            "top": "935",
+            "left": "4180",
+            "title": "Pont"
+        },
+        {
+            "class": "building bac",
+            "img": "bac",
+            "name": "bac-aux-orties",
+            "top": "950",
+            "left": "4688",
+            "title": "Bac du Ponts aux Orties"
+        },
+        {
+            "class": "building house",
+            "img": "house",
+            "name": "rimlin",
+            "top": "1100",
+            "left": "4800",
+            "title": "Maison de Rimlin"
+        }
+    ],
+    "resources":[
+        {
+            "class": "resources ble",
+            "img": "ble",
+            "name": "bleOleg",
+            "top": "300",
+            "left": "4340",
+            "title": "Zone agricole"
+        },
+        {
+            "class": "resources ble",
+            "img": "ble",
+            "name": "blePripyat",
+            "top": "300",
+            "left": "4850",
+            "title": "Zone agricole"
+        },
+        {
+            "class": "resources ble",
+            "img": "ble",
+            "name": "bleMoskva",
+            "top": "500",
+            "left": "4740",
+            "title": "Zone agricole"
+        },
+        {
+            "class": "resources ble",
+            "img": "ble",
+            "name": "bleVolvograd",
+            "top": "685",
+            "left": "3480",
+            "title": "Zone agricole"
+        },
+        {
+            "class": "resources ble",
+            "img": "ble",
+            "name": "bleSource",
+            "top": "1100",
+            "left": "4130",
+            "title": "Zone agricole"
+        },
+        {
+            "class": "resources mine",
+            "img": "mine",
+            "name": "goldMine",
+            "top": "700",
+            "left": "4330",
+            "title": "Mine d'or"
+        },
+        {
+            "class": "resources mine",
+            "img": "mine",
+            "name": "silverMine",
+            "top": "1100",
+            "left": "4550",
+            "title": "Mine d'argent"
+        },
+        {
+            "class": "resources source",
+            "img": "source",
+            "name": "sourcesChaudes",
+            "top": "1100",
+            "left": "4070",
+            "title": "Sources chaudes"
+        },
+        {
+            "class": "resources ruche",
+            "img": "ruche",
+            "name": "rucheLila",
+            "top": "900",
+            "left": "4000",
+            "title": "Ruches"
+        },
+        {
+            "class": "resources argile",
+            "img": "argile",
+            "name": "argileColoree",
+            "top": "880",
+            "left": "4190",
+            "title": "Argile colorée"
+        },
+        {
+            "class": "resources raspberry",
+            "img": "raspberry",
+            "name": "raspberryStalingrad",
+            "top": "270",
+            "left": "4100",
+            "title": "Des framboises..."
+        },
+        {
+            "class": "resources rock",
+            "img": "rock",
+            "name": "geode",
+            "top": "500",
+            "left": "4240",
+            "title": "Géode colossale"
+        }
+    ],
+    "misc": [
+        {
+            "class": "misc tombe",
+            "img": "tombe",
+            "name": "tigre",
+            "top": "300",
+            "left": "3420",
+            "title": "Tombe du chef du clan du tigre"
+        },
+        {
+            "class": "misc tombe",
+            "img": "tombe",
+            "name": "cottage",
+            "top": "500",
+            "left": "3300",
+            "title": "Cairn près du cottage en ruine"
+        },
+        {
+            "class": "misc tombe",
+            "img": "tombe",
+            "name": "trappeur",
+            "top": "550",
+            "left": "3780",
+            "title": "Tombe du trappeur"
+        },
+        {
+            "class": "misc tree",
+            "img": "tree",
+            "name": "armure",
+            "top": "570",
+            "left": "4240",
+            "title": "Arbre en armure"
+        },
+        {
+            "class": "misc tree",
+            "img": "tree",
+            "name": "tresor",
+            "top": "700",
+            "left": "4580",
+            "title": "Arbre au trésor"
+        },
+        {
+            "class": "misc tree",
+            "img": "tree",
+            "name": "mite",
+            "top": "900",
+            "left": "4450",
+            "title": "Arbre aux mites"
+        },
+        {
+            "class": "misc colline",
+            "img": "colline",
+            "name": "telluric",
+            "top": "480",
+            "left": "4000",
+            "title": "Collines aux lines telluriques"
+        },
+        {
+            "class": "misc path",
+            "img": "path",
+            "name": "pathElan",
+            "top": "640",
+            "left": "3880",
+            "title": "Vieille route taldorienne"
+        },
+        {
+            "class": "misc path",
+            "img": "path",
+            "name": "pathForest",
+            "top": "550",
+            "left": "4000",
+            "title": "Vieille route taldorienne"
+        },
+        {
+            "class": "misc sign",
+            "img": "sign",
+            "name": "crepuscule",
+            "top": "750",
+            "left": "3820",
+            "title": "Chemin du crépuscule..."
+        },
+        {
+            "class": "misc ruine",
+            "img": "ruine",
+            "name": "ruineTaldorienne",
+            "top": "740",
+            "left": "3950",
+            "title": "Forterresse taldorienne en ruine"
+        },
+        {
+            "class": "misc ruinecyclop",
+            "img": "ruinecyclop",
+            "name": "ruinecyclopA",
+            "top": "300",
+            "left": "3700",
+            "title": "Ruine cyclopéènne"
+        },
+        {
+            "class": "misc ruinecyclop",
+            "img": "ruinecyclop",
+            "name": "ruinecyclopB",
+            "top": "910",
+            "left": "4500",
+            "title": "Ruine cyclopéènne"
+        },
+        {
+            "class": "misc cottage",
+            "img": "cottage",
+            "name": "ruineCottage",
+            "top": "500",
+            "left": "3350",
+            "title": "Cottage devasté"
+        },
+        {
+            "class": "misc dragon",
+            "img": "dragon",
+            "name": "collineDragon",
+            "top": "290",
+            "left": "3900",
+            "title": "Colline au dragon"
+        },
+        {
+            "class": "misc swamp",
+            "img": "swamp",
+            "name": "marreDragon",
+            "top": "330",
+            "left": "3880",
+            "title": "Marre au dragon"
+        },
+        {
+            "class": "misc swamp",
+            "img": "swamp",
+            "name": "marreMagique",
+            "top": "780",
+            "left": "4140",
+            "title": "Marre magique"
+        },
+        {
+            "class": "misc swamp",
+            "img": "swamp",
+            "name": "marecage",
+            "top": "1150",
+            "left": "4320",
+            "title": "Zone marécageuse"
+        },
+        {
+            "class": "misc grotte",
+            "img": "grotte",
+            "name": "tristesse",
+            "top": "445",
+            "left": "3760",
+            "title": "Caverne de la Tristesse"
+        },
+        {
+            "class": "misc grotte",
+            "img": "grotte",
+            "name": "grotteKobold",
+            "top": "550",
+            "left": "4160",
+            "title": "Grotte aux kobolds"
+        },
+        {
+            "class": "misc spider",
+            "img": "spider",
+            "name": "bosquetAraignees",
+            "top": "490",
+            "left": "4450",
+            "title": "Bosquet aux araignées"
+        },
+        {
+            "class": "misc dolmen",
+            "img": "dolmen",
+            "name": "dolmenCyclop",
+            "top": "310",
+            "left": "4580",
+            "title": "Pierres cyclopéènnes"
+        }
+    ],
+    "fog": [
+        {
+            "img": "fog",
+            "name": "a1",
+            "top": "208",
+            "left": "142"
+        },
+        {
+            "img": "fog",
+            "name": "a2",
+            "top": "208",
+            "left": "370"
+        },
+        {
+            "img": "fog",
+            "name": "a3",
+            "top": "208",
+            "left": "598"
+        },
+        {
+            "img": "fog",
+            "name": "a4",
+            "top": "208",
+            "left": "828"
+        },
+        {
+            "img": "fog",
+            "name": "a5",
+            "top": "208",
+            "left": "1056"
+        },
+        {
+            "img": "fog",
+            "name": "a6",
+            "top": "208",
+            "left": "1284"
+        },
+        {
+            "img": "fog",
+            "name": "a7",
+            "top": "208",
+            "left": "1512"
+        },
+        {
+            "img": "fog",
+            "name": "a8",
+            "top": "208",
+            "left": "1742"
+        },
+        {
+            "img": "fog",
+            "name": "a9",
+            "top": "208",
+            "left": "1970"
+        },
+        {
+            "img": "fog",
+            "name": "a10",
+            "top": "208",
+            "left": "2200"
+        },
+        {
+            "img": "fog",
+            "name": "a11",
+            "top": "208",
+            "left": "2430"
+        },
+        {
+            "img": "fog",
+            "name": "a12",
+            "top": "208",
+            "left": "2655"
+        },
+        {
+            "img": "fog",
+            "name": "a13",
+            "top": "208",
+            "left": "2884"
+        },
+        {
+            "img": "fog",
+            "name": "a14",
+            "top": "208",
+            "left": "3114"
+        },
+        {
+            "img": "fog",
+            "name": "a15",
+            "top": "208",
+            "left": "3343",
+            "visited": true
+        },
+        {
+            "img": "fog",
+            "name": "a16",
+            "top": "208",
+            "left": "3572",
+            "visited": true
+        },
+        {
+            "img": "fog",
+            "name": "a17",
+            "top": "208",
+            "left": "3800",
+            "visited": true
+        },
+        {
+            "img": "fog",
+            "name": "a18",
+            "top": "208",
+            "left": "4030",
+            "visited": true
+        },
+        {
+            "img": "fog",
+            "name": "a19",
+            "top": "208",
+            "left": "4258",
+            "visited": true
+        },
+        {
+            "img": "fog",
+            "name": "a20",
+            "top": "208",
+            "left": "4488",
+            "visited": true
+        },
+        {
+            "img": "fog",
+            "name": "a21",
+            "top": "208",
+            "left": "4715",
+            "visited": true
+        },
+        {
+            "img": "fog",
+            "name": "a22",
+            "top": "208",
+            "left": "4944",
+            "visited": false
+        },
+        {
+            "img": "fog",
+            "name": "a23",
+            "top": "208",
+            "left": "5172"
+        },
+        {
+            "img": "fog",
+            "name": "a24",
+            "top": "208",
+            "left": "5401"
+        },
+        {
+            "img": "fog",
+            "name": "a25",
+            "top": "208",
+            "left": "5630"
+        },
+        {
+            "img": "fog",
+            "name": "a26",
+            "top": "208",
+            "left": "5860"
+        },
+        {
+            "img": "fog",
+            "name": "a27",
+            "top": "208",
+            "left": "6088"
+        },
+        {
+            "img": "fog",
+            "name": "b1",
+            "top": "405",
+            "left": "28",
+            "visited": false
+        },
+        {
+            "img": "fog",
+            "name": "b2",
+            "top": "405",
+            "left": "256",
+            "visited": false
+        },
+        {
+            "img": "fog",
+            "name": "b3",
+            "top": "405",
+            "left": "484",
+            "visited": false
+        },
+        {
+            "img": "fog",
+            "name": "b4",
+            "top": "405",
+            "left": "714",
+            "visited": false
+        },
+        {
+            "img": "fog",
+            "name": "b5",
+            "top": "405",
+            "left": "942",
+            "visited": false
+        },
+        {
+            "img": "fog",
+            "name": "b6",
+            "top": "405",
+            "left": "1170",
+            "visited": false
+        },
+        {
+            "img": "fog",
+            "name": "b7",
+            "top": "405",
+            "left": "1398",
+            "visited": false
+        },
+        {
+            "img": "fog",
+            "name": "b8",
+            "top": "405",
+            "left": "1628",
+            "visited": false
+        },
+        {
+            "img": "fog",
+            "name": "b9",
+            "top": "405",
+            "left": "1856",
+            "visited": false
+        },
+        {
+            "img": "fog",
+            "name": "b10",
+            "top": "405",
+            "left": "2086",
+            "visited": false
+        },
+        {
+            "img": "fog",
+            "name": "b11",
+            "top": "405",
+            "left": "2316",
+            "visited": false
+        },
+        {
+            "img": "fog",
+            "name": "b12",
+            "top": "405",
+            "left": "2541",
+            "visited": false
+        },
+        {
+            "img": "fog",
+            "name": "b13",
+            "top": "405",
+            "left": "2770",
+            "visited": false
+        },
+        {
+            "img": "fog",
+            "name": "b14",
+            "top": "405",
+            "left": "3000",
+            "visited": false
+        },
+        {
+            "img": "fog",
+            "name": "b15",
+            "top": "405",
+            "left": "3229",
+            "visited": true
+        },
+        {
+            "img": "fog",
+            "name": "b16",
+            "top": "405",
+            "left": "3458",
+            "visited": true
+        },
+        {
+            "img": "fog",
+            "name": "b17",
+            "top": "405",
+            "left": "3686",
+            "visited": true
+        },
+        {
+            "img": "fog",
+            "name": "b18",
+            "top": "405",
+            "left": "3916",
+            "visited": true
+        },
+        {
+            "img": "fog",
+            "name": "b19",
+            "top": "405",
+            "left": "4144",
+            "visited": true
+        },
+        {
+            "img": "fog",
+            "name": "b20",
+            "top": "405",
+            "left": "4374",
+            "visited": true
+        },
+        {
+            "img": "fog",
+            "name": "b21",
+            "top": "405",
+            "left": "4601",
+            "visited": true
+        },
+        {
+            "img": "fog",
+            "name": "b22",
+            "top": "405",
+            "left": "4830",
+            "visited": false
+        },
+        {
+            "img": "fog",
+            "name": "b23",
+            "top": "405",
+            "left": "5058",
+            "visited": false
+        },
+        {
+            "img": "fog",
+            "name": "b24",
+            "top": "405",
+            "left": "5287",
+            "visited": false
+        },
+        {
+            "img": "fog",
+            "name": "b25",
+            "top": "405",
+            "left": "5516",
+            "visited": false
+        },
+        {
+            "img": "fog",
+            "name": "b26",
+            "top": "405",
+            "left": "5746",
+            "visited": false
+        },
+        {
+            "img": "fog",
+            "name": "b27",
+            "top": "405",
+            "left": "5974",
+            "visited": false
+        },
+        {
+            "img": "fog",
+            "name": "b28",
+            "top": "405",
+            "left": "6200",
+            "visited": false
+        },
+        {
+            "img": "fog",
+            "name": "c1",
+            "top": "604",
+            "left": "142",
+            "visited": false
+        },
+        {
+            "img": "fog",
+            "name": "c2",
+            "top": "604",
+            "left": "370",
+            "visited": false
+        },
+        {
+            "img": "fog",
+            "name": "c3",
+            "top": "604",
+            "left": "598",
+            "visited": false
+        },
+        {
+            "img": "fog",
+            "name": "c4",
+            "top": "604",
+            "left": "828",
+            "visited": false
+        },
+        {
+            "img": "fog",
+            "name": "c5",
+            "top": "604",
+            "left": "1056",
+            "visited": false
+        },
+        {
+            "img": "fog",
+            "name": "c6",
+            "top": "604",
+            "left": "1284",
+            "visited": false
+        },
+        {
+            "img": "fog",
+            "name": "c7",
+            "top": "604",
+            "left": "1512",
+            "visited": false
+        },
+        {
+            "img": "fog",
+            "name": "c8",
+            "top": "604",
+            "left": "1742",
+            "visited": false
+        },
+        {
+            "img": "fog",
+            "name": "c9",
+            "top": "604",
+            "left": "1970",
+            "visited": false
+        },
+        {
+            "img": "fog",
+            "name": "c10",
+            "top": "604",
+            "left": "2200",
+            "visited": false
+        },
+        {
+            "img": "fog",
+            "name": "c11",
+            "top": "604",
+            "left": "2430",
+            "visited": false
+        },
+        {
+            "img": "fog",
+            "name": "c12",
+            "top": "604",
+            "left": "2655",
+            "visited": false
+        },
+        {
+            "img": "fog",
+            "name": "c13",
+            "top": "604",
+            "left": "2884",
+            "visited": false
+        },
+        {
+            "img": "fog",
+            "name": "c14",
+            "top": "604",
+            "left": "3114",
+            "visited": false
+        },
+        {
+            "img": "fog",
+            "name": "c15",
+            "top": "604",
+            "left": "3343",
+            "visited": true
+        },
+        {
+            "img": "fog",
+            "name": "c16",
+            "class": "fogLight",
+            "top": "604",
+            "left": "3572",
+            "visited": false
+        },
+        {
+            "img": "fog",
+            "name": "c17",
+            "top": "604",
+            "left": "3900",
+            "visited": true
+        },
+        {
+            "img": "fog",
+            "name": "c18",
+            "class": "fogLight",
+            "top": "604",
+            "left": "4030",
+            "visited": false
+        },
+        {
+            "img": "fog",
+            "name": "c19",
+            "top": "604",
+            "left": "4258",
+            "visited": true
+        },
+        {
+            "img": "fog",
+            "name": "c20",
+            "top": "604",
+            "left": "4488",
+            "visited": true
+        },
+        {
+            "img": "fog",
+            "name": "c21",
+            "top": "604",
+            "left": "4715",
+            "visited": true
+        },
+        {
+            "img": "fog",
+            "name": "c22",
+            "top": "604",
+            "left": "4944",
+            "visited": false
+        },
+        {
+            "img": "fog",
+            "name": "c23",
+            "top": "604",
+            "left": "5172",
+            "visited": false
+        },
+        {
+            "img": "fog",
+            "name": "c24",
+            "top": "604",
+            "left": "5401",
+            "visited": false
+        },
+        {
+            "img": "fog",
+            "name": "c25",
+            "top": "604",
+            "left": "5630",
+            "visited": false
+        },
+        {
+            "img": "fog",
+            "name": "c26",
+            "top": "604",
+            "left": "5860",
+            "visited": false
+        },
+        {
+            "img": "fog",
+            "name": "c27",
+            "top": "604",
+            "left": "6088",
+            "visited": false
+        },
+        {
+            "img": "fog",
+            "name": "d1",
+            "top": "800",
+            "left": "28",
+            "visited": false
+        },
+        {
+            "img": "fog",
+            "name": "d2",
+            "top": "800",
+            "left": "256",
+            "visited": false
+        },
+        {
+            "img": "fog",
+            "name": "d3",
+            "top": "800",
+            "left": "484",
+            "visited": false
+        },
+        {
+            "img": "fog",
+            "name": "d4",
+            "top": "800",
+            "left": "714",
+            "visited": false
+        },
+        {
+            "img": "fog",
+            "name": "d5",
+            "top": "800",
+            "left": "942",
+            "visited": false
+        },
+        {
+            "img": "fog",
+            "name": "d6",
+            "top": "800",
+            "left": "1170",
+            "visited": false
+        },
+        {
+            "img": "fog",
+            "name": "d7",
+            "top": "800",
+            "left": "1398",
+            "visited": false
+        },
+        {
+            "img": "fog",
+            "name": "d8",
+            "top": "800",
+            "left": "1628",
+            "visited": false
+        },
+        {
+            "img": "fog",
+            "name": "d9",
+            "top": "800",
+            "left": "1856",
+            "visited": false
+        },
+        {
+            "img": "fog",
+            "name": "d10",
+            "top": "800",
+            "left": "2086",
+            "visited": false
+        },
+        {
+            "img": "fog",
+            "name": "d11",
+            "top": "800",
+            "left": "2316",
+            "visited": false
+        },
+        {
+            "img": "fog",
+            "name": "d12",
+            "top": "800",
+            "left": "2541",
+            "visited": false
+        },
+        {
+            "img": "fog",
+            "name": "d13",
+            "top": "800",
+            "left": "2770",
+            "visited": false
+        },
+        {
+            "img": "fog",
+            "name": "d14",
+            "top": "800",
+            "left": "3000",
+            "visited": false
+        },
+        {
+            "img": "fog",
+            "name": "d15",
+            "class": "fogLight",
+            "top": "800",
+            "left": "3229",
+            "visited": false
+        },
+        {
+            "img": "fog",
+            "name": "d16",
+            "class": "fogLight",
+            "top": "800",
+            "left": "3458",
+            "visited": false
+        },
+        {
+            "img": "fog",
+            "name": "d17",
+            "class": "fogLight",
+            "top": "800",
+            "left": "3686",
+            "visited": false
+        },
+        {
+            "img": "fog",
+            "name": "d18",
+            "class": "fogLight",
+            "top": "800",
+            "left": "3916",
+            "visited": false
+        },
+        {
+            "img": "fog",
+            "name": "d19",
+            "top": "800",
+            "left": "4144",
+            "visited": true
+        },
+        {
+            "img": "fog",
+            "name": "d20",
+            "top": "800",
+            "left": "4374",
+            "visited": true
+        },
+        {
+            "img": "fog",
+            "name": "d21",
+            "top": "800",
+            "left": "4601",
+            "visited": true
+        },
+        {
+            "img": "fog",
+            "name": "d22",
+            "top": "800",
+            "left": "4830",
+            "visited": false
+        },
+        {
+            "img": "fog",
+            "name": "d23",
+            "top": "800",
+            "left": "5058",
+            "visited": false
+        },
+        {
+            "img": "fog",
+            "name": "d24",
+            "top": "800",
+            "left": "5287",
+            "visited": false
+        },
+        {
+            "img": "fog",
+            "name": "d25",
+            "top": "800",
+            "left": "5516",
+            "visited": false
+        },
+        {
+            "img": "fog",
+            "name": "d26",
+            "top": "800",
+            "left": "5746",
+            "visited": false
+        },
+        {
+            "img": "fog",
+            "name": "d27",
+            "top": "800",
+            "left": "5974",
+            "visited": false
+        },
+        {
+            "img": "fog",
+            "name": "d28",
+            "top": "800",
+            "left": "6200",
+            "visited": false
+        },
+        {
+            "img": "fog",
+            "name": "e1",
+            "top": "1000",
+            "left": "142",
+            "visited": false
+        },
+        {
+            "img": "fog",
+            "name": "e2",
+            "top": "1000",
+            "left": "370",
+            "visited": false
+        },
+        {
+            "img": "fog",
+            "name": "e3",
+            "top": "999",
+            "left": "599",
+            "visited": false
+        },
+        {
+            "img": "fog",
+            "name": "e4",
+            "top": "1000",
+            "left": "828",
+            "visited": false
+        },
+        {
+            "img": "fog",
+            "name": "e5",
+            "top": "1000",
+            "left": "1056",
+            "visited": false
+        },
+        {
+            "img": "fog",
+            "name": "e6",
+            "top": "1000",
+            "left": "1284",
+            "visited": false
+        },
+        {
+            "img": "fog",
+            "name": "e7",
+            "top": "1000",
+            "left": "1512",
+            "visited": false
+        },
+        {
+            "img": "fog",
+            "name": "e8",
+            "top": "1000",
+            "left": "1742",
+            "visited": false
+        },
+        {
+            "img": "fog",
+            "name": "e9",
+            "top": "1000",
+            "left": "1970",
+            "visited": false
+        },
+        {
+            "img": "fog",
+            "name": "e10",
+            "top": "1000",
+            "left": "2200",
+            "visited": false
+        },
+        {
+            "img": "fog",
+            "name": "e11",
+            "top": "1000",
+            "left": "2430",
+            "visited": false
+        },
+        {
+            "img": "fog",
+            "name": "e12",
+            "top": "1000",
+            "left": "2655",
+            "visited": false
+        },
+        {
+            "img": "fog",
+            "name": "e13",
+            "top": "1000",
+            "left": "2884",
+            "visited": false
+        },
+        {
+            "img": "fog",
+            "name": "e14",
+            "top": "1000",
+            "left": "3114",
+            "visited": false
+        },
+        {
+            "img": "fog",
+            "name": "e15",
+            "class": "fogLight",
+            "top": "1000",
+            "left": "3343",
+            "visited": false
+        },
+        {
+            "img": "fog",
+            "name": "e16",
+            "class": "fogLight",
+            "top": "1000",
+            "left": "3572",
+            "visited": false
+        },
+        {
+            "img": "fog",
+            "name": "e17",
+            "class": "fogLight",
+            "top": "1000",
+            "left": "3800",
+            "visited": false
+        },
+        {
+            "img": "fog",
+            "name": "e18",
+            "top": "1000",
+            "left": "4030",
+            "visited": true
+        },
+        {
+            "img": "fog",
+            "name": "e19",
+            "top": "1000",
+            "left": "4258",
+            "visited": true
+        },
+        {
+            "img": "fog",
+            "name": "e20",
+            "top": "1000",
+            "left": "4488",
+            "visited": true
+        },
+        {
+            "img": "fog",
+            "name": "e21",
+            "top": "1000",
+            "left": "4715",
+            "visited": true
+        },
+        {
+            "img": "fog",
+            "name": "e22",
+            "top": "1000",
+            "left": "4944",
+            "visited": false
+        },
+        {
+            "img": "fog",
+            "name": "e23",
+            "top": "1000",
+            "left": "5172",
+            "visited": false
+        },
+        {
+            "img": "fog",
+            "name": "e24",
+            "top": "1000",
+            "left": "5401",
+            "visited": false
+        },
+        {
+            "img": "fog",
+            "name": "e25",
+            "top": "1000",
+            "left": "5630",
+            "visited": false
+        },
+        {
+            "img": "fog",
+            "name": "e26",
+            "top": "1000",
+            "left": "5860",
+            "visited": false
+        },
+        {
+            "img": "fog",
+            "name": "e27",
+            "top": "1000",
+            "left": "6088",
+            "visited": false
+        },
+        {
+            "img": "fog",
+            "name": "f1",
+            "top": "1196",
+            "left": "28",
+            "visited": false
+        },
+        {
+            "img": "fog",
+            "name": "f2",
+            "top": "1196",
+            "left": "256",
+            "visited": false
+        },
+        {
+            "img": "fog",
+            "name": "f3",
+            "top": "1196",
+            "left": "484",
+            "visited": false
+        },
+        {
+            "img": "fog",
+            "name": "f4",
+            "top": "1196",
+            "left": "714",
+            "visited": false
+        },
+        {
+            "img": "fog",
+            "name": "f5",
+            "top": "1196",
+            "left": "942",
+            "visited": false
+        },
+        {
+            "img": "fog",
+            "name": "f6",
+            "top": "1196",
+            "left": "1170",
+            "visited": false
+        },
+        {
+            "img": "fog",
+            "name": "f7",
+            "top": "1196",
+            "left": "1398",
+            "visited": false
+        },
+        {
+            "img": "fog",
+            "name": "f8",
+            "top": "1196",
+            "left": "1628",
+            "visited": false
+        },
+        {
+            "img": "fog",
+            "name": "f9",
+            "top": "1196",
+            "left": "1856",
+            "visited": false
+        },
+        {
+            "img": "fog",
+            "name": "f10",
+            "top": "1196",
+            "left": "2086",
+            "visited": false
+        },
+        {
+            "img": "fog",
+            "name": "f11",
+            "top": "1196",
+            "left": "2316",
+            "visited": false
+        },
+        {
+            "img": "fog",
+            "name": "f12",
+            "top": "1196",
+            "left": "2541",
+            "visited": false
+        },
+        {
+            "img": "fog",
+            "name": "f13",
+            "top": "1196",
+            "left": "2770",
+            "visited": false
+        },
+        {
+            "img": "fog",
+            "name": "f14",
+            "top": "1196",
+            "left": "3000",
+            "visited": false
+        },
+        {
+            "img": "fog",
+            "name": "f15",
+            "top": "1196",
+            "left": "3229",
+            "visited": false
+        },
+        {
+            "img": "fog",
+            "name": "f16",
+            "top": "1196",
+            "left": "3458",
+            "visited": false
+        },
+        {
+            "img": "fog",
+            "name": "f17",
+            "top": "1196",
+            "left": "3686",
+            "visited": false
+        },
+        {
+            "img": "fog",
+            "name": "f18",
+            "top": "1196",
+            "left": "3916",
+            "visited": false
+        },
+        {
+            "img": "fog",
+            "name": "f19",
+            "top": "1196",
+            "left": "4144",
+            "visited": true
+        },
+        {
+            "img": "fog",
+            "name": "f20",
+            "top": "1196",
+            "left": "4374",
+            "visited": false
+        },
+        {
+            "img": "fog",
+            "name": "f21",
+            "top": "1196",
+            "left": "4601",
+            "visited": false
+        },
+        {
+            "img": "fog",
+            "name": "f22",
+            "top": "1196",
+            "left": "4830",
+            "visited": false
+        },
+        {
+            "img": "fog",
+            "name": "f23",
+            "top": "1196",
+            "left": "5058",
+            "visited": false
+        },
+        {
+            "img": "fog",
+            "name": "f24",
+            "top": "1196",
+            "left": "5287",
+            "visited": false
+        },
+        {
+            "img": "fog",
+            "name": "f25",
+            "top": "1196",
+            "left": "5516",
+            "visited": false
+        },
+        {
+            "img": "fog",
+            "name": "f26",
+            "top": "1196",
+            "left": "5746",
+            "visited": false
+        },
+        {
+            "img": "fog",
+            "name": "f27",
+            "top": "1196",
+            "left": "5974",
+            "visited": false
+        },
+        {
+            "img": "fog",
+            "name": "f28",
+            "top": "1196",
+            "left": "6200",
+            "visited": false
+        },
+        {
+            "img": "fog",
+            "name": "g1",
+            "top": "1394",
+            "left": "142",
+            "visited": false
+        },
+        {
+            "img": "fog",
+            "name": "g2",
+            "top": "1394",
+            "left": "370",
+            "visited": false
+        },
+        {
+            "img": "fog",
+            "name": "g3",
+            "top": "1394",
+            "left": "598",
+            "visited": false
+        },
+        {
+            "img": "fog",
+            "name": "g4",
+            "top": "1394",
+            "left": "828",
+            "visited": false
+        },
+        {
+            "img": "fog",
+            "name": "g5",
+            "top": "1394",
+            "left": "1056",
+            "visited": false
+        },
+        {
+            "img": "fog",
+            "name": "g6",
+            "top": "1394",
+            "left": "1284",
+            "visited": false
+        },
+        {
+            "img": "fog",
+            "name": "g7",
+            "top": "1394",
+            "left": "1512",
+            "visited": false
+        },
+        {
+            "img": "fog",
+            "name": "g8",
+            "top": "1394",
+            "left": "1742",
+            "visited": false
+        },
+        {
+            "img": "fog",
+            "name": "g9",
+            "top": "1394",
+            "left": "1970",
+            "visited": false
+        },
+        {
+            "img": "fog",
+            "name": "g10",
+            "top": "1394",
+            "left": "2200",
+            "visited": false
+        },
+        {
+            "img": "fog",
+            "name": "g11",
+            "top": "1394",
+            "left": "2430",
+            "visited": false
+        },
+        {
+            "img": "fog",
+            "name": "g12",
+            "top": "1394",
+            "left": "2655",
+            "visited": false
+        },
+        {
+            "img": "fog",
+            "name": "g13",
+            "top": "1394",
+            "left": "2884",
+            "visited": false
+        },
+        {
+            "img": "fog",
+            "name": "g14",
+            "top": "1394",
+            "left": "3114",
+            "visited": false
+        },
+        {
+            "img": "fog",
+            "name": "g15",
+            "top": "1394",
+            "left": "3343",
+            "visited": false
+        },
+        {
+            "img": "fog",
+            "name": "g16",
+            "top": "1394",
+            "left": "3572",
+            "visited": false
+        },
+        {
+            "img": "fog",
+            "name": "g17",
+            "top": "1394",
+            "left": "3800",
+            "visited": false
+        },
+        {
+            "img": "fog",
+            "name": "g18",
+            "top": "1394",
+            "left": "4030",
+            "visited": false
+        },
+        {
+            "img": "fog",
+            "name": "g19",
+            "top": "1394",
+            "left": "4258",
+            "visited": false
+        },
+        {
+            "img": "fog",
+            "name": "g20",
+            "top": "1394",
+            "left": "4488",
+            "visited": false
+        },
+        {
+            "img": "fog",
+            "name": "g21",
+            "top": "1394",
+            "left": "4715",
+            "visited": false
+        },
+        {
+            "img": "fog",
+            "name": "g22",
+            "top": "1394",
+            "left": "4944",
+            "visited": false
+        },
+        {
+            "img": "fog",
+            "name": "g23",
+            "top": "1394",
+            "left": "5172",
+            "visited": false
+        },
+        {
+            "img": "fog",
+            "name": "g24",
+            "top": "1394",
+            "left": "5401",
+            "visited": false
+        },
+        {
+            "img": "fog",
+            "name": "g25",
+            "top": "1394",
+            "left": "5630",
+            "visited": false
+        },
+        {
+            "img": "fog",
+            "name": "g26",
+            "top": "1394",
+            "left": "5860",
+            "visited": false
+        },
+        {
+            "img": "fog",
+            "name": "g27",
+            "top": "1394",
+            "left": "6088",
+            "visited": false
+        },
+        {
+            "img": "fog",
+            "name": "h1",
+            "top": "1590",
+            "left": "28",
+            "visited": false
+        },
+        {
+            "img": "fog",
+            "name": "h2",
+            "top": "1590",
+            "left": "256",
+            "visited": false
+        },
+        {
+            "img": "fog",
+            "name": "h3",
+            "top": "1590",
+            "left": "484",
+            "visited": false
+        },
+        {
+            "img": "fog",
+            "name": "h4",
+            "top": "1590",
+            "left": "714",
+            "visited": false
+        },
+        {
+            "img": "fog",
+            "name": "h5",
+            "top": "1590",
+            "left": "942",
+            "visited": false
+        },
+        {
+            "img": "fog",
+            "name": "h6",
+            "top": "1590",
+            "left": "1170",
+            "visited": false
+        },
+        {
+            "img": "fog",
+            "name": "h7",
+            "top": "1590",
+            "left": "1398",
+            "visited": false
+        },
+        {
+            "img": "fog",
+            "name": "h8",
+            "top": "1590",
+            "left": "1628",
+            "visited": false
+        },
+        {
+            "img": "fog",
+            "name": "h9",
+            "top": "1590",
+            "left": "1856",
+            "visited": false
+        },
+        {
+            "img": "fog",
+            "name": "h10",
+            "top": "1590",
+            "left": "2086",
+            "visited": false
+        },
+        {
+            "img": "fog",
+            "name": "h11",
+            "top": "1590",
+            "left": "2316",
+            "visited": false
+        },
+        {
+            "img": "fog",
+            "name": "h12",
+            "top": "1590",
+            "left": "2541",
+            "visited": false
+        },
+        {
+            "img": "fog",
+            "name": "h13",
+            "top": "1590",
+            "left": "2770",
+            "visited": false
+        },
+        {
+            "img": "fog",
+            "name": "h14",
+            "top": "1590",
+            "left": "3000",
+            "visited": false
+        },
+        {
+            "img": "fog",
+            "name": "h15",
+            "top": "1590",
+            "left": "3229",
+            "visited": false
+        },
+        {
+            "img": "fog",
+            "name": "h16",
+            "top": "1590",
+            "left": "3458",
+            "visited": false
+        },
+        {
+            "img": "fog",
+            "name": "h17",
+            "top": "1590",
+            "left": "3686",
+            "visited": false
+        },
+        {
+            "img": "fog",
+            "name": "h18",
+            "top": "1590",
+            "left": "3916",
+            "visited": false
+        },
+        {
+            "img": "fog",
+            "name": "h19",
+            "top": "1590",
+            "left": "4144",
+            "visited": false
+        },
+        {
+            "img": "fog",
+            "name": "h20",
+            "top": "1590",
+            "left": "4374",
+            "visited": false
+        },
+        {
+            "img": "fog",
+            "name": "h21",
+            "top": "1590",
+            "left": "4601",
+            "visited": false
+        },
+        {
+            "img": "fog",
+            "name": "h22",
+            "top": "1590",
+            "left": "4830",
+            "visited": false
+        },
+        {
+            "img": "fog",
+            "name": "h23",
+            "top": "1590",
+            "left": "5058",
+            "visited": false
+        },
+        {
+            "img": "fog",
+            "name": "h24",
+            "top": "1590",
+            "left": "5287",
+            "visited": false
+        },
+        {
+            "img": "fog",
+            "name": "h25",
+            "top": "1590",
+            "left": "5516",
+            "visited": false
+        },
+        {
+            "img": "fog",
+            "name": "h26",
+            "top": "1590",
+            "left": "5746",
+            "visited": false
+        },
+        {
+            "img": "fog",
+            "name": "h27",
+            "top": "1590",
+            "left": "5974",
+            "visited": false
+        },
+        {
+            "img": "fog",
+            "name": "h28",
+            "top": "1590",
+            "left": "6200",
+            "visited": false
+        },
+        {
+            "img": "fog",
+            "name": "i1",
+            "top": "1788",
+            "left": "142",
+            "visited": false
+        },
+        {
+            "img": "fog",
+            "name": "i2",
+            "top": "1788",
+            "left": "370",
+            "visited": false
+        },
+        {
+            "img": "fog",
+            "name": "i3",
+            "top": "1788",
+            "left": "598",
+            "visited": false
+        },
+        {
+            "img": "fog",
+            "name": "i4",
+            "top": "1788",
+            "left": "828",
+            "visited": false
+        },
+        {
+            "img": "fog",
+            "name": "i5",
+            "top": "1788",
+            "left": "1056",
+            "visited": false
+        },
+        {
+            "img": "fog",
+            "name": "i6",
+            "top": "1788",
+            "left": "1284",
+            "visited": false
+        },
+        {
+            "img": "fog",
+            "name": "i7",
+            "top": "1788",
+            "left": "1512",
+            "visited": false
+        },
+        {
+            "img": "fog",
+            "name": "i8",
+            "top": "1788",
+            "left": "1742",
+            "visited": false
+        },
+        {
+            "img": "fog",
+            "name": "i9",
+            "top": "1788",
+            "left": "1970",
+            "visited": false
+        },
+        {
+            "img": "fog",
+            "name": "i10",
+            "top": "1788",
+            "left": "2200",
+            "visited": false
+        },
+        {
+            "img": "fog",
+            "name": "i11",
+            "top": "1788",
+            "left": "2430",
+            "visited": false
+        },
+        {
+            "img": "fog",
+            "name": "i12",
+            "top": "1788",
+            "left": "2655",
+            "visited": false
+        },
+        {
+            "img": "fog",
+            "name": "i13",
+            "top": "1788",
+            "left": "2884",
+            "visited": false
+        },
+        {
+            "img": "fog",
+            "name": "i14",
+            "top": "1788",
+            "left": "3114",
+            "visited": false
+        },
+        {
+            "img": "fog",
+            "name": "i15",
+            "top": "1788",
+            "left": "3343",
+            "visited": false
+        },
+        {
+            "img": "fog",
+            "name": "i16",
+            "top": "1788",
+            "left": "3572",
+            "visited": false
+        },
+        {
+            "img": "fog",
+            "name": "i17",
+            "top": "1788",
+            "left": "3800",
+            "visited": false
+        },
+        {
+            "img": "fog",
+            "name": "i18",
+            "top": "1788",
+            "left": "4030",
+            "visited": false
+        },
+        {
+            "img": "fog",
+            "name": "i19",
+            "top": "1788",
+            "left": "4258",
+            "visited": false
+        },
+        {
+            "img": "fog",
+            "name": "i20",
+            "top": "1788",
+            "left": "4488",
+            "visited": false
+        },
+        {
+            "img": "fog",
+            "name": "i21",
+            "top": "1788",
+            "left": "4715",
+            "visited": false
+        },
+        {
+            "img": "fog",
+            "name": "i22",
+            "top": "1788",
+            "left": "4944",
+            "visited": false
+        },
+        {
+            "img": "fog",
+            "name": "i23",
+            "top": "1788",
+            "left": "5172",
+            "visited": false
+        },
+        {
+            "img": "fog",
+            "name": "i24",
+            "top": "1788",
+            "left": "5401",
+            "visited": false
+        },
+        {
+            "img": "fog",
+            "name": "i25",
+            "top": "1788",
+            "left": "5630",
+            "visited": false
+        },
+        {
+            "img": "fog",
+            "name": "i26",
+            "top": "1788",
+            "left": "5860",
+            "visited": false
+        },
+        {
+            "img": "fog",
+            "name": "i27",
+            "top": "1788",
+            "left": "6088",
+            "visited": false
+        }
+    ]
+}

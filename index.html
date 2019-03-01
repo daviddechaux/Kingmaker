@@ -14,11 +14,36 @@
     <script type="text/javascript" src="https://code.jquery.com/jquery-1.10.0.min.js"></script>
     <script type="text/javascript" src="scripts/tooltipster/js/tooltipster.bundle.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/interactjs@1.3/dist/interact.min.js"></script>
+
+    <script type="text/javascript" src="scripts/plugin.js"></script>
+    <script type="text/javascript" src="scripts/file.js"></script>
+    <script type="text/javascript" src="scripts/map.js"></script>
 </head>
 
 <body>
+    <div class="editMapDecoration">
+        <!-- name="pont-epine" -->
+        <div>
+            <label for="nameMapDecoration" title="Name"></label>
+            <input id="nameMapDecoration" />
+        </div>
+
+        <!-- alt="Pont" -->
+        <div>
+            <label for="titleMapDecoration" title="Title"></label>
+            <input id="titleMapDecoration" />
+        </div>
+        <!-- Should be done in background to be equals to Title -->
+        <!-- Remove tooltip and retrigger it for the element after that -->
+        <div> 
+            <label for="altMapDecoration" title="Alt"></label>
+            <input id="altMapDecoration" />
+        </div>
+
+        <img src="img/pont.png"  class="building pont  tooltip tap-target tooltipstered" style="top:935px; left:4180px" ></img>
+    </div>
     <div class="wrapper" > 
-            <!-- oncontextmenu="javascript:alert('success!');return false;"" -->
+        <!-- oncontextmenu="javascript:alert('success!');return false;"" -->
         <div class="displayer">
             <div align="center" class="file gimmeSpace" >
                 <label for="openData">
@@ -27,7 +52,6 @@
             
                 <input id="openData" type="file"/>
             </div>
-
             <hr>
 
             <div align="center" class="file gimmeSpace">
@@ -37,7 +61,6 @@
             
                 <input id="saveData" onclick="saveFile()" />
             </div>
-
             <hr>
             <hr>
 
@@ -81,8 +104,9 @@
         // Load data
         loadFile();
         
-        // Drag 'n drop 
+        // interactjs
         drapAndDrop();
+        tapTarget();
 
         // Right click
         // document.getElementsByClassName('wrapper').addEventListener('contextmenu', function(ev) {
@@ -92,89 +116,9 @@
         // }, false);
     });
 
-    function drapAndDrop(){
-        interact('.draggable')
-            .draggable({
-                autoScroll: true,
-                // call this function on every dragmove event
-                onmove: dragMoveListener
-            });
-    };
 
-    function dragMoveListener (event) {
-        var target = event.target,
-            // keep the dragged position in the data-x/data-y attributes
-            x = (parseFloat(target.getAttribute('data-x')) || 0) + event.dx,
-            y = (parseFloat(target.getAttribute('data-y')) || 0) + event.dy;
-
-        // translate the element
-        target.style.webkitTransform =
-        target.style.transform =
-        'translate(' + x + 'px, ' + y + 'px)';
-
-        // update the posiion attributes
-        target.setAttribute('data-x', x);
-        target.setAttribute('data-y', y);
-    }
-
-    function saveFile() {
-        var map = convertMapToObject();
-
-        var file = new Blob([map], { type: "text/ plain" });
-        if (window.navigator.msSaveOrOpenBlob) // IE10+
-            window.navigator.msSaveOrOpenBlob(file, "map.json");
-        else { // Others
-            var a = document.createElement("a"),
-                url = URL.createObjectURL(file);
-            a.href = url;
-            a.download = "Kingmaker.map";
-            document.body.appendChild(a);
-            a.click();
-            setTimeout(function () {
-                document.body.removeChild(a);
-                window.URL.revokeObjectURL(url);
-            }, 0);
-        }
-    };
-
-    function convertMapToObject() {
-        var mapContainer = $(".mapDecoration").find("img");
-
-        var building = [];
-        var resources = [];
-        var misc = [];
-        var fog = [];
-        for (var i = 0; i < mapContainer.length; i++) {
-            var newElement = htmlToObject(mapContainer[i]);
-            
-            var elementType = getElementType(newElement.class);
-            switch (elementType) {
-                case "fog": fog.push(newElement);
-                    break;
-                case "building": building.push(newElement);
-                    break;
-                case "resources": resources.push(newElement);
-                    break;
-                case "misc": misc.push(newElement);
-                    break;
-            }
-            var player = createPlayerObject();
-
-            var map = { player, building, resources, misc, fog };
-        }
-
-        return JSON.stringify(map);
-    };
-
-    function createPlayerObject(){
-        var x = $(".player").data("x") ;
-        var y = $(".player").data("y") ;
-
-        return {x, y};
-    };
 
     function htmlToObject(element) {
-        
         //Firefox doesn't suppport "?<=" regex properly so I use a workaround
         //var myRegexp = /(?<=img\/)(.*)(?=\.png)/g;
         //var img = myRegexp.exec(element.currentSrc)[1];
@@ -189,96 +133,8 @@
         var title = element.alt;
 
         return { "class": className.trim(), img, name, top, left, title };
-    }
-
-    function getElementType(className) {
-        return className.includes("building") ? "building" :
-                className.includes("resources") ? "resources" :
-                    className.includes("misc") ? "misc" : "fog";
-    }
-
-    function tooltip() {
-        $('.tooltip').tooltipster();
     };
 
-    function loadFile(){
-        $("#openData").change(function (e) {
-            var file = e.target.files[0];
-            if (!file) {
-                return;
-            }
-            var reader = new FileReader();
-            reader.onload = function (e) {
-                var data = JSON.parse(e.target.result);
-                createMapDecoration(data);
-            };
-            reader.readAsText(file);
-        });
-    };
-
-    function createMapDecoration(data) {
-        cleanMap();
-
-        addPlayerToMap(data.player);
-        addElementToMap(data.fog, "fogOfWar", true);
-        addElementToMap(data.building, "buildingSection", false);
-        addElementToMap(data.resources, "resourcesSection", false);
-        addElementToMap(data.misc, "miscSection", false);
-
-        tooltip();
-    };
-
-    function cleanMap(){
-        $(".fogOfWar").remove();
-        $(".buildingSection").remove();
-        $(".resourcesSection").remove();
-        $(".miscSection").remove();
-    };
-
-    function addPlayerToMap(player){
-        var x = player && player.x ? player.x : 0;
-        var y = player && player.y ? player.y : 0;
-        $(".player").data("x", x);
-        $(".player").data("y", y);
-        $(".player").css({"-webkit-transform":"translate(" + x + "px, " + y + "px)"});
-        $(".player").css({"-transform":"translate(" + x + "px, " + y + "px)"});
-    };
-
-    function addElementToMap(item, sectionName, isFogOfWar) {
-        if (item) {
-            $(".mapDecoration").append("<div class='" + sectionName + "'> </div>");
-            var div = $("." + sectionName);
-
-            for (var i = 0; i < item.length; i++) {
-                var obj = item[i];
-
-                var visited = obj.visited && obj.visited == true ? "visited" : "";
-                var name = obj.name ? obj.name : "";
-                var cssClass = obj.class ? obj.class : "";
-                var title = obj.title ? obj.title.replace("'", "&#39;") : "";
-                var elementType = isFogOfWar ? "fog" : "tooltip";
-
-                var img = createImgDiv(obj.img, name, cssClass, visited, elementType, obj.top, obj.left, title);
-                div.append(img);
-            }
-        }
-    };
-
-    function createImgDiv(picName, elementName, cssClass, visited, elementType, top, left, title) {
-        var fullClass = (cssClass + " " + visited + " " + elementType).trim();
-        return "<img src='img/" + picName + ".png' name='" + elementName + "' class='" + fullClass + "' style='top:" + top + "px; left:" + left + "px' title='" + title + "' alt='" + title + "' />";
-    };
-
-    function createCheckbox(name) {
-        $('input[type="checkbox"][name="display-' + name + '"]').change(function () {
-            if (this.checked) {
-                $("." + name).show();
-            }
-            else {
-                $("." + name).hide();
-            }
-        });
-    };
 </script>
 
 </html>
