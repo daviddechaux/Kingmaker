@@ -17,8 +17,30 @@
 </head>
 
 <body>
-    <div class="wrapper">
+    <div class="wrapper" > 
+            <!-- oncontextmenu="javascript:alert('success!');return false;"" -->
         <div class="displayer">
+            <div align="center" class="file gimmeSpace" >
+                <label for="openData">
+                    <img src="img/load.png" title="Load existing map"/>
+                </label>
+            
+                <input id="openData" type="file"/>
+            </div>
+
+            <hr>
+
+            <div align="center" class="file gimmeSpace">
+                <label for="saveData">
+                    <img src="img/save.png" title="Save current map"/>
+                </label>
+            
+                <input id="saveData" onclick="saveFile()" />
+            </div>
+
+            <hr>
+            <hr>
+
             <div class="checkboxDisplay">
                 <input type="checkbox" id="building" class="checkbox" name="display-building" checked>
                 <label for="building" class="label">Buildings</label>
@@ -35,20 +57,16 @@
                 <input type="checkbox" id="misc" class="checkbox" name="display-misc">
                 <label for="misc" class="label">Misc</label>
             </div>
-            <div>
-                <input type="file" id="openData">
-            </div>
-            <button onclick="saveFile()">Save file</button>
+            <button onclick="createMapDecoration()">Add map decoration</button>
         </div>
 
         <img src="img/map.jpg" class="background" />
         <img src="img/token.png" class="player draggable" />
 
-        <!-- Battle -->
-        <!-- <img src="img/battle.png" class="happs battle tooltip" title="Happs" />
-        <img src="img/battle.png" class="kressle battle tooltip" title="Kressle" /> -->
-
         <div class="mapDecoration">
+            <!-- Battle -->
+            <!-- <img src="img/battle.png" class="happs battle tooltip" title="Happs" />
+            <img src="img/battle.png" class="kressle battle tooltip" title="Kressle" /> -->
         </div>
     </div>
 </body>
@@ -65,6 +83,13 @@
         
         // Drag 'n drop 
         drapAndDrop();
+
+        // Right click
+        // document.getElementsByClassName('wrapper').addEventListener('contextmenu', function(ev) {
+        //     ev.preventDefault();
+        //     alert('success!');
+        //     return false;
+        // }, false);
     });
 
     function drapAndDrop(){
@@ -72,7 +97,7 @@
             .draggable({
                 autoScroll: true,
                 // call this function on every dragmove event
-                onmove: dragMoveListener,
+                onmove: dragMoveListener
             });
     };
 
@@ -102,7 +127,7 @@
             var a = document.createElement("a"),
                 url = URL.createObjectURL(file);
             a.href = url;
-            a.download = "map.json";
+            a.download = "Kingmaker.map";
             document.body.appendChild(a);
             a.click();
             setTimeout(function () {
@@ -121,7 +146,6 @@
         var fog = [];
         for (var i = 0; i < mapContainer.length; i++) {
             var newElement = htmlToObject(mapContainer[i]);
-            console.log(newElement);
             
             var elementType = getElementType(newElement.class);
             switch (elementType) {
@@ -150,8 +174,14 @@
     };
 
     function htmlToObject(element) {
-        var myRegexp = /(?<=img\/)(.*)(?=\.png)/g;
-        var img = myRegexp.exec(element.currentSrc)[1];
+        
+        //Firefox doesn't suppport "?<=" regex properly so I use a workaround
+        //var myRegexp = /(?<=img\/)(.*)(?=\.png)/g;
+        //var img = myRegexp.exec(element.currentSrc)[1];
+
+        var imageName = element.currentSrc.split("img/");
+        var img = imageName[1].replace(".png", "")
+
         var name = element.name;
         var className = element.className.replace("fog", "").replace("tooltipstered", "").replace("tooltip", "").replace(img, "").trim() + " " + img; // remove the plugin class
         var top = element.style.top.replace("px", "").replace('"', "");
@@ -229,8 +259,6 @@
                 var elementType = isFogOfWar ? "fog" : "tooltip";
 
                 var img = createImgDiv(obj.img, name, cssClass, visited, elementType, obj.top, obj.left, title);
-                console.log(img);
-
                 div.append(img);
             }
         }

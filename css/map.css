@@ -21,6 +21,16 @@
     opacity: 1;
 }
 
+.gimmeSpace{
+    margin-top:5px;
+    margin-bottom:5px;
+}
+
+.file > input
+{
+    display: none;
+}
+
 .hide {
     display: none;
 }
@@ -37,8 +47,6 @@
     z-index: 200;
 
     user-select: none;
-    /* -webkit-transform: translate(0px, 0px);
-            transform: translate(0px, 0px); */
 }
 
 
