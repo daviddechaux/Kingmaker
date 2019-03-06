@@ -77,6 +77,7 @@ function loadFile(){
 };
 
 function createMapDecoration(data) {
+    console.log(data);
     cleanMap();
 
     addPlayerToMap(data.player);
@@ -111,7 +112,7 @@ function addElementToMap(item, sectionName, isFogOfWar) {
             var name = obj.name ? obj.name : "";
             var cssClass = obj.class ? obj.class : "";
             var title = obj.title ? obj.title.replace("'", "&#39;") : "";
-            var elementType = isFogOfWar ? "fog" : "tooltip";
+            var elementType = isFogOfWar ? "fog" : "tooltip tap-target";
 
             var img = createImgDiv(obj.img, name, cssClass, visited, elementType, obj.top, obj.left, title);
             div.append(img);
@@ -121,6 +122,6 @@ function addElementToMap(item, sectionName, isFogOfWar) {
 
 
 function createImgDiv(picName, elementName, cssClass, visited, elementType, top, left, title) {
-    var fullClass = (cssClass + " " + visited + " " + elementType + " tap-target").trim();
-    return "<img src='img/" + picName + ".png' name='" + elementName + "' class='" + fullClass + "' style='top:" + top + "px; left:" + left + "px' title='" + title + "' alt='" + title + "' />";
+    var fullClass = (cssClass + " " + visited + " " + elementType).trim();
+    return "<img src='icons/" + picName + ".png' name='" + elementName + "' class='" + fullClass + "' style='top:" + top + "px; left:" + left + "px' title='" + title + "' alt='" + title + "' />";
 };

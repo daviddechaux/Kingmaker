@@ -15,48 +15,51 @@
     <script type="text/javascript" src="scripts/tooltipster/js/tooltipster.bundle.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/interactjs@1.3/dist/interact.min.js"></script>
 
-    <script type="text/javascript" src="scripts/plugin.js"></script>
-    <script type="text/javascript" src="scripts/file.js"></script>
-    <script type="text/javascript" src="scripts/map.js"></script>
+    <script type="text/javascript" src="js/plugin.js"></script>
+    <script type="text/javascript" src="js/file.js"></script>
+    <script type="text/javascript" src="js/map.js"></script>
 </head>
 
 <body>
+    <div class="editorBackground"></div>
     <div class="editMapDecoration">
         <!-- name="pont-epine" -->
-        <div>
-            <label for="nameMapDecoration" title="Name"></label>
+        <div class="editField gimmeFullSpace" >
+            <label for="nameMapDecoration" title="Name">Name</label>
             <input id="nameMapDecoration" />
         </div>
 
         <!-- alt="Pont" -->
-        <div>
-            <label for="titleMapDecoration" title="Title"></label>
+        <div class="editField gimmeFullSpace">
+            <label for="titleMapDecoration" title="Title">Title</label>
             <input id="titleMapDecoration" />
         </div>
         <!-- Should be done in background to be equals to Title -->
         <!-- Remove tooltip and retrigger it for the element after that -->
-        <div> 
+        <!-- <div> 
             <label for="altMapDecoration" title="Alt"></label>
             <input id="altMapDecoration" />
+        </div> -->
+
+        <div>
+            <input type="button" class="gimmeSpace dockRight" value="Save changes" />
         </div>
 
-        <img src="img/pont.png"  class="building pont  tooltip tap-target tooltipstered" style="top:935px; left:4180px" ></img>
     </div>
     <div class="wrapper" > 
-        <!-- oncontextmenu="javascript:alert('success!');return false;"" -->
         <div class="displayer">
             <div align="center" class="file gimmeSpace" >
                 <label for="openData">
-                    <img src="img/load.png" title="Load existing map"/>
+                    <img src="images/load.png" title="Load existing map"/>
                 </label>
             
-                <input id="openData" type="file"/>
+                <input id="openData" onclick="loadFile()" type="file"/>
             </div>
             <hr>
 
             <div align="center" class="file gimmeSpace">
                 <label for="saveData">
-                    <img src="img/save.png" title="Save current map"/>
+                    <img src="images/save.png" title="Save current map"/>
                 </label>
             
                 <input id="saveData" onclick="saveFile()" />
@@ -83,13 +86,10 @@
             <button onclick="createMapDecoration()">Add map decoration</button>
         </div>
 
-        <img src="img/map.jpg" class="background" />
-        <img src="img/token.png" class="player draggable" />
+        <img src="images/map.jpg" class="background" />
+        <img src="images/token.png" class="player draggable" />
 
         <div class="mapDecoration">
-            <!-- Battle -->
-            <!-- <img src="img/battle.png" class="happs battle tooltip" title="Happs" />
-            <img src="img/battle.png" class="kressle battle tooltip" title="Kressle" /> -->
         </div>
     </div>
 </body>
@@ -100,13 +100,16 @@
         // createCheckbox("battle");
         createCheckbox("resources");
         createCheckbox("misc");
-
-        // Load data
-        loadFile();
         
         // interactjs
         drapAndDrop();
         tapTarget();
+
+        // Edit map decoration
+        $(".editorBackground").click(function(){
+            $(".editMapDecoration").hide();
+            $(".editorBackground").hide();
+        })
 
         // Right click
         // document.getElementsByClassName('wrapper').addEventListener('contextmenu', function(ev) {
@@ -123,11 +126,11 @@
         //var myRegexp = /(?<=img\/)(.*)(?=\.png)/g;
         //var img = myRegexp.exec(element.currentSrc)[1];
 
-        var imageName = element.currentSrc.split("img/");
+        var imageName = element.currentSrc.split("icons/");
         var img = imageName[1].replace(".png", "")
 
         var name = element.name;
-        var className = element.className.replace("fog", "").replace("tooltipstered", "").replace("tooltip", "").replace(img, "").trim() + " " + img; // remove the plugin class
+        var className = element.className.replace("fog", "").replace("tooltipstered", "").replace("tooltip", "").trim() + " " + img; // remove the plugin class
         var top = element.style.top.replace("px", "").replace('"', "");
         var left = element.style.left.replace("px", "");
         var title = element.alt;

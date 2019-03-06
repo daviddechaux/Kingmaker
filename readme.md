@@ -1,5 +1,6 @@
 Todo : 
 - Gérer les catégories dynamiquement.
+- Mettre les pluggins en local (utile quand on est dans l'avion ) 
 - Rendre tous les éléments bougeables
 - Ajouter le principe de faction
 - Mettre les icones dans une police

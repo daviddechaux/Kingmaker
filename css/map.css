@@ -1,3 +1,15 @@
+.editorBackground{
+    z-index: 999;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 6450px;
+    height: 2250px;
+    background-color : grey;
+    opacity: 0.8;
+    display: none;
+}
+
 .background {
     position: relative;
     top: 0;
@@ -26,6 +38,15 @@
     margin-bottom:5px;
 }
 
+.gimmeFullSpace{
+    margin: 5px 5px 5px 5px;
+}
+
+.dockRight{
+    margin-left:auto;
+    margin-right:5px;
+}
+
 .file > input
 {
     display: none;
@@ -49,4 +70,26 @@
     user-select: none;
 }
 
+
+.mapDecorationToolBox{
+    width:200px;
+    height:200px;
+    background-color: white;
+    display:none;
+}
+
+.editField{
+    display:block;
+}
+
+.editMapDecoration{
+    background-color: white;
+    border : 1px solid black;
+    display: none;
+}
+
+.centerMapDecoration{
+    z-index: 1000;
+    position: absolute;
+}​
 

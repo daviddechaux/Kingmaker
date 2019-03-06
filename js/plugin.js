@@ -12,8 +12,6 @@ function drapAndDrop(){
         });
 };
 
-
-
 function dragMoveListener (event) {
     var target = event.target,
         // keep the dragged position in the data-x/data-y attributes
@@ -28,24 +26,27 @@ function dragMoveListener (event) {
     // update the posiion attributes
     target.setAttribute('data-x', x);
     target.setAttribute('data-y', y);
-}
-
+};
 
 function tapTarget(){
     interact('.tap-target')
         .on('tap', function (event) {
-            alert(event.currentTarget.classList);
-            event.preventDefault();
-        })
-        .on('doubletap', function (event) {
-            alert(event.currentTarget.classList);
+            $(".editMapDecoration").addClass('centerMapDecoration'); 
+
+            var element = document.getElementsByName(event.currentTarget.name)[0];
+            var obj = htmlToObject(element);
+
+            $(".editMapDecoration").css("top", parseInt(obj.top) + element.clientHeight + "px");
+            $(".editMapDecoration").css("left", parseInt(obj.left) + element.clientWidth + "px");
+            
+            $(".editMapDecoration").show();
+            $(".editorBackground").show();
+            $("#nameMapDecoration").val(event.currentTarget.name);
+            $("#titleMapDecoration").val(event.currentTarget.alt);
+
             event.preventDefault();
         })
 };
-
-
-<img src="img/pont.png" name="pont-epine" class="building pont  tooltip tap-target tooltipstered" style="top:935px; left:4180px" alt="Pont"></img>
-
 
 
 
