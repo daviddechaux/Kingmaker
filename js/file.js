@@ -77,14 +77,15 @@ function loadFile(){
 };
 
 function createMapDecoration(data) {
-    console.log(data);
     cleanMap();
 
     addPlayerToMap(data.player);
-    addElementToMap(data.fog, "fogOfWar", true);
-    addElementToMap(data.building, "buildingSection", false);
-    addElementToMap(data.resources, "resourcesSection", false);
-    addElementToMap(data.misc, "miscSection", false);
+
+    var imgId = 1;
+    imgId = addElementToMap(data.fog, "fogOfWar", true, imgId);
+    imgId = addElementToMap(data.building, "buildingSection", false, imgId);
+    imgId = addElementToMap(data.resources, "resourcesSection", false, imgId);
+    addElementToMap(data.misc, "miscSection", false, imgId);
 
     tooltip();
 };
@@ -100,7 +101,7 @@ function addPlayerToMap(player){
 };
 
 
-function addElementToMap(item, sectionName, isFogOfWar) {
+function addElementToMap(item, sectionName, isFogOfWar, imgId) {
     if (item) {
         $(".mapDecoration").append("<div class='" + sectionName + "'> </div>");
         var div = $("." + sectionName);
@@ -114,14 +115,13 @@ function addElementToMap(item, sectionName, isFogOfWar) {
             var title = obj.title ? obj.title.replace("'", "&#39;") : "";
             var elementType = isFogOfWar ? "fog" : "tooltip tap-target";
 
-            var img = createImgDiv(obj.img, name, cssClass, visited, elementType, obj.top, obj.left, title);
+            var img = createImgTag(imgId, obj.img, name, cssClass, visited, elementType, obj.top, obj.left, title);
             div.append(img);
+
+            imgId++;
         }
     }
+
+    return imgId;
 };
 
-
-function createImgDiv(picName, elementName, cssClass, visited, elementType, top, left, title) {
-    var fullClass = (cssClass + " " + visited + " " + elementType).trim();
-    return "<img src='icons/" + picName + ".png' name='" + elementName + "' class='" + fullClass + "' style='top:" + top + "px; left:" + left + "px' title='" + title + "' alt='" + title + "' />";
-};

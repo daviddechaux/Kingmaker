@@ -2,6 +2,11 @@ function tooltip() {
     $('.tooltip').tooltipster();
 };
 
+function tooltipOne(id) {
+    $('#' + id).tooltipster();
+};
+
+
 
 function drapAndDrop(){
     interact('.draggable')
@@ -43,6 +48,8 @@ function tapTarget(){
             $(".editorBackground").show();
             $("#nameMapDecoration").val(event.currentTarget.name);
             $("#titleMapDecoration").val(event.currentTarget.alt);
+
+            $("#decorationToChange").val(event.currentTarget.id);
 
             event.preventDefault();
         })

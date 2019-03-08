@@ -18,11 +18,16 @@
     <script type="text/javascript" src="js/plugin.js"></script>
     <script type="text/javascript" src="js/file.js"></script>
     <script type="text/javascript" src="js/map.js"></script>
+    <script type="text/javascript" src="js/decoration.js"></script>
 </head>
 
 <body>
     <div class="editorBackground"></div>
     <div class="editMapDecoration">
+        <div class="editField gimmeFullSpace">
+            <input id="decorationToChange" style="display:none"/>
+        </div>
+
         <!-- name="pont-epine" -->
         <div class="editField gimmeFullSpace" >
             <label for="nameMapDecoration" title="Name">Name</label>
@@ -34,15 +39,9 @@
             <label for="titleMapDecoration" title="Title">Title</label>
             <input id="titleMapDecoration" />
         </div>
-        <!-- Should be done in background to be equals to Title -->
-        <!-- Remove tooltip and retrigger it for the element after that -->
-        <!-- <div> 
-            <label for="altMapDecoration" title="Alt"></label>
-            <input id="altMapDecoration" />
-        </div> -->
-
+        
         <div>
-            <input type="button" class="gimmeSpace dockRight" value="Save changes" />
+            <input type="button" value="Save changes" onclick="changeDecoration()" />
         </div>
 
     </div>
@@ -71,10 +70,6 @@
                 <input type="checkbox" id="building" class="checkbox" name="display-building" checked>
                 <label for="building" class="label">Buildings</label>
             </div>
-            <!-- <div class="checkboxDisplay">
-                <input type="checkbox" id="battle" class="checkbox" name="display-battle">
-                <label for="battle" class="label">Battles</label>
-            </div> -->
             <div class="checkboxDisplay">
                 <input type="checkbox" id="resources" class="checkbox" name="display-resources">
                 <label for="resources" class="label">Resources</label>
@@ -83,7 +78,7 @@
                 <input type="checkbox" id="misc" class="checkbox" name="display-misc">
                 <label for="misc" class="label">Misc</label>
             </div>
-            <button onclick="createMapDecoration()">Add map decoration</button>
+            <!-- <button onclick="createMapDecoration()">Add map decoration</button> -->
         </div>
 
         <img src="images/map.jpg" class="background" />
@@ -97,7 +92,6 @@
     $(document).ready(function () {
         // Checkbox
         createCheckbox("building");
-        // createCheckbox("battle");
         createCheckbox("resources");
         createCheckbox("misc");
         
@@ -107,8 +101,7 @@
 
         // Edit map decoration
         $(".editorBackground").click(function(){
-            $(".editMapDecoration").hide();
-            $(".editorBackground").hide();
+            clodeEditDecoration();
         })
 
         // Right click
@@ -119,15 +112,12 @@
         // }, false);
     });
 
-
-
     function htmlToObject(element) {
         //Firefox doesn't suppport "?<=" regex properly so I use a workaround
-        //var myRegexp = /(?<=img\/)(.*)(?=\.png)/g;
+        //var myRegexp = /(?<=icons\/)(.*)(?=\.png)/g;
         //var img = myRegexp.exec(element.currentSrc)[1];
 
-        var imageName = element.currentSrc.split("icons/");
-        var img = imageName[1].replace(".png", "")
+        var img = imgPathToImgName(element.currentSrc);
 
         var name = element.name;
         var className = element.className.replace("fog", "").replace("tooltipstered", "").replace("tooltip", "").trim() + " " + img; // remove the plugin class
@@ -138,6 +128,15 @@
         return { "class": className.trim(), img, name, top, left, title };
     };
 
+    function createImgTag(imgId, picName, elementName, cssClass, visited, elementType, top, left, title) {
+        var fullClass = (cssClass + " " + visited + " " + elementType).trim();
+        return "<img id='" + imgId + "' src='icons/" + picName + ".png' name='" + elementName + "' class='" + fullClass + "' style='top:" + top + "px; left:" + left + "px' title='" + title + "' alt='" + title + "' />";
+    };
+
+    function imgPathToImgName(imgPath){
+        var imageName = imgPath.split("icons/");
+        return imageName[1].replace(".png", "")
+    };
 </script>
 
 </html>
