@@ -113,10 +113,6 @@
     });
 
     function htmlToObject(element) {
-        //Firefox doesn't suppport "?<=" regex properly so I use a workaround
-        //var myRegexp = /(?<=icons\/)(.*)(?=\.png)/g;
-        //var img = myRegexp.exec(element.currentSrc)[1];
-
         var img = imgPathToImgName(element.currentSrc);
 
         var name = element.name;
@@ -130,11 +126,15 @@
 
     function createImgTag(imgId, picName, elementName, cssClass, visited, elementType, top, left, title) {
         var fullClass = (cssClass + " " + visited + " " + elementType).trim();
-        return "<img id='" + imgId + "' src='icons/" + picName + ".png' name='" + elementName + "' class='" + fullClass + "' style='top:" + top + "px; left:" + left + "px' title='" + title + "' alt='" + title + "' />";
+        return "<img id='" + imgId + "' src='pics/" + picName + ".png' name='" + elementName + "' class='" + fullClass + "' style='top:" + top + "px; left:" + left + "px' title='" + title + "' alt='" + title + "' />";
     };
 
     function imgPathToImgName(imgPath){
-        var imageName = imgPath.split("icons/");
+        //Firefox doesn't suppport "?<=" regex properly so I use a workaround
+        //var myRegexp = /(?<=pics\/)(.*)(?=\.png)/g;
+        //var img = myRegexp.exec(element.currentSrc)[1];
+
+        var imageName = imgPath.split("pics/");
         return imageName[1].replace(".png", "")
     };
 </script>
