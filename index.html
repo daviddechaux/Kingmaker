@@ -47,6 +47,15 @@
     </div>
     <div class="wrapper" > 
         <div class="displayer">
+            <div align="center" class="file gimmeSpace" onclick="openNew()" >
+                <label >
+                    <img src="images/new.png" title="Create a new map"/>
+                </label>
+            
+                <input id="openNew" type="file" value="data/empty.map"/>
+            </div>
+            <hr>
+
             <div align="center" class="file gimmeSpace" >
                 <label for="openData">
                     <img src="images/load.png" title="Load existing map"/>
@@ -116,7 +125,12 @@
         var img = imgPathToImgName(element.currentSrc);
 
         var name = element.name;
-        var className = element.className.replace("fog", "").replace("tooltipstered", "").replace("tooltip", "").trim() + " " + img; // remove the plugin class
+        var className = element.className.replace("fog", "")
+                                        .replace("tooltipstered", "")
+                                        .replace("tooltip", "")
+                                        .replace("tap-target", "")
+                                        .trim();
+                                        // + " " + img; // remove the plugin class
         var top = element.style.top.replace("px", "").replace('"', "");
         var left = element.style.left.replace("px", "");
         var title = element.alt;
