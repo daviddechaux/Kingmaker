@@ -5,9 +5,13 @@
     left: 0px;
     width: 6450px;
     height: 2250px;
-    background-color : grey;
+    background-color : white;
     opacity: 0.8;
     display: none;
+}
+
+.inFront{
+    z-index: 1001 !important;
 }
 
 .background {
@@ -99,4 +103,3 @@
     z-index: 1000;
     position: absolute;
 }​
-

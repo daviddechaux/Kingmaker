@@ -13,14 +13,20 @@ function changeDecoration(){
     var id = itemToChange[0].id;
     var imgName = imgPathToImgName(itemToChange[0].src);
 
+console.log(itemToChange);
+
+    var transform = itemToChange[0].style.transform.replace("translate(", "").replace("px", "").replace(" ", "").replace(")", "").split(",");
+    var left = parseInt(itemToChange[0].style.left.replace("px", "")) + parseInt(transform[0]);
+    var top = parseInt(itemToChange[0].style.top.replace("px", "")) + parseInt(transform[1]);
+    
     var img = createImgTag(id,
         imgName,
         name,
         className,
         "",
         "",
-        itemToChange[0].style.top.replace("px", ""),
-        itemToChange[0].style.left.replace("px", ""),
+        top,
+        left,
         title );
     
     var section = itemToChange[0].parentNode.className;

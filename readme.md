@@ -1,8 +1,9 @@
 Todo : 
-2. Make elements movable on edit 
-3. Make fog manageable (remove, add and transparency)
-4. Change icons while edit the element
-5. Envoyer un mail au créateur de la carte pour lui demander la permission
+1. Create element 
+1. Make fog manageable (remove, add and transparency)
+2. Change icons while edit the element
+3. Send mail to map's creator
+- After load (or create) center on player token
 - Create factions (borders and color)
 - Create a font to put icons in it (SVG, free icons / self made)
 - Use a proper framework to do the stuff done by jQuery (vueJs, React, whateverJs)
@@ -22,3 +23,4 @@ Done :
 - Default map
 - Edit elements (partial)
 - Hide menu on load file (Create and Load)
+- Make elements movable on edit 

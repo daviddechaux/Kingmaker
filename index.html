@@ -96,8 +96,11 @@
     </div>
 
     <img src="images/map.jpg" class="background" />
-    <img src="images/token.png" class="player draggable" />
 
+    <div id="player">
+        <img src="images/token.png" class="player draggable" />
+    </div>
+    
     <div class="mapDecoration">
     </div>
 </body>
@@ -133,6 +136,8 @@
                                         .replace("tooltipstered", "")
                                         .replace("tooltip", "")
                                         .replace("tap-target", "")
+                                        .replace("inFront", "")
+                                        .replace("draggable", "")
                                         .trim();
                                         // + " " + img; // remove the plugin class
         var top = element.style.top.replace("px", "").replace('"', "");
