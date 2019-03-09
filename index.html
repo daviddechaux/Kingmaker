@@ -46,7 +46,7 @@
 
     </div>
     <div class="wrapper" > 
-        <div class="displayer">
+        <div class="newMap">
             <div align="center" class="file gimmeSpace" onclick="openNew()" >
                 <label >
                     <img src="images/new.png" title="Create a new map"/>
@@ -55,7 +55,9 @@
                 <input id="openNew" type="file" value="data/empty.map"/>
             </div>
             <hr>
+        </div>
 
+        <div class="openMap">
             <div align="center" class="file gimmeSpace" >
                 <label for="openData">
                     <img src="images/load.png" title="Load existing map"/>
@@ -63,8 +65,9 @@
             
                 <input id="openData" onclick="loadFile()" type="file"/>
             </div>
-            <hr>
+        </div>
 
+        <div class="saveMap">
             <div align="center" class="file gimmeSpace">
                 <label for="saveData">
                     <img src="images/save.png" title="Save current map"/>
@@ -73,8 +76,9 @@
                 <input id="saveData" onclick="saveFile()" />
             </div>
             <hr>
-            <hr>
+        </div>
 
+        <div class="displayer">
             <div class="checkboxDisplay">
                 <input type="checkbox" id="building" class="checkbox" name="display-building" checked>
                 <label for="building" class="label">Buildings</label>
@@ -89,12 +93,12 @@
             </div>
             <!-- <button onclick="createMapDecoration()">Add map decoration</button> -->
         </div>
+    </div>
 
-        <img src="images/map.jpg" class="background" />
-        <img src="images/token.png" class="player draggable" />
+    <img src="images/map.jpg" class="background" />
+    <img src="images/token.png" class="player draggable" />
 
-        <div class="mapDecoration">
-        </div>
+    <div class="mapDecoration">
     </div>
 </body>
 <script>

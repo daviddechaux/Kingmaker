@@ -16,7 +16,7 @@
     left: 0;
 }
 
-.displayer {
+.wrapper {
     position: fixed;
     background: white;
     border: 1px solid black;
@@ -29,8 +29,16 @@
     opacity: 0.5;
 }
 
-.displayer:hover {
+.wrapper:hover {
     opacity: 1;
+}
+
+.saveMap{
+    display:none;
+}
+
+.displayer{
+    display:none;
 }
 
 .gimmeSpace{

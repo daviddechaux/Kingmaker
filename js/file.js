@@ -93,8 +93,15 @@ function createMapDecoration(data) {
     addElementToMap(data.misc, "miscSection", false, imgId);
 
     tooltip();
+    hideMenu();
 };
 
+function hideMenu(){
+    $(".newMap").hide();
+    $(".openMap").hide();
+    $(".displayer").show();
+    $(".saveMap").show();
+};
 
 function addPlayerToMap(player){
     var x = player && player.x ? player.x : 0;
