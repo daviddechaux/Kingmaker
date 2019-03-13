@@ -1,3 +1,7 @@
+.hide{
+    display:none;
+}
+
 .editorBackground{
     z-index: 999;
     position: absolute;
@@ -37,14 +41,6 @@
     opacity: 1;
 }
 
-.saveMap{
-    display:none;
-}
-
-.displayer{
-    display:none;
-}
-
 .gimmeSpace{
     margin-top:5px;
     margin-bottom:5px;
@@ -61,10 +57,6 @@
 
 .file > input
 {
-    display: none;
-}
-
-.hide {
     display: none;
 }
 
@@ -90,16 +82,10 @@
     display:none;
 }
 
-.editField{
+.field{
     display:block;
 }
 
 .editMapDecoration{
-    background-color: white;
     display: none;
 }
-
-.centerMapDecoration{
-    z-index: 1000;
-    position: absolute;
-}​

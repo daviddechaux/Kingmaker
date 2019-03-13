@@ -13,6 +13,7 @@
     <link rel="stylesheet" type="text/css" href="scripts/tooltipster/css/tooltipster.bundle.css" />
 
     <script type="text/javascript" src="scripts/jquery.1.12.4.js"></script>
+    <script type="text/javascript" src="scripts/jquery.ddslick.min.js"></script>
     <script type="text/javascript" src="scripts/tooltipster/js/tooltipster.bundle.js"></script>
     <script type="text/javascript" src="scripts/interactjs/interact.js"></script>
 
@@ -25,7 +26,7 @@
 <body>
     <div class="editorBackground"></div>
     <!-- Open / Create a map -->
-    <div class="openOrCreateMap hide">
+    <div class="openOrCreateMap hide menu">
         <div class="newMap">
             <div align="center" class="file gimmeSpace" onclick="createNew()" >
                 <label>
@@ -47,26 +48,89 @@
         </div>
     </div>
 
-    <!-- Edit map decoration -->
-    <div class="editMapDecoration">
-        <div class="editField gimmeFullSpace">
+    <!-- Edit element -->
+    <div class="editMapDecoration menu">
+        <div class="field gimmeFullSpace">
             <input id="decorationToChange" style="display:none"/>
         </div>
-
-        <!-- name="pont-epine" -->
-        <div class="editField gimmeFullSpace" >
+        <div class="field gimmeFullSpace" >
             <label for="nameMapDecoration" title="Name">Name</label>
             <input id="nameMapDecoration" />
         </div>
-
-        <!-- alt="Pont" -->
-        <div class="editField gimmeFullSpace">
+        <div class="field gimmeFullSpace">
             <label for="titleMapDecoration" title="Title">Title</label>
             <input id="titleMapDecoration" />
         </div>
-        
-        <div>
+        <div class="gimmeFullSpace fr">
             <input type="button" value="Save changes" onclick="changeDecoration()" />
+        </div>
+    </div>
+
+    <!-- Add element -->
+    
+    <div class="addElement menu hide">
+        <!-- src="pics/village.png" -->
+        <!-- Add a dropdown list with pics -->
+        <!-- maybe do something automatic (could be done with the font)-->
+        <select id="decorationDdl" class="decorationDdl">
+            <option value="0" data-imagesrc="pics/argile.png" data-description="Argile">Argile</option>
+            <option value="1" data-imagesrc="pics/bac.png" data-description="Ferry">Ferry</option>
+            <option value="2" data-imagesrc="pics/ble.png" data-description="Blé">Blé</option>
+            <option value="3" data-imagesrc="pics/cabane.png" data-description="Cabane">Cabane</option>
+            <option value="4" data-imagesrc="pics/camp.png" data-description="Camp">Camp</option>
+            <option value="5" data-imagesrc="pics/colline.png" data-description="Hill">Hill</option>
+            <option value="6" data-imagesrc="pics/cottage.png" data-description="Cottage">Cottage</option>
+            <option value="7" data-imagesrc="pics/dolmen.png" data-description="Dolmen">Dolmen</option>
+            <option value="8" data-imagesrc="pics/dragon.png" data-description="Dragon">Dragon</option>
+            <option value="9" data-imagesrc="pics/elk.png" data-description="Elk">Elk</option>
+            <option value="10" data-imagesrc="pics/grotte.png" data-description="Cave">Cave</option>
+            <option value="11" data-imagesrc="pics/house.png" data-description="House">House</option>
+            <option value="12" data-imagesrc="pics/mine.png" data-description="Mine">Mine</option>
+            <option value="13" data-imagesrc="pics/path.png" data-description="Path">Path</option>
+            <option value="14" data-imagesrc="pics/pont.png" data-description="Bridge">Bridge</option>
+            <option value="15" data-imagesrc="pics/raspberry.png" data-description="Raspberry">Raspberry</option>
+            <option value="16" data-imagesrc="pics/rock.png" data-description="Rock">Rock</option>
+            <option value="17" data-imagesrc="pics/ruche.png" data-description="Ruche">Ruche</option>
+            <option value="18" data-imagesrc="pics/ruine.png" data-description="Ruin">Ruin</option>
+            <option value="19" data-imagesrc="pics/ruinecyclop.png" data-description="Ruin cyclop">Ruin</option>
+            <option value="20" data-imagesrc="pics/sign.png" data-description="Sign">Sign</option>
+            <option value="21" data-imagesrc="pics/source.png" data-description="Source">Source</option>
+            <option value="22" data-imagesrc="pics/spider.png" data-description="Spider-web">Spider-web</option>
+            <option value="23" data-imagesrc="pics/stag.png" data-description="Stag">Stag</option>
+            <option value="24" data-imagesrc="pics/swamp.png" data-description="Swamp">Swamp</option>
+            <option value="25" data-imagesrc="pics/tombe.png" data-description="Tumb">Tumb</option>
+            <option value="26" data-imagesrc="pics/tree.png" data-description="Tree">Tree</option>
+            <option value="27" data-imagesrc="pics/village.png" data-description="village">village</option>
+        </select>
+    
+        <!-- name="leningrad" -->
+        <!-- Add a hint for no space -->
+        <div class="field gimmeFullSpace" >
+            <label for="addNameMapDecoration" title="Name">Name</label>
+            <input id="addNameMapDecoration" />
+        </div>
+        
+        <!-- class="building -->
+        <!-- Add a dropdown list with Building, Resources and Misc -->
+
+        <!-- village -->
+        <!-- Depend of the pics ? -->
+
+        <div class="field gimmeFullSpace">
+            <input id="addClassMapDecoration" class="hide" value="tooltip tap-target draggable inFront" />
+        </div>
+
+        <!--  style="top: 300px; left: 3600px;" -->
+        <!-- Create on player token -->  
+
+        <!--  alt title -->
+        <div class="field gimmeFullSpace">
+            <label for="addTitleMapDecoration" title="Title">Title</label>
+            <input id="addTitleMapDecoration" />
+        </div>
+        
+        <div class="gimmeFullSpace fr">
+            <input type="button" value="Create element" onclick="createDecoration()" />
         </div>
     </div>
 
@@ -115,31 +179,27 @@
 </body>
 <script>
     $(document).ready(function () {
+        idElement = 1;
+
         // Checkbox
         createCheckbox("building");
         createCheckbox("resources");
         createCheckbox("misc");
         
         // interactjs
-        drapAndDrop();
+        dragAndDrop();
         tapTarget();
-
-        // Edit map decoration
-        $(".editorBackground").click(function(){
-            closeEditDecoration();
-        })
 
         // Display OpenCreate map
         $(".openOrCreateMap").removeClass("hide");
         $(".openOrCreateMap").addClass("inline-flex");
         $(".editorBackground").show();
+        $(".wrapper").hide();
 
-        // Right click
-        // document.getElementsByClassName('wrapper').addEventListener('contextmenu', function(ev) {
-        //     ev.preventDefault();
-        //     alert('success!');
-        //     return false;
-        // }, false);
+        // Dropdown list create element
+        $('#decorationDdl').ddslick({
+            height: 300
+        });
     });
 
     function htmlToObject(element) {

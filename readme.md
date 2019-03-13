@@ -1,9 +1,16 @@
-working on it : 
--. Create element 
+Bug :
+- On edit : When no change, the element is remove nut nothing is recreate => check modifications before destroy
+- On edit : Sometimes the class "draggable" and "inFront" stays
+- On edit : Element move faster than the mouse cursor
+- On move player it always switch to 0 0 before moving
+
+In devlopment : 
+- Create element 
 
 Todo : 
 1. Make fog manageable (remove, add and transparency)
 2. Ability to change icons while editing the element
+- Remove element
 - Center the menu to open / create map
 - After load (or create) center on player token
 - Create factions (borders and color)

@@ -6,7 +6,7 @@ function tooltipOne(id) {
     $('#' + id).tooltipster();
 };
 
-function drapAndDrop(){
+function dragAndDrop(){
     interact('.draggable')
         .draggable({
             autoScroll: true,
@@ -34,13 +34,13 @@ function dragMoveListener(event) {
 function tapTarget(){
     interact('.tap-target')
         .on('tap', function (event) {
-            $(".editMapDecoration").addClass('centerMapDecoration'); 
+            // $(".editMapDecoration").addClass('centerMapDecoration'); 
 
             var element = document.getElementsByName(event.currentTarget.name)[0];
             var obj = htmlToObject(element);
             
             $("#" + event.currentTarget.id).addClass("draggable inFront");
-            drapAndDrop();
+            dragAndDrop();
 
             $(".editMapDecoration").css("top", parseInt(obj.top) + element.clientHeight + "px");
             $(".editMapDecoration").css("left", parseInt(obj.left) + element.clientWidth + "px");

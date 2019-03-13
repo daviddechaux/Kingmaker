@@ -86,11 +86,11 @@ function createMapDecoration(data) {
 
     addPlayerToMap(data.player);
 
-    var imgId = 1;
-    imgId = addElementToMap(data.fog, "fogOfWar", true, imgId);
-    imgId = addElementToMap(data.building, "buildingSection", false, imgId);
-    imgId = addElementToMap(data.resources, "resourcesSection", false, imgId);
-    addElementToMap(data.misc, "miscSection", false, imgId);
+    // var idElement = 1
+    idElement = addElementToMap(data.fog, "fogOfWar", true, idElement);
+    idElement = addElementToMap(data.building, "buildingSection", false, idElement);
+    idElement = addElementToMap(data.resources, "resourcesSection", false, idElement);
+    idElement = addElementToMap(data.misc, "miscSection", false, idElement);
 
     tooltip();
     menuDisplayer();
@@ -99,8 +99,11 @@ function createMapDecoration(data) {
 function menuDisplayer(){
     $(".openOrCreateMap").hide();
     $(".editorBackground").hide();
-    $(".displayer").show();
-    $(".saveMap").show();
+    $(".wrapper").show();
+
+    $(".editorBackground").click(function(){
+        closeEditDecoration();
+    })
 };
 
 function addPlayerToMap(player){

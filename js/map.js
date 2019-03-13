@@ -16,8 +16,3 @@ function createCheckbox(name) {
     });
 };
 
-
-function addMapDecoration(){
-    // Do a toggle show hide
-    $(".mapDecorationToolBox").show();
-};

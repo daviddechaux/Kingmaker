@@ -1,25 +1,8 @@
-/* .openMap{
-    max-width: 100px;
-}
-
-.newMap{
-    max-width: 100px;
-} */
-
 .inline-flex{
     display:inline-flex;
 }
 
-.hide{
-    display:none;
-}
-
-
 .openOrCreateMap{
-    background-color : white;
-    /* display:none; */
-    position: absolute;
-    z-index: 1000;
     max-width: 200px;
     max-height: 100px;
     padding: 10px;
@@ -28,5 +11,19 @@
     right: 0;
     bottom: 0;
     left: 0;
+}
+
+.fr{
+    float:right;
+}
+
+.menu{
+    z-index: 1000;
+    position: absolute;
     border: 1px solid #C0B391;
+    background-color : white;
+}
+
+.dd-selected-image, .dd-option-image{
+    height: 30px;
 }
