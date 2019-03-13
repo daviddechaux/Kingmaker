@@ -1,4 +1,4 @@
-function clodeEditDecoration(){
+function closeEditDecoration(){
     $(".editMapDecoration").hide();
     $(".editorBackground").hide();
 };
@@ -12,8 +12,6 @@ function changeDecoration(){
     var className = itemToChange[0].className.replace("tooltipstered", "");
     var id = itemToChange[0].id;
     var imgName = imgPathToImgName(itemToChange[0].src);
-
-console.log(itemToChange);
 
     var transform = itemToChange[0].style.transform.replace("translate(", "").replace("px", "").replace(" ", "").replace(")", "").split(",");
     var left = parseInt(itemToChange[0].style.left.replace("px", "")) + parseInt(transform[0]);
@@ -34,6 +32,10 @@ console.log(itemToChange);
 
     itemToChange.remove();
 
-    clodeEditDecoration();
+    closeEditDecoration();
     tooltipOne(id);
+};
+
+function addMapDecoration(){
+
 };

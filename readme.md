@@ -1,8 +1,10 @@
+working on it : 
+-. Create element 
+
 Todo : 
-1. Create element 
 1. Make fog manageable (remove, add and transparency)
-2. Change icons while edit the element
-3. Send mail to map's creator
+2. Ability to change icons while editing the element
+- Center the menu to open / create map
 - After load (or create) center on player token
 - Create factions (borders and color)
 - Create a font to put icons in it (SVG, free icons / self made)
@@ -11,11 +13,13 @@ Todo :
 - Add a calendar (or something that display date)
 - Add link to the github
 - Add link to the deviant-art map creator's page
-- Load default map from web
+
 
 Maybe : 
-- Put js pluggins in local (usefull in plane)
 - Manage dynamically elements categories.
+- Load default map from web
+- Possibility to choose map (use the kingmaker video-game map ?)
+
 
 Done :
 - Load file
@@ -24,3 +28,4 @@ Done :
 - Edit elements (partial)
 - Hide menu on load file (Create and Load)
 - Make elements movable on edit 
+- Put js pluggins in local (usefull in plane)

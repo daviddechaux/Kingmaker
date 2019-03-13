@@ -4,6 +4,7 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 
     <link rel="stylesheet" type="text/css" href="css/map.css">
+    <link rel="stylesheet" type="text/css" href="css/menu.css">
     <link rel="stylesheet" type="text/css" href="css/building.css">
     <link rel="stylesheet" type="text/css" href="css/battle.css">
     <link rel="stylesheet" type="text/css" href="css/resources.css">
@@ -11,9 +12,9 @@
     <link rel="stylesheet" type="text/css" href="css/fog.css">
     <link rel="stylesheet" type="text/css" href="scripts/tooltipster/css/tooltipster.bundle.css" />
 
-    <script type="text/javascript" src="https://code.jquery.com/jquery-1.10.0.min.js"></script>
+    <script type="text/javascript" src="scripts/jquery.1.12.4.js"></script>
     <script type="text/javascript" src="scripts/tooltipster/js/tooltipster.bundle.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/interactjs@1.3/dist/interact.min.js"></script>
+    <script type="text/javascript" src="scripts/interactjs/interact.js"></script>
 
     <script type="text/javascript" src="js/plugin.js"></script>
     <script type="text/javascript" src="js/file.js"></script>
@@ -23,6 +24,30 @@
 
 <body>
     <div class="editorBackground"></div>
+    <!-- Open / Create a map -->
+    <div class="openOrCreateMap hide">
+        <div class="newMap">
+            <div align="center" class="file gimmeSpace" onclick="createNew()" >
+                <label>
+                    <img src="images/new.png" title="Create a new map"/>
+                </label>
+            
+                <input id="createNew" type="file" value="data/empty.map"/>
+            </div>
+        </div>
+
+        <div class="openMap">
+            <div align="center" class="file gimmeSpace" >
+                <label for="openData">
+                    <img src="images/load.png" title="Load existing map"/>
+                </label>
+            
+                <input id="openData" onclick="loadFile()" type="file"/>
+            </div>
+        </div>
+    </div>
+
+    <!-- Edit map decoration -->
     <div class="editMapDecoration">
         <div class="editField gimmeFullSpace">
             <input id="decorationToChange" style="display:none"/>
@@ -43,30 +68,10 @@
         <div>
             <input type="button" value="Save changes" onclick="changeDecoration()" />
         </div>
-
     </div>
+
+
     <div class="wrapper" > 
-        <div class="newMap">
-            <div align="center" class="file gimmeSpace" onclick="openNew()" >
-                <label >
-                    <img src="images/new.png" title="Create a new map"/>
-                </label>
-            
-                <input id="openNew" type="file" value="data/empty.map"/>
-            </div>
-            <hr>
-        </div>
-
-        <div class="openMap">
-            <div align="center" class="file gimmeSpace" >
-                <label for="openData">
-                    <img src="images/load.png" title="Load existing map"/>
-                </label>
-            
-                <input id="openData" onclick="loadFile()" type="file"/>
-            </div>
-        </div>
-
         <div class="saveMap">
             <div align="center" class="file gimmeSpace">
                 <label for="saveData">
@@ -75,8 +80,13 @@
             
                 <input id="saveData" onclick="saveFile()" />
             </div>
-            <hr>
         </div>
+
+        <hr>
+
+        <button onclick="addMapDecoration()">Add element</button>
+
+        <hr>
 
         <div class="displayer">
             <div class="checkboxDisplay">
@@ -91,7 +101,6 @@
                 <input type="checkbox" id="misc" class="checkbox" name="display-misc">
                 <label for="misc" class="label">Misc</label>
             </div>
-            <!-- <button onclick="createMapDecoration()">Add map decoration</button> -->
         </div>
     </div>
 
@@ -117,8 +126,13 @@
 
         // Edit map decoration
         $(".editorBackground").click(function(){
-            clodeEditDecoration();
+            closeEditDecoration();
         })
+
+        // Display OpenCreate map
+        $(".openOrCreateMap").removeClass("hide");
+        $(".openOrCreateMap").addClass("inline-flex");
+        $(".editorBackground").show();
 
         // Right click
         // document.getElementsByClassName('wrapper').addEventListener('contextmenu', function(ev) {
