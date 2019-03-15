@@ -1,16 +1,13 @@
-.inline-flex{
-    display:inline-flex;
-}
-
 .openOrCreateMap{
-    max-width: 200px;
-    max-height: 100px;
+    display:inline-flex;
+    width: 200px;
+    height: 100px;
     padding: 10px;
     margin: auto;
-    top: 0;
+    /* top: 0;
     right: 0;
     bottom: 0;
-    left: 0;
+    left: 0; */
 }
 
 .fr{
@@ -25,5 +22,6 @@
 }
 
 .dd-selected-image, .dd-option-image{
-    height: 30px;
+    max-height: 30px !important;
+    max-width: 30px !important;
 }

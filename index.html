@@ -20,6 +20,7 @@
     <script type="text/javascript" src="js/plugin.js"></script>
     <script type="text/javascript" src="js/file.js"></script>
     <script type="text/javascript" src="js/map.js"></script>
+    <script type="text/javascript" src="js/menu.js"></script>
     <script type="text/javascript" src="js/decoration.js"></script>
 </head>
 
@@ -191,8 +192,8 @@
         tapTarget();
 
         // Display OpenCreate map
-        $(".openOrCreateMap").removeClass("hide");
-        $(".openOrCreateMap").addClass("inline-flex");
+        displayMapOpenner();
+
         $(".editorBackground").show();
         $(".wrapper").hide();
 
