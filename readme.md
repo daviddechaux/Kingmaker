@@ -1,4 +1,4 @@
-Known bug :
+Known bugs :
 - On edit : When no change, the element is remove nut nothing is recreate => check modifications before destroy
 - On edit : Sometimes the class "draggable" and "inFront" stays => class are not remove properly
 - On edit : Element move faster than the mouse cursor
