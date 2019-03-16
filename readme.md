@@ -4,6 +4,8 @@ Known bugs :
 - On edit : Element move faster than the mouse cursor
 - On move player it always switch to 0 before moving
 - Newly created item doesn't display if it's type is not display by default
+- FF : Centering of the create / load popup doesn't work
+- Chrome, FF : Centering doesn't work when scorll bar is on full right
 
 Todo : 
 - Change icons while editing the element
