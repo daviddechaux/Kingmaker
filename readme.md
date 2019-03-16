@@ -1,4 +1,4 @@
-Known bug :
+Known bugs :
 - On edit : When no change, the element is remove nut nothing is recreate => check modifications before destroy
 - On edit : Sometimes the class "draggable" and "inFront" stays => class are not remove properly
 - On edit : Element move faster than the mouse cursor
@@ -37,5 +37,8 @@ Done :
 - Make elements movable on edit 
 - Put js pluggins in local (usefull in plane)
 - Make fog manageable (remove)
+<<<<<<< HEAD
 - Add link to the github
 - Add link to the deviant-art map creator's page
+=======
+>>>>>>> 7ee3bad252d8d5fbf24a67c29c50bab6a56d0eee
