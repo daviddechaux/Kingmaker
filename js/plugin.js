@@ -34,8 +34,6 @@ function dragMoveListener(event) {
 function tapTarget(){
     interact('.tap-target')
         .on('tap', function (event) {
-            // $(".editMapDecoration").addClass('centerMapDecoration'); 
-
             var element = document.getElementsByName(event.currentTarget.name)[0];
             var obj = htmlToObject(element);
             
@@ -52,6 +50,11 @@ function tapTarget(){
 
             $("#decorationToChange").val(event.currentTarget.id);
 
+            event.preventDefault();
+        })
+    interact('.fog')
+        .on('tap', function (event) {
+            $("#" + event.currentTarget.id).addClass("visited");
             event.preventDefault();
         })
 };

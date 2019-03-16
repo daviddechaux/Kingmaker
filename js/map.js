@@ -5,7 +5,7 @@ function cleanMap(){
     $(".miscSection").remove();
 };
 
-function createCheckbox(name) {
+function displayElement(name) {
     $('input[type="checkbox"][name="display-' + name + '"]').change(function () {
         if (this.checked) {
             $("." + name).show();

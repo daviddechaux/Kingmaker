@@ -3,13 +3,14 @@ Bug :
 - On edit : Sometimes the class "draggable" and "inFront" stays => class are not remove properly
 - On edit : Element move faster than the mouse cursor
 - On move player it always switch to 0 before moving
+- Newly created item doesn't display if it's type is not display by default
 
 In devlopment : 
-- Create element 
+
 
 Todo : 
-1. Make fog manageable (remove, add and transparency)
-2. Ability to change icons while editing the element
+- Change icons while editing the element
+- Make fog more manageable (add and transparency)
 - Add a hint for no space (and disallow them) in name on edit and create
 - Remove element
 - Center the menu to open / create map
@@ -22,6 +23,7 @@ Todo :
 - Add link to the github
 - Add link to the deviant-art map creator's page
 - Save before quit
+- Auto-enable checkbox on add item of this type
 
 
 Maybe : 
