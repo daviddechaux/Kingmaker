@@ -86,11 +86,10 @@ function createMapDecoration(data) {
 
     addPlayerToMap(data.player);
 
-    // var idElement = 1
-    idElement = addElementToMap(data.fog, "fogOfWar", true, idElement);
-    idElement = addElementToMap(data.building, "buildingSection", false, idElement);
-    idElement = addElementToMap(data.resources, "resourcesSection", false, idElement);
-    idElement = addElementToMap(data.misc, "miscSection", false, idElement);
+    addElementToMap(data.fog, "fogOfWar", true);
+    addElementToMap(data.building, "buildingSection", false);
+    addElementToMap(data.resources, "resourcesSection", false);
+    addElementToMap(data.misc, "miscSection", false);
 
     tooltip();
     menuDisplayer();
@@ -102,7 +101,7 @@ function menuDisplayer(){
     $(".wrapper").show();
 
     $(".editorBackground").click(function(){
-        closeEditDecoration();
+        closeMenuDecoration();
     })
 };
 
@@ -116,7 +115,7 @@ function addPlayerToMap(player){
 };
 
 
-function addElementToMap(item, sectionName, isFogOfWar, imgId) {
+function addElementToMap(item, sectionName, isFogOfWar) {
     if (item) {
         $(".mapDecoration").append("<div class='" + sectionName + "'> </div>");
         var div = $("." + sectionName);
@@ -130,13 +129,11 @@ function addElementToMap(item, sectionName, isFogOfWar, imgId) {
             var title = obj.title ? obj.title.replace("'", "&#39;") : "";
             var elementType = isFogOfWar ? "fog" : "tooltip tap-target";
 
-            var img = createImgTag(imgId, obj.img, name, cssClass, visited, elementType, obj.top, obj.left, title);
+            var img = createImgTag(idElement, obj.img, name, cssClass, visited, elementType, obj.top, obj.left, title);
             div.append(img);
 
-            imgId++;
+            idElement++;
         }
     }
-
-    return imgId;
 };
 
