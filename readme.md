@@ -1,12 +1,9 @@
-Bug :
+Known bug :
 - On edit : When no change, the element is remove nut nothing is recreate => check modifications before destroy
 - On edit : Sometimes the class "draggable" and "inFront" stays => class are not remove properly
 - On edit : Element move faster than the mouse cursor
 - On move player it always switch to 0 before moving
 - Newly created item doesn't display if it's type is not display by default
-
-In devlopment : 
-
 
 Todo : 
 - Change icons while editing the element
@@ -41,3 +38,4 @@ Done :
 - Hide menu on load file (Create and Load)
 - Make elements movable on edit 
 - Put js pluggins in local (usefull in plane)
+- Make fog manageable (remove)
