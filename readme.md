@@ -17,8 +17,6 @@ Todo :
 - Use a proper framework to do the stuff done by jQuery (vueJs, React, whateverJs)
 - Find an awesome tokens for the party
 - Add a calendar (or something that display date)
-- Add link to the github
-- Add link to the deviant-art map creator's page
 - Save before quit
 - Auto-enable checkbox on add item of this type
 
@@ -39,3 +37,5 @@ Done :
 - Make elements movable on edit 
 - Put js pluggins in local (usefull in plane)
 - Make fog manageable (remove)
+- Add link to the github
+- Add link to the deviant-art map creator's page

@@ -1,9 +1,28 @@
 function displayMapOpenner(){
     var menu = $(".openOrCreateMap");
-    menu.removeClass("hide");
+    menu.show();
 
-    var offsetHeight = $(".openOrCreateMap").height() / 2;
-    var offsetWidth = $(".openOrCreateMap").width() / 2;
+    centerThis(menu);
+};
+
+function question(){
+    $(".askQuestion").click(function(){
+        displayQuestion();
+    });    
+};
+
+function displayQuestion(){
+    $(".editorBackground").show();
+
+    var menu = $(".question");
+    menu.show();
+
+    centerThis(menu);
+};
+
+function centerThis(obj){
+    var offsetHeight = obj.height() / 2;
+    var offsetWidth = obj.width() / 2;
 
     var width = window.innerWidth / 2;
     var height = window.innerHeight / 2;
@@ -11,8 +30,15 @@ function displayMapOpenner(){
     var offsetX = window.scrollX;
     var offsetY = window.scrollY;
 
-    menu.css('left', width + offsetX - offsetWidth + 'px');
-    menu.css('top', height + offsetY - offsetHeight + 'px');
+    obj.css('left', width + offsetX - offsetWidth + 'px');
+    obj.css('top', height + offsetY - offsetHeight + 'px');
+}
+
+function closeMenuDecoration(){
+    $(".editMapDecoration").hide();
+    $(".addElement").hide();
+    $(".editorBackground").hide();
+    $(".question").hide();
 };
 
 

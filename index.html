@@ -114,6 +114,24 @@
                 <input id="saveData" onclick="saveFile()" />
             </div>
         </div>
+
+        <hr>
+
+        <div class="container">
+            <img src="images/question.png" class="askQuestion gimmeSpace" alt="about ?"/>
+        </div>
+    </div>
+
+    <div class="question menu hide">
+        <p class="gimmeFullSpace">
+            Map has been done by <a href="https://www.deviantart.com/jonpintar" target="_blank">Jon Pintar</a>.
+        </p>
+        <p class="gimmeFullSpace">
+            Check the code on my <a href="https://github.com/daviddechaux/Kingmaker" target="_blank">Github</a>.
+        </p>
+        <p class="gimmeFullSpace">
+            Last update : 16/03/2019 22h34
+        </p>
     </div>
 
 
@@ -162,6 +180,8 @@
 
         // Display OpenCreate map
         displayMapOpenner();
+
+        question();
 
         $(".editorBackground").show();
         $(".wrapper").hide();

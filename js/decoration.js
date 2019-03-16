@@ -1,9 +1,3 @@
-function closeMenuDecoration(){
-    $(".editMapDecoration").hide();
-    $(".addElement").hide();
-    $(".editorBackground").hide();
-};
-
 function createDecoration(){
     // <img id="252" src="pics/village.png" name="moskva" class="building village  tooltip tap-target tooltipstered" style="top:500px; left:4670px" alt="Moskva">
 

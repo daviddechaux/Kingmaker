@@ -1,3 +1,15 @@
+.container{
+    margin: 0;
+}
+
+.askQuestion{
+    height: 50px;
+    width: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    display:block;
+}
+
 .openOrCreateMap{
     display:inline-flex;
     width: 200px;
