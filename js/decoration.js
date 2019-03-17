@@ -17,6 +17,9 @@ function createDecoration(){
         $("#addTitleMapDecoration").val());
 
     $("." + elementType + "Section").append(img);
+    if ($("#" + elementType)[0].checked){
+        $("#" + idElement).show();
+    }
 
     closeMenuDecoration();
     tooltipOne(idElement);
