@@ -37,6 +37,8 @@ function tapTarget(){
             var element = document.getElementsByName(event.currentTarget.name)[0];
             var obj = htmlToObject(element);
             
+            idSelectedElement = event.currentTarget.id;
+
             $("#" + event.currentTarget.id).addClass("draggable inFront");
             dragAndDrop();
 

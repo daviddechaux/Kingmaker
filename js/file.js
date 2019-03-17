@@ -39,10 +39,9 @@ function convertMapToObject() {
             case "misc": misc.push(newElement);
                 break;
         }
-        var player = createPlayerObject();
-
-        var map = { player, building, resources, misc, fog };
     }
+    var player = createPlayerObject();
+    var map = { player, building, resources, misc, fog };
 
     return JSON.stringify(map);
 };
@@ -54,8 +53,8 @@ function getElementType(className) {
 };
 
 function createPlayerObject(){
-    var x = $(".player").data("x") ;
-    var y = $(".player").data("y") ;
+    var x = parseInt($(".player")[0].getAttribute("data-x"));
+    var y = parseInt($(".player")[0].getAttribute("data-y"));
 
     return {x, y};
 };
@@ -93,6 +92,8 @@ function createMapDecoration(data) {
 
     tooltip();
     menuDisplayer();
+
+    isMapLoaded = true;
 };
 
 function menuDisplayer(){
@@ -102,6 +103,7 @@ function menuDisplayer(){
 
     $(".editorBackground").click(function(){
         closeMenuDecoration();
+        unselectElement();
     })
 };
 

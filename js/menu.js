@@ -1,8 +1,10 @@
 function displayMapOpenner(){
-    var menu = $(".openOrCreateMap");
-    menu.show();
-
-    centerThis(menu);
+	if (!isMapLoaded){
+		var menu = $(".openOrCreateMap");
+		menu.show();
+	
+		centerThis(menu);
+	}
 };
 
 function question(){

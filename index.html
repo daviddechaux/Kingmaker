@@ -168,6 +168,8 @@
 <script>
     $(document).ready(function () {
         idElement = 1;
+        idSelectedElement = 0;
+        isMapLoaded = false;
 
         // Checkbox
         displayElement("building");
@@ -180,22 +182,18 @@
 
         // Display OpenCreate map
         displayMapOpenner();
-        // 
         $(window).resize(function () { 
             displayMapOpenner();
         });
-
         $(window).scroll(function() {
             displayMapOpenner();
         });
         
-
+        // About
         question();
 
         $(".editorBackground").show();
         $(".wrapper").hide();
-
-
     });
 
     function htmlToObject(element) {
@@ -218,7 +216,7 @@
     };
 
     function createImgTag(imgId, picName, elementName, cssClass, visited, elementType, top, left, title) {
-        var fullClass = (cssClass + " " + visited + " " + elementType).trim();
+        var fullClass = (cssClass + " " + visited + " " + elementType).trim().replace("  ", " ");
         return "<img id='" + imgId + "' src='pics/" + picName + ".png' name='" + elementName + "' class='" + fullClass + "' style='top:" + top + "px; left:" + left + "px' title='" + title + "' alt='" + title + "' />";
     };
 </script>

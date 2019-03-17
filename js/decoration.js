@@ -1,10 +1,10 @@
 function createDecoration(){
     // <img id="252" src="pics/village.png" name="moskva" class="building village  tooltip tap-target tooltipstered" style="top:500px; left:4670px" alt="Moskva">
 
-    var className = $("#decorationDdl").find(".dd-selected-text").text() + " tooltip";
+    var className = $("#decorationDdl").find(".dd-selected-text").text() + " tooltip tap-target";
     var imgName = imgPathToImgName($("#decorationDdl").find(".dd-selected").find("img")[0].currentSrc);
     var pos = getElementPos(".player");
-    var elementType = $("#decorationDdlType").find(".dd-selected-text").text();
+    var elementType = $("#decorationDdlType").find(".dd-selected-text").text().toLowerCase();
 
     var img = createImgTag(idElement,
         imgName,
@@ -88,4 +88,11 @@ function imgPathToImgName(imgPath){
 
     var imageName = imgPath.split("pics/");
     return imageName[1].replace(".png", "")
+};
+
+function unselectElement(){
+    $("#" + idSelectedElement).removeClass("draggable");
+    $("#" + idSelectedElement).removeClass("inFront");
+
+    idSelectedElement = 0;
 };
