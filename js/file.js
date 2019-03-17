@@ -125,6 +125,10 @@ function addElementToMap(item, sectionName, isFogOfWar) {
             var name = obj.name ? obj.name : "";
             var cssClass = obj.class ? obj.class : "";
             var title = obj.title ? obj.title.replace("'", "&#39;") : "";
+            if (sectionName === "fogOfWar"){
+                title = "Click to remove";
+            }
+
             var elementType = isFogOfWar ? "fog" : "tooltip tap-target";
 
             var img = createImgTag(idElement, obj.img, name, cssClass, visited, elementType, obj.top, obj.left, title);
