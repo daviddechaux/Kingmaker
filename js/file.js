@@ -85,10 +85,10 @@ function createMapDecoration(data) {
 
     addPlayerToMap(data.player);
 
-    addElementToMap(data.fog, "fogOfWar", true);
-    addElementToMap(data.building, "buildingSection", false);
-    addElementToMap(data.resources, "resourcesSection", false);
-    addElementToMap(data.misc, "miscSection", false);
+    addElementToMap(data.fog, "fogOfWar");
+    addElementToMap(data.building, "buildingSection");
+    addElementToMap(data.resources, "resourcesSection");
+    addElementToMap(data.misc, "miscSection");
 
     tooltip();
     menuDisplayer();
@@ -125,11 +125,15 @@ function addElementToMap(item, sectionName, isFogOfWar) {
             var name = obj.name ? obj.name : "";
             var cssClass = obj.class ? obj.class : "";
             var title = obj.title ? obj.title.replace("'", "&#39;") : "";
-            if (sectionName === "fogOfWar"){
-                title = "Click to remove";
-            }
 
-            var elementType = isFogOfWar ? "fog" : "tooltip tap-target";
+            var elementType = "";
+            if(sectionName === "fogOfWar"){
+                title = visited ? "Click to add" : "Click to remove";
+                elementType = "fog";
+            }
+            else{
+                elementType = "tooltip tap-target";
+            }
 
             var img = createImgTag(idElement, obj.img, name, cssClass, visited, elementType, obj.top, obj.left, title);
             div.append(img);

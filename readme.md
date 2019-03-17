@@ -2,7 +2,6 @@
 
 ## Todo : 
 - Change icons while editing the element
-- Make fog more manageable (add and transparency)
 - Add a hint for no space (and disallow them) in name on edit and create
 - Center the menu to open / create map
 - After load (or create) center on player token
@@ -11,9 +10,12 @@
 - Find an awesome tokens for the party
 - Add a calendar (or something that display date)
 - Save before quit
+- Add icons for 
+.- Add element button
+.- Save changes button
 
 ## In progress :
-
+- Make fog more manageable (add and transparency)
 
 ## Maybe : 
 - Load default map from web (currently data are store in js)
@@ -25,7 +27,7 @@
 - Confirm delete element
 
 ## Bugs : 
-No known bug for now.
+- Fog wording
 
 ## Done :
 - Load default map

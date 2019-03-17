@@ -32,32 +32,47 @@ function dragMoveListener(event) {
 function tapTarget(){
     interact('.tap-target')
         .on('tap', function (event) {
-            var element = document.getElementsByName(event.currentTarget.name)[0];
-            var obj = htmlToObject(element);
-            
-            idSelectedElement = event.currentTarget.id;
-
-            $("#" + event.currentTarget.id).addClass("draggable inFront");
-
-            $(".editMapDecoration").css("top", parseInt(obj.top) + element.clientHeight + "px");
-            $(".editMapDecoration").css("left", parseInt(obj.left) + element.clientWidth + "px");
-            
-            $(".editMapDecoration").show();
-            $(".editorBackground").show();
-
-            $("#nameMapDecoration").val(event.currentTarget.name);
-            $("#titleMapDecoration").val(event.currentTarget.alt);
-            $("#decorationToChange").val(event.currentTarget.id);
-
+            interactWithElement(event);
             event.preventDefault();
         })
     interact('.fog')
         .on('tap', function (event) {
-            $("#" + event.currentTarget.id).addClass("visited");
+            interactWithFog(event)
             event.preventDefault();
         })
 };
 
+function interactWithFog(event){
+    var element = $("#" + event.currentTarget.id);
+
+    if (element.hasClass("visited")){
+        element.removeClass("visited");
+        element.attr( "title", "Click to remove");
+    }
+    else{
+        element.addClass("visited");
+        element.attr( "title", "Click to add");
+    }
+};
+
+function interactWithElement(event){
+    var element = document.getElementsByName(event.currentTarget.name)[0];
+    var obj = htmlToObject(element);
+    
+    idSelectedElement = event.currentTarget.id;
+
+    $("#" + event.currentTarget.id).addClass("draggable inFront");
+
+    $(".editMapDecoration").css("top", parseInt(obj.top) + element.clientHeight + "px");
+    $(".editMapDecoration").css("left", parseInt(obj.left) + element.clientWidth + "px");
+    
+    $(".editMapDecoration").show();
+    $(".editorBackground").show();
+
+    $("#nameMapDecoration").val(event.currentTarget.name);
+    $("#titleMapDecoration").val(event.currentTarget.alt);
+    $("#decorationToChange").val(event.currentTarget.id);
+};
 
 function displayNiceDropdownList(){
     $("#decorationDdlType").ddslick('destroy');
@@ -72,4 +87,4 @@ function displayNiceDropdownList(){
         data: ddElement,
         selectText: "Select an icon"
     });
-}
+};
