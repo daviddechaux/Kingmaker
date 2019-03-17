@@ -1,8 +1,9 @@
-Todo : 
+# Kingmaker interactive map roadmap
+
+## Todo : 
 - Change icons while editing the element
 - Make fog more manageable (add and transparency)
 - Add a hint for no space (and disallow them) in name on edit and create
-- Remove element
 - Center the menu to open / create map
 - After load (or create) center on player token
 - Create factions (borders and color)
@@ -11,16 +12,22 @@ Todo :
 - Add a calendar (or something that display date)
 - Save before quit
 
+## In progress :
 
-Maybe : 
+
+## Maybe : 
 - Load default map from web (currently data are store in js)
 - Manage dynamically elements categories.
 - Possibility to choose map (use the kingmaker video-game map ?) => no fog of war
 - Move the edit box while moving tje element
 - Auto-enable checkbox on add item of this type
 - Create a font to put icons in it (SVG, free icons / self made)
+- Confirm delete element
 
-Done :
+## Bugs : 
+No known bug for now.
+
+## Done :
 - Load default map
 - Load file
 - Save file
@@ -31,4 +38,5 @@ Done :
 - Put js pluggins in local (usefull in plane)
 - Make fog manageable (remove)
 - Add link to the github
-- Add link to the deviant-art map creator's page
+- Add link to Jon Pintar's deviant-art page
+- Remove element

@@ -26,7 +26,7 @@ function createDecoration(){
     idElement++;
 };
 
-function changeDecoration(){
+function editElement(){
     var decorationToChange = $("#decorationToChange").val();
     var itemToChange = $("#" + decorationToChange);
 
@@ -98,4 +98,9 @@ function unselectElement(){
     $("#" + idSelectedElement).removeClass("inFront");
 
     idSelectedElement = 0;
+};
+
+function deleteElement(){
+    $("#" + idSelectedElement).remove();
+    closeMenuDecoration();
 };

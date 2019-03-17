@@ -67,9 +67,15 @@
             <label for="titleMapDecoration" title="Title">Title</label>
             <input id="titleMapDecoration" />
         </div>
-        <div class="gimmeFullSpace fr">
-            <input type="button" value="Save changes" onclick="changeDecoration()" />
+
+        <div class="gimmeFullSpace">
+            <img src="images/delete.png" class="delete" title="Delete element" onclick="deleteElement()"/>
+            
+            <div class="fr">
+                <input type="button" class="save" value="Save changes" onclick="editElement()" />
+            </div>
         </div>
+
     </div>
 
     <!-- Add element -->
@@ -91,7 +97,7 @@
             <label for="addTitleMapDecoration" title="Title">Title</label>
             <input id="addTitleMapDecoration" />
         </div>
-        
+
         <div class="gimmeFullSpace fr">
             <input type="button" value="Create element" onclick="createDecoration()" />
         </div>
