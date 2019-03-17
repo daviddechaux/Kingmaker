@@ -1,7 +1,6 @@
 Known bugs :
 - On edit : When no change, the element is remove nut nothing is recreate => check modifications before destroy
 - On edit : Element move faster than the mouse cursor
-- On move player it always switch to 0 before moving
 - Newly created item doesn't display if it's type is not display by default
 
 Todo : 

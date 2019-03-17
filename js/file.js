@@ -108,12 +108,8 @@ function menuDisplayer(){
 };
 
 function addPlayerToMap(player){
-    var x = player && player.x ? player.x : 0;
-    var y = player && player.y ? player.y : 0;
-    $(".player").data("x", x);
-    $(".player").data("y", y);
-    $(".player").css({"-webkit-transform":"translate(" + x + "px, " + y + "px)"});
-    $(".player").css({"-transform":"translate(" + x + "px, " + y + "px)"});
+    $(".player")[0].style.left = $(".player")[0].offsetLeft + player.x + "px";
+    $(".player")[0].style.top = $(".player")[0].offsetTop + player.y + "px";
 };
 
 
