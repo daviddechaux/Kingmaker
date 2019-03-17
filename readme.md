@@ -1,6 +1,5 @@
 Known bugs :
 - On edit : When no change, the element is remove nut nothing is recreate => check modifications before destroy
-- Newly created item doesn't display if it's type is not display by default
 
 Todo : 
 - Change icons while editing the element
