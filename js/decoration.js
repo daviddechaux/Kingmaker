@@ -61,8 +61,8 @@ function changeDecoration(){
 };
 
 function getElementPos(element){
-    var pos = { left: $(element)[0].offsetLeft + TryParseInt(document.querySelector(element).dataset.x, 0),
-                top : $(element)[0].offsetTop + TryParseInt(document.querySelector(element).dataset.y, 0)};
+    var pos = { left: $(element)[0].offsetLeft + tryParseInt($(element).data("x"), 0),
+                top : $(element)[0].offsetTop + tryParseInt($(element).data("y"), 0)};
 
     return pos;
 };

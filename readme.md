@@ -1,6 +1,3 @@
-Known bugs :
-- On edit : When no change, the element is remove nut nothing is recreate => check modifications before destroy
-
 Todo : 
 - Change icons while editing the element
 - Make fog more manageable (add and transparency)
@@ -9,19 +6,19 @@ Todo :
 - Center the menu to open / create map
 - After load (or create) center on player token
 - Create factions (borders and color)
-- Create a font to put icons in it (SVG, free icons / self made)
 - Use a proper framework to do the stuff done by jQuery (vueJs, React, whateverJs)
 - Find an awesome tokens for the party
 - Add a calendar (or something that display date)
 - Save before quit
-- Auto-enable checkbox on add item of this type
 
 
 Maybe : 
 - Load default map from web (currently data are store in js)
 - Manage dynamically elements categories.
 - Possibility to choose map (use the kingmaker video-game map ?) => no fog of war
-
+- Move the edit box while moving tje element
+- Auto-enable checkbox on add item of this type
+- Create a font to put icons in it (SVG, free icons / self made)
 
 Done :
 - Load default map

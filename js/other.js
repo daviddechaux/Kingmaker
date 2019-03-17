@@ -1,5 +1,5 @@
-function TryParseInt(str, defaultValue) {
-    if(str !== null && str != undefined && str.length > 0 && !isNaN(str)) {
+function tryParseInt(str, defaultValue) {
+    if(str !== null && str != undefined && !isNaN(str)) {
         return parseInt(str);
     }
     
