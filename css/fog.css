@@ -3,6 +3,10 @@
     opacity: 0.9;
 }
 
+.fog:hover {
+    cursor: pointer;
+}
+
 .light {
     opacity: 0.7;
 }
