@@ -180,11 +180,22 @@
 
         // Display OpenCreate map
         displayMapOpenner();
+        // 
+        $(window).resize(function () { 
+            displayMapOpenner();
+        });
+
+        $(window).scroll(function() {
+            displayMapOpenner();
+        });
+        
 
         question();
 
         $(".editorBackground").show();
         $(".wrapper").hide();
+
+
     });
 
     function htmlToObject(element) {
