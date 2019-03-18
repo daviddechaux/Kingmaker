@@ -13,9 +13,10 @@
 - Add icons for 
 .- Add element button
 .- Save changes button
+- Make fog more manageable (add and transparency)
 
 ## In progress :
-- Make fog more manageable (add and transparency)
+- Create a font to put icons in it (SVG, free icons / self made)
 
 ## Maybe : 
 - Load default map from web (currently data are store in js)
@@ -23,7 +24,7 @@
 - Possibility to choose map (use the kingmaker video-game map ?) => no fog of war
 - Move the edit box while moving tje element
 - Auto-enable checkbox on add item of this type
-- Create a font to put icons in it (SVG, free icons / self made)
+
 - Confirm delete element
 
 ## Bugs : 
