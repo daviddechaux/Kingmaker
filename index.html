@@ -4,11 +4,7 @@
 
     <link rel="stylesheet" type="text/css" href="css/map.css">
     <link rel="stylesheet" type="text/css" href="css/menu.css">
-    <link rel="stylesheet" type="text/css" href="css/building.css">
-    <link rel="stylesheet" type="text/css" href="css/battle.css">
-    <link rel="stylesheet" type="text/css" href="css/resources.css">
-    <link rel="stylesheet" type="text/css" href="css/misc.css">
-    <link rel="stylesheet" type="text/css" href="css/fog.css">
+    <link rel="stylesheet" type="text/css" href="css/element.css">
     <link rel="stylesheet" type="text/css" href="scripts/tooltipster/css/tooltipster.bundle.css" />
 
     <!-- Font -->
@@ -33,37 +29,6 @@
     <script type="text/javascript" src="js/decoration.js"></script>
 </head>
 <body>
-    <!-- 
-<i class="icon icon-cabane"></i>  
-<i class="icon icon-camp"></i>    
-<i class="icon icon-cave"></i>    
-<i class="icon icon-clay"></i>    
-<i class="icon icon-cottage"></i> 
-<i class="icon icon-deadtree"></i>
-<i class="icon icon-dolmen"></i>  
-<i class="icon icon-dragon"></i>  
-<i class="icon icon-elk"></i>     
-<i class="icon icon-ferry"></i>   
-<i class="icon icon-hill"></i>    
-<i class="icon icon-hive"></i>    
-<i class="icon icon-house"></i>   
-<i class="icon icon-mine"></i>    
-<i class="icon icon-raspberry"></i> 
-<i class="icon icon-road"></i>      
-<i class="icon icon-rock"></i>      
-<i class="icon icon-ruin"></i>      
-<i class="icon icon-ruin2"></i>     
-<i class="icon icon-sign"></i>      
-<i class="icon icon-source"></i>    
-<i class="icon icon-spiderweb"></i> 
-<i class="icon icon-stag"></i>       
-<i class="icon icon-swamp"></i>      
-<i class="icon icon-tomb"></i>       
-<i class="icon icon-village"></i>    
-<i class="icon icon-wheat"></i>      
-<i class="icon icon-bridge"></i>     
-    -->
-
     <div class="img">
         <img src="images/map.jpg" class="background" />
     </div>
@@ -209,6 +174,7 @@
         idElement = 1;
         idSelectedElement = 0;
         isMapLoaded = false;
+        elementType = ["building", "resources", "misc"];
 
         // Checkbox
         displayElement("building");
@@ -236,9 +202,10 @@
     });
 
     function htmlToObject(element) {
-        var img = imgPathToImgName(element.currentSrc);
+        var img = getIconName(element);
+        var jqElement = $(element)[0];
 
-        var name = element.name;
+        var name = jqElement.attributes["name"].value;
         var className = element.className.replace("fog", "")
                                         .replace("tooltipstered", "")
                                         .replace("tooltip", "")
@@ -247,16 +214,36 @@
                                         .replace("draggable", "")
                                         .trim();
                                         // + " " + img; // remove the plugin class
-        var top = element.style.top.replace("px", "").replace('"', "");
-        var left = element.style.left.replace("px", "");
-        var title = element.alt;
+
+        
+        var top = $(jqElement.parentElement)[0].style.top.replace("px", "").replace('"', "");
+        var left = $(jqElement.parentElement)[0].style.left.replace("px", "");
+        var title = $(element)[0].attributes["alt"].value;
 
         return { "class": className.trim(), img, name, top, left, title };
     };
 
     function createImgTag(imgId, picName, elementName, cssClass, visited, elementType, top, left, title) {
         var fullClass = (cssClass + " " + visited + " " + elementType).trim().replace("  ", " ");
-        return "<img id='" + imgId + "' src='pics/" + picName + ".png' name='" + elementName + "' class='" + fullClass + "' style='top:" + top + "px; left:" + left + "px' title='" + title + "' alt='" + title + "' />";
+
+        if(elementType === "fog"){
+            return "<img id='" + imgId + "' src='pics/" + picName + ".png' name='" + elementName + "' class='" + fullClass + "' style='top:" + top + "px; left:" + left + "px' title='" + title + "' alt='" + title + "' />";
+        }
+        else{
+            var iconName = getIconNameFrom(cssClass);
+            var result = "<div id='" + imgId + "' style='top:" + top + "px; left:" + left + "px' class='" + cssClass + "'>" + 
+                            "<i name='" + elementName + "' class='icon icon-" + iconName + " " + iconName + " " + elementType + "' title='" + title + "' alt='" + title + "' />" + 
+                         "</div>";
+            return result;
+        }
+    };
+
+    function getIconNameFrom(className){
+        for(var i = 0; i < elementType.length; i++){
+            className = className.replace(elementType[i], "");
+        }
+        
+        return className.trim();
     };
 </script>
 

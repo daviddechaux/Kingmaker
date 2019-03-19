@@ -1,8 +1,6 @@
 function createDecoration(){
-    // <img id="252" src="pics/village.png" name="moskva" class="building village  tooltip tap-target tooltipstered" style="top:500px; left:4670px" alt="Moskva">
-
     var className = $("#decorationDdl").find(".dd-selected-text").text() + " tooltip tap-target";
-    var imgName = imgPathToImgName($("#decorationDdl").find(".dd-selected").find("img")[0].currentSrc);
+    var imgName = getIconName($("#decorationDdl").find(".dd-selected").find("img")[0].currentSrc);
     var pos = getElementPos(".player");
     var elementType = $("#decorationDdlType").find(".dd-selected-text").text().toLowerCase();
 
@@ -37,7 +35,7 @@ function editElement(){
                                 .replace("draggable", "")
                                 .replace("inFront", "");
     var id = itemToChange[0].id;
-    var imgName = imgPathToImgName(itemToChange[0].src);
+    var imgName = getIconName(itemToChange[0]);
 
     var pos = getElementPos("#" + decorationToChange);
 
@@ -84,13 +82,14 @@ function addMapDecoration(){
 
 };
 
-function imgPathToImgName(imgPath){
-    //Firefox doesn't suppport "?<=" regex properly so I use a workaround
-    //var myRegexp = /(?<=pics\/)(.*)(?=\.png)/g;
-    //var img = myRegexp.exec(element.currentSrc)[1];
+function getIconName(element){
+    var classes = $(element)[0].attributes["class"].value.split(" ");
 
-    var imageName = imgPath.split("pics/");
-    return imageName[1].replace(".png", "")
+    for(var i = 0; i < classes.length; i++){
+        if (classes[i].startsWith("icon-")){
+            return classes[i];
+        }
+    }
 };
 
 function unselectElement(){
