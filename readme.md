@@ -24,8 +24,8 @@
 - Possibility to choose map (use the kingmaker video-game map ?) => no fog of war
 - Move the edit box while moving tje element
 - Auto-enable checkbox on add item of this type
-
 - Confirm delete element
+- Add a recently use element
 
 ## Bugs : 
 - Fog wording
