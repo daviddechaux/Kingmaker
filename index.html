@@ -80,7 +80,6 @@
                 <input type="button" class="save" value="Save changes" onclick="editElement()" />
             </div>
         </div>
-
     </div>
 
     <!-- Add element -->
@@ -132,9 +131,6 @@
         </p>
         <p class="gimmeFullSpace">
             Check the code on my <a href="https://github.com/daviddechaux/Kingmaker" target="_blank">Github</a>.
-        </p>
-        <p class="gimmeFullSpace">
-            Last update : 17/03/2019 18h24
         </p>
     </div>
 
@@ -203,21 +199,18 @@
 
     function htmlToObject(element) {
         var img = getIconName(element);
-        var jqElement = $(element)[0];
 
-        var name = jqElement.attributes["name"].value;
-        var className = element.className.replace("fog", "")
-                                        .replace("tooltipstered", "")
+        var name = $(element)[0].attributes["name"].value;
+        var className = element.className.replace("tooltipstered", "")
                                         .replace("tooltip", "")
                                         .replace("tap-target", "")
                                         .replace("inFront", "")
                                         .replace("draggable", "")
+                                        .replace("  ", "")
                                         .trim();
-                                        // + " " + img; // remove the plugin class
-
         
-        var top = $(jqElement.parentElement)[0].style.top.replace("px", "").replace('"', "");
-        var left = $(jqElement.parentElement)[0].style.left.replace("px", "");
+        var top = $(element)[0].style.top.replace("px", "").replace('"', "");
+        var left = $(element)[0].style.left.replace("px", "");
         var title = $(element)[0].attributes["alt"].value;
 
         return { "class": className.trim(), img, name, top, left, title };
@@ -227,14 +220,11 @@
         var fullClass = (cssClass + " " + visited + " " + elementType).trim().replace("  ", " ");
 
         if(elementType === "fog"){
-            return "<img id='" + imgId + "' src='pics/" + picName + ".png' name='" + elementName + "' class='" + fullClass + "' style='top:" + top + "px; left:" + left + "px' title='" + title + "' alt='" + title + "' />";
+            return "<img id='" + imgId + "' src='pics/" + picName + ".png' name='" + elementName + "' class='" + fullClass + "' title='" + title + "' alt='" + title + "' style='top:" + top + "px; left:" + left + "px' />";
         }
         else{
             var iconName = getIconNameFrom(cssClass);
-            var result = "<div id='" + imgId + "' style='top:" + top + "px; left:" + left + "px' class='" + cssClass + "'>" + 
-                            "<i name='" + elementName + "' class='icon icon-" + iconName + " " + iconName + " " + elementType + "' title='" + title + "' alt='" + title + "' />" + 
-                         "</div>";
-            return result;
+            return "<div id='" + imgId + "' name='" + elementName + "' class='icon icon-" + iconName + " " + iconName + " " + elementType + " " + cssClass + "' alt='" + title + "' style='top:" + top + "px; left:" + left + "px' />";
         }
     };
 

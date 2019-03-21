@@ -1,6 +1,3 @@
-https://picsvg.com/
-http://fontello.com/
-
 Comments on archive content
 ---------------------------
 

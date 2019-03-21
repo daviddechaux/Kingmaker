@@ -56,13 +56,13 @@ function interactWithFog(event){
 };
 
 function interactWithElement(event){
-    var name = $(event.currentTarget)[0].attributes["name"].nodeValue;
+    var name = $(event.currentTarget)[0].attributes["name"].value;
     var element = document.getElementsByName(name)[0];
     var obj = htmlToObject(element);
     
     idSelectedElement = event.currentTarget.id;
 
-    $($(event.currentTarget)[0].parentNode).addClass("draggable inFront");
+    $(event.currentTarget).addClass("draggable inFront");
 
     $(".editMapDecoration").css("top", parseInt(obj.top) + element.clientHeight + "px");
     $(".editMapDecoration").css("left", parseInt(obj.left) + element.clientWidth + "px");
@@ -71,7 +71,7 @@ function interactWithElement(event){
     $(".editorBackground").show();
 
     $("#nameMapDecoration").val(name);
-    $("#titleMapDecoration").val(event.currentTarget.alt);
+    $("#titleMapDecoration").val(obj.title);
     $("#decorationToChange").val(event.currentTarget.id);
 };
 

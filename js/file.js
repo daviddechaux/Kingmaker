@@ -20,18 +20,21 @@ function saveFile() {
 
 function convertMapToObject() {
     var mapContainer = $(".mapDecoration").find("img");
+    var fog = [];
+    for (var i = 0; i < mapContainer.length; i++) {
+        var newElement = htmlToObject(mapContainer[i]);
+        fog.push(newElement);
+    }
 
+    var mapContainer = $(".mapDecoration").find(".icon");
     var building = [];
     var resources = [];
     var misc = [];
-    var fog = [];
     for (var i = 0; i < mapContainer.length; i++) {
         var newElement = htmlToObject(mapContainer[i]);
         
         var elementType = getElementType(newElement.class);
         switch (elementType) {
-            case "fog": fog.push(newElement);
-                break;
             case "building": building.push(newElement);
                 break;
             case "resources": resources.push(newElement);
@@ -40,6 +43,7 @@ function convertMapToObject() {
                 break;
         }
     }
+
     var player = createPlayerObject();
     var map = { player, building, resources, misc, fog };
 
@@ -53,8 +57,14 @@ function getElementType(className) {
 };
 
 function createPlayerObject(){
-    var x = parseInt($(".player")[0].getAttribute("data-x"));
-    var y = parseInt($(".player")[0].getAttribute("data-y"));
+    var x1 = parseInt($(".player")[0].style.top.replace("px", ""))
+    var y1 = parseInt($(".player")[0].style.left.replace("px", ""))
+
+    var x2 = parseInt($(".player")[0].getAttribute("data-x"));
+    var y2 = parseInt($(".player")[0].getAttribute("data-y"));
+
+    x = isNaN(x2) ? 0 + x1 : x1 + x2;
+    y = isNaN(y2) ? 0 + y1 : y1 + y2;
 
     return {x, y};
 };
