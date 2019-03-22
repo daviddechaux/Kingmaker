@@ -19,14 +19,14 @@ Well ... you can create icons... Please...
 
 ## Todo : 
 - Edit element
-.- Change icon
-.- Change category
+...- Change icon
+...- Change category
 - Add a hint on fields (name and title)
-.- Disable somes characteres on names
+...- Disable somes characteres on names
 - After load (or create) center on player token
 - Create factions
-.- Border
-.- Color
+...- Border
+...- Color
 - Use a proper framework to do the stuff done by jQuery (vueJs, React, whateverJs)
 - Find an awesome tokens for the party
 - Add a calendar (or something that display date)
@@ -38,17 +38,17 @@ Well ... you can create icons... Please...
 
 ## Maybe : 
 - Load default map from web (currently data are store in js)
-.- Cross domain origin issue
+...- Cross domain origin issue
 - Move the edit box while moving the element
 - Auto-enable checkbox on add item of this type
 - Confirm delete element
 - Add a recently use element
-.- Avoid / destroy and create box ?
+...- Avoid / destroy and create box ?
 
 ## Nope
 - Possibility to choose map (use the kingmaker video-game map ?)
-.- No fog of war
-.- No default map
+...- No fog of war
+...- No default map
 
 ## Bugs : 
 - Fog wording
