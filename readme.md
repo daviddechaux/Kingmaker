@@ -1,6 +1,5 @@
-# Kingmaker interactive 
-
-The app is an interactive map for Kingmaker.  
+# Kingmaker interactive map
+The app is an interactive map for the Kingmaker campaign.  
 [Site](http://kerchiefed-turnarou.000webhostapp.com/)  
 
 Last update : 17/03/2019 18h24  
@@ -8,20 +7,30 @@ Last update : 17/03/2019 18h24
 PngToCsv : https://picsvg.com/  
 CsvToFont : http://fontello.com/  
 
+### Map
+The map has been made by [Jon Pintar](https://jonpintar.com/).
+
+### Copyright
+I do not look after them when I get the pics.  
+If you think the icons is your (it could be) and you don't want me to use it or want to have your name on the app, please, be my guest
+
+### Help ?
+Well ... you can create icons... Please...
 
 ## Todo : 
-- Change icons while editing the element
-- Add a hint for no space (and disallow them) in name on edit and create
-- Center the menu to open / create map
+- Edit element
+.- Change icon
+.- Change category
+- Add a hint on fields (name and title)
+.- Disable somes characteres on names
 - After load (or create) center on player token
-- Create factions (borders and color)
+- Create factions
+.- Border
+.- Color
 - Use a proper framework to do the stuff done by jQuery (vueJs, React, whateverJs)
 - Find an awesome tokens for the party
 - Add a calendar (or something that display date)
 - Save before quit
-- Add icons for 
-.- Add element button
-.- Save changes button
 - Make fog more manageable (add and transparency)
 
 ## In progress :
@@ -29,15 +38,25 @@ CsvToFont : http://fontello.com/
 
 ## Maybe : 
 - Load default map from web (currently data are store in js)
-- Manage dynamically elements categories.
-- Possibility to choose map (use the kingmaker video-game map ?) => no fog of war
-- Move the edit box while moving tje element
+.- Cross domain origin issue
+- Move the edit box while moving the element
 - Auto-enable checkbox on add item of this type
 - Confirm delete element
 - Add a recently use element
+.- Avoid / destroy and create box ?
+
+## Nope
+- Possibility to choose map (use the kingmaker video-game map ?)
+.- No fog of war
+.- No default map
 
 ## Bugs : 
 - Fog wording
+
+## Icons
+Add icons for :
+- Add element button
+- Save changes button
 
 ## Done :
 - Load default map
@@ -48,7 +67,8 @@ CsvToFont : http://fontello.com/
 - Hide menu on load file (Create and Load)
 - Make elements movable on edit 
 - Put js pluggins in local (usefull in plane)
-- Make fog manageable (remove)
+- Make fog manageable (add and remove)
 - Add link to the github
 - Add link to Jon Pintar's deviant-art page
 - Remove element
+- Center the menu to open / create map
