@@ -3,7 +3,7 @@ The app is an interactive map for the Kingmaker campaign.
 You can either use the [site](http://kerchiefed-turnarou.000webhostapp.com/) or copy everything in local.  
 
 ### Website 
-Last update : 17/03/2019 18h24  
+Last update : 23/03/2019 12h50  
 
 ### Font 
 PngToCsv : https://picsvg.com/  
