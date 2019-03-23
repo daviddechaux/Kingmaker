@@ -1,8 +1,9 @@
 function createDecoration(){
-    var className = $("#decorationDdl").find(".dd-selected-text").text() + " tooltip tap-target";
-    var imgName = getIconName($("#decorationDdl").find(".dd-selected").find("img")[0].currentSrc);
     var pos = getElementPos(".player");
-    var elementType = $("#decorationDdlType").find(".dd-selected-text").text().toLowerCase();
+
+    var className = $("#decorationDdl-dd-placeholder").find(".dd-selected-text").text().trim().toLowerCase() + " tooltip tap-target";
+    var imgName = $("#decorationDdl-dd-placeholder").find(".dd-selected-text")[0].className.replace("dd-selected-text", "");
+    var elementType = $("#decorationDdlType-dd-placeholder").find(".dd-selected-text").text().trim().toLowerCase();
 
     var img = createImgTag(idElement,
         imgName,
@@ -16,6 +17,7 @@ function createDecoration(){
 
     $("." + elementType + "Section").append(img);
     if ($("#" + elementType)[0].checked){
+        $("#" + elementType)[0].checked = true;
         $("#" + idElement).show();
     }
 
@@ -67,8 +69,6 @@ function getElementPos(element){
 
 
 function addMapDecoration(){
-    displayNiceDropdownList();
-
     $(".editorBackground").show();
     $(".addElement").show();
 

@@ -50,21 +50,21 @@ var ddElementType = [
 		"value": 0,
 		"selected": false,
 		"description": "",
-		"imageSrc": "pics/village.png",
+		"userClass": "icon-village",
 		"text": "Building"
     },
     {
 		"value": 1,
 		"selected": false,
 		"description": "",
-		"imageSrc": "pics/ble.png",
+		"userClass": "icon-wheat",
 		"text": "Resources"
     },
     {
 		"value": 2,
 		"selected": false,
 		"description": "",
-		"imageSrc": "pics/sign.png",
+		"userClass": "icon-sign",
 		"text": "Misc"
 	}   
 ]
@@ -75,196 +75,196 @@ var ddElement = [
 		"value": 0,
 		"selected": false,
 		"description": "",
-		"imageSrc": "pics/argile.png",
-		"text": "Argile"
+		"userClass": "icon-clay",
+		"text": "Clay"
 	},
 	{
 		"value": 1,
 		"selected": false,
 		"description": "",
-		"imageSrc": "pics/bac.png",
+		"userClass": "icon-ferry",
 		"text": "Ferry"
 	},
 	{
 		"value": 2,
 		"selected": false,
 		"description": "",
-		"imageSrc": "pics/ble.png",
-		"text": "Ble"
+		"userClass": "icon-wheat",
+		"text": "Wheat"
 	},
 	{
 		"value": 3,
 		"selected": false,
 		"description": "",
-		"imageSrc": "pics/cabane.png",
+		"userClass": "icon-cabane",
 		"text": "Cabane"
 	},
 	{
 		"value": 4,
 		"selected": false,
 		"description": "",
-		"imageSrc": "pics/camp.png",
+		"userClass": "icon-camp",
 		"text": "Camp"
 	},
 	{
 		"value": 5,
 		"selected": false,
 		"description": "",
-		"imageSrc": "pics/colline.png",
+		"userClass": "icon-hill",
 		"text": "Hill"
 	},
 	{
 		"value": 6,
 		"selected": false,
 		"description": "",
-		"imageSrc": "pics/cottage.png",
+		"userClass": "icon-cottage",
 		"text": "Cottage"
 	},
 	{
 		"value": 7,
 		"selected": false,
 		"description": "",
-		"imageSrc": "pics/dolmen.png",
+		"userClass": "icon-dolmen",
 		"text": "Dolmen"
 	},
 	{
 		"value": 8,
 		"selected": false,
 		"description": "",
-		"imageSrc": "pics/dragon.png",
+		"userClass": "icon-dragon",
 		"text": "Dragon"
 	},
 	{
 		"value": 9,
 		"selected": false,
 		"description": "",
-		"imageSrc": "pics/elk.png",
+		"userClass": "icon-elk",
 		"text": "Elk"
 	},
 	{
 		"value": 10,
 		"selected": false,
 		"description": "",
-		"imageSrc": "pics/grotte.png",
+		"userClass": "icon-cave",
 		"text": "Cave"
 	},
 	{
 		"value": 11,
 		"selected": false,
 		"description": "",
-		"imageSrc": "pics/house.png",
+		"userClass": "icon-house",
 		"text": "House"
 	},
 	{
 		"value": 12,
 		"selected": false,
 		"description": "",
-		"imageSrc": "pics/mine.png",
+		"userClass": "icon-mine",
 		"text": "Mine"
 	},
 	{
 		"value": 13,
 		"selected": false,
 		"description": "",
-		"imageSrc": "pics/path.png",
+		"userClass": "icon-path",
 		"text": "Path"
 	},
 	{
 		"value": 14,
 		"selected": false,
 		"description": "",
-		"imageSrc": "pics/pont.png",
+		"userClass": "icon-bridge",
 		"text": "Bridge"
 	},
 	{
 		"value": 15,
 		"selected": false,
 		"description": "",
-		"imageSrc": "pics/raspberry.png",
+		"userClass": "icon-raspberry",
 		"text": "Raspberry"
 	},
 	{
 		"value": 16,
 		"selected": false,
 		"description": "",
-		"imageSrc": "pics/rock.png",
+		"userClass": "icon-rock",
 		"text": "Rock"
 	},
 	{
 		"value": 17,
 		"selected": false,
 		"description": "",
-		"imageSrc": "pics/ruche.png",
-		"text": "Ruche"
+		"userClass": "icon-hive",
+		"text": "Hive"
 	},
 	{
 		"value": 18,
 		"selected": false,
 		"description": "",
-		"imageSrc": "pics/ruine.png",
+		"userClass": "icon-ruin",
 		"text": "Ruin"
 	},
 	{
 		"value": 19,
 		"selected": false,
 		"description": "",
-		"imageSrc": "pics/ruinecyclop.png",
-		"text": "Ruin cyclop"
+		"userClass": "icon-ruin2",
+		"text": "Ruin"
 	},
 	{
 		"value": 20,
 		"selected": false,
 		"description": "",
-		"imageSrc": "pics/sign.png",
+		"userClass": "icon-sign",
 		"text": "Sign"
 	},
 	{
 		"value": 21,
 		"selected": false,
 		"description": "",
-		"imageSrc": "pics/source.png",
+		"userClass": "icon-source",
 		"text": "Source"
 	},
 	{
 		"value": 22,
 		"selected": false,
 		"description": "",
-		"imageSrc": "pics/spider.png",
+		"userClass": "icon-spiderweb",
 		"text": "Spider-web"
 	},
 	{
 		"value": 23,
 		"selected": false,
 		"description": "",
-		"imageSrc": "pics/stag.png",
+		"userClass": "icon-stag",
 		"text": "Stag"
 	},
 	{
 		"value": 24,
 		"selected": false,
 		"description": "",
-		"imageSrc": "pics/swamp.png",
+		"userClass": "icon-swamp",
 		"text": "Swamp"
 	},
 	{
 		"value": 25,
 		"selected": false,
 		"description": "",
-		"imageSrc": "pics/tombe.png",
-		"text": "Tumb"
+		"userClass": "icon-tomb",
+		"text": "Tomb"
 	},
 	{
 		"value": 26,
 		"selected": false,
 		"description": "",
-		"imageSrc": "pics/tree.png",
+		"userClass": "icon-deadtree",
 		"text": "Tree"
 	},
 	{
 		"value": 27,
 		"selected": false,
 		"description": "",
-		"imageSrc": "pics/village.png",
+		"userClass": "icon-village",
 		"text": "village"
 	}
 ];

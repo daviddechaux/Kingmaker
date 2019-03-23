@@ -118,8 +118,8 @@ function menuDisplayer(){
 };
 
 function addPlayerToMap(player){
-    $(".player")[0].style.left = $(".player")[0].offsetLeft + player.x + "px";
-    $(".player")[0].style.top = $(".player")[0].offsetTop + player.y + "px";
+    $(".player")[0].style.top = player.x + "px";
+    $(".player")[0].style.left = player.y + "px";
 };
 
 
