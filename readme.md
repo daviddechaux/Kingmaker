@@ -29,7 +29,6 @@ If you think the icons is your (it could be) and you don't want me to use it or 
 > Change category
 - Add a hint on fields (name and title)
 > Disable somes characteres on names
-- After load (or create) center on player token
 - Create factions
 > Border  
 > Color
@@ -40,7 +39,7 @@ If you think the icons is your (it could be) and you don't want me to use it or 
 - Make fog more manageable (add and transparency)
 
 ## In progress :
-- Create a font to put icons in it (SVG, free icons / self made)
+
 
 ## Maybe : 
 - Load default map from web (currently data are store in js)
@@ -79,3 +78,5 @@ Add icons for :
 - Remove element
 - Center the menu to open / create map
 - Auto-enable checkbox on add item of this type
+- Create a font to put icons in it (SVG, free icons / self made)
+- After load (or create) center on player token
