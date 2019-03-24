@@ -5,17 +5,11 @@
     <link rel="stylesheet" type="text/css" href="css/map.css">
     <link rel="stylesheet" type="text/css" href="css/menu.css">
     <link rel="stylesheet" type="text/css" href="css/element.css">
-
-    <!-- Font -->
-    <link rel="stylesheet" type="text/css" href="cssfont/animation.css">
-    <link rel="stylesheet" type="text/css" href="cssfont/pics.css">
-    <link rel="stylesheet" type="text/css" href="cssfont/pics-codes.css">
-    <link rel="stylesheet" type="text/css" href="cssfont/pics-embedded.css">
-    <!-- Font End -->
+    <link rel="stylesheet" type="text/css" href="cssfont/pics.css"> <!-- Font -->
 
     <!-- Plugins -->
     <script type="text/javascript" src="plugin/jquery.1.12.4.js"></script>
-    <script type="text/javascript" src="plugin/jquery.ddslick.js"></script>
+    <script type="text/javascript" src="plugin/jquery.ddslick.min.js"></script>
     <script type="text/javascript" src="plugin/tooltipster/js/tooltipster.bundle.js"></script>
     <link rel="stylesheet" type="text/css" href="plugin/tooltipster/css/tooltipster.bundle.css" />
     <script type="text/javascript" src="plugin/interactjs/interact.js"></script>
@@ -60,21 +54,24 @@
     </div>
 
     <!-- Edit element -->
-    <div class="editMapDecoration menu">
+    <div class="editMapDecoration menu hide inFront">
+        <select id="editDecorationDdlType" class="decorationType decorationDdl gimmeSpace"></select>
+        <select id="editDecorationDdl" class="decorationDdl gimmeSpace"></select>
+
         <div class="field gimmeFullSpace">
             <input id="decorationToChange" style="display:none"/>
         </div>
-        <div class="field gimmeFullSpace" >
+        <!-- <div class="field gimmeFullSpace" >
             <label for="nameMapDecoration" title="Name">Name</label>
             <input id="nameMapDecoration" />
-        </div>
+        </div> -->
         <div class="field gimmeFullSpace">
             <label for="titleMapDecoration" title="Title">Title</label>
             <input id="titleMapDecoration" />
         </div>
 
         <div class="gimmeFullSpace">
-            <img src="images/delete.png" class="delete" title="Delete element" onclick="deleteElement()"/>
+            <div class="icon icon-delete delete" onclick="deleteElement()"></div>
             
             <div class="fr">
                 <input type="button" class="save" value="Save changes" onclick="editElement()" />
@@ -85,27 +82,30 @@
     <!-- Add element -->
     <div class="addElement menu hide">
         <select id="decorationDdlType" class="decorationType decorationDdl gimmeSpace"></select>
-        <!-- maybe do something automatic (could be done with the font)-->
         <select id="decorationDdl" class="decorationDdl gimmeSpace"></select>
+
+        <input id="addClassMapDecoration" class="hide" value="tooltip tap-target draggable inFront" />
     
-        <div class="field gimmeFullSpace" >
-            <label for="addNameMapDecoration" title="Name">Name</label>
+        <!-- <div class="field gimmeFullSpace" >
+            <label for="addNameMapDecoration" class="icon-information">Name</label>
             <input id="addNameMapDecoration" />
-        </div>
-        
-        <div class="field gimmeFullSpace">
-            <input id="addClassMapDecoration" class="hide" value="tooltip tap-target draggable inFront" />
-        </div>
+        </div> -->
 
         <div class="field gimmeFullSpace">
-            <label for="addTitleMapDecoration" title="Title">Title</label>
-            <input id="addTitleMapDecoration" />
+            <label for="addTitleMapDecoration">Name</label>
+            <!-- <label class="icon-information" onclick="displayInfoName()">Name</label> -->
+            <input id="addTitleMapDecoration"/>
         </div>
 
         <div class="gimmeFullSpace fr">
             <input type="button" value="Create element" onclick="createDecoration()" />
         </div>
     </div>
+    <!-- <div class="informationName hide">
+        <p class="gimmeFullSpace">
+            Name you want to be display on hover an element.
+        </p>
+    </div> -->
 
     <div class="menu wrapper wrapperLeft" > 
         <div class="saveMap">
@@ -120,9 +120,7 @@
 
         <hr>
 
-        <div class="container">
-            <img src="images/question.png" class="askQuestion gimmeSpace" alt="about ?"/>
-        </div>
+        <div class="icon icon-question askQuestion" onclick="displayQuestion();"></div>
     </div>
 
     <div class="question menu hide">
@@ -192,9 +190,6 @@
 
         // Dropdownlists
         displayNiceDropdownList();
-        
-        // About
-        question();
 
         $(".editorBackground").show();
         $(".wrapper").hide();
@@ -202,22 +197,23 @@
 
     function htmlToObject(element) {
         var img = "fog";
-        var name = $(element)[0].attributes["name"].value;
-        var className = removeClassNameOnSave(element.className, ["fog", "  "]);
+        var name = $(element)[0].attributes["name"] != undefined ? $(element)[0].attributes["name"].value : "";
+        var className = removeClassNameOnSave($(element)[0].className, ["fog", "  "]);
         var title = "";
 
-        if (element.className.indexOf("fog") === -1){
-            img = getIconName(element);
-            console.log(img);
+        if (className.indexOf("fog") === -1){
+            img = getIconNameFromElement(element);
         
-            className = removeClassNameOnSave(element.className, ["tooltipstered", "tooltip", "tap-target", "inFront", "draggable", "icon", img, "  "]);
+            className = removeClassNameOnSave(className, ["tooltipstered", "tooltip", "tap-target", "inFront", "draggable", "icon", img, "  "]);
             title = $(element)[0].attributes["alt"].value;
         }
-        
+
+        var elementType = $(element).data("elementtype");
+
         var top = $(element)[0].style.top.replace("px", "").replace('"', "");
         var left = $(element)[0].style.left.replace("px", "");
 
-        return { "class": className.trim(), img, name, top, left, title };
+        return { "class": className.trim(), img, name, elementType, top, left, title };
     };
 
     function removeClassNameOnSave(className, classToRemove){
@@ -228,14 +224,14 @@
         return className.trim();
     };
 
-    function createImgTag(imgId, picName, elementName, cssClass, visited, elementType, top, left, title) {
-        if(elementType === "fog"){
-            var fullClass = (cssClass + " " + visited + " " + elementType).trim().replace("  ", " ");
-            return "<img id='" + imgId + "' src='pics/" + picName + ".png' name='" + elementName + "' class='" + fullClass + "' title='" + title + "' alt='" + title + "' style='top:" + top + "px; left:" + left + "px' />";
+    function createImgTag(imgId, picName, elementName, cssClass, visited, additionalClass, top, left, title, elementType) {
+        if(elementType === "fogOfWar"){
+            var fullClass = (cssClass + " " + visited + " " + additionalClass).trim().replace("  ", " ");
+            return "<img id='" + imgId + "' src='pics/" + picName + ".png' name='" + elementName + "' class='" + fullClass + "' title='" + title + "' data-elementType='" + elementType +"' alt='" + title + "' style='top:" + top + "px; left:" + left + "px' />";
         }
         else{
-            var fullClass = (cssClass + " " + elementType + " " + picName).trim().replace("  ", " ");
-            return "<div id='" + imgId + "' name='" + elementName + "' class='icon " + fullClass + "' alt='" + title + "' style='top:" + top + "px; left:" + left + "px' />";
+            var fullClass = (cssClass + " " + additionalClass + " " + picName).trim().replace("  ", " ");
+            return "<div id='" + imgId + "' class='icon " + fullClass + "' data-elementType='" + elementType +"' alt='" + title + "' style='top:" + top + "px; left:" + left + "px' />";
         }
     };
 

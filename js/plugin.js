@@ -56,23 +56,31 @@ function interactWithFog(event){
 };
 
 function interactWithElement(event){
-    var name = $(event.currentTarget)[0].attributes["name"].value;
-    var element = document.getElementsByName(name)[0];
-    var obj = htmlToObject(element);
-    
     idSelectedElement = event.currentTarget.id;
-
     $(event.currentTarget).addClass("draggable inFront");
 
-    $(".editMapDecoration").css("top", parseInt(obj.top) + element.clientHeight + "px");
-    $(".editMapDecoration").css("left", parseInt(obj.left) + element.clientWidth + "px");
+    var pos = getEditMenuPosition(event);
+    $(".editMapDecoration").css("top", pos.top);
+    $(".editMapDecoration").css("left", pos.left);
     
     $(".editMapDecoration").show();
     $(".editorBackground").show();
 
-    $("#nameMapDecoration").val(name);
+    var obj = htmlToObject($(event.currentTarget));
     $("#titleMapDecoration").val(obj.title);
-    $("#decorationToChange").val(event.currentTarget.id);
+
+    var indexType = ddElementType.find( e => e.text.toLowerCase() === obj.elementType.toLowerCase()).value;
+    $('#editDecorationDdlType').ddslick('select', {index: indexType });
+    var index = ddElement.find( e => e.userClass.toLowerCase() === obj.img.toLowerCase()).value;
+    $('#editDecorationDdl').ddslick('select', {index: index });
+
+    $("#decorationToChange").val(idSelectedElement);
+};
+
+function getEditMenuPosition(event){
+    var offset = $(event.currentTarget).height()
+    return { top : (parseInt($(event.currentTarget)[0].style["top"].replace("px", "")) + offset) + "px",
+            left : (parseInt($(event.currentTarget)[0].style["left"].replace("px", "")) + offset) + "px"};
 };
 
 function displayNiceDropdownList(){
@@ -84,6 +92,17 @@ function displayNiceDropdownList(){
 
     //$("#decorationDdl").ddslick('destroy');
     $("#decorationDdl").ddslick({
+        height: 300,
+        data: ddElement,
+        selectText: "Select an icon"
+    });
+
+    
+    $("#editDecorationDdlType").ddslick({
+        data: ddElementType,
+        selectText: "Select element type"
+    });
+    $("#editDecorationDdl").ddslick({
         height: 300,
         data: ddElement,
         selectText: "Select an icon"

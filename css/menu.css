@@ -1,26 +1,27 @@
-.delete{
-    height: 30px;
-}
-
 .save{
     margin-top:10px;
 }
 
+.delete{
+    display: -webkit-inline-box;
+}
+
+.icon-delete{
+    height:20px;
+    font-size: 20px;
+}
 
 .container{
     margin: 0;
 }
 
-.askQuestion{
-    height: 50px;
-    width: 50px;
-    margin-left: auto;
-    margin-right: auto;
-    display:block;
-}
-
 .question{
     width: 240px;
+}
+
+.askQuestion{
+  width: 100%;
+  margin: 0 auto;
 }
 
 .openOrCreateMap{

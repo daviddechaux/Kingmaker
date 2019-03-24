@@ -30,26 +30,32 @@ function editElement(){
     var decorationToChange = $("#decorationToChange").val();
     var itemToChange = $("#" + decorationToChange);
 
-    var name = $("#nameMapDecoration").val();
+    //var name = $("#nameMapDecoration").val();
     var title = $("#titleMapDecoration").val();
-    var className = itemToChange[0].className
+    var className = removeOldIcon(itemToChange[0].className
                                 .replace("tooltipstered", "")
                                 .replace("draggable", "")
-                                .replace("inFront", "");
+                                .replace("inFront", "")
+                                .trim());
+
     var id = itemToChange[0].id;
-    var imgName = getIconName(itemToChange[0]);
+    var imgName = getIconNameFromElement(itemToChange[0]);
 
     var pos = getElementPos("#" + decorationToChange);
 
+    var ddDataType = $('#editDecorationDdlType').data('ddslick');
+    var ddData = $('#editDecorationDdl').data('ddslick');
+
     var img = createImgTag(id,
-        imgName,
-        name,
+        ddData.selectedData.userClass,
+        "",
         className,
         "",
         "",
         pos.top,
         pos.left,
-        title );
+        title,
+        ddDataType.selectedData.text);
 
     var section = itemToChange[0].parentNode.className;
     itemToChange.remove();
@@ -58,6 +64,11 @@ function editElement(){
 
     closeMenuDecoration();
     tooltipOne(id);
+};
+
+function removeOldIcon(className){
+    var oldIcon = getIconName(className.split(" "));
+    return className.replace(oldIcon, "");
 };
 
 function getElementPos(element){
@@ -80,14 +91,20 @@ function addMapDecoration(){
 
 };
 
-function getIconName(element){
+function getIconNameFromElement(element){
     var classes = $(element)[0].attributes["class"].value.split(" ");
 
+    return getIconName(classes);
+};
+
+function getIconName(classes){
     for(var i = 0; i < classes.length; i++){
         if (classes[i].startsWith("icon-")){
             return classes[i];
         }
     }
+
+    return "";
 };
 
 function unselectElement(){

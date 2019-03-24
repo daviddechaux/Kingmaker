@@ -7,19 +7,11 @@ function displayMapOpenner(){
 	}
 };
 
-function question(){
-    $(".askQuestion").click(function(){
-        displayQuestion();
-    });    
-};
-
 function displayQuestion(){
     $(".editorBackground").show();
+    $(".question").show();
 
-    var menu = $(".question");
-    menu.show();
-
-    centerThis(menu);
+    centerThis($(".question"));
 };
 
 function centerThis(obj){
@@ -52,15 +44,15 @@ var ddElementType = [
 		"description": "",
 		"userClass": "icon-village",
 		"text": "Building"
-    },
-    {
+	},
+	{
 		"value": 1,
 		"selected": false,
 		"description": "",
 		"userClass": "icon-wheat",
 		"text": "Resources"
-    },
-    {
+	},
+	{
 		"value": 2,
 		"selected": false,
 		"description": "",
@@ -258,7 +250,7 @@ var ddElement = [
 		"selected": false,
 		"description": "",
 		"userClass": "icon-deadtree",
-		"text": "Tree"
+		"text": "Deadtree"
 	},
 	{
 		"value": 27,

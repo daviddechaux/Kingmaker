@@ -69,21 +69,18 @@
     display:block;
 }
 
-.editMapDecoration{
-    display: none;
-}
 
-@font-face {
-    font-family: 'pics';
-    src: url('./font/pics.eot?50637754');
-    src: url('./font/pics.eot?50637754#iefix') format('embedded-opentype'),
-         url('./font/pics.woff?50637754') format('woff'),
-         url('./font/pics.ttf?50637754') format('truetype'),
-         url('./font/pics.svg?50637754#pics') format('svg');
-    font-weight: normal;
-    font-style: normal;
+/* @font-face {
+      font-family: 'pics';
+      src: url('./font/pics.eot?49113644');
+      src: url('./font/pics.eot?49113644#iefix') format('embedded-opentype'),
+           url('./font/pics.woff?49113644') format('woff'),
+           url('./font/pics.ttf?49113644') format('truetype'),
+           url('./font/pics.svg?49113644#pics') format('svg');
+      font-weight: normal;
+      font-style: normal;
   }
-   
+    */
   .icon{
     font-family: "pics";
     font-size: 50px;

@@ -137,7 +137,7 @@ function addPlayerToMap(player){
 };
 
 
-function addElementToMap(item, sectionName, isFogOfWar) {
+function addElementToMap(item, sectionName) {
     if (item) {
         $(".mapDecoration").append("<div class='" + sectionName + "'> </div>");
         var div = $("." + sectionName);
@@ -150,16 +150,16 @@ function addElementToMap(item, sectionName, isFogOfWar) {
             var cssClass = obj.class ? obj.class : "";
             var title = obj.title ? obj.title.replace("'", "&#39;") : "";
 
-            var elementType = "";
+            var additionalClass = "";
             if(sectionName === "fogOfWar"){
                 title = visited ? "Click to add" : "Click to remove";
-                elementType = "fog";
+                additionalClass = "fog";
             }
             else{
-                elementType = "tooltip tap-target";
+                additionalClass = "tooltip tap-target";
             }
 
-            var img = createImgTag(idElement, obj.img, name, cssClass, visited, elementType, obj.top, obj.left, title);
+            var img = createImgTag(idElement, obj.img, name, cssClass, visited, additionalClass, obj.top, obj.left, title, sectionName.replace("Section", ""));
             div.append(img);
 
             idElement++;

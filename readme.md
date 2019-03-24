@@ -31,11 +31,9 @@ If you think the icons is your (it could be) and you don't want me to use it or 
 - Save before quit
 - Make fog more manageable (add and transparency)
 - Adjust css to have all icon on the same size (more or less)
+- Add a class to hide every menu at the same time when clicking on the background (use ".menu" ?)
 
 ## In progress :
-- Edit element
-> Change icon   
-> Change category
 - Add a hint on fields (name and title)
 > Disable somes characteres on names
 
@@ -49,6 +47,8 @@ If you think the icons is your (it could be) and you don't want me to use it or 
 - Put the dropdown to the default value
 - Use a proper framework to do the stuff done by jQuery (vueJs, React, whateverJs)
 - Add a calendar (or something that display date)
+- What is the utility of the name of the element vs title ?
+- Fill the dropdown automatically instead of using the crappy object
 
 ## Nope
 - Possibility to choose map (use the kingmaker video-game map ?)
@@ -57,6 +57,7 @@ If you think the icons is your (it could be) and you don't want me to use it or 
 
 ## Bugs : 
 - Fog wording
+- Title doesn't work anymore (img to font)
 
 ## Icons
 Add icons for :
@@ -68,7 +69,7 @@ Add icons for :
 - Load file
 - Save file
 - Default map
-- Edit elements (partial)
+- Edit elements 
 - Hide menu on load file (Create and Load)
 - Make elements movable on edit 
 - Put js pluggins in local (usefull in plane)
