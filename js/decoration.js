@@ -30,37 +30,37 @@ function editElement(){
     var decorationToChange = $("#decorationToChange").val();
     var itemToChange = $("#" + decorationToChange);
 
-    //var name = $("#nameMapDecoration").val();
     var title = $("#titleMapDecoration").val();
     var className = removeOldIcon(itemToChange[0].className
+                                .replace("icon", "")
                                 .replace("tooltipstered", "")
                                 .replace("draggable", "")
                                 .replace("inFront", "")
+                                .replace("  ", " ")
                                 .trim());
+
+    var userClass = $('#editDecorationDdl').data('ddslick').selectedData.userClass;
+    var newIcon = getIconName(userClass.split(" ")).replace("icon-", "");
 
     var id = itemToChange[0].id;
     var imgName = getIconNameFromElement(itemToChange[0]);
-
     var pos = getElementPos("#" + decorationToChange);
 
-    var ddDataType = $('#editDecorationDdlType').data('ddslick');
-    var ddData = $('#editDecorationDdl').data('ddslick');
+    var newSection = $('#editDecorationDdlType').data('ddslick').selectedData.text.toLowerCase();
 
     var img = createImgTag(id,
-        ddData.selectedData.userClass,
+        userClass,
         "",
-        className,
+        className + " " + newIcon,
         "",
         "",
         pos.top,
         pos.left,
         title,
-        ddDataType.selectedData.text);
+        newSection);
 
-    var section = itemToChange[0].parentNode.className;
-    itemToChange.remove();
-    
-    $("." + section).append(img);
+    itemToChange.remove();   
+    $("." + newSection + "Section").append(img);
 
     closeMenuDecoration();
     tooltipOne(id);
@@ -68,7 +68,12 @@ function editElement(){
 
 function removeOldIcon(className){
     var oldIcon = getIconName(className.split(" "));
-    return className.replace(oldIcon, "");
+    var oldClass = oldIcon.replace("icon-", "");
+
+    var result = className.replace(oldIcon, "")
+                        .replace(oldClass, "");
+
+    return result;
 };
 
 function getElementPos(element){
