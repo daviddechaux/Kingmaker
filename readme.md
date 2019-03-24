@@ -57,7 +57,7 @@ If you think the icons is your (it could be) and you don't want me to use it or 
 
 ## Bugs : 
 - Fog wording
-- Title doesn't work anymore (img to font)
+
 
 ## Icons
 Add icons for :
