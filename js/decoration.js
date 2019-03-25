@@ -1,9 +1,9 @@
 function createDecoration(){
     var pos = getElementPos(".player");
 
-    var className = $("#decorationDdl-dd-placeholder").find(".dd-selected-text").text().trim().toLowerCase() + " tooltip tap-target";
-    var imgName = $("#decorationDdl-dd-placeholder").find(".dd-selected-text")[0].className.replace("dd-selected-text", "");
-    var elementType = $("#decorationDdlType-dd-placeholder").find(".dd-selected-text").text().trim().toLowerCase();
+    var className = $("#decorationDdl").find("a.dd-selected").find("label").text().trim().toLowerCase() + " tooltip tap-target";
+    var imgName = $("#decorationDdl").find("a.dd-selected").find("label")[0].className.replace("dd-selected-text", "").trim();
+    var elementType = $("#decorationDdlType").find("a.dd-selected").find("label").text().trim().toLowerCase()
 
     var img = createImgTag(idElement,
         imgName,
@@ -13,7 +13,8 @@ function createDecoration(){
         elementType,
         pos.top,
         pos.left,
-        $("#addTitleMapDecoration").val());
+        $("#addTitleMapDecoration").val(),
+        elementType);
 
     $("." + elementType + "Section").append(img);
     if ($("#" + elementType)[0].checked){
@@ -39,11 +40,12 @@ function editElement(){
                                 .replace("  ", " ")
                                 .trim());
 
+    className = removeOldSection(className);
+
     var userClass = $('#editDecorationDdl').data('ddslick').selectedData.userClass;
     var newIcon = getIconName(userClass.split(" ")).replace("icon-", "");
 
     var id = itemToChange[0].id;
-    var imgName = getIconNameFromElement(itemToChange[0]);
     var pos = getElementPos("#" + decorationToChange);
 
     var newSection = $('#editDecorationDdlType').data('ddslick').selectedData.text.toLowerCase();
@@ -53,7 +55,7 @@ function editElement(){
         "",
         className + " " + newIcon,
         "",
-        "",
+        newSection,
         pos.top,
         pos.left,
         title,
@@ -64,6 +66,14 @@ function editElement(){
 
     closeMenuDecoration();
     tooltipOne(id);
+};
+
+function removeOldSection(className){
+    for(var i = 0; i < elementType.length; i++){
+        className = className.replace(elementType[i], "");
+    }
+    
+    return className;
 };
 
 function removeOldIcon(className){
