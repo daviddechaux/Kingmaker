@@ -142,13 +142,6 @@
 
         <hr>
 
-        <div class="factions">
-            <input type="text" id="yourFaction"></div>
-            <div id="yourFactionColorPicker"></div>
-        </div>
-
-        <hr>
-
         <div class="displayer">
             <div class="checkboxDisplay">
                 <input type="checkbox" id="building" class="checkbox" name="display-building" checked>
@@ -162,6 +155,15 @@
                 <input type="checkbox" id="misc" class="checkbox" name="display-misc">
                 <label for="misc" class="label">Misc</label>
             </div>
+        </div>
+
+        <hr>
+        
+        <div class="factions">
+            <form>
+                <input type="text" id="yourFaction"></div>
+            </form>
+            <div id="yourFactionColorPicker"></div>
         </div>
     </div>
 
@@ -204,6 +206,8 @@
         $(".wrapper").hide();
 
         $("#yourFactionColorPicker").farbtastic("#yourFaction"); 
+        $(".farbtastic").hide();
+        $("#yourFaction").click($(".farbtastic").show());
     });
 
     function htmlToObject(element) {
