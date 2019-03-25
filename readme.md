@@ -23,15 +23,30 @@ Well ... you can create icons... Please...
 I didn't look after them when I get the pics.  
 If you think the icons is your (it could be) and you don't want me to use it or you want to have your name on the app, please ask.
 
+### Plugin
+[jQuery](https://jquery.com/)  
+[ddSlick](http://designwithpc.com/Plugins/ddSlick)  
+[Tooltipster](http://iamceege.github.io/tooltipster/)  
+[interactjs](http://interactjs.io/)
+
+https://iro.js.org/  
+http://acko.net/blog/farbtastic-jquery-color-picker-plug-in/
+
 ## Todo : 
 - Find an awesome tokens for the party
 - Save before quit
 - Make fog more manageable (add and transparency)
 - Adjust css to have all icon on the same size (more or less)
 - Add a class to hide every menu at the same time when clicking on the background (use ".menu" ?)
+- Use data instead of crappy class method like I did
 - Add a hint on fields (name and title)
 > Disable somes characteres on names
 - Create capital
+
+## In progress :
+- Create factions
+> Border  
+> Color
 
 ## In progress :
 - Create factions
@@ -56,9 +71,8 @@ If you think the icons is your (it could be) and you don't want me to use it or 
 > No fog of war  
 > No default map
 
-## Bugs : 
+## Known Bugs : 
 - Fog wording
-
 
 ## Icons
 Add icons for :
