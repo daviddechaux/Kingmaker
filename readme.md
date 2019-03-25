@@ -3,7 +3,7 @@ The app is an interactive map for the Kingmaker campaign.
 You can either use the [site](http://kerchiefed-turnarou.000webhostapp.com/) or copy everything in local.  
 
 ### Website 
-Last update : 23/03/2019 12h50  
+Last update : 24/03/2019 11h30  
 
 ### Font 
 PngToCsv : https://picsvg.com/  
@@ -24,21 +24,22 @@ I didn't look after them when I get the pics.
 If you think the icons is your (it could be) and you don't want me to use it or you want to have your name on the app, please ask.
 
 ## Todo : 
-- Create factions
-> Border  
-> Color
 - Find an awesome tokens for the party
 - Save before quit
 - Make fog more manageable (add and transparency)
 - Adjust css to have all icon on the same size (more or less)
 - Add a class to hide every menu at the same time when clicking on the background (use ".menu" ?)
-
-## In progress :
 - Add a hint on fields (name and title)
 > Disable somes characteres on names
+- Create capital
+
+## In progress :
+- Create factions
+> Border  
+> Color
 
 ## Maybe : 
-- Load default map from web (currently data are store in js)
+- Load default file from web (currently data are store in js)
 > Cross domain origin issue
 - Move the edit box while moving the element
 - Confirm delete element
