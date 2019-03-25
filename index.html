@@ -12,8 +12,8 @@
     <script type="text/javascript" src="plugin/js/jquery.ddslick.min.js"></script>
     <script type="text/javascript" src="plugin/js/tooltipster.bundle.js"></script>
     <link rel="stylesheet" type="text/css" href="plugin/css/tooltipster.bundle.css" />
-    <script type="text/javascript" src="plugin/js/farbtastic.js"></script>
-    <link rel="stylesheet" type="text/css" href="plugin/css/farbtastic.css" />
+    <script type="text/javascript" src="plugin/farbtastic/farbtastic.js"></script>
+    <link rel="stylesheet" type="text/css" href="plugin/farbtastic/farbtastic.css" />
     <script type="text/javascript" src="plugin/js/interact.js"></script>
     <!-- End plugins -->
 
@@ -142,6 +142,13 @@
 
         <hr>
 
+        <div class="factions">
+            <input type="text" id="yourFaction"></div>
+            <div id="yourFactionColorPicker"></div>
+        </div>
+
+        <hr>
+
         <div class="displayer">
             <div class="checkboxDisplay">
                 <input type="checkbox" id="building" class="checkbox" name="display-building" checked>
@@ -195,6 +202,8 @@
 
         $(".editorBackground").show();
         $(".wrapper").hide();
+
+        $("#yourFactionColorPicker").farbtastic("#yourFaction"); 
     });
 
     function htmlToObject(element) {
