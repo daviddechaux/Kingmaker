@@ -1,11 +1,12 @@
 <html>
+
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 
     <link rel="stylesheet" type="text/css" href="css/map.css">
     <link rel="stylesheet" type="text/css" href="css/menu.css">
     <link rel="stylesheet" type="text/css" href="css/element.css">
-    <link rel="stylesheet" type="text/css" href="cssfont/pics.css"> 
+    <link rel="stylesheet" type="text/css" href="cssfont/pics.css">
 
     <!-- Plugins -->
     <script type="text/javascript" src="plugin/js/jquery.1.12.4.js"></script>
@@ -24,6 +25,7 @@
     <script type="text/javascript" src="js/menu.js"></script>
     <script type="text/javascript" src="js/decoration.js"></script>
 </head>
+
 <body>
     <div class="img">
         <img src="images/map.jpg" class="background" />
@@ -33,40 +35,37 @@
     <div class="editorBackground"></div>
 
     <!-- Open / Create a map -->
-    <div class="openOrCreateMap hide menu">
+    <div class="openOrCreateMap hide menu hideableMenu">
         <div class="newMap">
-            <div align="center" class="file gimmeSpace" onclick="createNew()" >
+            <div align="center" class="file gimmeSpace" onclick="createNew()">
                 <label>
-                    <img src="images/new.png" title="Create a new map"/>
+                    <img src="images/new.png" title="Create a new map" />
                 </label>
-            
-                <input id="createNew" type="file" value="data/empty.map"/>
+
+                <input id="createNew" type="file" value="data/empty.map" />
             </div>
         </div>
 
         <div class="openMap">
-            <div align="center" class="file gimmeSpace" >
+            <div align="center" class="file gimmeSpace">
                 <label for="openData">
-                    <img src="images/load.png" title="Load existing map"/>
+                    <img src="images/load.png" title="Load existing map" />
                 </label>
-            
-                <input id="openData" onclick="loadFile()" type="file"/>
+
+                <input id="openData" onclick="loadFile()" type="file" />
             </div>
         </div>
     </div>
 
     <!-- Edit element -->
-    <div class="editMapDecoration menu hide inFront">
+    <div class="editMapDecoration menu hide inFront hideableMenu">
         <select id="editDecorationDdlType" class="decorationType decorationDdl gimmeSpace"></select>
         <select id="editDecorationDdl" class="decorationDdl gimmeSpace"></select>
 
         <div class="field gimmeFullSpace">
-            <input id="decorationToChange" style="display:none"/>
+            <input id="decorationToChange" style="display:none" />
         </div>
-        <!-- <div class="field gimmeFullSpace" >
-            <label for="nameMapDecoration" title="Name">Name</label>
-            <input id="nameMapDecoration" />
-        </div> -->
+
         <div class="field gimmeFullSpace">
             <label for="titleMapDecoration" title="Title">Title</label>
             <input id="titleMapDecoration" />
@@ -74,7 +73,7 @@
 
         <div class="gimmeFullSpace">
             <div class="icon icon-delete delete" onclick="deleteElement()"></div>
-            
+
             <div class="fr">
                 <input type="button" class="save" value="Save changes" onclick="editElement()" />
             </div>
@@ -82,40 +81,36 @@
     </div>
 
     <!-- Add element -->
-    <div class="addElement menu hide">
+    <div class="addElement menu hide hideableMenu">
         <select id="decorationDdlType" class="decorationType decorationDdl gimmeSpace"></select>
         <select id="decorationDdl" class="decorationDdl gimmeSpace"></select>
 
         <input id="addClassMapDecoration" class="hide" value="tooltip tap-target draggable inFront" />
-    
-        <!-- <div class="field gimmeFullSpace" >
-            <label for="addNameMapDecoration" class="icon-information">Name</label>
-            <input id="addNameMapDecoration" />
-        </div> -->
 
         <div class="field gimmeFullSpace">
             <label for="addTitleMapDecoration">Name</label>
-            <!-- <label class="icon-information" onclick="displayInfoName()">Name</label> -->
-            <input id="addTitleMapDecoration"/>
+            <input id="addTitleMapDecoration" />
         </div>
 
         <div class="gimmeFullSpace fr">
             <input type="button" value="Create element" onclick="createDecoration()" />
         </div>
     </div>
-    <!-- <div class="informationName hide">
-        <p class="gimmeFullSpace">
-            Name you want to be display on hover an element.
-        </p>
-    </div> -->
 
-    <div class="menu wrapper wrapperLeft" > 
+    <!-- Color Picker -->
+    <div class="colorPicker hide menu hideableMenu">
+        <div id="villagePicker" class="icon icon-village"></div>
+        <input id="demoPicker" class="" />
+        <div id="colorPicker"></div>
+    </div>
+
+    <div class="menu wrapper wrapperLeft">
         <div class="saveMap">
             <div align="center" class="file gimmeSpace">
                 <label for="saveData">
-                    <img src="images/save.png" title="Save current map"/>
+                    <img src="images/save.png" title="Save current map" />
                 </label>
-            
+
                 <input id="saveData" onclick="saveFile()" />
             </div>
         </div>
@@ -125,7 +120,7 @@
         <div class="icon icon-question askQuestion" onclick="displayQuestion();"></div>
     </div>
 
-    <div class="question menu hide">
+    <div class="question menu hide hideableMenu">
         <p class="gimmeFullSpace">
             Map has been done by <a href="https://www.deviantart.com/jonpintar" target="_blank">Jon Pintar</a>.
         </p>
@@ -135,7 +130,7 @@
     </div>
 
 
-    <div class="menu wrapper wrapperRight" > 
+    <div class="menu wrapper wrapperRight">
         <div class="gimmeFullSpace">
             <button onclick="addMapDecoration()">Add element</button>
         </div>
@@ -158,19 +153,16 @@
         </div>
 
         <hr>
-        
+
         <div class="factions">
-            <form>
-                <input type="text" id="yourFaction"></div>
-            </form>
-            <div id="yourFactionColorPicker"></div>
+            <input type="text" id="yourFaction" />
         </div>
     </div>
 
     <div id="player">
         <img src="images/token.png" class="player draggable" />
     </div>
-    
+
     <div class="mapDecoration">
     </div>
 </body>
@@ -185,17 +177,17 @@
         displayElement("building");
         displayElement("resources");
         displayElement("misc");
-        
+
         // interactjs
         dragAndDrop();
         tapTarget();
 
         // Display OpenCreate map
         displayMapOpenner();
-        $(window).resize(function () { 
+        $(window).resize(function () {
             displayMapOpenner();
         });
-        $(window).scroll(function() {
+        $(window).scroll(function () {
             displayMapOpenner();
         });
 
@@ -205,9 +197,10 @@
         $(".editorBackground").show();
         $(".wrapper").hide();
 
-        $("#yourFactionColorPicker").farbtastic("#yourFaction"); 
-        $(".farbtastic").hide();
-        $("#yourFaction").click($(".farbtastic").show());
+        // Display color picker
+        $("#yourFaction").click(function () {
+            displayColorPicker();
+        });
     });
 
     function htmlToObject(element) {
@@ -216,9 +209,9 @@
         var className = removeClassNameOnSave($(element)[0].className, ["fog", "  "]);
         var title = "";
 
-        if (className.indexOf("fog") === -1){
+        if (className.indexOf("fog") === -1) {
             img = getIconNameFromElement(element);
-        
+
             className = removeClassNameOnSave(className, ["tooltipstered", "tooltip", "tap-target", "inFront", "draggable", "icon", img, "  "]);
             title = $(element)[0].attributes["alt"].value;
         }
@@ -231,8 +224,8 @@
         return { "class": className.trim(), img, name, elementType, top, left, title };
     };
 
-    function removeClassNameOnSave(className, classToRemove){
-        for(var i = 0; i < classToRemove.length; i++){
+    function removeClassNameOnSave(className, classToRemove) {
+        for (var i = 0; i < classToRemove.length; i++) {
             className = className.replace(classToRemove[i], "");
         }
 
@@ -240,21 +233,21 @@
     };
 
     function createImgTag(imgId, picName, elementName, cssClass, visited, additionalClass, top, left, title, elementType) {
-        if(elementType === "fogOfWar"){
+        if (elementType === "fogOfWar") {
             var fullClass = (cssClass + " " + visited + " " + additionalClass).trim().replace("  ", " ");
-            return "<img id='" + imgId + "' src='pics/" + picName + ".png' name='" + elementName + "' class='" + fullClass + "' title='" + title + "' data-elementType='" + elementType +"' alt='" + title + "' style='top:" + top + "px; left:" + left + "px' />";
+            return "<img id='" + imgId + "' src='pics/" + picName + ".png' name='" + elementName + "' class='" + fullClass + "' title='" + title + "' data-elementType='" + elementType + "' alt='" + title + "' style='top:" + top + "px; left:" + left + "px' />";
         }
-        else{
+        else {
             var fullClass = (cssClass + " " + additionalClass + " " + picName).trim().replace("  ", " ");
-            return "<div id='" + imgId + "' class='icon " + fullClass + "' data-elementType='" + elementType +"' alt='" + title + "' title='" + title + "' style='top:" + top + "px; left:" + left + "px' />";
+            return "<div id='" + imgId + "' class='icon " + fullClass + "' data-elementType='" + elementType + "' alt='" + title + "' title='" + title + "' style='top:" + top + "px; left:" + left + "px' />";
         }
     };
 
-    function removeElementType(className){
-        for(var i = 0; i < elementType.length; i++){
+    function removeElementType(className) {
+        for (var i = 0; i < elementType.length; i++) {
             className = className.replace(elementType[i], "");
         }
-        
+
         return className.trim();
     };
 </script>

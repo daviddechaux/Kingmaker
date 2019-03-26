@@ -1,38 +1,46 @@
-function displayMapOpenner(){
-	if (!isMapLoaded){
+function displayMapOpenner() {
+	if (!isMapLoaded) {
 		var menu = $(".openOrCreateMap");
 		menu.show();
-	
+
 		centerThis(menu);
 	}
 };
 
-function displayQuestion(){
-    $(".editorBackground").show();
-    $(".question").show();
+function displayQuestion() {
+	$(".editorBackground").show();
+	$(".question").show();
 
-    centerThis($(".question"));
+	centerThis($(".question"));
 };
 
-function centerThis(obj){
-    var offsetHeight = obj.height() / 2;
-    var offsetWidth = obj.width() / 2;
+function centerThis(obj) {
+	var offsetHeight = obj.height() / 2;
+	var offsetWidth = obj.width() / 2;
 
-    var width = window.innerWidth / 2;
-    var height = window.innerHeight / 2;
+	var width = window.innerWidth / 2;
+	var height = window.innerHeight / 2;
 
-    var offsetX = window.scrollX;
-    var offsetY = window.scrollY;
+	var offsetX = window.scrollX;
+	var offsetY = window.scrollY;
 
-    obj.css('left', width + offsetX - offsetWidth + 'px');
-    obj.css('top', height + offsetY - offsetHeight + 'px');
+	obj.css('left', width + offsetX - offsetWidth + 'px');
+	obj.css('top', height + offsetY - offsetHeight + 'px');
 }
 
-function closeMenuDecoration(){
-    $(".editMapDecoration").hide();
-    $(".addElement").hide();
-    $(".editorBackground").hide();
-    $(".question").hide();
+function closeMenuDecoration() {
+	$(".hideableMenu").hide();
+	$(".editorBackground").hide();
+};
+
+function displayColorPicker() {
+	var menu = $(".colorPicker");
+	menu.show();
+	centerThis(menu);
+
+	$("#colorPicker").farbtastic("#demoPicker");
+
+	//villagePicker
 };
 
 
@@ -58,7 +66,7 @@ var ddElementType = [
 		"description": "",
 		"userClass": "icon-sign",
 		"text": "Misc"
-	}   
+	}
 ]
 
 // Dropdown element
