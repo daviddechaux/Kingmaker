@@ -27,8 +27,8 @@ If you think the icons is your (it could be) and you don't want me to use it or 
 [jQuery](https://jquery.com/)  
 [ddSlick](http://designwithpc.com/Plugins/ddSlick)  
 [Tooltipster](http://iamceege.github.io/tooltipster/)  
-[interactjs](http://interactjs.io/)
-[Farbtastic](http://acko.net/blog/farbtastic-jquery-color-picker-plug-in/)
+[interactjs](http://interactjs.io/)  
+[Farbtastic](http://acko.net/blog/farbtastic-jquery-color-picker-plug-in/)  
 
 http://forum.jquery.com/topic/how-do-i-listen-for-changes-to-an-attribute
 
