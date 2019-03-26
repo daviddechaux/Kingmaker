@@ -45,9 +45,30 @@ function convertMapToObject() {
     }
 
     var player = createPlayerObject();
-    var map = { player, building, resources, misc, fog };
+    var factions = createFactionObject();
+    var map = { player, factions, building, resources, misc, fog };
 
     return JSON.stringify(map);
+};
+
+function createFactionObject(){
+    // Select all factions
+    var factions = $(".faction");
+
+    var factionList = [];
+    for (var i = 0; i < factions.length; i++) {
+        var currentFaction = factions[i];
+
+        var faction = {
+            "id": $(currentFaction).find(".factionName").data("factionid"),
+            "name": $(currentFaction).find(".factionName").val(),
+            "color": $(currentFaction).find(".factionBox")[0].style["background-color"]
+        };
+
+        factionList.push(faction);
+    }
+
+    return factionList;
 };
 
 function getElementType(className) {

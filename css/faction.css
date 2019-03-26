@@ -1,0 +1,26 @@
+.testBkg{
+    background-image: url("../images/test-background.png");
+    height: 200px;
+    width: 200px;
+    text-align: center;
+    vertical-align: middle;
+    line-height: 200px;
+}
+
+.villagePicker{
+    font-family: "pics";
+    font-size: 70px;
+}
+
+.villagePicker:before{
+    content: '\e819';
+}
+
+.factionBox{
+    width: 30px;
+    /* border-width: 0; */
+}
+
+.factionName{
+    width: 120px;
+}

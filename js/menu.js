@@ -33,17 +33,6 @@ function closeMenuDecoration() {
 	$(".editorBackground").hide();
 };
 
-function displayColorPicker() {
-	var menu = $(".colorPicker");
-	menu.show();
-	centerThis(menu);
-
-	$("#colorPicker").farbtastic("#demoPicker");
-
-	//villagePicker
-};
-
-
 // Dropdown element type
 var ddElementType = [
 	{
