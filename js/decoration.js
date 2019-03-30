@@ -106,12 +106,6 @@ function addMapDecoration(){
 
 };
 
-function getIconNameFromElement(element){
-    var classes = $(element)[0].attributes["class"].value.split(" ");
-
-    return getIconName(classes);
-};
-
 function getIconName(classes){
     for(var i = 0; i < classes.length; i++){
         if (classes[i].startsWith("icon-")){

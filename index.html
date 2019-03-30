@@ -11,20 +11,34 @@
     <link rel="stylesheet" type="text/css" href="cssfont/pics.css">
 
     <!-- Plugins -->
-    <script type="text/javascript" src="plugin/js/jquery.1.12.4.js"></script>
-    <script type="text/javascript" src="plugin/js/jquery.ddslick.min.js"></script>
-    <script type="text/javascript" src="plugin/js/tooltipster.bundle.js"></script>
-    <link rel="stylesheet" type="text/css" href="plugin/css/tooltipster.bundle.css" />
-    <script type="text/javascript" src="plugin/farbtastic/farbtastic.js"></script>
+    <!-- <script type="text/javascript" src="plugin/jquery.1.12.4.js"></script> -->
+    <script type="text/javascript" src="plugin/jquery.3.2.1.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="plugin/jquery-ui.1.12/jquery-ui.css" />
+    <link rel="stylesheet" type="text/css" href="plugin/jquery-ui.1.12/jquery-ui.structure.css" />
+    <script type="text/javascript" src="plugin/jquery-ui.1.12/jquery-ui.js"></script>
+    
+    <link rel="stylesheet" type="text/css" href="plugin/tooltipster/tooltipster.bundle.css" />
+    <script type="text/javascript" src="plugin/tooltipster/tooltipster.bundle.js"></script>
+    
     <link rel="stylesheet" type="text/css" href="plugin/farbtastic/farbtastic.css" />
-    <script type="text/javascript" src="plugin/js/interact.js"></script>
+
+    <script type="text/javascript" src="plugin/farbtastic/farbtastic.js"></script>
+    <script type="text/javascript" src="plugin/jquery.ddslick.min.js"></script>
+    <script type="text/javascript" src="plugin/interact.js"></script>
     <!-- End plugins -->
 
     <script type="text/javascript" src="js/jsExt.js"></script>
+    <script type="text/javascript" src="js/common.js"></script>
+
+    <script type="text/javascript" src="js/tooltip.js"></script>
+    <script type="text/javascript" src="js/interact.js"></script>
+    <script type="text/javascript" src="js/ddslick.js"></script>
 
     <script type="text/javascript" src="js/faction.js"></script>
-    <script type="text/javascript" src="js/other.js"></script>
-    <script type="text/javascript" src="js/plugin.js"></script>
+    <script type="text/javascript" src="js/file.js"></script>
+    <script type="text/javascript" src="js/saveFile.js"></script>
+
     <script type="text/javascript" src="js/file.js"></script>
     <script type="text/javascript" src="js/map.js"></script>
     <script type="text/javascript" src="js/menu.js"></script>
@@ -216,54 +230,6 @@
         // Display color picker
         addFaction();
     });
-
-    function htmlToObject(element) {
-        var img = "fog";
-        var name = $(element)[0].attributes["name"] != undefined ? $(element)[0].attributes["name"].value : "";
-        var className = removeClassNameOnSave($(element)[0].className, ["fog", "  "]);
-        var title = "";
-
-        if (className.indexOf("fog") === -1) {
-            img = getIconNameFromElement(element);
-
-            className = removeClassNameOnSave(className, ["tooltipstered", "tooltip", "tap-target", "inFront", "draggable", "icon", img, "  "]);
-            title = $(element)[0].attributes["alt"].value;
-        }
-
-        var elementType = $(element).data("elementtype");
-
-        var top = $(element)[0].style.top.replace("px", "").replace('"', "");
-        var left = $(element)[0].style.left.replace("px", "");
-
-        return { "class": className.trim(), img, name, elementType, top, left, title };
-    };
-
-    function removeClassNameOnSave(className, classToRemove) {
-        for (var i = 0; i < classToRemove.length; i++) {
-            className = className.replace(classToRemove[i], "");
-        }
-
-        return className.trim();
-    };
-
-    function createImgTag(imgId, picName, elementName, cssClass, visited, additionalClass, top, left, title, elementType) {
-        if (elementType === "fogOfWar") {
-            var fullClass = (cssClass + " " + visited + " " + additionalClass).trim().replace("  ", " ");
-            return "<img id='" + imgId + "' src='pics/" + picName + ".png' name='" + elementName + "' class='" + fullClass + "' title='" + title + "' data-elementType='" + elementType + "' alt='" + title + "' style='top:" + top + "px; left:" + left + "px' />";
-        }
-        else {
-            var fullClass = (cssClass + " " + additionalClass + " " + picName).trim().replace("  ", " ");
-            return "<div id='" + imgId + "' class='icon " + fullClass + "' data-elementType='" + elementType + "' alt='" + title + "' title='" + title + "' style='top:" + top + "px; left:" + left + "px' />";
-        }
-    };
-
-    function removeElementType(className) {
-        for (var i = 0; i < elementType.length; i++) {
-            className = className.replace(elementType[i], "");
-        }
-
-        return className.trim();
-    };
 </script>
 
 </html>

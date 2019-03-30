@@ -73,6 +73,7 @@ http://forum.jquery.com/topic/how-do-i-listen-for-changes-to-an-attribute
 
 ## Known Bugs : 
 - Fog wording
+- Light fog / visited
 
 ## Icons
 Add icons for :

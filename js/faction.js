@@ -55,3 +55,20 @@ function addFaction(){
     displayColorPicker();
 };
 
+function addFactions(factions){
+	if (factions == undefined) return;
+	$(".faction").remove();
+
+	var factionsDiv = $(".factions");
+
+	for(var i = 0; i < factions.length; i++){
+		var currentFaction = factions[i];
+		// Create the HTML string
+    var faction = "<div class='faction gimmeFullSpace'>" +
+                    "<input type='text' class='factionName' data-factionId='" + currentFaction.id + "' value='" + currentFaction.name + "' />" +
+                    "<input type='text' class='factionBox gimmeOtherSpace' style='background-color: " + currentFaction.color + "' id='faction" + currentFaction.id + "'/>" +
+									"</div>";
+
+		factionsDiv.append(faction);
+	}
+};
