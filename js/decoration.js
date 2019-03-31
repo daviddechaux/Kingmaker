@@ -50,6 +50,8 @@ function editElement(){
 
     var newSection = $('#editDecorationDdlType').data('ddslick').selectedData.text.toLowerCase();
 
+    var faction = $('#editDecorationDdlFaction').data('ddslick').selectedData.text;
+
     var img = createImgTag(id,
         userClass,
         "",
@@ -59,7 +61,8 @@ function editElement(){
         pos.top,
         pos.left,
         title,
-        newSection);
+        newSection,
+        faction);
 
     itemToChange.remove();   
     $("." + newSection + "Section").append(img);
@@ -104,6 +107,7 @@ function addMapDecoration(){
     $("#addNameMapDecoration").val("");
     $("#addTitleMapDecoration").val("");
 
+    displayDropDownFaction($("#decorationDdlFaction"));
 };
 
 function getIconName(classes){

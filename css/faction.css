@@ -18,9 +18,12 @@
 
 .factionBox{
     width: 30px;
-    /* border-width: 0; */
 }
 
 .factionName{
     width: 120px;
+}
+
+.deleteFaction:hover{
+    cursor: pointer;
 }

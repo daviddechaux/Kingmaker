@@ -74,6 +74,8 @@ http://forum.jquery.com/topic/how-do-i-listen-for-changes-to-an-attribute
 ## Known Bugs : 
 - Fog wording
 - Light fog / visited
+- Quote on faction name
+- Faction dropdown on create element
 
 ## Icons
 Add icons for :

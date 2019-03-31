@@ -38,16 +38,13 @@ function addFaction(){
     // Get the count of factions
     var factionCount = $(".faction").length + 1;
 
-    // Generate a random color
-    var color = "background-color: rgb(" + getRandomInt(256) + "," +
-                                        getRandomInt(256) + "," +
-                                        getRandomInt(256) + ")";
+		// Generate a random color
+    var color = "rgb(" + getRandomInt(256) + "," +
+												getRandomInt(256) + "," +
+												getRandomInt(256) + ")";
 
-    // Create the HTML string
-    var faction = "<div class='faction gimmeFullSpace'>" +
-                    "<input type='text' class='factionName' data-factionId='" + factionCount + "' value='Faction " + factionCount + "' />" +
-                    "<input type='text' class='factionBox gimmeOtherSpace' style='" + color + "' id='faction" + factionCount + "'/>" +
-                  "</div>";
+		// Create the HTML string
+		var faction = factionToHtml(factionCount, "Faction " + factionCount, color);
 
     // Add the faction to the list of factions
     $(".factions").append(faction);
@@ -57,18 +54,56 @@ function addFaction(){
 
 function addFactions(factions){
 	if (factions == undefined) return;
-	$(".faction").remove();
 
+	$(".faction").remove();
 	var factionsDiv = $(".factions");
 
 	for(var i = 0; i < factions.length; i++){
 		var currentFaction = factions[i];
 		// Create the HTML string
-    var faction = "<div class='faction gimmeFullSpace'>" +
-                    "<input type='text' class='factionName' data-factionId='" + currentFaction.id + "' value='" + currentFaction.name + "' />" +
-                    "<input type='text' class='factionBox gimmeOtherSpace' style='background-color: " + currentFaction.color + "' id='faction" + currentFaction.id + "'/>" +
-									"</div>";
+		var faction = factionToHtml(currentFaction.id, currentFaction.name, currentFaction.color);
 
 		factionsDiv.append(faction);
 	}
+};
+
+
+function factionToHtml(id, name, color){
+	var faction = 
+	"<div class='faction gimmeFullSpace'>" +
+		"<input type='text' class='factionName' data-factionId='" + id + "' value='" + name + "' />" +
+		"<input type='text' class='factionBox gimmeOtherSpace' style='background-color: " + color + "' id='faction" + id + "'/>" +
+		"<div class='icon icon-delete delete deleteFaction' onclick='deleteFaction(" + id + ")'/>" +
+	"</div>";
+
+	return faction;
+};
+
+function deleteFaction(factionId){
+	$("#faction" + factionId).parent().remove();
+};
+
+
+// Yup that's dirty.
+function factionNameToColor(name){
+	var div = $("input[value='" + name + "']");
+	
+	if (div != undefined){
+		var parent = div.parent();
+
+		if (parent != undefined){
+			var childs = parent.children()
+
+			if (childs != undefined && childs.length > 0){
+				var child = childs[1];
+
+				if(child != undefined){
+					return child.attributes["style"].value.replace("background-", "")
+				}
+			}
+		}
+	}
+
+	// Black
+	return "rgb(0, 0, 0)";
 };

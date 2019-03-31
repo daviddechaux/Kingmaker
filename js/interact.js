@@ -53,6 +53,8 @@ function interactWithElement(event){
     $('#editDecorationDdl').ddslick('select', {index: index });
 
     $("#decorationToChange").val(idSelectedElement);
+
+    displayDropDownFaction($("#editDecorationDdlFaction"));
 };
 
 function getEditMenuPosition(event){

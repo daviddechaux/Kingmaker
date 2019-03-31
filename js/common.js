@@ -36,13 +36,15 @@ function getIconNameFromElement(element){
 
 
 
-function createImgTag(imgId, picName, elementName, cssClass, visited, additionalClass, top, left, title, elementType) {
+function createImgTag(imgId, picName, elementName, cssClass, visited, additionalClass, top, left, title, elementType, faction) {
     if (elementType === "fogOfWar") {
         var fullClass = (cssClass + " " + visited + " " + additionalClass).trim().replace("  ", " ");
         return "<img id='" + imgId + "' src='pics/" + picName + ".png' name='" + elementName + "' class='" + fullClass + "' title='" + title + "' data-elementType='" + elementType + "' alt='" + title + "' style='top:" + top + "px; left:" + left + "px' />";
     }
     else {
         var fullClass = (cssClass + " " + additionalClass + " " + picName).trim().replace("  ", " ");
-        return "<div id='" + imgId + "' class='icon " + fullClass + "' data-elementType='" + elementType + "' alt='" + title + "' title='" + title + "' style='top:" + top + "px; left:" + left + "px' />";
+        var color = factionNameToColor(faction)
+        
+        return "<div id='" + imgId + "' data-faction='" + faction + "' class='icon " + fullClass + "' data-elementType='" + elementType + "' alt='" + title + "' title='" + title + "' style='top:" + top + "px; left:" + left + "px; " + color + "' />";
     }
 };
