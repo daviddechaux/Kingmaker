@@ -1,27 +1,26 @@
 # Kingmaker interactive map
 The app is an interactive map for the Kingmaker campaign.    
+It is **not** made for the [video game](https://owlcatgames.com/) but for the [paper version](https://paizo.com/kingmaker) (french version [here](https://www.black-book-editions.fr/catalogue.php?id=29)). 
+
 You can either use the [site](http://kerchiefed-turnarou.000webhostapp.com/) or copy everything in local.  
+> *Last update : 01/04/2019 22h30*
 
-### Website 
-Last update : 24/03/2019 11h30  
-
-### Font 
-[PngToCsv](https://picsvg.com/)  
-[CsvToFont](http://fontello.com/)  
-
-### Map
 The map has been made by [Jon Pintar](https://jonpintar.com/).
-
-### Whan something
-New feature, icons, ... Please ask.  
-Juste remember that the app is still underdevelopment.
-
-### Help ?
-Well ... you can create icons... Please...
 
 ### Copyright
 I didn't look after them when I get the pics.  
 If you think the icons is your (it could be) and you don't want me to use it or you want to have your name on the app, please ask.
+
+### Tools
+[PngToCsv](https://picsvg.com/)  
+[CsvToFont](http://fontello.com/)  
+
+### Want something ?
+New feature, icons, ... Please ask.  
+Just remember that the app is still underdevelopment.
+
+### Need help ?
+Well ... you can create icons... Please...
 
 ### Plugin
 [jQuery](https://jquery.com/)  
@@ -29,8 +28,11 @@ If you think the icons is your (it could be) and you don't want me to use it or 
 [Tooltipster](http://iamceege.github.io/tooltipster/)  
 [Interactjs](http://interactjs.io/)  
 [Farbtastic](http://acko.net/blog/farbtastic-jquery-color-picker-plug-in/)  
-
-http://forum.jquery.com/topic/how-do-i-listen-for-changes-to-an-attribute
+> http://raphaeljs.com/  
+> http://jsfiddle.net/yFn6z/1/  
+> https://www.w3schools.com/howto/howto_css_shapes.asp  
+> https://css-tricks.com/the-shapes-of-css/  
+> https://developer.mozilla.org/fr/docs/Web/CSS/clip-path
 
 ## Todo : 
 - Find an awesome tokens for the party
@@ -39,27 +41,18 @@ http://forum.jquery.com/topic/how-do-i-listen-for-changes-to-an-attribute
 - Adjust css to have all icon on the same size (more or less)
 - Add a class to hide every menu at the same time when clicking on the background (use ".menu" ?)
 - Use data instead of crappy class method like I did
-- Add a hint on fields (name and title)
-> Disable somes characteres on names
+- Add a hint on fields (name and title) : disable some characteres on names
 - Create capital
+- Fog in CSS
 
 ## In progress :
-- Create factions
-> Border  
-> Color
-
-## In progress :
-- Create factions
-> Border  
-> Color
+- Create factions : Border  
 
 ## Maybe : 
-- Load default file from web (currently data are store in js)
-> Cross domain origin issue
+- Load default file from web (currently data are store in js) : Cross domain origin issue
 - Move the edit box while moving the element
 - Confirm delete element
-- Add a recently use element
-> Avoid / destroy and create box ?
+- Add a recently use element : Avoid / destroy and create box ?
 - Put the dropdown to the default value
 - Use a proper framework to do the stuff done by jQuery (vueJs, React, whateverJs)
 - Add a calendar (or something that display date)
@@ -67,26 +60,26 @@ http://forum.jquery.com/topic/how-do-i-listen-for-changes-to-an-attribute
 - Fill the dropdown automatically instead of using the crappy object
 
 ## Nope
-- Possibility to choose map (use the kingmaker video-game map ?)
-> No fog of war  
-> No default map
+- Possibility to choose map (use the kingmaker video-game map ?) : No fog of war, No default map
 
 ## Known Bugs : 
 - Fog wording
 - Light fog / visited
 - Quote on faction name
+- Quote on element name
 - Faction dropdown on create element
 
-## Icons
-Add icons for :
+## Missing icons
 - Add element button
 - Save changes button
+- New => To SVG
+- Load => To SVG
+- Save => To SVG
 
 ## Done :
-- Load default map
+- Load default map (Must be outdated)
 - Load file
 - Save file
-- Default map
 - Edit elements 
 - Hide menu on load file (Create and Load)
 - Make elements movable on edit 
@@ -99,3 +92,6 @@ Add icons for :
 - Auto-enable checkbox on add item of this type
 - Create a font to put icons in it (SVG, free icons / self made)
 - After load (or create) center on player token
+- Create factions (color element)
+
+
