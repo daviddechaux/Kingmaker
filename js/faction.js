@@ -88,7 +88,7 @@ function deleteFaction(factionId){
 function factionNameToColor(name){
 	var div = $("input[value='" + name + "']");
 	
-	if (div != undefined){
+	if (div != undefined && name != "None"){
 		var parent = div.parent();
 
 		if (parent != undefined){

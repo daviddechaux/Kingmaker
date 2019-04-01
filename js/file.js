@@ -88,6 +88,7 @@ function addElementToMap(item, sectionName) {
             var name = obj.name ? obj.name : "";
             var cssClass = obj.class ? obj.class : "";
             var title = obj.title ? obj.title.replace("'", "&#39;") : "";
+            var faction = obj.faction ? obj.faction : "";
 
             var additionalClass = "";
             if(sectionName === "fogOfWar"){
@@ -98,7 +99,7 @@ function addElementToMap(item, sectionName) {
                 additionalClass = "tooltip tap-target";
             }
 
-            var img = createImgTag(idElement, obj.img, name, cssClass, visited, additionalClass, obj.top, obj.left, title, sectionName.replace("Section", ""));
+            var img = createImgTag(idElement, obj.img, name, cssClass, visited, additionalClass, obj.top, obj.left, title, sectionName.replace("Section", ""), faction);
             div.append(img);
 
             idElement++;

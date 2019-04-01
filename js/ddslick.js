@@ -24,27 +24,23 @@ function displayNiceDropdownList(){
     });
 };
 
-function displayDropDownFaction(select){
-    select.ddslick('destroy');
+function displayDropDownFaction(select, selectedFaction){
+	$(".option").remove();
+
+	select.append("<option class='option' value='0'>None</option>");
 
     var factionsDiv = $(".factions");
-
-    var factionsList = [];
-    for(var i = 0; i < factionsDiv.children().length; i++){
+	for(var i = 0; i < factionsDiv.children().length; i++){
         var currentFaction = factionsDiv.children()[i];
         
         var id = currentFaction.children[0].attributes["data-factionid"].value;
-        var name = currentFaction.children[0].attributes["value"].value;
+		var name = currentFaction.children[0].attributes["value"].value;
+		
+		var selected = selectedFaction === name ? "selected" : "";
+		var option = "<option class='option' value='" + id + "' " + selected + " >" + name + "</option>";
 
-        factionsList.push({"value": id, "text": name, "selected": false, "description": "", "userClass": "icon-faction"});
+		select.append(option);
 	}
-
-    console.log(factionsList);
-    select.ddslick({
-        height: 100,
-        data: factionsList,
-        selectText: "Claim to faction"
-    });
 };
 
 

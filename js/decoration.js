@@ -4,6 +4,7 @@ function createDecoration(){
     var className = $("#decorationDdl").find("a.dd-selected").find("label").text().trim().toLowerCase() + " tooltip tap-target";
     var imgName = $("#decorationDdl").find("a.dd-selected").find("label")[0].className.replace("dd-selected-text", "").trim();
     var elementType = $("#decorationDdlType").find("a.dd-selected").find("label").text().trim().toLowerCase()
+    var faction = $("#decorationDdlFaction option:selected").text();
 
     var img = createImgTag(idElement,
         imgName,
@@ -14,7 +15,8 @@ function createDecoration(){
         pos.top,
         pos.left,
         $("#addTitleMapDecoration").val(),
-        elementType);
+        elementType,
+        faction);
 
     $("." + elementType + "Section").append(img);
     if ($("#" + elementType)[0].checked){
@@ -27,7 +29,7 @@ function createDecoration(){
     idElement++;
 };
 
-function editElement(){
+function editElement(){ 
     var decorationToChange = $("#decorationToChange").val();
     var itemToChange = $("#" + decorationToChange);
 
@@ -49,8 +51,7 @@ function editElement(){
     var pos = getElementPos("#" + decorationToChange);
 
     var newSection = $('#editDecorationDdlType').data('ddslick').selectedData.text.toLowerCase();
-
-    var faction = $('#editDecorationDdlFaction').data('ddslick').selectedData.text;
+    var faction = $("#editDecorationDdlFaction option:selected").text();
 
     var img = createImgTag(id,
         userClass,

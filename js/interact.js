@@ -50,11 +50,13 @@ function interactWithElement(event){
     var indexType = ddElementType.find( e => e.text.toLowerCase() === obj.elementType.toLowerCase()).value;
     $('#editDecorationDdlType').ddslick('select', {index: indexType });
     var index = ddElement.find( e => e.userClass.toLowerCase() === obj.img.toLowerCase()).value;
+    
     $('#editDecorationDdl').ddslick('select', {index: index });
-
     $("#decorationToChange").val(idSelectedElement);
 
-    displayDropDownFaction($("#editDecorationDdlFaction"));
+    var currentFaction = $(event.currentTarget).data("faction");
+
+    displayDropDownFaction($("#editDecorationDdlFaction"), currentFaction);
 };
 
 function getEditMenuPosition(event){
