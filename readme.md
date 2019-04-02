@@ -60,7 +60,7 @@ Well ... you can create icons... Please...
 - Fill the dropdown automatically instead of using the crappy object
 
 ## Nope
-- Possibility to choose map (use the kingmaker video-game map ?) : No fog of war, No default map
+- Possibility to choose map (use the kingmaker video-game map ?) : No fog of war, No default map (https://drive.google.com/file/d/0B3tF_dcxI0LWMjNqNFY5clFsRjg/edit)
 
 ## Known Bugs : 
 - Fog wording
