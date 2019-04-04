@@ -31,10 +31,8 @@ Well ... you can create icons... Please...
 
 
 > http://raphaeljs.com/  
-> http://jsfiddle.net/yFn6z/1/  
-> https://www.w3schools.com/howto/howto_css_shapes.asp  
-> https://css-tricks.com/the-shapes-of-css/  
-> https://developer.mozilla.org/fr/docs/Web/CSS/clip-path
+
+
 
 ## Todo : 
 - Find an awesome tokens for the party

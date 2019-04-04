@@ -57,10 +57,8 @@
     left: 4335px;
     width: 100px;
     z-index: 200;
-
     user-select: none;
 }
-
 
 .mapDecorationToolBox{
     width:200px;
@@ -73,19 +71,9 @@
     display:block;
 }
 
-
-/* @font-face {
-      font-family: 'pics';
-      src: url('./font/pics.eot?49113644');
-      src: url('./font/pics.eot?49113644#iefix') format('embedded-opentype'),
-           url('./font/pics.woff?49113644') format('woff'),
-           url('./font/pics.ttf?49113644') format('truetype'),
-           url('./font/pics.svg?49113644#pics') format('svg');
-      font-weight: normal;
-      font-style: normal;
-  }
-    */
-  .icon{
+.icon{
     font-family: "pics";
     font-size: 50px;
-  }
+}
+
+

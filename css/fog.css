@@ -1,0 +1,25 @@
+/* https://developer.mozilla.org/fr/docs/Web/CSS/clip-path */
+.fog{ 
+    width: 230px; 
+    height: 133px; 
+    background: gray; 
+    position: relative; 
+} 
+
+.fog:before { 
+    content: ""; 
+    position: absolute; 
+    top: -67px;
+    border-left: 115px solid transparent; 
+    border-right: 115px solid transparent; 
+    border-bottom: 67px solid gray; 
+} 
+
+.fog:after { 
+    content: ""; 
+    position: absolute; 
+    bottom: -67px;
+    border-left: 115px solid transparent; 
+    border-right: 115px solid transparent; 
+    border-top: 67px solid gray; 
+}
