@@ -3,7 +3,7 @@
     width: 230px; 
     height: 133px; 
     background: gray; 
-    position: relative; 
+    /* position: relative;  */
 } 
 
 .fog:before { 

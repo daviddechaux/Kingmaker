@@ -44,7 +44,7 @@ function getIconNameFromElement(element){
 function createImgTag(imgId, picName, elementName, cssClass, visited, additionalClass, top, left, title, elementType, faction) {
     if (elementType === "fogOfWar") {
         var fullClass = (cssClass + " " + visited + " " + additionalClass).trim().replace("  ", " ");
-        return "<div id='" + imgId + "' name='" + elementName + "' class='" + fullClass + "' title='" + title + "' data-elementType='" + elementType + "' alt='" + title + "' style='top:" + top + "px; left:" + left + "px' />";
+        return "<div id='" + imgId + "' name='" + elementName + "' class='" + fullClass + "' data-elementType='" + elementType + "' alt='" + title + "' style='top:" + top + "px; left:" + left + "px' />";
     }
     else {
         var fullClass = (cssClass + " " + additionalClass + " " + picName).trim().replace("  ", " ");
