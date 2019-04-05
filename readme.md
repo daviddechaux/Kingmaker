@@ -30,7 +30,8 @@ Well ... you can create icons... Please...
 [Farbtastic](http://acko.net/blog/farbtastic-jquery-color-picker-plug-in/)  
 
 
-> http://raphaeljs.com/  
+> http://raphaeljs.com/    
+> Animating Clip Paths
 
 
 
