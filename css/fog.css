@@ -23,3 +23,11 @@
     border-right: 115px solid transparent; 
     border-top: 67px solid gray; 
 }
+
+.polygon {
+    width: 230px;
+    height: 266px;
+    background-color: grey;
+    -webkit-clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+    clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+}
