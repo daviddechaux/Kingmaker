@@ -136,7 +136,7 @@ function deleteElement(){
 function htmlToObject(element) {
     var name = $(element)[0].attributes["name"] != undefined ? $(element)[0].attributes["name"].value : "";
     var img = getIconNameFromElement(element);
-    var className = removeClassNameOnSave(className, ["tooltipstered", "tooltip", "tap-target", "inFront", "draggable", "icon", img, "  "]);
+    var className = removeClassNameOnSave($(element)[0].className, ["tooltipstered", "tooltip", "tap-target", "inFront", "draggable", "icon", img, "  "]);
     var title = $(element)[0].attributes["alt"].value;
     var faction = $(element).data("faction");
 

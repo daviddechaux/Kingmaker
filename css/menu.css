@@ -25,9 +25,9 @@
 }
 
 .openOrCreateMap{
-    display:inline-flex;
-    width: 200px;
-    height: 100px;
+    /* display:flex; */
+    width: 270px;
+    /* height: 100px; */
     padding: 10px;
     margin: auto;
 }
@@ -71,3 +71,14 @@
     left: 1em;
 }
 
+.bigIcon{
+    font-size: 100px;
+}
+
+.hide{
+    display:none;
+}
+
+.iconContainer{
+    width:100px;
+}

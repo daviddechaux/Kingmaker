@@ -13,6 +13,8 @@ function createNew(){
 };
 
 function loadFile(){
+    $("#openData").click();
+
     $("#openData").change(function (e) {
         var file = e.target.files[0];
         if (!file) {

@@ -42,7 +42,7 @@ Well ... you can create icons... Please...
 - Use data instead of crappy class method like I did
 - Add a hint on fields (name and title) : disable some characteres on names
 - Create capital
-
+- Redo the fog positioning properly
 
 ## In progress :
 - Create factions : Border  
@@ -73,9 +73,6 @@ https://drive.google.com/file/d/0B2d5Rs815f8bOU80T1ZsUkUtZm8/view
 ## Missing icons
 - Add element button
 - Save changes button
-- New => To SVG
-- Load => To SVG
-- Save => To SVG
 
 ## Done :
 - Load default map (Must be outdated)

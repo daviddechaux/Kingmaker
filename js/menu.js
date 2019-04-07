@@ -1,7 +1,7 @@
 function displayMapOpenner() {
 	if (!isMapLoaded) {
 		var menu = $(".openOrCreateMap");
-		menu.show();
+		menu.css("display", "flex");
 
 		centerThis(menu);
 	}
