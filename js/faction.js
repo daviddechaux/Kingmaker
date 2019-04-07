@@ -83,7 +83,6 @@ function deleteFaction(factionId){
 	$("#faction" + factionId).parent().remove();
 };
 
-
 // Yup that's dirty.
 function factionNameToColor(name){
 	var div = $("input[value='" + name + "']");

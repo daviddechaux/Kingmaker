@@ -25,9 +25,7 @@
 }
 
 .openOrCreateMap{
-    /* display:flex; */
     width: 270px;
-    /* height: 100px; */
     padding: 10px;
     margin: auto;
 }
@@ -69,6 +67,7 @@
 
 .wrapperLeft{
     left: 1em;
+    width: 150px;
 }
 
 .bigIcon{

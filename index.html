@@ -41,12 +41,39 @@
     <script type="text/javascript" src="js/map.js"></script>
     <script type="text/javascript" src="js/menu.js"></script>
     <script type="text/javascript" src="js/element.js"></script>
+
+    <style>
+            .haut{
+            position:absolute;
+            top:13px;
+            left:30px;
+            }
+            </style>
 </head>
 
 <body>
     <div class="img">
         <img src="images/map.jpg" class="background" />
     </div>
+
+    <svg height="266" width="230" class="haut ne">
+        <polygon points="115,0 230,67 225,72 115,7" style="fill:gray"/>
+    </svg>
+    <svg height="266" width="230" class="haut e">
+        <polygon points="230, 67 230,200 225,195 225, 72" style="fill:red;"/>
+    </svg>
+    <svg height="266" width="230" class="haut se">
+        <polygon points="230,200 115,266 115,259 225,195" style="fill:blue;"/>
+    </svg>
+    <svg height="266" width="230" class="haut sw">
+        <polygon points="115,266 0,200 5,195 115,259" style="fill:yellow;"/>
+    </svg>
+    <svg height="266" width="230" class="haut w">
+        <polygon points="0,200 0,67 5,72 5,195" style="fill:black"/>
+    </svg>
+    <svg height="266" width="230" class="haut nw">
+        <polygon points="0,67 115,0 115,7 5,72" style="fill:cyan"/>
+    </svg>
 
     <!-- layer on the map when we do stuff -->
     <div class="editorBackground"></div>
@@ -123,14 +150,9 @@
 
     <!-- Save Map (left menu) -->
     <div class="menu wrapper wrapperLeft">
-        <div class="saveMap">
-            <div align="center" class="file gimmeSpace">
-                <label for="saveData">
-                    <img src="images/save.png" title="Save current map" />
-                </label>
-
-                <input id="saveData" onclick="saveFile()" />
-            </div>
+        <div class="saveMap iconContainer">
+            <div class="file gimmeSpace icon icon-save bigIcon"  title="Save current map" onclick="saveFile()"></div>
+            <input id="saveData" class="hide" />
         </div>
 
         <hr>

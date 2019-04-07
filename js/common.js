@@ -1,4 +1,3 @@
-
 function removeClassNameOnSave(className, classToRemove) {
     for (var i = 0; i < classToRemove.length; i++) {
         className = className.replace(classToRemove[i], "");

@@ -1,4 +1,6 @@
 function saveFile() {
+    $("#saveData").click();
+
     var map = convertMapToObject();
 
     var file = new Blob([map], { type: "text/ plain" });
