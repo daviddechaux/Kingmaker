@@ -3,7 +3,7 @@ The app is an interactive map for the Kingmaker campaign.
 It is **not** made for the [video game](https://owlcatgames.com/) but for the [paper version](https://paizo.com/kingmaker) (french version [here](https://www.black-book-editions.fr/catalogue.php?id=29)). 
 
 You can either use the [site](http://kerchiefed-turnarou.000webhostapp.com/) or copy everything in local.  
-> *Last update : 07/04/2019 09h30*
+> *Last update : 07/04/2019 12h00*
 
 The map has been made by [Jon Pintar](https://jonpintar.com/).
 
@@ -17,7 +17,7 @@ If you think the icons is your (it could be) and you don't want me to use it or 
 
 ### Want something ?
 New feature, icons, ... Please ask.  
-Just remember that the app is still underdevelopment.
+Just remember that the app is still in development.
 
 ### Need help ?
 Well ... you can create icons... Please...
