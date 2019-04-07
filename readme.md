@@ -3,7 +3,7 @@ The app is an interactive map for the Kingmaker campaign.
 It is **not** made for the [video game](https://owlcatgames.com/) but for the [paper version](https://paizo.com/kingmaker) (french version [here](https://www.black-book-editions.fr/catalogue.php?id=29)). 
 
 You can either use the [site](http://kerchiefed-turnarou.000webhostapp.com/) or copy everything in local.  
-> *Last update : 01/04/2019 22h30*
+> *Last update : 07/04/2019 09h30*
 
 The map has been made by [Jon Pintar](https://jonpintar.com/).
 
@@ -34,17 +34,15 @@ Well ... you can create icons... Please...
 > Animating Clip Paths  
 
 
-
 ## Todo : 
 - Find an awesome tokens for the party
 - Save before quit
 - Make fog more manageable (add and transparency)
 - Adjust css to have all icon on the same size (more or less)
-- Add a class to hide every menu at the same time when clicking on the background (use ".menu" ?)
 - Use data instead of crappy class method like I did
 - Add a hint on fields (name and title) : disable some characteres on names
 - Create capital
-- Fog in CSS
+
 
 ## In progress :
 - Create factions : Border  
@@ -92,9 +90,10 @@ https://drive.google.com/file/d/0B2d5Rs815f8bOU80T1ZsUkUtZm8/view
 - Add link to Jon Pintar's deviant-art page
 - Remove element
 - Center the menu to open / create map
+- Add a class to hide every menu at the same time when clicking on the background (use ".menu" ?)
 - Auto-enable checkbox on add item of this type
 - Create a font to put icons in it (SVG, free icons / self made)
 - After load (or create) center on player token
 - Create factions (color element)
-
+- Fog in CSS
 
