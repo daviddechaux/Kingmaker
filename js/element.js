@@ -132,3 +132,32 @@ function deleteElement(){
     $("#" + idSelectedElement).remove();
     closeMenuDecoration();
 };
+
+function htmlToObject(element) {
+    var name = $(element)[0].attributes["name"] != undefined ? $(element)[0].attributes["name"].value : "";
+    var img = getIconNameFromElement(element);
+    var className = removeClassNameOnSave(className, ["tooltipstered", "tooltip", "tap-target", "inFront", "draggable", "icon", img, "  "]);
+    var title = $(element)[0].attributes["alt"].value;
+    var faction = $(element).data("faction");
+
+    var elementType = $(element).data("elementtype");
+
+    var top = $(element)[0].style.top.replace("px", "").replace('"', "");
+    var left = $(element)[0].style.left.replace("px", "");
+
+    var obj = { "class": className.trim(), img, name, elementType, top, left, title, faction };
+
+    return obj;
+};
+
+function fogToObject(element) {
+    var img = "fog";
+    var name = $(element)[0].attributes["name"] != undefined ? $(element)[0].attributes["name"].value : "";
+    var className = removeClassNameOnSave($(element)[0].className, ["fog", "  "]);
+    var elementType = $(element).data("elementtype");
+    var top = $(element)[0].style.top.replace("px", "").replace('"', "");
+    var left = $(element)[0].style.left.replace("px", ""); 
+    
+    var obj = { "class": className.trim(), img, name, elementType, top, left };
+    return obj;
+};

@@ -1,28 +1,3 @@
-function htmlToObject(element) {
-    var img = "fog";
-    var name = $(element)[0].attributes["name"] != undefined ? $(element)[0].attributes["name"].value : "";
-    var className = removeClassNameOnSave($(element)[0].className, ["fog", "  "]);
-    var title = "";
-    var faction = "";
-
-    if (className.indexOf("fog") === -1) {
-        img = getIconNameFromElement(element);
-
-        className = removeClassNameOnSave(className, ["tooltipstered", "tooltip", "tap-target", "inFront", "draggable", "icon", img, "  "]);
-        title = $(element)[0].attributes["alt"].value;
-        faction = $(element).data("faction");
-    }
-
-    var elementType = $(element).data("elementtype");
-
-    var top = $(element)[0].style.top.replace("px", "").replace('"', "");
-    var left = $(element)[0].style.left.replace("px", "");
-
-    var obj = { "class": className.trim(), img, name, elementType, top, left, title, faction };
-
-    console.log(obj);
-    return obj;
-};
 
 function removeClassNameOnSave(className, classToRemove) {
     for (var i = 0; i < classToRemove.length; i++) {

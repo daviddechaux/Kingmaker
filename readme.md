@@ -31,7 +31,7 @@ Well ... you can create icons... Please...
 
 
 > http://raphaeljs.com/    
-> Animating Clip Paths
+> Animating Clip Paths  
 
 
 

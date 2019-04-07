@@ -19,7 +19,7 @@ function saveFile() {
 };
 
 function convertMapToObject() {
-    var mapContainer = $(".mapDecoration").find("img");
+    var mapContainer = document.querySelectorAll("[data-elementtype='fogOfWar']");
     var fog = [];
     for (var i = 0; i < mapContainer.length; i++) {
         var newElement = fogToObject(mapContainer[i]);
@@ -50,18 +50,6 @@ function convertMapToObject() {
 
     return JSON.stringify(map);
 };
-
-function fogToObject(element) {
-    var img = "fog";
-    var name = $(element)[0].attributes["name"] != undefined ? $(element)[0].attributes["name"].value : "";
-    var className = removeClassNameOnSave($(element)[0].className, ["fog", "  "]);
-    var elementType = $(element).data("elementtype");
-    var top = $(element)[0].style.top.replace("px", "").replace('"', "");
-    var left = $(element)[0].style.left.replace("px", "");
-
-    return { "class": className.trim(), img, name, elementType, top, left };
-};
-
 
 function createPlayerObject(){
     var x1 = parseInt($(".player")[0].style.top.replace("px", ""))
