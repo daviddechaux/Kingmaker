@@ -24,10 +24,10 @@ Well ... you can create icons... Please...
 
 ### Plugin
 [jQuery](https://jquery.com/)  
-[ddSlick](http://designwithpc.com/Plugins/ddSlick)  
-[Tooltipster](http://iamceege.github.io/tooltipster/)  
-[Interactjs](http://interactjs.io/)  
-[Farbtastic](http://acko.net/blog/farbtastic-jquery-color-picker-plug-in/)  
+Dropdownlist with pics : [ddSlick](http://designwithpc.com/Plugins/ddSlick)  
+Nice title display : [Tooltipster](http://iamceege.github.io/tooltipster/)  
+Interaction : [Interactjs](http://interactjs.io/)  
+Color Picker : [Farbtastic](http://acko.net/blog/farbtastic-jquery-color-picker-plug-in/)  
 
 
 > http://raphaeljs.com/    
