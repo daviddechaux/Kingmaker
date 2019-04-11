@@ -12,8 +12,8 @@ I didn't look after them when I get the pics.
 If you think the icons is your (it could be) and you don't want me to use it or you want to have your name on the app, please ask.
 
 ### Tools
-[PngToCsv](https://picsvg.com/)  
-[CsvToFont](http://fontello.com/)  
+[PngToSvg](https://picsvg.com/)  
+[SvgToFont](http://fontello.com/)  
 
 ### Want something ?
 New feature, icons, ... Please ask.  
