@@ -69,6 +69,7 @@ https://drive.google.com/file/d/0B2d5Rs815f8bOU80T1ZsUkUtZm8/view
 - Quote on faction name
 - Quote on element name
 - Faction dropdown on create element
+- Faction change on edit element (ressurces)
 
 ## Missing icons
 - Add element button (top right menu)
