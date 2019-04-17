@@ -32,7 +32,7 @@ Color Picker : [Farbtastic](http://acko.net/blog/farbtastic-jquery-color-picker-
 
 > http://raphaeljs.com/    
 > Animating Clip Paths  
-
+> https://d3js.org/
 
 ## Todo : 
 - Find an awesome tokens for the party
