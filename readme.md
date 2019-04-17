@@ -71,6 +71,7 @@ https://drive.google.com/file/d/0B2d5Rs815f8bOU80T1ZsUkUtZm8/view
 - Quote on element name
 - Faction dropdown on create element
 - Faction change on edit element (ressurces)
+- Change color when faction color change
 
 ## Missing icons
 - Add element button (top right menu)
