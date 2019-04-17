@@ -43,6 +43,7 @@ Color Picker : [Farbtastic](http://acko.net/blog/farbtastic-jquery-color-picker-
 - Add a hint on fields (name and title) : disable some characteres on names
 - Create capital
 - Redo the fog positioning properly
+- Use Lucian POC for Javascript Object
 
 ## In progress :
 - Create factions : Border  
