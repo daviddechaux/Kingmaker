@@ -7,6 +7,7 @@
     <link rel="stylesheet" type="text/css" href="css/element.css">
     <link rel="stylesheet" type="text/css" href="css/faction.css">
     <link rel="stylesheet" type="text/css" href="css/fog.css">
+    <link rel="stylesheet" type="text/css" href="css/border.css">
     <link rel="stylesheet" type="text/css" href="css/pics.css"> <!-- Font -->
 
     <!-- Plugins -->
@@ -56,7 +57,7 @@
         <img src="images/map.jpg" class="background" />
     </div>
 
-    <svg height="266" width="230" class="haut ne">
+    <!-- <svg height="266" width="230" class="haut ne">
         <polygon points="115,0 230,67 225,72 115,7" style="fill:gray"/>
     </svg>
     <svg height="266" width="230" class="haut e">
@@ -73,7 +74,7 @@
     </svg>
     <svg height="266" width="230" class="haut nw">
         <polygon points="0,67 115,0 115,7 5,72" style="fill:cyan"/>
-    </svg>
+    </svg> -->
 
     <!-- layer on the map when we do stuff -->
     <div class="editorBackground"></div>
@@ -216,6 +217,7 @@
         idSelectedElement = 0;
         isMapLoaded = false;
         elementType = ["building", "resources", "misc"];
+        factions = [];
 
         // Checkbox
         displayElement("building");
@@ -240,9 +242,6 @@
 
         $(".editorBackground").show();
         $(".wrapper").hide();
-
-        // Display color picker
-        addFaction();
     });
 </script>
 

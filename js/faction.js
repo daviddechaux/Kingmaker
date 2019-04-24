@@ -69,6 +69,8 @@ function addFactions(factions){
 
 
 function factionToHtml(id, name, color){
+	factions.push({id, name, color});
+
 	var faction = 
 	"<div class='faction gimmeFullSpace'>" +
 		"<input type='text' class='factionName' data-factionId='" + id + "' value='" + name + "' />" +
