@@ -1,41 +1,41 @@
-function displayNiceDropdownList(){
-    //$("#decorationDdlType").ddslick('destroy');
-    $("#decorationDdlType").ddslick({
-        data: ddElementType,
-        selectText: "Select element type"
-    });
+function displayNiceDropdownList() {
+	//$("#decorationDdlType").ddslick('destroy');
+	$("#decorationDdlType").ddslick({
+		data: ddElementType,
+		selectText: "Select element type"
+	});
 
-    //$("#decorationDdl").ddslick('destroy');
-    $("#decorationDdl").ddslick({
-        height: 300,
-        data: ddElement,
-        selectText: "Select an icon"
-    });
+	//$("#decorationDdl").ddslick('destroy');
+	$("#decorationDdl").ddslick({
+		height: 300,
+		data: ddElement,
+		selectText: "Select an icon"
+	});
 
-    
-    $("#editDecorationDdlType").ddslick({
-        data: ddElementType,
-        selectText: "Select element type"
-    });
-    $("#editDecorationDdl").ddslick({
-        height: 300,
-        data: ddElement,
-        selectText: "Select an icon"
-    });
+
+	$("#editDecorationDdlType").ddslick({
+		data: ddElementType,
+		selectText: "Select element type"
+	});
+	$("#editDecorationDdl").ddslick({
+		height: 300,
+		data: ddElement,
+		selectText: "Select an icon"
+	});
 };
 
-function displayDropDownFaction(select, selectedFaction){
+function displayDropDownFaction(select, selectedFaction) {
 	$(".option").remove();
 
 	select.append("<option class='option' value='0'>None</option>");
 
-    var factionsDiv = $(".factions");
-	for(var i = 0; i < factionsDiv.children().length; i++){
-        var currentFaction = factionsDiv.children()[i];
-        
-        var id = currentFaction.children[0].attributes["data-factionid"].value;
+	var factionsDiv = $(".factions");
+	for (var i = 0; i < factionsDiv.children().length; i++) {
+		var currentFaction = factionsDiv.children()[i];
+
+		var id = currentFaction.children[0].attributes["data-factionid"].value;
 		var name = currentFaction.children[0].attributes["value"].value;
-		
+
 		var selected = selectedFaction === name ? "selected" : "";
 		var option = "<option class='option' value='" + id + "' " + selected + " >" + name + "</option>";
 
@@ -265,6 +265,48 @@ var ddElement = [
 		"selected": false,
 		"description": "",
 		"userClass": "icon-village",
-		"text": "village"
+		"text": "Village"
+	},
+	{
+		"value": 28,
+		"selected": false,
+		"description": "",
+		"userClass": "icon-statue",
+		"text": "Statue"
+	},
+	{
+		"value": 29,
+		"selected": false,
+		"description": "",
+		"userClass": "icon-toad",
+		"text": "Toad"
+	},
+	{
+		"value": 30,
+		"selected": false,
+		"description": "",
+		"userClass": "icon-lys",
+		"text": "Lily"
+	},
+	{
+		"value": 31,
+		"selected": false,
+		"description": "",
+		"userClass": "icon-cairn",
+		"text": "Cairn"
+	},
+	{
+		"value": 32,
+		"selected": false,
+		"description": "",
+		"userClass": "icon-lac",
+		"text": "Lac"
+	},
+	{
+		"value": 33,
+		"selected": false,
+		"description": "",
+		"userClass": "icon-souche",
+		"text": "stump"
 	}
 ];

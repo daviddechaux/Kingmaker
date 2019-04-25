@@ -1,11 +1,11 @@
 @font-face {
   font-family: 'pics';
-  src: url('../font/pics.eot?16690612');
-  src: url('../font/pics.eot?16690612#iefix') format('embedded-opentype'),
-       url('../font/pics.woff2?16690612') format('woff2'),
-       url('../font/pics.woff?16690612') format('woff'),
-       url('../font/pics.ttf?16690612') format('truetype'),
-       url('../font/pics.svg?16690612#pics') format('svg');
+  src: url('../font/pics.eot?49849484');
+  src: url('../font/pics.eot?49849484#iefix') format('embedded-opentype'),
+       url('../font/pics.woff2?49849484') format('woff2'),
+       url('../font/pics.woff?49849484') format('woff'),
+       url('../font/pics.ttf?49849484') format('truetype'),
+       url('../font/pics.svg?49849484#fontello') format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -15,7 +15,7 @@
 @media screen and (-webkit-min-device-pixel-ratio:0) {
   @font-face {
     font-family: 'pics';
-    src: url('../font/pics.svg?16690612#pics') format('svg');
+    src: url('../font/pics.svg?49849484#fontello') format('svg');
   }
 }
 */
@@ -55,38 +55,44 @@
   /* text-shadow: 1px 1px 1px rgba(127, 127, 127, 0.3); */
 }
  
-.icon-cabane:before { content: '\e800'; } /* '' */
-.icon-camp:before { content: '\e801'; } /* '' */
-.icon-cave:before { content: '\e802'; } /* '' */
-.icon-clay:before { content: '\e803'; } /* '' */
-.icon-cottage:before { content: '\e804'; } /* '' */
-.icon-deadtree:before { content: '\e805'; } /* '' */
-.icon-dolmen:before { content: '\e806'; } /* '' */
-.icon-dragon:before { content: '\e807'; } /* '' */
-.icon-elk:before { content: '\e808'; } /* '' */
-.icon-ferry:before { content: '\e809'; } /* '' */
-.icon-hill:before { content: '\e80a'; } /* '' */
-.icon-hive:before { content: '\e80b'; } /* '' */
-.icon-house:before { content: '\e80c'; } /* '' */
-.icon-mine:before { content: '\e80d'; } /* '' */
-.icon-raspberry:before { content: '\e80e'; } /* '' */
-.icon-road:before { content: '\e80f'; } /* '' */
-.icon-rock:before { content: '\e810'; } /* '' */
-.icon-ruin:before { content: '\e811'; } /* '' */
-.icon-ruin2:before { content: '\e812'; } /* '' */
-.icon-sign:before { content: '\e813'; } /* '' */
-.icon-source:before { content: '\e814'; } /* '' */
-.icon-spiderweb:before { content: '\e815'; } /* '' */
-.icon-stag:before { content: '\e816'; } /* '' */
-.icon-swamp:before { content: '\e817'; } /* '' */
-.icon-tomb:before { content: '\e818'; } /* '' */
-.icon-village:before { content: '\e819'; } /* '' */
-.icon-wheat:before { content: '\e81a'; } /* '' */
-.icon-bridge:before { content: '\e81b'; } /* '' */
-.icon-question:before { content: '\e81c'; } /* '' */
-.icon-delete:before { content: '\e81d'; } /* '' */
-.icon-information:before { content: '\e81e'; } /* '' */
+.icon-raspberry:before { content: '\e800'; } /* '' */
+.icon-road:before { content: '\e801'; } /* '' */
+.icon-rock:before { content: '\e802'; } /* '' */
+.icon-ruin:before { content: '\e803'; } /* '' */
+.icon-ruin2:before { content: '\e804'; } /* '' */
+.icon-save:before { content: '\e805'; } /* '' */
+.icon-sign:before { content: '\e806'; } /* '' */
+.icon-source:before { content: '\e807'; } /* '' */
+.icon-spiderweb:before { content: '\e808'; } /* '' */
+.icon-stag:before { content: '\e809'; } /* '' */
+.icon-swamp:before { content: '\e80a'; } /* '' */
+.icon-tomb:before { content: '\e80b'; } /* '' */
+.icon-village:before { content: '\e80c'; } /* '' */
+.icon-wheat:before { content: '\e80d'; } /* '' */
+.icon-statue:before { content: '\e80e'; } /* '' */
+.icon-toad:before { content: '\e80f'; } /* '' */
+.icon-lys:before { content: '\e810'; } /* '' */
+.icon-cairn:before { content: '\e811'; } /* '' */
+.icon-lac:before { content: '\e812'; } /* '' */
+.icon-souche:before { content: '\e813'; } /* '' */
+.icon-bridge:before { content: '\e814'; } /* '' */
+.icon-cabane:before { content: '\e815'; } /* '' */
+.icon-camp:before { content: '\e816'; } /* '' */
+.icon-cave:before { content: '\e817'; } /* '' */
+.icon-clay:before { content: '\e818'; } /* '' */
+.icon-cottage:before { content: '\e819'; } /* '' */
+.icon-deadtree:before { content: '\e81a'; } /* '' */
+.icon-delete:before { content: '\e81b'; } /* '' */
+.icon-dolmen:before { content: '\e81c'; } /* '' */
+.icon-dragon:before { content: '\e81d'; } /* '' */
+.icon-elk:before { content: '\e81e'; } /* '' */
 .icon-faction:before { content: '\e81f'; } /* '' */
-.icon-save:before { content: '\e820'; } /* '' */
-.icon-new:before { content: '\e821'; } /* '' */
-.icon-load:before { content: '\e822'; } /* '' */
+.icon-ferry:before { content: '\e820'; } /* '' */
+.icon-hill:before { content: '\e821'; } /* '' */
+.icon-hive:before { content: '\e822'; } /* '' */
+.icon-house:before { content: '\e823'; } /* '' */
+.icon-information:before { content: '\e824'; } /* '' */
+.icon-load:before { content: '\e825'; } /* '' */
+.icon-mine:before { content: '\e826'; } /* '' */
+.icon-new:before { content: '\e827'; } /* '' */
+.icon-question:before { content: '\e828'; } /* '' */
