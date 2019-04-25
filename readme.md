@@ -45,6 +45,7 @@ Color Picker : [Farbtastic](http://acko.net/blog/farbtastic-jquery-color-picker-
 - Redo the fog positioning properly
 - Use Lucian POC for Javascript Object
 - Add line J
+- Sort dropdown alphabetically
 
 ## In progress :
 - Create factions : Border  
