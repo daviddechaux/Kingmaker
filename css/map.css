@@ -1,20 +1,20 @@
-.hide{
-    display:none;
+.hide {
+    display: none;
 }
 
-.editorBackground{
+.editorBackground {
     z-index: 999;
     position: absolute;
     top: 0px;
     left: 0px;
     width: 6460px;
     height: 2260px;
-    background-color : white;
+    background-color: white;
     opacity: 0.8;
     display: none;
 }
 
-.inFront{
+.inFront {
     z-index: 1001 !important;
 }
 
@@ -24,26 +24,25 @@
     left: 0;
 }
 
-.gimmeSpace{
-    margin-top:5px;
-    margin-bottom:5px;
+.gimmeSpace {
+    margin-top: 5px;
+    margin-bottom: 5px;
 }
 
-.gimmeOtherSpace{
-    margin-left:5px;
+.gimmeOtherSpace {
+    margin-left: 5px;
 }
 
-.gimmeFullSpace{
+.gimmeFullSpace {
     margin: 5px 5px 5px 5px;
 }
 
-.dockRight{
-    margin-left:auto;
-    margin-right:5px;
+.dockRight {
+    margin-left: auto;
+    margin-right: 5px;
 }
 
-.file > input
-{
+.file>input {
     display: none;
 }
 
@@ -60,20 +59,25 @@
     user-select: none;
 }
 
-.mapDecorationToolBox{
-    width:200px;
-    height:200px;
+.mapDecorationToolBox {
+    width: 200px;
+    height: 200px;
     background-color: white;
-    display:none;
+    display: none;
 }
 
-.field{
-    display:block;
+.field {
+    display: block;
 }
 
-.icon{
+.icon {
     font-family: "pics";
     font-size: 50px;
 }
 
 
+.hex {
+    font-size: xx-large;
+    position: absolute;
+    text-transform: uppercase;
+}

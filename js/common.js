@@ -16,7 +16,7 @@ function getIconNameFromElement(element) {
 
 
 function createImgTag(imgId, picName, elementName, cssClass, visited, additionalClass, top, left, title, elementType, faction) {
-    if (faction == undefined) {
+    if (faction == undefined || faction == "") {
         faction = "None";
     }
 
@@ -24,30 +24,20 @@ function createImgTag(imgId, picName, elementName, cssClass, visited, additional
         var fullClass = (cssClass + " " + visited + " " + additionalClass).trim().replace("  ", " ");
         var div = "<div><div id='" + imgId + "' name='" + elementName + "' class='" + fullClass + "' data-elementType='" + elementType + "' data-faction='" + faction + "' alt='" + title + "' style='top:" + top + "px; left:" + left + "px' />";
 
-        if (faction != "" && faction != "None") {
+        if (faction != "None") {
             var factionColor = getFactionColorFromId(faction);
             var position = "top:" + top + "px; left:" + left + "px";
 
-            div +=
-                "<svg class='border ne' style='" + position + "'>" +
-                "<polygon points='115,0 230,67 225,72 115,7' style='fill:" + factionColor + "'/>" +
-                "</svg>" +
-                "<svg class='border e' style='" + position + "'>" +
-                "<polygon points='230, 67 230,200 225,195 225, 72' style='fill:" + factionColor + "'/>" +
-                "</svg>" +
-                "<svg class='border se' style='" + position + "'>" +
-                "<polygon points='230,200 115,266 115,259 225,195' style='fill:" + factionColor + "'/>" +
-                "</svg>" +
-                "<svg class='border sw' style='" + position + "'>" +
-                "<polygon points='115,266 0,200 5,195 115,259' style='fill:" + factionColor + "'/>" +
-                "</svg>" +
-                "<svg class='border w' style='" + position + "'>" +
-                "<polygon points='0,200 0,67 5,72 5,195' style='fill:" + factionColor + "'/>" +
-                "</svg>" +
-                "<svg class='border nw' style='" + position + "'>" +
-                "<polygon points='0,67 115,0 115,7 5,72' style='fill:" + factionColor + "'/>" +
-                "</svg>";
+            div += createBorder(position, factionColor);
         }
+
+        var newTop = parseInt(top) + 215;
+        var newLeft = parseInt(left) + 91;
+        var row = elementName.substring(0, 1);
+        var column = parseInt(elementName.substring(1, 3)) - 14;
+
+        if (column > 0)
+            div += "<label class='hex' style='top:" + newTop + "px; left:" + newLeft + "px';>" + row + column + "</label>";
 
         div += "</div>";
         return div;
@@ -60,3 +50,25 @@ function createImgTag(imgId, picName, elementName, cssClass, visited, additional
         return '<div id="' + imgId + '" data-faction="' + faction + '" class="icon ' + fullClass + '" data-elementType="' + elementType + '" alt="' + title + '" title="' + title + '" style="top:' + top + 'px; left:' + left + 'px; color:' + color + '" />';
     }
 };
+
+
+function createBorder(position, factionColor) {
+    return "<svg class='border ne' style='" + position + "'>" +
+        "<polygon points='115,0 230,67 225,72 115,7' style='fill:" + factionColor + "'/>" +
+        "</svg>" +
+        "<svg class='border e' style='" + position + "'>" +
+        "<polygon points='230, 67 230,200 225,195 225, 72' style='fill:" + factionColor + "'/>" +
+        "</svg>" +
+        "<svg class='border se' style='" + position + "'>" +
+        "<polygon points='230,200 115,266 115,259 225,195' style='fill:" + factionColor + "'/>" +
+        "</svg>" +
+        "<svg class='border sw' style='" + position + "'>" +
+        "<polygon points='115,266 0,200 5,195 115,259' style='fill:" + factionColor + "'/>" +
+        "</svg>" +
+        "<svg class='border w' style='" + position + "'>" +
+        "<polygon points='0,200 0,67 5,72 5,195' style='fill:" + factionColor + "'/>" +
+        "</svg>" +
+        "<svg class='border nw' style='" + position + "'>" +
+        "<polygon points='0,67 115,0 115,7 5,72' style='fill:" + factionColor + "'/>" +
+        "</svg>";
+}
