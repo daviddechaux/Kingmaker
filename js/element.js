@@ -1,4 +1,4 @@
-function createDecoration(){
+function createDecoration() {
     var pos = getElementPos(".player");
 
     var className = $("#decorationDdl").find("a.dd-selected").find("label").text().trim().toLowerCase() + " tooltip tap-target";
@@ -19,7 +19,7 @@ function createDecoration(){
         faction);
 
     $("." + elementType + "Section").append(img);
-    if ($("#" + elementType)[0].checked){
+    if ($("#" + elementType)[0].checked) {
         $("#" + elementType)[0].checked = true;
         $("#" + idElement).show();
     }
@@ -29,18 +29,18 @@ function createDecoration(){
     idElement++;
 };
 
-function editElement(){ 
+function editElement() {
     var decorationToChange = $("#decorationToChange").val();
     var itemToChange = $("#" + decorationToChange);
 
     var title = $("#titleMapDecoration").val();
     var className = removeOldIcon(itemToChange[0].className
-                                .replace("icon", "")
-                                .replace("tooltipstered", "")
-                                .replace("draggable", "")
-                                .replace("inFront", "")
-                                .replace("  ", " ")
-                                .trim());
+        .replace("icon", "")
+        .replace("tooltipstered", "")
+        .replace("draggable", "")
+        .replace("inFront", "")
+        .replace("  ", " ")
+        .trim());
 
     className = removeOldSection(className);
 
@@ -51,7 +51,7 @@ function editElement(){
     var pos = getElementPos("#" + decorationToChange);
 
     var newSection = $('#editDecorationDdlType').data('ddslick').selectedData.text.toLowerCase();
-    var faction = $("#editDecorationDdlFaction option:selected").text();
+    var faction = $("#editDecorationDdlFaction option:selected").val();
 
     var img = createImgTag(id,
         userClass,
@@ -65,38 +65,45 @@ function editElement(){
         newSection,
         faction);
 
-    itemToChange.remove();   
+    console.log(img);
+
+    itemToChange.remove();
     $("." + newSection + "Section").append(img);
+    $("#" + id).show();
+
+    console.log($("#" + id));
 
     closeMenuDecoration();
     tooltipOne(id);
 };
 
-function removeOldSection(className){
-    for(var i = 0; i < elementType.length; i++){
+function removeOldSection(className) {
+    for (var i = 0; i < elementType.length; i++) {
         className = className.replace(elementType[i], "");
     }
-    
+
     return className;
 };
 
-function removeOldIcon(className){
+function removeOldIcon(className) {
     var oldIcon = getIconName(className.split(" "));
     var oldClass = oldIcon.replace("icon-", "");
 
     var result = className.replace(oldIcon, "")
-                        .replace(oldClass, "");
+        .replace(oldClass, "");
 
     return result;
 };
 
-function getElementPos(element){
-    return { left: $(element)[0].offsetLeft + tryParseInt($(element).data("x"), 0),
-             top : $(element)[0].offsetTop + tryParseInt($(element).data("y"), 0)};
+function getElementPos(element) {
+    return {
+        left: $(element)[0].offsetLeft + tryParseInt($(element).data("x"), 0),
+        top: $(element)[0].offsetTop + tryParseInt($(element).data("y"), 0)
+    };
 };
 
 
-function addMapDecoration(){
+function addMapDecoration() {
     $(".editorBackground").show();
     $(".addElement").show();
 
@@ -111,9 +118,9 @@ function addMapDecoration(){
     displayDropDownFaction($("#decorationDdlFaction"));
 };
 
-function getIconName(classes){
-    for(var i = 0; i < classes.length; i++){
-        if (classes[i].startsWith("icon-")){
+function getIconName(classes) {
+    for (var i = 0; i < classes.length; i++) {
+        if (classes[i].startsWith("icon-")) {
             return classes[i];
         }
     }
@@ -121,14 +128,14 @@ function getIconName(classes){
     return "";
 };
 
-function unselectElement(){
+function unselectElement() {
     $("#" + idSelectedElement).removeClass("draggable");
     $("#" + idSelectedElement).removeClass("inFront");
 
     idSelectedElement = 0;
 };
 
-function deleteElement(){
+function deleteElement() {
     $("#" + idSelectedElement).remove();
     closeMenuDecoration();
 };
@@ -138,7 +145,9 @@ function htmlToObject(element) {
     var img = getIconNameFromElement(element);
     var className = removeClassNameOnSave($(element)[0].className, ["tooltipstered", "tooltip", "tap-target", "inFront", "draggable", "icon", img, "  "]);
     var title = $(element)[0].attributes["alt"].value;
-    var faction = $(element).data("faction");
+    var faction = $(element).data("faction").toString();
+
+    console.log(title);
 
     var elementType = $(element).data("elementtype");
 

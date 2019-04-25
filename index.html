@@ -1,4 +1,5 @@
 <html>
+
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 
@@ -16,10 +17,10 @@
     <link rel="stylesheet" type="text/css" href="plugin/jquery-ui.1.12/jquery-ui.css" />
     <link rel="stylesheet" type="text/css" href="plugin/jquery-ui.1.12/jquery-ui.structure.css" />
     <script type="text/javascript" src="plugin/jquery-ui.1.12/jquery-ui.js"></script>
-    
+
     <link rel="stylesheet" type="text/css" href="plugin/tooltipster/tooltipster.bundle.css" />
     <script type="text/javascript" src="plugin/tooltipster/tooltipster.bundle.js"></script>
-    
+
     <link rel="stylesheet" type="text/css" href="plugin/farbtastic/farbtastic.css" />
 
     <script type="text/javascript" src="plugin/farbtastic/farbtastic.js"></script>
@@ -42,39 +43,12 @@
     <script type="text/javascript" src="js/map.js"></script>
     <script type="text/javascript" src="js/menu.js"></script>
     <script type="text/javascript" src="js/element.js"></script>
-
-    <style>
-            .haut{
-            position:absolute;
-            top:13px;
-            left:30px;
-            }
-            </style>
 </head>
 
 <body>
     <div class="img">
         <img src="images/map.jpg" class="background" />
     </div>
-
-    <!-- <svg height="266" width="230" class="haut ne">
-        <polygon points="115,0 230,67 225,72 115,7" style="fill:gray"/>
-    </svg>
-    <svg height="266" width="230" class="haut e">
-        <polygon points="230, 67 230,200 225,195 225, 72" style="fill:red;"/>
-    </svg>
-    <svg height="266" width="230" class="haut se">
-        <polygon points="230,200 115,266 115,259 225,195" style="fill:blue;"/>
-    </svg>
-    <svg height="266" width="230" class="haut sw">
-        <polygon points="115,266 0,200 5,195 115,259" style="fill:yellow;"/>
-    </svg>
-    <svg height="266" width="230" class="haut w">
-        <polygon points="0,200 0,67 5,72 5,195" style="fill:black"/>
-    </svg>
-    <svg height="266" width="230" class="haut nw">
-        <polygon points="0,67 115,0 115,7 5,72" style="fill:cyan"/>
-    </svg> -->
 
     <!-- layer on the map when we do stuff -->
     <div class="editorBackground"></div>
@@ -87,7 +61,8 @@
         </div>
 
         <div class="openMap iconContainer">
-            <div class="file gimmeSpace icon icon-load bigIcon openMap" title="Load existing map" onclick="loadFile()" ></div>
+            <div class="file gimmeSpace icon icon-load bigIcon openMap" title="Load existing map" onclick="loadFile()">
+            </div>
             <input id="openData" class="hide" type="file" />
         </div>
     </div>
@@ -143,7 +118,7 @@
         <div id="colorPicker"></div>
 
         <label id="factionName" class="hide"></label>
-        
+
         <div class="gimmeFullSpace">
             <button onclick="saveColor()">Save color</button>
         </div>
@@ -152,7 +127,7 @@
     <!-- Save Map (left menu) -->
     <div class="menu wrapper wrapperLeft">
         <div class="saveMap iconContainer">
-            <div class="file gimmeSpace icon icon-save bigIcon"  title="Save current map" onclick="saveFile()"></div>
+            <div class="file gimmeSpace icon icon-save bigIcon" title="Save current map" onclick="saveFile()"></div>
             <input id="saveData" class="hide" />
         </div>
 
