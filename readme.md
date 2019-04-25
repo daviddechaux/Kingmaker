@@ -5,7 +5,7 @@ It is **not** made for the [video game](https://owlcatgames.com/) but for the [p
 You can either use the [site](http://kerchiefed-turnarou.000webhostapp.com/) or copy everything in local.  
 > *Last update : 25/04/2019 11h00*
 
-The map has been made by [Jon Pintar](https://jonpintar.com/).
+The map has been done by [Jon Pintar](https://jonpintar.com/).
 
 ### Copyright
 I didn't look after them when I get the pics.  
