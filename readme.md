@@ -3,7 +3,7 @@ The app is an interactive map for the Kingmaker campaign.
 It is **not** made for the [video game](https://owlcatgames.com/) but for the [paper version](https://paizo.com/kingmaker) (french version [here](https://www.black-book-editions.fr/catalogue.php?id=29)). 
 
 You can either use the [site](http://kerchiefed-turnarou.000webhostapp.com/) or copy everything in local.  
-> *Last update : 07/04/2019 12h00*
+> *Last update : 25/04/2019 11h00*
 
 The map has been made by [Jon Pintar](https://jonpintar.com/).
 
@@ -39,11 +39,12 @@ Color Picker : [Farbtastic](http://acko.net/blog/farbtastic-jquery-color-picker-
 - Save before quit
 - Make fog more manageable (add and transparency)
 - Adjust css to have all icon on the same size (more or less)
-- Use data instead of crappy class method like I did
+- Use data instead of crappy css class method like I did
 - Add a hint on fields (name and title) : disable some characteres on names
 - Create capital
 - Redo the fog positioning properly
 - Use Lucian POC for Javascript Object
+- Add line J
 
 ## In progress :
 - Create factions : Border  
@@ -56,7 +57,6 @@ Color Picker : [Farbtastic](http://acko.net/blog/farbtastic-jquery-color-picker-
 - Put the dropdown to the default value
 - Use a proper framework to do the stuff done by jQuery (vueJs, React, whateverJs)
 - Add a calendar (or something that display date)
-- What is the utility of the name of the element vs title ?
 - Fill the dropdown automatically instead of using the crappy object
 
 ## Nope
@@ -70,8 +70,7 @@ https://drive.google.com/file/d/0B2d5Rs815f8bOU80T1ZsUkUtZm8/view
 - Quote on faction name
 - Quote on element name
 - Faction dropdown on create element
-- Faction change on edit element (ressurces)
-- Change color when faction color change
+- Change color when faction color change <= is that a bug ?
 
 ## Missing icons
 - Add element button (top right menu)
@@ -99,4 +98,5 @@ https://drive.google.com/file/d/0B2d5Rs815f8bOU80T1ZsUkUtZm8/view
 - After load (or create) center on player token
 - Create factions (color element)
 - Fog in CSS
+
 
