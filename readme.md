@@ -46,6 +46,7 @@ Color Picker : [Farbtastic](http://acko.net/blog/farbtastic-jquery-color-picker-
 - Use Lucian POC for Javascript Object
 - Add line J
 - Sort dropdown alphabetically
+- dropdown path is buggy ?
 
 ## In progress :
 - Create factions : Border  
