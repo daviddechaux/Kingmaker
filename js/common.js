@@ -15,7 +15,7 @@ function getIconNameFromElement(element) {
 
 
 
-function createImgTag(imgId, picName, elementName, cssClass, visited, additionalClass, top, left, title, elementType, faction) {
+function createElement(imgId, picName, elementName, cssClass, visited, additionalClass, top, left, title, elementType, faction) {
     if (faction == undefined || faction == "") {
         faction = "None";
     }
@@ -23,9 +23,9 @@ function createImgTag(imgId, picName, elementName, cssClass, visited, additional
     if (elementType === "fogOfWar") {
         var fullClass = (cssClass + " " + visited + " " + additionalClass).trim().replace("  ", " ");
 
-        var div = "<div>";
-        div += "<div id='" + imgId + "' name='" + elementName + "' class='" + fullClass + "' data-elementType='" + elementType + "' data-faction='" + faction + "' alt='" + title + "' style='top:" + top + "px; left:" + left + "px' />";
-        div += createBorder(faction, top, left);
+        var div = "<div class='hex' data-faction='" + faction + "'>";
+        div += "<div id='" + imgId + "' name='" + elementName + "' class='" + fullClass + "' data-elementType='" + elementType + "' alt='" + title + "' style='top:" + top + "px; left:" + left + "px' />";
+        div += createBorder(faction, elementName, top, left);
         div += displayAreaCode(elementName, top, left);
         div += "</div>";
         return div;
@@ -46,18 +46,19 @@ function displayAreaCode(hexName, top, left) {
     var column = parseInt(hexName.substring(1, 3)) - 14;
 
     if (0 < column && column < 8)
-        return "<label class='hex' style='top:" + newTop + "px; left:" + newLeft + "px';>" + row + column + "</label>";
+        return "<label class='hexLabel' style='top:" + newTop + "px; left:" + newLeft + "px';>" + row + column + "</label>";
 
     return "";
 }
 
-function createBorder(faction, top, left) {
+function createBorder(faction, elementName, top, left) {
     if (faction != "None") {
         var factionColor = getFactionColorFromId(faction);
         var position = "top:" + top + "px; left:" + left + "px";
 
 
-        return "<svg class='border ne' style='" + position + "'>" +
+        return "<div class='isBorder' data-faction='" + faction + "' name='" + elementName + "' >" +
+            "<svg class='border ne' style='" + position + "'>" +
             "<polygon points='115,0 230,67 225,72 115,7' style='fill:" + factionColor + "'/>" +
             "</svg>" +
             "<svg class='border e' style='" + position + "'>" +
@@ -74,7 +75,7 @@ function createBorder(faction, top, left) {
             "</svg>" +
             "<svg class='border nw' style='" + position + "'>" +
             "<polygon points='0,67 115,0 115,7 5,72' style='fill:" + factionColor + "'/>" +
-            "</svg>";
+            "</svg></div>";
     }
 
     return "";

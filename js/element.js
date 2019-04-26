@@ -6,7 +6,7 @@ function createDecoration() {
     var elementType = $("#decorationDdlType").find("a.dd-selected").find("label").text().trim().toLowerCase()
     var faction = $("#decorationDdlFaction option:selected").text();
 
-    var img = createImgTag(idElement,
+    var img = createElement(idElement,
         imgName,
         $("#addNameMapDecoration").val(),
         className.toLowerCase(),
@@ -53,7 +53,7 @@ function editElement() {
     var newSection = $('#editDecorationDdlType').data('ddslick').selectedData.text.toLowerCase();
     var faction = $("#editDecorationDdlFaction option:selected").val();
 
-    var img = createImgTag(id,
+    var img = createElement(id,
         userClass,
         "",
         className + " " + newIcon,
