@@ -35,22 +35,20 @@ Color Picker : [Farbtastic](http://acko.net/blog/farbtastic-jquery-color-picker-
 > https://d3js.org/
 
 ## Todo : 
-- Find an awesome tokens for the party
 - Save before quit
 - Make fog more manageable (add and transparency)
 - Adjust css to have all icon on the same size (more or less)
 - Use data instead of crappy css class method like I did
 - Add a hint on fields (name and title) : disable some characteres on names
 - Create capital
-- Redo the fog positioning properly
 - Use Lucian POC for Javascript Object
-- Add line J
 - Sort dropdown alphabetically
-- Dropdown path is buggy ?
-- Player token position is wrongly saved
+- Add a crow on the player token, and make this crown evovle with the size of the kingdom (check https://upload.wikimedia.org/wikipedia/commons/8/86/Meuble_h%C3%A9raldique_Couronnes_fran%C3%A7aises.svg)
+- Add army tokens (that must be factionnable)
+- Switch hex numerotation with radiobutton
 
 ## In progress :
-- Create factions : Border  
+- Create factions : Claim hexagone  
 
 ## Maybe : 
 - Load default file from web (currently data are store in js) : Cross domain origin issue
@@ -61,6 +59,7 @@ Color Picker : [Farbtastic](http://acko.net/blog/farbtastic-jquery-color-picker-
 - Use a proper framework to do the stuff done by jQuery (vueJs, React, whateverJs)
 - Add a calendar (or something that display date)
 - Fill the dropdown automatically instead of using the crappy object
+- Find an awesome tokens for the party (choosable by the user ?)
 
 ## Nope
 - Possibility to choose map (use the kingmaker video-game map ?) : No fog of war, No default map 
@@ -75,6 +74,7 @@ https://drive.google.com/file/d/0B2d5Rs815f8bOU80T1ZsUkUtZm8/view
 - Faction dropdown on create element
 - Change color when faction color change <= is that a bug ?
 - When edit an element the creation position is the edited element
+- Dropdown path is buggy ?
 
 ## Missing icons
 - Add element button (top right menu)

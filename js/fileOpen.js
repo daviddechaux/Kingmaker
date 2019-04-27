@@ -76,8 +76,8 @@ function menuDisplayer() {
 };
 
 function addPlayerToMap(player) {
-    $(".player")[0].style.top = player.x + "px";
-    $(".player")[0].style.left = player.y + "px";
+    $(".player")[0].style.left = player.x + "px";
+    $(".player")[0].style.top = player.y + "px";
 };
 
 

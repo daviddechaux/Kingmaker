@@ -101,45 +101,27 @@ function simplifyBorders() {
 
 		for (var j = 0; j < hex.length; j++) {
 			var hexname = $(hex[j])[0].attributes["name"].value;
-			console.log(hexname);
-
 			var hexCloseTo = getHexNameCloseTo(hexname);
-			console.log(hexCloseTo);
-
-			var result = false;
-			result = isHexIsInList(hex, hexCloseTo.a2);
-			console.log(result);
-			//remove nw
-			result = isHexIsInList(hex, hexCloseTo.a3);
-			console.log(result);
-			//remove ne
-			result = isHexIsInList(hex, hexCloseTo.b1);
-			console.log(result);
-			//remove w
-			result = isHexIsInList(hex, hexCloseTo.b3);
-			console.log(result);
-			//remove ne
-			result = isHexIsInList(hex, hexCloseTo.c2);
-			console.log(result);
-			//remove sw
-			result = isHexIsInList(hex, hexCloseTo.c3);
-			console.log(result);
-			//remove se
-
-
+			
+			removeBorder(hex, hexCloseTo.nw, $(hex[j]).children(".nw"));
+			removeBorder(hex, hexCloseTo.ne, $(hex[j]).children(".ne"));
+			removeBorder(hex, hexCloseTo.w, $(hex[j]).children(".w"));
+			removeBorder(hex, hexCloseTo.e, $(hex[j]).children(".e"));
+			removeBorder(hex, hexCloseTo.sw, $(hex[j]).children(".sw"));
+			removeBorder(hex, hexCloseTo.se, $(hex[j]).children(".se"));
 		}
-
-		console.log(hex);
 	}
 };
 
-function isHexIsInList(hex, hexName) {
-	for (var i = 0; i < hex.length; i++) {
-		if ($(hex[i])[0].attributes["name"].value === hexName)
-			return true;
-	}
+function removeBorder(hex, hexName, borderToRemove) {
+	if (hexName === "") return;
 
-	return false;
+	for (var i = 0; i < hex.length; i++) {
+		if ($(hex[i])[0].attributes["name"].value === hexName){
+			borderToRemove.hide();
+			return;
+		}
+	}
 };
 
 function getHexNameCloseTo(hexName) {
@@ -148,20 +130,52 @@ function getHexNameCloseTo(hexName) {
 	var row = hexName.substring(0, 1);
 	var col = parseInt(hexName.substring(1, 3));
 
-	//   A2  A3
-	// B1  B2  B3
-	//   C2  C3
-	// The hexagon in param is B2
-	var a2Name = previousRow(row) + col;
-	var a3Name = previousRow(row) + parseInt(col + 1);
+	var nw = "";
+	var ne = "";
+	var sw = "";
+	var se = "";
+	var w = "";
+	var e = "";
 
-	var b1Name = row + parseInt(col - 1);
-	var b3Name = row + parseInt(col + 1);
+	var isSlided = row === "a" || row === "c" || row === "e" || row === "g" || row === "i" ? false : true;
+	if (isSlided === false){
+		// Raw A C E G I
+		//   A2  A3
+		// B1  B2  B3
+		//   C2  C3
+		// The hexagon in param is B2
+		
+		if (row !== "a"){
+			nw = previousRow(row) + col;
+			ne = previousRow(row) + parseInt(col + 1);
+		}
 
-	var c2Name = nextRow(row) + col;
-	var c3Name = nextRow(row) + parseInt(col + 1);
+		sw = nextRow(row) + col;
+		se = nextRow(row) + parseInt(col + 1);
+	}
+	else{
+		// Raw B D F H J
+		//   A1  A2
+		// B1  B2  B3
+		//   C1  C2
+		// The hexagon in param is B2
+		nw = previousRow(row) + parseInt(col - 1);
+		ne = previousRow(row) + col;
 
-	return { a2: a2Name, a3: a3Name, b1: b1Name, b3: b3Name, c2: c2Name, c3: c3Name };
+		if (row !== "j")
+		{
+			sw = nextRow(row) + parseInt(col - 1);
+			se = nextRow(row) + col;
+		}
+	}
+
+	if (col >= 1)
+		w = row + parseInt(col - 1);
+
+	if (col <= 28 && isSlided || col <= 27 && !isSlided)
+		e = row + parseInt(col + 1);
+
+	return { nw, ne, w, e, sw, se };
 };
 
 
@@ -179,5 +193,32 @@ function previousRow(row) {
 		return String.fromCharCode(row.charCodeAt(0) - 1);
 };
 
+function createBorder(faction, elementName, top, left) {
+    if (faction != "None") {
+        var factionColor = getFactionColorFromId(faction);
+        var position = "top:" + top + "px; left:" + left + "px";
 
+        return "<div class='isBorder' data-faction='" + faction + "' name='" + elementName + "' >" +
+            "<svg class='border ne' style='" + position + "'>" +
+            "<polygon points='115,1 229,67 229,69 113,2' style='fill:" + factionColor + "'/>" +
+            "</svg>" +
+            "<svg class='border e' style='" + position + "'>" +
+            "<polygon points='229,67 229,200 227,201 227,66' style='fill:" + factionColor + "'/>" +
+            "</svg>" +
+            "<svg class='border se' style='" + position + "'>" +
+            "<polygon points='229,200 115,264 113,263 229,198' style='fill:" + factionColor + "'/>" +
+            "</svg>" +
+            "<svg class='border sw' style='" + position + "'>" +
+            "<polygon points='115,264 1,200 1,198 117,263' style='fill:" + factionColor + "'/>" +
+            "</svg>" +
+            "<svg class='border w' style='" + position + "'>" +
+            "<polygon points='1,200 1,67 3,66 3,201' style='fill:" + factionColor + "'/>" +
+            "</svg>" +
+            "<svg class='border nw' style='" + position + "'>" +
+            "<polygon points='1,67 115,1 117,2 1,69' style='fill:" + factionColor + "'/>" +
+            "</svg></div>";
+    }
+
+    return "";
+};
 

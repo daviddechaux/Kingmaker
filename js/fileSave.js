@@ -58,7 +58,7 @@ function fogToObject(element) {
     var name = $(element)[0].attributes["name"] != undefined ? $(element)[0].attributes["name"].value : "";
     var className = removeClassNameOnSave($(element)[0].className, ["fog", "  "]);
     var elementType = $(element).data("elementtype");
-    var faction = $(element).data("faction").toString();
+    var faction = $(element)[0].parentNode.attributes[1].value.toString()
     var top = $(element)[0].style.top.replace("px", "").replace('"', "");
     var left = $(element)[0].style.left.replace("px", ""); 
     
@@ -68,16 +68,25 @@ function fogToObject(element) {
 
 
 function createPlayerObject(){
-    var x1 = parseInt($(".player")[0].style.top.replace("px", ""))
-    var y1 = parseInt($(".player")[0].style.left.replace("px", ""))
+    var x1 = parseInt($(".player")[0].style.left.replace("px", ""))
+    var y1 = parseInt($(".player")[0].style.top.replace("px", ""))
 
     var x2 = parseInt($(".player")[0].getAttribute("data-x"));
     var y2 = parseInt($(".player")[0].getAttribute("data-y"));
 
-    x = isNaN(x2) ? 0 + x1 : x1 + x2;
-    y = isNaN(y2) ? 0 + y1 : y1 + y2;
+    x = getSavingPos(x1, x2);
+    y = getSavingPos(y1, y2);
 
     return {x, y};
+};
+
+function getSavingPos(initialPos, currentPos){
+    var newPos = isNaN(currentPos) ? initialPos : initialPos + currentPos;
+
+    if(newPos < 0)
+        newPos = 0
+
+    return newPos;
 };
 
 function createFactionObject(){
