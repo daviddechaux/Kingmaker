@@ -71,11 +71,11 @@ function factionToHtml(id, name, color) {
 	factions.push({ id, name, color });
 
 	var faction =
-		"<div class='faction gimmeFullSpace'>" +
-		"<input type='text' class='factionName' data-factionId='" + id + "' value='" + name + "' />" +
-		"<input type='text' class='factionBox gimmeOtherSpace' style='background-color: " + color + "' id='faction" + id + "'/>" +
-		"<div class='icon icon-delete delete deleteFaction' onclick='deleteFaction(" + id + ")'/>" +
-		"</div>";
+		'<div class="faction gimmeFullSpace">' +
+		'<input type="text" class="factionName" data-factionId="' + id + '" value="' + name + '" />' +
+		'<input type="text" class="factionBox gimmeOtherSpace" style="background-color: ' + color + '" id="faction' + id + '"/>' +
+		'<div class="icon icon-delete delete deleteFaction" onclick="deleteFaction(' + id + ')"/>' +
+		'</div>';
 
 	return faction;
 };
@@ -137,15 +137,15 @@ function getHexNameCloseTo(hexName) {
 	var w = "";
 	var e = "";
 
-	var isSlided = row === "a" || row === "c" || row === "e" || row === "g" || row === "i" ? false : true;
-	if (isSlided === false){
-		// Raw A C E G I
+	// The hexagon in param is B2
+	var shortRow = isShortRow(row);
+	if (shortRow === false){
+		// Row A C E G I
 		//   A2  A3
 		// B1  B2  B3
-		//   C2  C3
-		// The hexagon in param is B2
-		
+		//   C2  C3	
 		if (row !== "a"){
+			// Nothing before row A
 			nw = previousRow(row) + col;
 			ne = previousRow(row) + parseInt(col + 1);
 		}
@@ -154,26 +154,32 @@ function getHexNameCloseTo(hexName) {
 		se = nextRow(row) + parseInt(col + 1);
 	}
 	else{
-		// Raw B D F H J
+		// Row B D F H J
 		//   A1  A2
 		// B1  B2  B3
 		//   C1  C2
-		// The hexagon in param is B2
 		nw = previousRow(row) + parseInt(col - 1);
 		ne = previousRow(row) + col;
 
 		if (row !== "j")
 		{
+			// Nothing after row J
 			sw = nextRow(row) + parseInt(col - 1);
 			se = nextRow(row) + col;
 		}
 	}
 
-	if (col >= 1)
+	if (col >= 1){
+		// Nothing before col 1
 		w = row + parseInt(col - 1);
+	}
+		
 
-	if (col <= 28 && isSlided || col <= 27 && !isSlided)
+	if (col < 28 && !shortRow || col < 27 && shortRow){
+		// Nothing after col 27 / 28
 		e = row + parseInt(col + 1);
+	}
+		
 
 	return { nw, ne, w, e, sw, se };
 };
@@ -184,6 +190,10 @@ function nextRow(row) {
 		return "";
 	else
 		return String.fromCharCode(row.charCodeAt(0) + 1);
+};
+
+function isShortRow(row){
+	return row === "a" || row === "c" || row === "e" || row === "g" || row === "i" ? false : true;
 };
 
 function previousRow(row) {

@@ -36,7 +36,6 @@ Color Picker : [Farbtastic](http://acko.net/blog/farbtastic-jquery-color-picker-
 
 ## Todo : 
 - Save before quit
-- Make fog more manageable (add and transparency)
 - Adjust css to have all icon on the same size (more or less)
 - Use data instead of crappy css class method like I did
 - Add a hint on fields (name and title) : disable some characteres on names
@@ -49,6 +48,7 @@ Color Picker : [Farbtastic](http://acko.net/blog/farbtastic-jquery-color-picker-
 
 ## In progress :
 - Create factions : Claim hexagone  
+- Make fog more manageable (add and transparency)
 
 ## Maybe : 
 - Load default file from web (currently data are store in js) : Cross domain origin issue
