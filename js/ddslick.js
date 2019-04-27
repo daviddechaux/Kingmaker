@@ -166,8 +166,8 @@ var ddElement = [
 		"value": 13,
 		"selected": false,
 		"description": "",
-		"userClass": "icon-path",
-		"text": "Path"
+		"userClass": "icon-road",
+		"text": "Road"
 	},
 	{
 		"value": 14,

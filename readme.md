@@ -60,6 +60,7 @@ Color Picker : [Farbtastic](http://acko.net/blog/farbtastic-jquery-color-picker-
 - Add a calendar (or something that display date)
 - Fill the dropdown automatically instead of using the crappy object
 - Find an awesome tokens for the party (choosable by the user ?)
+- Localization
 
 ## Nope
 - Possibility to choose map (use the kingmaker video-game map ?) : No fog of war, No default map 
@@ -69,12 +70,8 @@ https://drive.google.com/file/d/0B2d5Rs815f8bOU80T1ZsUkUtZm8/view
 ## Known Bugs : 
 - Fog wording
 - Light fog / visited
-- Quote on faction name
-- Quote on element name
-- Faction dropdown on create element
 - Change color when faction color change <= is that a bug ?
 - When edit an element the creation position is the edited element
-- Dropdown path is buggy ?
 
 ## Missing icons
 - Add element button (top right menu)
