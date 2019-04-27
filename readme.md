@@ -71,7 +71,8 @@ https://drive.google.com/file/d/0B2d5Rs815f8bOU80T1ZsUkUtZm8/view
 - Fog wording
 - Light fog / visited
 - Change color when faction color change <= is that a bug ?
-- When edit an element the creation position is the edited element
+- When edit the faction is not set properly
+- When create an element the position is the one of the previous element created (Maybe had to change the elemnttype before)
 
 ## Missing icons
 - Add element button (top right menu)
