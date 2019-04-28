@@ -65,13 +65,9 @@ function editElement() {
         newSection,
         faction);
 
-    console.log(img);
-
     itemToChange.remove();
     $("." + newSection + "Section").append(img);
     $("#" + id).show();
-
-    console.log($("#" + id));
 
     closeMenuDecoration();
     tooltipOne(id);
@@ -146,8 +142,6 @@ function htmlToObject(element) {
     var className = removeClassNameOnSave($(element)[0].className, ["tooltipstered", "tooltip", "tap-target", "inFront", "draggable", "icon", img, "  "]);
     var title = $(element)[0].attributes["alt"].value;
     var faction = $(element).data("faction").toString();
-
-    console.log(title);
 
     var elementType = $(element).data("elementtype");
 

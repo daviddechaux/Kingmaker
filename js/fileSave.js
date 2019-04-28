@@ -58,7 +58,7 @@ function fogToObject(element) {
     var name = $(element)[0].attributes["name"] != undefined ? $(element)[0].attributes["name"].value : "";
     var className = removeClassNameOnSave($(element)[0].className, ["fog", "  "]);
     var elementType = $(element).data("elementtype");
-    var faction = $(element)[0].parentNode.attributes[1].value.toString()
+    var faction = $(element)[0].parentNode.attributes[1].value.toString();
     var top = $(element)[0].style.top.replace("px", "").replace('"', "");
     var left = $(element)[0].style.left.replace("px", ""); 
     

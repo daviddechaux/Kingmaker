@@ -45,9 +45,9 @@ function displayAreaCode(hexName, top, left) {
     var row = hexName.substring(0, 1);
     var column = parseInt(hexName.substring(1, 3)) - 14;
 
-    //return "<label class='hexLabel' style='top:" + newTop + "px; left:" + newLeft + "px';>" + hexName + "</label>";
+    //return "<label class='hexLabel' style='top:" + newTop + "px; left:" + newLeft + "px;'>" + hexName + "</label>";
     if (0 < column && column < 8)
-        return "<label class='hexLabel' style='top:" + newTop + "px; left:" + newLeft + "px';>" + row + column + "</label>";
+        return "<label class='hexLabel' style='top:" + newTop + "px; left:" + newLeft + "px;'>" + row + column + "</label>";
 
     return "";
 }
