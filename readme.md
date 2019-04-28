@@ -40,17 +40,14 @@ Color Picker : [Farbtastic](http://acko.net/blog/farbtastic-jquery-color-picker-
 - Add a hint on fields (title) : disable some characteres on names
 - Create capital
 - Use Lucian POC for Javascript Object
-- Sort dropdown alphabetically
 - Add a [crown](https://upload.wikimedia.org/wikipedia/commons/8/86/Meuble_h%C3%A9raldique_Couronnes_fran%C3%A7aises.svg) on the player token, and make this crown evolve with the size of the kingdom
 - Add army tokens (that must be factionnable)
 - Switch hex numerotation with radiobutton
 - Custom CSS on checkbox
 - Create Road
-- Change the icon of the ColorPicker test => village
 
 ## In progress :
-- Create factions : Claim hexagone  
-- Make fog more manageable (add and transparency)
+
 
 ## Maybe : 
 - Load default file from web (currently data are store in js) : Cross domain origin issue
@@ -100,5 +97,6 @@ https://drive.google.com/file/d/0B2d5Rs815f8bOU80T1ZsUkUtZm8/view
 - After load (or create) center on player token
 - Create factions (color element)
 - Fog in CSS
-
+- Create hexagones for faction
+- RightClick tool 
 

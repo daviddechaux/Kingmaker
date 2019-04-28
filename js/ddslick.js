@@ -72,25 +72,11 @@ var ddElementType = [
 // Dropdown element
 var ddElement = [
 	{
-		"value": 0,
+		"value": 14,
 		"selected": false,
 		"description": "",
-		"userClass": "icon-clay",
-		"text": "Clay"
-	},
-	{
-		"value": 1,
-		"selected": false,
-		"description": "",
-		"userClass": "icon-ferry",
-		"text": "Ferry"
-	},
-	{
-		"value": 2,
-		"selected": false,
-		"description": "",
-		"userClass": "icon-wheat",
-		"text": "Wheat"
+		"userClass": "icon-bridge",
+		"text": "Bridge"
 	},
 	{
 		"value": 3,
@@ -100,6 +86,13 @@ var ddElement = [
 		"text": "Cabane"
 	},
 	{
+		"value": 31,
+		"selected": false,
+		"description": "",
+		"userClass": "icon-cairn",
+		"text": "Cairn"
+	},
+	{
 		"value": 4,
 		"selected": false,
 		"description": "",
@@ -107,11 +100,11 @@ var ddElement = [
 		"text": "Camp"
 	},
 	{
-		"value": 5,
+		"value": 10,
 		"selected": false,
 		"description": "",
-		"userClass": "icon-hill",
-		"text": "Hill"
+		"userClass": "icon-cave",
+		"text": "Cave"
 	},
 	{
 		"value": 6,
@@ -119,6 +112,20 @@ var ddElement = [
 		"description": "",
 		"userClass": "icon-cottage",
 		"text": "Cottage"
+	},
+	{
+		"value": 0,
+		"selected": false,
+		"description": "",
+		"userClass": "icon-clay",
+		"text": "Clay"
+	},
+	{
+		"value": 26,
+		"selected": false,
+		"description": "",
+		"userClass": "icon-deadtree",
+		"text": "Deadtree"
 	},
 	{
 		"value": 7,
@@ -142,11 +149,25 @@ var ddElement = [
 		"text": "Elk"
 	},
 	{
-		"value": 10,
+		"value": 1,
 		"selected": false,
 		"description": "",
-		"userClass": "icon-cave",
-		"text": "Cave"
+		"userClass": "icon-ferry",
+		"text": "Ferry"
+	},
+	{
+		"value": 5,
+		"selected": false,
+		"description": "",
+		"userClass": "icon-hill",
+		"text": "Hill"
+	},
+	{
+		"value": 17,
+		"selected": false,
+		"description": "",
+		"userClass": "icon-hive",
+		"text": "Hive"
 	},
 	{
 		"value": 11,
@@ -156,25 +177,25 @@ var ddElement = [
 		"text": "House"
 	},
 	{
+		"value": 32,
+		"selected": false,
+		"description": "",
+		"userClass": "icon-lac",
+		"text": "Lac"
+	},
+	{
+		"value": 30,
+		"selected": false,
+		"description": "",
+		"userClass": "icon-lys",
+		"text": "Lily"
+	},
+	{
 		"value": 12,
 		"selected": false,
 		"description": "",
 		"userClass": "icon-mine",
 		"text": "Mine"
-	},
-	{
-		"value": 13,
-		"selected": false,
-		"description": "",
-		"userClass": "icon-road",
-		"text": "Road"
-	},
-	{
-		"value": 14,
-		"selected": false,
-		"description": "",
-		"userClass": "icon-bridge",
-		"text": "Bridge"
 	},
 	{
 		"value": 15,
@@ -184,18 +205,18 @@ var ddElement = [
 		"text": "Raspberry"
 	},
 	{
+		"value": 13,
+		"selected": false,
+		"description": "",
+		"userClass": "icon-road",
+		"text": "Road"
+	},
+	{
 		"value": 16,
 		"selected": false,
 		"description": "",
 		"userClass": "icon-rock",
 		"text": "Rock"
-	},
-	{
-		"value": 17,
-		"selected": false,
-		"description": "",
-		"userClass": "icon-hive",
-		"text": "Hive"
 	},
 	{
 		"value": 18,
@@ -240,39 +261,25 @@ var ddElement = [
 		"text": "Stag"
 	},
 	{
-		"value": 24,
-		"selected": false,
-		"description": "",
-		"userClass": "icon-swamp",
-		"text": "Swamp"
-	},
-	{
-		"value": 25,
-		"selected": false,
-		"description": "",
-		"userClass": "icon-tomb",
-		"text": "Tomb"
-	},
-	{
-		"value": 26,
-		"selected": false,
-		"description": "",
-		"userClass": "icon-deadtree",
-		"text": "Deadtree"
-	},
-	{
-		"value": 27,
-		"selected": false,
-		"description": "",
-		"userClass": "icon-village",
-		"text": "Village"
-	},
-	{
 		"value": 28,
 		"selected": false,
 		"description": "",
 		"userClass": "icon-statue",
 		"text": "Statue"
+	},
+	{
+		"value": 33,
+		"selected": false,
+		"description": "",
+		"userClass": "icon-souche",
+		"text": "Stump"
+	},
+	{
+		"value": 24,
+		"selected": false,
+		"description": "",
+		"userClass": "icon-swamp",
+		"text": "Swamp"
 	},
 	{
 		"value": 29,
@@ -282,31 +289,24 @@ var ddElement = [
 		"text": "Toad"
 	},
 	{
-		"value": 30,
+		"value": 25,
 		"selected": false,
 		"description": "",
-		"userClass": "icon-lys",
-		"text": "Lily"
+		"userClass": "icon-tomb",
+		"text": "Tomb"
 	},
 	{
-		"value": 31,
+		"value": 27,
 		"selected": false,
 		"description": "",
-		"userClass": "icon-cairn",
-		"text": "Cairn"
+		"userClass": "icon-village",
+		"text": "Village"
 	},
 	{
-		"value": 32,
+		"value": 2,
 		"selected": false,
 		"description": "",
-		"userClass": "icon-lac",
-		"text": "Lac"
-	},
-	{
-		"value": 33,
-		"selected": false,
-		"description": "",
-		"userClass": "icon-souche",
-		"text": "stump"
+		"userClass": "icon-wheat",
+		"text": "Wheat"
 	}
 ];

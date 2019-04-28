@@ -10,10 +10,9 @@
 .villagePicker{
     font-family: "pics";
     font-size: 70px;
-}
-
-.villagePicker:before{
-    content: '\e819';
+    top: 55px;
+    position: absolute;
+    left: 40px;
 }
 
 .factionBox{
