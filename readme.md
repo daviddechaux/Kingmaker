@@ -45,6 +45,7 @@ Color Picker : [Farbtastic](http://acko.net/blog/farbtastic-jquery-color-picker-
 - Switch hex numerotation with radiobutton
 - Custom CSS on checkbox
 - Create Road
+- Remove faction
 
 ## In progress :
 
