@@ -55,7 +55,6 @@ function explore(hex){
 function claim(hex, factionId){
     unclaim(hex);
 
-    //hex.data("faction", factionId);
     hex.attr("data-faction", factionId);
     var name = hex.children("div.fog")[0].attributes["name"].value;
     var top = hex.children("div.fog")[0].style.top.replace("px", "");
