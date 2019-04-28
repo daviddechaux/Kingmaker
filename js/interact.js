@@ -12,11 +12,11 @@ function tapTarget(){
             interactWithElement(event);
             event.preventDefault();
         })
-    interact('.fog')
-        .on('tap', function (event) {
-            interactWithFog(event)
-            event.preventDefault();
-        })
+    // interact('.fog')
+    //     .on('tap', function (event) {
+    //         interactWithFog(event)
+    //         event.preventDefault();
+    //     })
 };
 
 function interactWithFog(event){
@@ -24,11 +24,11 @@ function interactWithFog(event){
 
     if (element.hasClass("visited")){
         element.removeClass("visited");
-        element.attr( "title", "Click to remove");
+        //element.attr( "title", "Click to remove");
     }
     else{
         element.addClass("visited");
-        element.attr( "title", "Click to add");
+        //element.attr( "title", "Click to add");
     }
 };
 

@@ -1,0 +1,21 @@
+/* The whole thing */
+.custom-menu {
+    display: none;
+    overflow: hidden;
+    border: 1px solid #CCC;
+    white-space: nowrap;
+    padding: 0;
+}
+
+/* Each of the items in the list */
+.custom-menu li {
+    padding: 8px 12px;
+    cursor: pointer;
+    list-style-type: none;
+    transition: all .3s ease;
+    user-select: none;
+}
+
+.custom-menu li:hover {
+    background-color: #DEF;
+}

@@ -9,13 +9,11 @@
     <link rel="stylesheet" type="text/css" href="css/faction.css">
     <link rel="stylesheet" type="text/css" href="css/fog.css">
     <link rel="stylesheet" type="text/css" href="css/border.css">
+    <link rel="stylesheet" type="text/css" href="css/contextMenu.css">
     <link rel="stylesheet" type="text/css" href="css/pics.css"> <!-- Font -->
 
     <!-- Plugins -->
     <script type="text/javascript" src="plugin/jquery.3.2.1.js"></script>
-
-    <link rel="stylesheet" type="text/css" href="plugin/jquery-ui.1.12/jquery-ui.css" />
-    <script type="text/javascript" src="plugin/jquery-ui.1.12/jquery-ui.js"></script>
 
     <link rel="stylesheet" type="text/css" href="plugin/tooltipster/tooltipster.bundle.css" />
     <script type="text/javascript" src="plugin/tooltipster/tooltipster.bundle.js"></script>
@@ -26,7 +24,8 @@
     <script type="text/javascript" src="plugin/jquery.ddslick.min.js"></script>
     <script type="text/javascript" src="plugin/interact.js"></script>
 
-    <script src="assets/jquery.ui-contextmenu.min.js"></script>
+    <!-- <link rel="stylesheet" type="text/css" href="plugin/contextmenu/contextMenu.css" />
+    <script type="text/javascript" src="plugin/contextmenu/contextMenu.js"></script> -->
     <!-- End plugins -->
 
     <script type="text/javascript" src="js/jsExt.js"></script>
@@ -37,6 +36,7 @@
     <script type="text/javascript" src="js/tooltip.js"></script>
     <script type="text/javascript" src="js/interact.js"></script>
     <script type="text/javascript" src="js/ddslick.js"></script>
+    <script type="text/javascript" src="js/contextMenu.js"></script>
 
     <script type="text/javascript" src="js/faction.js"></script>
     <script type="text/javascript" src="js/fileOpen.js"></script>
@@ -45,6 +45,9 @@
 </head>
 
 <body>
+    <ul class='custom-menu menu'>
+    </ul>
+
     <div class="img">
         <img src="images/map.jpg" class="background" />
     </div>
@@ -219,6 +222,24 @@
 
         $(".editorBackground").show();
         $(".wrapper").hide();
+    });
+
+    //https://stackoverflow.com/a/20471268/11261984
+    $(document).bind("contextmenu", function (event) {
+        event.preventDefault();
+
+        var contextMenu = $(".custom-menu");
+
+        removeMenu(contextMenu);
+        addMenu(contextMenu, $(event.target.closest(".hex")));
+        centerMenu(contextMenu);
+    });
+
+    $(document).bind("mousedown", function (e) {
+        // If the clicked element is not the menu
+        if (!$(e.target).parents(".custom-menu").length > 0) {
+            $(".custom-menu").hide();
+        }
     });
 </script>
 

@@ -29,22 +29,23 @@ Nice title display : [Tooltipster](http://iamceege.github.io/tooltipster/)
 Interaction : [Interactjs](http://interactjs.io/)  
 Color Picker : [Farbtastic](http://acko.net/blog/farbtastic-jquery-color-picker-plug-in/)  
 
-
 > http://raphaeljs.com/    
 > Animating Clip Paths  
 > https://d3js.org/
 
 ## Todo : 
 - Save before quit
-- Adjust css to have all icon on the same size (more or less)
+- Adjust CSS to have all icon on the same size (more or less)
 - Use data instead of crappy css class method like I did
-- Add a hint on fields (name and title) : disable some characteres on names
+- Add a hint on fields (title) : disable some characteres on names
 - Create capital
 - Use Lucian POC for Javascript Object
 - Sort dropdown alphabetically
-- Add a crow on the player token, and make this crown evovle with the size of the kingdom (check https://upload.wikimedia.org/wikipedia/commons/8/86/Meuble_h%C3%A9raldique_Couronnes_fran%C3%A7aises.svg)
+- Add a [crown](https://upload.wikimedia.org/wikipedia/commons/8/86/Meuble_h%C3%A9raldique_Couronnes_fran%C3%A7aises.svg) on the player token, and make this crown evolve with the size of the kingdom
 - Add army tokens (that must be factionnable)
 - Switch hex numerotation with radiobutton
+- Custom CSS on checkbox
+- Create Road
 
 ## In progress :
 - Create factions : Claim hexagone  
@@ -60,9 +61,7 @@ Color Picker : [Farbtastic](http://acko.net/blog/farbtastic-jquery-color-picker-
 - Add a calendar (or something that display date)
 - Fill the dropdown automatically instead of using the crappy object
 - Find an awesome tokens for the party (choosable by the user ?)
-- Localization
-
-## Nope
+- Localization (FR, ?)
 - Possibility to choose map (use the kingmaker video-game map ?) : No fog of war, No default map 
 https://drive.google.com/file/d/0B3tF_dcxI0LWMjNqNFY5clFsRjg/edit
 https://drive.google.com/file/d/0B2d5Rs815f8bOU80T1ZsUkUtZm8/view
@@ -71,7 +70,7 @@ https://drive.google.com/file/d/0B2d5Rs815f8bOU80T1ZsUkUtZm8/view
 - Fog wording
 - Light fog / visited
 - Change color when faction color change <= is that a bug ?
-- When edit the faction is not set properly
+- When edit an element the faction dropdown is not set properly
 - When create an element the position is the one of the previous element created (Maybe had to change the elemnttype before)
 
 ## Missing icons

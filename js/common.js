@@ -23,7 +23,7 @@ function createElement(imgId, picName, elementName, cssClass, visited, additiona
     if (elementType === "fogOfWar") {
         var fullClass = (cssClass + " " + visited + " " + additionalClass).trim().replace("  ", " ");
 
-        var div = "<div class='hex' data-faction='" + faction + "'>";
+        var div = "<div class='hex' data-faction='" + faction + "' >";
         div += "<div id='" + imgId + "' name='" + elementName + "' class='" + fullClass + "' data-elementType='" + elementType + "' alt='" + title + "' style='top:" + top + "px; left:" + left + "px' />";
         div += createBorder(faction, elementName, top, left);
         div += displayAreaCode(elementName, top, left);

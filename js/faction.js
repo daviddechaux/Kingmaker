@@ -113,12 +113,12 @@ function simplifyBorders() {
 	}
 };
 
-function removeBorder(hex, hexName, borderToRemove) {
+function removeBorder(hex, hexName, borderToHide) {
 	if (hexName === "") return;
 
 	for (var i = 0; i < hex.length; i++) {
 		if ($(hex[i])[0].attributes["name"].value === hexName){
-			borderToRemove.hide();
+			borderToHide.addClass("hide");
 			return;
 		}
 	}
