@@ -69,6 +69,7 @@ https://drive.google.com/file/d/0B2d5Rs815f8bOU80T1ZsUkUtZm8/view
 - Fog wording
 - Light fog / visited
 - Change color when faction color change <= is that a bug ?
+- Edit element is verry buggy
 - When edit an element the faction dropdown is not set properly
 - When create an element the position is the one of the previous element created (Maybe had to change the elemnttype before)
 
