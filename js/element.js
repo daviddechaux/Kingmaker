@@ -1,10 +1,10 @@
 function createDecoration() {
-    var pos = getElementPos(".player");
+    var pos = getEditMenuPosition($(".player"), false, true);
 
     var className = $("#decorationDdl").find("a.dd-selected").find("label").text().trim().toLowerCase() + " tooltip tap-target";
     var imgName = $("#decorationDdl").find("a.dd-selected").find("label")[0].className.replace("dd-selected-text", "").trim();
     var elementType = $("#decorationDdlType").find("a.dd-selected").find("label").text().trim().toLowerCase()
-    var faction = $("#decorationDdlFaction option:selected").text();
+    var faction = $("#decorationDdlFaction option:selected").index();
 
     var img = createElement(idElement,
         imgName,
@@ -12,8 +12,8 @@ function createDecoration() {
         className.toLowerCase(),
         "",
         elementType,
-        pos.top,
-        pos.left,
+        pos.top.replace("px", ""),
+        pos.left.replace("px", ""),
         $("#addTitleMapDecoration").val(),
         elementType,
         faction);
@@ -101,12 +101,13 @@ function getElementPos(element) {
 
 function addMapDecoration() {
     $(".editorBackground").show();
+
+    var pos = getEditMenuPosition($(".player"), false, true);
+
+    $(".addElement").css("top", pos.top);
+    $(".addElement").css("left", pos.left);
+
     $(".addElement").show();
-
-    var pos = getElementPos(".player");
-
-    $(".addElement").css("top", pos.top + $(".player").height() / 2 + "px");
-    $(".addElement").css("left", pos.left + $(".player").width() / 2 + "px");
 
     $("#addNameMapDecoration").val("");
     $("#addTitleMapDecoration").val("");

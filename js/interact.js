@@ -12,32 +12,13 @@ function tapTarget(){
             interactWithElement(event);
             event.preventDefault();
         })
-    // interact('.fog')
-    //     .on('tap', function (event) {
-    //         interactWithFog(event)
-    //         event.preventDefault();
-    //     })
 };
-
-function interactWithFog(event){
-    var element = $("#" + event.currentTarget.id);
-
-    if (element.hasClass("visited")){
-        element.removeClass("visited");
-        //element.attr( "title", "Click to remove");
-    }
-    else{
-        element.addClass("visited");
-        //element.attr( "title", "Click to add");
-    }
-};
-
 
 function interactWithElement(event){
     idSelectedElement = event.currentTarget.id;
     $(event.currentTarget).addClass("draggable inFront");
 
-    var pos = getEditMenuPosition(event);
+    var pos = getEditMenuPosition(event.currentTarget, true);
     $(".editMapDecoration").css("top", pos.top);
     $(".editMapDecoration").css("left", pos.left);
     
@@ -59,10 +40,20 @@ function interactWithElement(event){
     displayDropDownFaction($("#editDecorationDdlFaction"), currentFaction);
 };
 
-function getEditMenuPosition(event){
-    var offset = $(event.currentTarget).height()
-    return { top : (parseInt($(event.currentTarget)[0].style["top"].replace("px", "")) + offset) + "px",
-            left : (parseInt($(event.currentTarget)[0].style["left"].replace("px", "")) + offset) + "px"};
+function getEditMenuPosition(el, useOffset, useTranlate){
+    var offset = 0, x = 0, y = 0;
+
+    if (useOffset){
+        offset = $(el).height()
+    }
+
+    if(useTranlate){
+       y = tryParseInt(el.attr("data-y"), 0);
+       x = tryParseInt(el.attr("data-x"), 0);
+    }
+
+    return { top : (parseInt($(el)[0].style["top"].replace("px", "")) + offset + y) + "px",
+            left : (parseInt($(el)[0].style["left"].replace("px", "")) + offset + x) + "px"};
 };
 
 function dragMoveListener(event) {
