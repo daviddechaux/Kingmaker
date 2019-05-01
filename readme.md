@@ -28,6 +28,7 @@ Dropdownlist with pics : [ddSlick](http://designwithpc.com/Plugins/ddSlick)
 Nice title display : [Tooltipster](http://iamceege.github.io/tooltipster/)  
 Interaction : [Interactjs](http://interactjs.io/)  
 Color Picker : [Farbtastic](http://acko.net/blog/farbtastic-jquery-color-picker-plug-in/)  
+Checkbox Styling : [Pretty-Checkbox](https://lokesh-coder.github.io/pretty-checkbox/) with [UIkit](https://getuikit.com/docs/introduction)
 
 > http://raphaeljs.com/    
 > Animating Clip Paths  
@@ -49,7 +50,7 @@ Color Picker : [Farbtastic](http://acko.net/blog/farbtastic-jquery-color-picker-
 - Add a checkbox to remove transparency on menu
 
 ## In progress :
-- Create an element en right click, remove the button
+
 
 ## Maybe : 
 - Load default file from web (currently data are store in js) : Cross domain origin issue
@@ -97,4 +98,4 @@ https://drive.google.com/file/d/0B2d5Rs815f8bOU80T1ZsUkUtZm8/view http://kingmak
 - Fog in CSS
 - Create hexagones for faction
 - RightClick tool 
-
+- Create an element en right click, remove the button

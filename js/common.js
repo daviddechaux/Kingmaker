@@ -40,7 +40,7 @@ function createElement(imgId, picName, elementName, cssClass, visited, additiona
 };
 
 function displayAreaCode(hexName, top, left) {
-    var newTop = parseInt(top) + 221;
+    var newTop = parseInt(top) + 210;
     var newLeft = parseInt(left) + 97;
     var row = hexName.substring(0, 1);
     var column = parseInt(hexName.substring(1, 3)) - 14;

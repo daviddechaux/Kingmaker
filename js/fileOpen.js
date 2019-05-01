@@ -96,7 +96,6 @@ function addElementToMap(item, sectionName) {
 
             var additionalClass = "";
             if (sectionName === "fogOfWar") {
-                title = visited ? "Click to add" : "Click to remove";
                 additionalClass = "fog";
             }
             else {

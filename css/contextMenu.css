@@ -1,5 +1,5 @@
-/* The whole thing */
-.custom-menu {
+.custom-menu,
+.sub-custom-menu {
     display: none;
     overflow: hidden;
     border: 1px solid #CCC;
@@ -8,7 +8,8 @@
 }
 
 /* Each of the items in the list */
-.custom-menu li {
+.custom-menu li,
+.sub-custom-menu li {
     padding: 8px 12px;
     cursor: pointer;
     list-style-type: none;
@@ -16,6 +17,7 @@
     user-select: none;
 }
 
-.custom-menu li:hover {
+.custom-menu li:hover,
+.sub-custom-menu li:hover {
     background-color: #DEF;
 }

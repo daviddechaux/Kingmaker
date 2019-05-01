@@ -4,45 +4,47 @@ function removeMenu(contextMenu){
     }
 };
 
-function addMenu(contextMenu, hex, mousePos){
-    // If visited
-    if ($(hex.children("div.fog")[0].attributes["class"]).val().indexOf("visited") > -1){
-        contextMenu.append("<li data-action='unexplore'>Un-explore</li>");
-    }
-    else{
-        contextMenu.append("<li data-action='explore'>Explore</li>");
-    }
+function addMenu(contextMenu, subContextMenu, hex, mousePos){
+    //Cancel right click on an element => just edit it
+    if(hex.length == 0) return;
 
-    contextMenu.append("<hr>");
-    contextMenu.append("<li data-action='create'>Add element on map</li>");
+    // If visited
+    if ($(hex.children("div.fog")[0].attributes["class"]).val().indexOf("visited") > -1)
+        contextMenu.append("<li data-action='unexplore'>Un-explore</li>");
+    else
+        contextMenu.append("<li data-action='explore'>Explore</li>");
+
+    contextMenu.append("<li data-action='create'>Add an element</li>");
 
     if (factions.length > 0){
         contextMenu.append("<hr>");
+
+        if(hex.children("div.isBorder").length > 0)
+            contextMenu.append("<li data-action='unclaim'>Unclaim</li>");
+
+        contextMenu.append('<li class="claim" onmouseover="displaySubMenu(' + mousePos.x + ', ' + mousePos.y + ')">Claim > </li>');
     }
 
     // Add claim actions
     for(var i = 0; i < factions.length; i++){
-        contextMenu.append("<li data-action='claim' data-faction='" + factions[i].id + "'>Claim " + factions[i].name + "</li>");
+        subContextMenu.append("<li data-action='claim' data-faction='" + factions[i].id + "'>Claim " + factions[i].name + "</li>");
     }
 
-    if (factions.length > 0 && hex.children("div.isBorder").length > 0){
-        contextMenu.append("<hr>");
-        contextMenu.append("<li data-action='unclaim'>Unclaim</li>");
-    }
+    $(".contextMenu li").click(function(){
+        $(".contextMenu").hide();
 
-    $(".custom-menu li").click(function(){
         var action = $(this).attr("data-action");
         var faction = $(this).attr("data-faction");
  
         switch(action){
+            // Menu
             case "unexplore" : explore(hex); break;
             case "explore" : explore(hex); break;
             case "create" : addMapDecoration(mousePos); break;
-            case "claim" : claim(hex, faction); break;
             case "unclaim" : unclaim(hex); break;
+            // Sub menu
+            case "claim" : claim(hex, faction); break;
         }
-        
-        $(".custom-menu").hide();
     });
 };
 
@@ -79,7 +81,6 @@ function unclaim(hex){
     simplifyBorders();
 };
 
-
 function centerMenu(contextMenu){
     contextMenu.toggle().
     css({
@@ -88,26 +89,10 @@ function centerMenu(contextMenu){
     });
 };
 
-// function mouseX(evt) {
-//     if (evt.pageX) {
-//         return evt.pageX;
-//     } else if (evt.clientX) {
-//        return evt.clientX + (document.documentElement.scrollLeft ?
-//            document.documentElement.scrollLeft :
-//            document.body.scrollLeft);
-//     } else {
-//         return null;
-//     }
-// }
-
-// function mouseY(evt) {
-//     if (evt.pageY) {
-//         return evt.pageY;
-//     } else if (evt.clientY) {
-//        return evt.clientY + (document.documentElement.scrollTop ?
-//        document.documentElement.scrollTop :
-//        document.body.scrollTop);
-//     } else {
-//         return null;
-//     }
-// }
+function displaySubMenu(x, y){
+    $(".sub-custom-menu").toggle().
+    css({
+        top: parseInt(y) + parseInt($(".claim")[0].offsetTop) + "px",
+        left: parseInt(x) + parseInt($(".custom-menu").width()) + "px"
+    });
+};
