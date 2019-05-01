@@ -4,7 +4,7 @@ function removeMenu(contextMenu){
     }
 };
 
-function addMenu(contextMenu, hex){
+function addMenu(contextMenu, hex, mousePos){
     // If visited
     if ($(hex.children("div.fog")[0].attributes["class"]).val().indexOf("visited") > -1){
         contextMenu.append("<li data-action='unexplore'>Un-explore</li>");
@@ -12,6 +12,9 @@ function addMenu(contextMenu, hex){
     else{
         contextMenu.append("<li data-action='explore'>Explore</li>");
     }
+
+    contextMenu.append("<hr>");
+    contextMenu.append("<li data-action='create'>Add element on map</li>");
 
     if (factions.length > 0){
         contextMenu.append("<hr>");
@@ -34,6 +37,7 @@ function addMenu(contextMenu, hex){
         switch(action){
             case "unexplore" : explore(hex); break;
             case "explore" : explore(hex); break;
+            case "create" : addMapDecoration(mousePos); break;
             case "claim" : claim(hex, faction); break;
             case "unclaim" : unclaim(hex); break;
         }

@@ -156,13 +156,7 @@
 
     <!-- Right menu -->
     <div class="menu wrapper wrapperRight">
-        <div class="gimmeFullSpace">
-            <button onclick="addMapDecoration()">Add element</button>
-        </div>
-
-        <hr>
-
-        <div class="displayer">
+        <div class="displayer gimmeFullSpace">
             <div class="checkboxDisplay">
                 <input type="checkbox" id="building" class="checkbox" name="display-building" checked>
                 <label for="building" class="label">Buildings</label>
@@ -197,6 +191,7 @@
         isMapLoaded = false;
         elementType = ["building", "resources", "misc"];
         factions = [];
+        createPos = {x:0, y:0};
 
         // Checkbox
         displayElement("building");
@@ -225,12 +220,14 @@
 
     //https://stackoverflow.com/a/20471268/11261984
     $(document).bind("contextmenu", function (event) {
+        createPos = {x : event.clientX + document.body.scrollLeft, y: event.clientY + document.body.scrollTop};
+
         event.preventDefault();
 
         var contextMenu = $(".custom-menu");
 
         removeMenu(contextMenu);
-        addMenu(contextMenu, $(event.target.closest(".hex")));
+        addMenu(contextMenu, $(event.target.closest(".hex")), createPos);
         centerMenu(contextMenu);
     });
 

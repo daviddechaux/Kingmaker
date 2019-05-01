@@ -1,5 +1,5 @@
 function createDecoration() {
-    var pos = getEditMenuPosition($(".player"), false, true);
+    //var pos = getEditMenuPosition($(".player"), false, true);
 
     var className = $("#decorationDdl").find("a.dd-selected").find("label").text().trim().toLowerCase() + " tooltip tap-target";
     var imgName = $("#decorationDdl").find("a.dd-selected").find("label")[0].className.replace("dd-selected-text", "").trim();
@@ -12,8 +12,8 @@ function createDecoration() {
         className.toLowerCase(),
         "",
         elementType,
-        pos.top.replace("px", ""),
-        pos.left.replace("px", ""),
+        createPos.y,
+        createPos.x,
         $("#addTitleMapDecoration").val(),
         elementType,
         faction);
@@ -99,13 +99,13 @@ function getElementPos(element) {
 };
 
 
-function addMapDecoration() {
+function addMapDecoration(mousePos) {
     $(".editorBackground").show();
 
     var pos = getEditMenuPosition($(".player"), false, true);
 
-    $(".addElement").css("top", pos.top);
-    $(".addElement").css("left", pos.left);
+    $(".addElement").css("top", mousePos.y);
+    $(".addElement").css("left", mousePos.x);
 
     $(".addElement").show();
 
