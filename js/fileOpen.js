@@ -17,9 +17,7 @@ function loadFile() {
 
     $("#openData").change(function (e) {
         var file = e.target.files[0];
-        if (!file) {
-            return;
-        }
+        if (!file) return;
 
         var reader = new FileReader();
         reader.onload = function (e) {

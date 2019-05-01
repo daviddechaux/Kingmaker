@@ -1,7 +1,7 @@
 <html>
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-
+    
     <link rel="stylesheet" type="text/css" href="css/map.css">
     <link rel="stylesheet" type="text/css" href="css/menu.css">
     <link rel="stylesheet" type="text/css" href="css/element.css">
@@ -9,6 +9,7 @@
     <link rel="stylesheet" type="text/css" href="css/fog.css">
     <link rel="stylesheet" type="text/css" href="css/border.css">
     <link rel="stylesheet" type="text/css" href="css/contextMenu.css">
+    <link rel="stylesheet" type="text/css" href="css/icons.css"> <!-- Icons ajustment -->
     <link rel="stylesheet" type="text/css" href="css/pics.css"> <!-- Font -->
 
     <!-- Plugins -->
@@ -44,7 +45,6 @@
     <script type="text/javascript" src="js/fileSave.js"></script>
     <script type="text/javascript" src="js/element.js"></script>
 </head>
-
 <body>
     <div class="img">
         <img src="images/map.jpg" class="background" />
@@ -134,34 +134,40 @@
         </div>
     </div>
 
-    <!-- Save Map (left menu) -->
+    <!-- Left menu -->
     <div class="menu wrapper wrapperLeft">
-        <div class="saveMap iconContainer">
-            <div class="file gimmeSpace icon icon-save bigIcon menuIcon menuIcon" title="Save current map" onclick="saveFile()"></div>
-            <input id="saveData" class="hide" />
+        <!-- Save Map -->
+        <div>
+            <div class="title menuIcon">
+                <img src="svg/download.svg" class="title saveTitle"/>
+                <label>Save map</label>
+            </div>
+            <div class="saveMap iconContainer">
+                <div class="file gimmeSpace icon icon-save bigIcon menuIcon menuIcon" title="Save current map" onclick="saveFile()"></div>
+                <input id="saveData" class="hide" />
+            </div>
         </div>
-
+                
         <hr>
 
-        <div class="icon icon-question askQuestion menuIcon" onclick="displayQuestion();"></div>
+        <!-- About -->
+        <div class="gimmeFullSpace">
+            <div class="title askQuestion menuIcon" onclick="displayQuestion();">
+                <img src="svg/question.svg" class="title factionTitle"/>
+                <label>About</label>
+            </div>
+        </div>
     </div>
-
-    <!-- About -->
-    <div class="question menu hide hideableMenu">
-        <p class="gimmeFullSpace">
-            Map done by <a href="https://www.deviantart.com/jonpintar" target="_blank">Jon Pintar</a>.
-        </p>
-        <p class="gimmeFullSpace">
-            Check the code on my <a href="https://github.com/daviddechaux/Kingmaker" target="_blank">Github</a>.
-        </p>
-        <p class="gimmeFullSpace">
-            GDPR stuff : I don't care about your personnal information. No cookie on this website.
-        </p>
-    </div>
+        
 
     <!-- Right menu -->
     <div class="menu wrapper wrapperRight">
+        <!-- Checkbox displayer -->
         <div class="displayer">
+            <div class="title">
+                <img src="svg/visibility.svg" class="title visibilityTitle"/>
+                <label>Visibility</label>
+            </div>
             <div class="pretty p-svg gimmeFullSpace">
                 <input type="checkbox" id="building" class="checkbox" name="display-building" checked/>
                 <div class="state">
@@ -187,12 +193,30 @@
 
         <hr>
 
-        <div class="gimmeFullSpace">
-            <button onclick="addFaction()">Add faction</button>
+        <!-- Factions -->
+        <div>
+            <div class="title">
+                <img src="svg/faction.svg" class="title factionTitle"/>
+                <label>Factions</label>
+            </div>
+        
+            <div class="factions"></div>
+            <div class="gimmeFullSpace">
+                <button onclick="addFaction()">Add faction</button>
+            </div>
         </div>
-
-        <div class="factions">
-        </div>
+    </div>
+    
+    <div class="question menu hide hideableMenu">
+        <p class="gimmeFullSpace">
+            Map done by <a href="https://www.deviantart.com/jonpintar" target="_blank">Jon Pintar</a>.
+        </p>
+        <p class="gimmeFullSpace">
+            Check the code on my <a href="https://github.com/daviddechaux/Kingmaker" target="_blank">Github</a>.
+        </p>
+        <p class="gimmeFullSpace">
+            GDPR stuff : I don't care about your personnal information. No cookie on this website.
+        </p>
     </div>
 
     <div class="mapDecoration">

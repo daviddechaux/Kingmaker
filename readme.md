@@ -10,6 +10,8 @@ The map has been done by [Jon Pintar](https://jonpintar.com/).
 ### Copyright
 I didn't look after them when I get the pics.  
 If you think the icons is your (it could be) and you don't want me to use it or you want to have your name on the app, please ask.
+  
+[Vectors Market](https://www.flaticon.com/authors/vectors-market)
 
 ### Tools
 [PngToSvg](https://picsvg.com/)  
@@ -36,6 +38,7 @@ Checkbox Styling : [Pretty-Checkbox](https://lokesh-coder.github.io/pretty-check
 
 ## Todo : 
 - Save before quit
+- Display save only when add / change stuff
 - Adjust CSS to have all icon on the same size (more or less)
 - Use data instead of crappy css class method like I did
 - Add a hint on fields (title) : disable some characteres on names
@@ -44,10 +47,10 @@ Checkbox Styling : [Pretty-Checkbox](https://lokesh-coder.github.io/pretty-check
 - Add a [crown](https://upload.wikimedia.org/wikipedia/commons/8/86/Meuble_h%C3%A9raldique_Couronnes_fran%C3%A7aises.svg) on the player token, and make this crown evolve with the size of the kingdom
 - Add army tokens (that must be factionnable)
 - Switch hex numerotation with radiobutton
-- Custom CSS on checkbox
 - Create Road
 - Remove faction
 - Add a checkbox to remove transparency on menu
+- Unzoom everything
 
 ## In progress :
 
@@ -99,3 +102,4 @@ https://drive.google.com/file/d/0B2d5Rs815f8bOU80T1ZsUkUtZm8/view http://kingmak
 - Create hexagones for faction
 - RightClick tool 
 - Create an element en right click, remove the button
+- Custom CSS on checkbox

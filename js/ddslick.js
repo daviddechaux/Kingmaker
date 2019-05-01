@@ -3,13 +3,11 @@ function displayNiceDropdownList() {
 		data: ddElementType,
 		selectText: "Select element type"
 	});
-
 	$("#decorationDdl").ddslick({
 		height: 300,
 		data: ddElement,
 		selectText: "Select an icon"
 	});
-
 
 	$("#editDecorationDdlType").ddslick({
 		data: ddElementType,
@@ -39,7 +37,6 @@ function displayDropDownFaction(select, selectedFaction) {
 		select.append(option);
 	}
 };
-
 
 // Dropdown element type
 var ddElementType = [

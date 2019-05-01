@@ -93,7 +93,6 @@ function getFactionColorFromId(factionId) {
 	return "rgb(0, 0, 0)";
 };
 
-
 function simplifyBorders() {
 	for (var i = 0; i < factions.length; i++) {
 		var factionId = factions[i].id;
@@ -231,4 +230,3 @@ function createBorder(faction, elementName, top, left) {
 
     return "";
 };
-

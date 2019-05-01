@@ -67,7 +67,7 @@
 
 .wrapperLeft{
     left: 1em;
-    width: 150px;
+    width: 175px;
 }
 
 .bigIcon{
@@ -80,4 +80,21 @@
 
 .menuIcon{
     color: black;
+}
+
+.title{
+    color: black;
+    text-decoration: underline;
+}
+
+.visibilityTitle{
+    height: 50px;
+}
+
+.factionTitle{
+    height: 45px;
+}
+
+.saveTitle{
+    height: 30px;
 }

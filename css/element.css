@@ -20,38 +20,17 @@
     z-index: 10;
 }
 
-.temple { font-size: 70px;}
-.village { font-size: 60px;}
-.cabane { font-size: 40px; }
-.house { font-size: 60px; }
-.camp { font-size: 40px; }
-.pont { font-size: 40px; }
-.ferry { font-size: 30px; }
-.stag { font-size: 100px; }
-
-
 .resources {
     position: absolute;
     display: none;
     z-index: 10;
 }
 
-.wheat { font-size: 70px; }
-.mine { height: 70px; }
-
-
 .misc{ 
     position: absolute; 
     display: none;
     z-index: 10;
 }
-
-.tree{ font-size: 70px; }
-.sign{ font-size: 65px; }
-.ruine{ font-size: 65px; }
-.spider{ height: 70px; }
-.dolmen{ height: 60px; }
-.hill{ height: 60px; }
 
 .battle{
     position: absolute;

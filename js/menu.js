@@ -26,7 +26,7 @@ function centerThis(obj) {
 
 	obj.css('left', width + offsetX - offsetWidth + 'px');
 	obj.css('top', height + offsetY - offsetHeight + 'px');
-}
+};
 
 function closeMenuDecoration() {
 	$(".hideableMenu").hide();

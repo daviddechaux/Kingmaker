@@ -6,14 +6,11 @@ function removeClassNameOnSave(className, classToRemove) {
     return className.trim();
 };
 
-
 function getIconNameFromElement(element) {
     var classes = $(element)[0].attributes["class"].value.split(" ");
 
     return getIconName(classes);
 };
-
-
 
 function createElement(imgId, picName, elementName, cssClass, visited, additionalClass, top, left, title, elementType, faction) {
     if (faction == undefined || faction == "") {
@@ -50,4 +47,4 @@ function displayAreaCode(hexName, top, left) {
         return "<label class='hexLabel' style='top:" + newTop + "px; left:" + newLeft + "px;'>" + row + column + "</label>";
 
     return "";
-}
+};
