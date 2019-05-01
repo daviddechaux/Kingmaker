@@ -20,7 +20,12 @@
 }
 
 .factionName{
-    width: 120px;
+    width: 250px;
+}
+
+.factionStyling{
+    font-size: 0.8em;
+    border: 0px solid white;
 }
 
 .deleteFaction:hover{
