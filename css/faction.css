@@ -25,9 +25,13 @@
 
 .factionStyling{
     font-size: 0.8em;
-    border: 0px solid white;
+    border: 2px solid #dadada;
+    border-radius: 7px;
 }
 
-.deleteFaction:hover{
-    cursor: pointer;
+.factionStyling:focus { 
+    outline: none;
+    border-color: #9ecaed;
+    box-shadow: 0 0 10px #9ecaed;
 }
+

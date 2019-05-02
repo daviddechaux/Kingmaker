@@ -71,9 +71,16 @@
 }
 
 .icon {
+    font-family: "icons";
+    font-size: 50px;
+}
+
+
+.pics {
     font-family: "pics";
     font-size: 50px;
 }
+
 
 .hexLabel {
     font-size: xx-large;

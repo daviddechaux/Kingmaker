@@ -39,6 +39,7 @@ Checkbox Styling : [Pretty-Checkbox](https://lokesh-coder.github.io/pretty-check
 ## Todo : 
 - Save before quit
 - Display save only when add / change stuff
+- Toggle menu
 - Adjust CSS to have all icon on the same size (more or less)
 - Use data instead of crappy css class method like I did
 - Add a hint on fields (title) : disable some characteres on names

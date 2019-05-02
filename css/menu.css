@@ -4,11 +4,16 @@
 
 .delete{
     display: -webkit-inline-box;
+    height: 20px;
+    font-size: 20px;
+    position: absolute;
+    right: 15px;
+    margin-top: 7px;
+    color: #666;
 }
 
-.icon-delete{
-    height:20px;
-    font-size: 20px;
+.delete:hover{
+    cursor: pointer;
 }
 
 .container{
@@ -97,4 +102,8 @@
 
 .saveTitle{
     height: 30px;
+}
+
+.factionTitle:hover{
+    cursor: pointer;
 }
