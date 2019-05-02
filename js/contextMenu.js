@@ -22,7 +22,7 @@ function addMenu(contextMenu, subContextMenu, hex, mousePos){
         if(hex.children("div.isBorder").length > 0)
             contextMenu.append("<li data-action='unclaim'>Unclaim</li>");
 
-        contextMenu.append('<li class="claim" onmouseover="displaySubMenu(' + mousePos.x + ', ' + mousePos.y + ')">Claim > </li>');
+        contextMenu.append('<li class="claim" onmouseover="displaySubMenu(' + mousePos.x + ', ' + mousePos.y + ')"><span>Claim</span> <i class="dockToRight">></i></li>');
     }
 
     // Add claim actions
@@ -30,6 +30,10 @@ function addMenu(contextMenu, subContextMenu, hex, mousePos){
         subContextMenu.append("<li data-action='claim' data-faction='" + factions[i].id + "'>Claim " + factions[i].name + "</li>");
     }
 
+    bindActions(hex, mousePos);
+};
+
+function bindActions(hex, mousePos){
     $(".contextMenu li").click(function(){
         $(".contextMenu").hide();
 

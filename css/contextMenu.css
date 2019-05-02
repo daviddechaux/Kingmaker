@@ -20,3 +20,8 @@
 .sub-custom-menu li:hover {
     background-color: #DEF;
 }
+
+.dockToRight{
+    position: absolute;
+    right: 12px;
+}

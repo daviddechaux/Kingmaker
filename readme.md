@@ -52,6 +52,7 @@ Checkbox Styling : [Pretty-Checkbox](https://lokesh-coder.github.io/pretty-check
 - Remove faction
 - Add a checkbox to remove transparency on menu
 - Unzoom everything
+- Add icons to the contextmenu add put the ">" at the right of the menu
 
 ## In progress :
 
