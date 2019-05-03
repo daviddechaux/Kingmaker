@@ -9,8 +9,8 @@
     <link rel="stylesheet" type="text/css" href="css/fog.css">
     <link rel="stylesheet" type="text/css" href="css/border.css">
     <link rel="stylesheet" type="text/css" href="css/contextMenu.css">
-    <link rel="stylesheet" type="text/css" href="css/icons.css"> <!-- Icons for website -->
-    <link rel="stylesheet" type="text/css" href="css/pics.css"> <!-- Pics on the map -->
+    <link rel="stylesheet" type="text/css" href="css/font.css">
+    <link rel="stylesheet" type="text/css" href="css/pics.css"> <!-- Font -->
 
     <!-- Plugins -->
     <script type="text/javascript" src="plugin/jquery.3.2.1.js"></script>
@@ -23,11 +23,11 @@
     <link rel="stylesheet" type="text/css" href="plugin/farbtastic/farbtastic.css" />
     <script type="text/javascript" src="plugin/farbtastic/farbtastic.js"></script>
     
-    <link rel="stylesheet" type="text/css" href="plugin/uikit/uikit.css" />
+    <!-- <link rel="stylesheet" type="text/css" href="plugin/uikit/uikit.css" />
     <script type="text/javascript" src="plugin/uikit/uikit.js"></script>
     <script type="text/javascript" src="plugin/uikit/uikit-icons.js"></script>
 
-    <link rel="stylesheet" type="text/css" href="plugin/pretty-checkbox.css" />
+    <link rel="stylesheet" type="text/css" href="plugin/pretty-checkbox.css" /> -->
     <!-- Plugins -->
 
     <script type="text/javascript" src="js/jsExt.js"></script>
@@ -64,13 +64,12 @@
     <!-- Open / Create a map -->
     <div class="openOrCreateMap hide menu hideableMenu">
         <div class="newMap iconContainer" onclick="createNew()">
-            <div class="file gimmeSpace icon icon-new bigIcon newMap menuIcon" title="Create a new map"></div>
+            <div class="file gimmeSpace icon  icon-map-new bigIcon newMap" title="Create a new map"></div>
             <input id="createNew" class="hide" type="file" value="data/empty.map" />
         </div>
 
         <div class="openMap iconContainer">
-            <div class="file gimmeSpace icon icon-load bigIcon openMap menuIcon" title="Load existing map" onclick="loadFile()">
-            </div>
+            <div class="file gimmeSpace icon icon-map-load bigIcon openMap" title="Load existing map" onclick="loadFile()"></div>
             <input id="openData" class="hide" type="file" />
         </div>
     </div>
@@ -90,7 +89,7 @@
         </div>
 
         <div class="gimmeFullSpace">
-            <div class="icon icon-delete delete menuIcon" onclick="deleteElement()"></div>
+            <div class="icon icon-delete delete" onclick="deleteElement()"></div>
 
             <div class="fr">
                 <input type="button" class="save" value="Save changes" onclick="editElement()" />
@@ -138,12 +137,12 @@
     <div class="menu wrapper wrapperLeft">
         <!-- Save Map -->
         <div>
-            <div class="title menuIcon">
-                <img src="menu-icons/download.svg" class="title saveTitle"/>
+            <div class="title">
+                <img src="icons/download.svg" class="title saveTitle"/>
                 <label>Save map</label>
             </div>
             <div class="saveMap iconContainer">
-                <div class="file gimmeSpace icon icon-save bigIcon menuIcon menuIcon" title="Save current map" onclick="saveFile()"></div>
+                <div class="file gimmeSpace icon icon-map-save bigIcon" title="Save current map" onclick="saveFile()"></div>
                 <input id="saveData" class="hide" />
             </div>
         </div>
@@ -152,8 +151,8 @@
 
         <!-- About -->
         <div class="gimmeFullSpace">
-            <div class="title askQuestion menuIcon" onclick="displayQuestion();">
-                <img src="menu-icons/question.svg" class="factionTitle"/>
+            <div class="title askQuestion" onclick="displayQuestion();">
+                <img src="icons/question.svg" class="factionTitle"/>
                 <label class="factionTitle">About</label>
             </div>
         </div>
@@ -165,29 +164,20 @@
         <!-- Checkbox displayer -->
         <div class="displayer">
             <div class="title">
-                <img src="menu-icons/visibility.svg" class="title visibilityTitle"/>
+                <img src="icons/visibility.svg" class="title visibilityTitle"/>
                 <label>Visibility</label>
             </div>
-            <div class="pretty p-svg gimmeFullSpace">
+            <div class="gimmeFullSpace">
                 <input type="checkbox" id="building" class="checkbox" name="display-building" checked/>
-                <div class="state">
-                    <span class="svg" uk-icon="icon: check"></span>
-                    <label for="building" class="label">Buildings</label>
-                </div>
+                <label for="building" class="label">Buildings</label>
             </div>
-            <div class="pretty p-svg gimmeFullSpace">
-                <input type="checkbox" id="resources" class="checkbox" name="display-resources" checked/>
-                <div class="state">
-                    <span class="svg" uk-icon="icon: check"></span>
-                    <label for="resources" class="label">Resources</label>
-                </div>
+            <div class="gimmeFullSpace">
+                <input type="checkbox" id="resources" class="checkbox" name="display-resources"/>
+                <label for="resources" class="label">Resources</label>
             </div>
-            <div class="pretty p-svg gimmeFullSpace">
-                <input type="checkbox" id="misc" class="checkbox" name="display-misc" checked/>
-                <div class="state">
-                    <span class="svg" uk-icon="icon: check"></span>
-                    <label for="misc" class="label">Misc</label>
-                </div>
+            <div class="gimmeFullSpace">
+                <input type="checkbox" id="misc" class="checkbox" name="display-misc"/>
+                <label for="misc" class="label">Misc</label>
             </div>
         </div>
 
@@ -196,7 +186,7 @@
         <!-- Factions -->
         <div>
             <div class="title">
-                <img src="menu-icons/faction.svg" class="title factionTitle"/>
+                <img src="icons/faction.svg" class="title factionTitle"/>
                 <label>Factions</label>
             </div>
         

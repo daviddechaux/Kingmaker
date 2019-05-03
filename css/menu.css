@@ -83,17 +83,14 @@
     width:100px;
 }
 
-.menuIcon{
-    color: black;
-}
-
 .title{
-    color: black;
     text-decoration: underline;
+    display: inline-flex;
 }
 
 .visibilityTitle{
-    height: 50px;
+    width: 50px;
+    height: 40px;
 }
 
 .factionTitle{

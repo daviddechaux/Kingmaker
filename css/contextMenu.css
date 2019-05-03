@@ -9,7 +9,7 @@
 
 .custom-menu li,
 .sub-custom-menu li {
-    padding: 8px 12px;
+    padding: 8px 5px;
     cursor: pointer;
     list-style-type: none;
     transition: all .3s ease;
@@ -23,5 +23,8 @@
 
 .dockToRight{
     position: absolute;
-    right: 12px;
+    right: 0px;
+    font-size: smaller;
+    margin-top: 3px;
 }
+

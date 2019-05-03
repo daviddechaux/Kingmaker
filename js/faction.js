@@ -74,7 +74,7 @@ function factionToHtml(id, name, color) {
 		'<div class="faction gimmeFullSpace">' +
 		'<input type="text" class="factionBox factionStyling" style="background-color: ' + color + '" id="faction' + id + '"/>' +
 		'<input type="text" class="factionName factionStyling gimmeOtherSpace" data-factionId="' + id + '" value="' + name + '" />' +
-		'<i class="icon img-delete-cross delete" onclick="deleteFaction(' + id + ')"/>'
+		'<i class="icon icon-delete-cross delete" onclick="deleteFaction(' + id + ')"/>'
 		'</div>';
 
 	return faction;

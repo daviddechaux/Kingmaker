@@ -10,11 +10,11 @@ function addMenu(contextMenu, subContextMenu, hex, mousePos){
 
     // If visited
     if ($(hex.children("div.fog")[0].attributes["class"]).val().indexOf("visited") > -1)
-        contextMenu.append("<li data-action='unexplore'>Un-explore</li>");
+        contextMenu.append("<li data-action='unexplore'><i class='icon-visibility-off'></i><span>Un-explore</span></li>");
     else
-        contextMenu.append("<li data-action='explore'>Explore</li>");
+        contextMenu.append("<li data-action='explore'><i class='icon-visibility'></i><span>Explore</span></li>");
 
-    contextMenu.append("<li data-action='create'>Add an element</li>");
+    contextMenu.append("<li data-action='create'><i class='icon-add'></i><span>Add element</span></li>");
 
     if (factions.length > 0){
         contextMenu.append("<hr>");
@@ -22,7 +22,7 @@ function addMenu(contextMenu, subContextMenu, hex, mousePos){
         if(hex.children("div.isBorder").length > 0)
             contextMenu.append("<li data-action='unclaim'>Unclaim</li>");
 
-        contextMenu.append('<li class="claim" onmouseover="displaySubMenu(' + mousePos.x + ', ' + mousePos.y + ')"><span>Claim</span> <i class="dockToRight">></i></li>');
+        contextMenu.append('<li class="claim" onmouseover="displaySubMenu(' + mousePos.x + ', ' + mousePos.y + ')"><i class="icon-faction"></i><span>Claim</span> <i class="dockToRight icon-next"></i></li>');
     }
 
     // Add claim actions

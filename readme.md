@@ -52,10 +52,11 @@ Checkbox Styling : [Pretty-Checkbox](https://lokesh-coder.github.io/pretty-check
 - Remove faction
 - Add a checkbox to remove transparency on menu
 - Unzoom everything
-- Add icons to the contextmenu add put the ">" at the right of the menu
+- Custom CSS on checkbox
+- Add a favicon
 
 ## In progress :
-
+- Add icons to the contextmenu add put the ">" at the right of the menu
 
 ## Maybe : 
 - Load default file from web (currently data are store in js) : Cross domain origin issue
@@ -105,4 +106,4 @@ https://drive.google.com/file/d/0B2d5Rs815f8bOU80T1ZsUkUtZm8/view http://kingmak
 - Create hexagones for faction
 - RightClick tool 
 - Create an element en right click, remove the button
-- Custom CSS on checkbox
+
