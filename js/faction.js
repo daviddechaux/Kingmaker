@@ -4,6 +4,9 @@ function displayColorPicker() {
 		menu.show();
 		centerThis(menu);
 
+		var villageColor = $(e.currentTarget)[0].style["background-color"];
+		$(".villagePicker").css("color", villageColor);
+
 		$("#factionName").text($(e.currentTarget)[0].id);
 
 		$("#colorPicker").farbtastic("#demoPicker");
