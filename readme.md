@@ -78,11 +78,7 @@ https://drive.google.com/file/d/0B2d5Rs815f8bOU80T1ZsUkUtZm8/view http://kingmak
 - Explore context menu icon override the text 
 
 ## Missing icons
-- Add element button (top right menu)
-- Create element (after clicking on add element)
 - Save changes button (on edit element)
-- Add faction button (top right menu)
-
 
 ## Done :
 - Load default map (Must be outdated)
