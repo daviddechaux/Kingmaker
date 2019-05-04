@@ -43,9 +43,15 @@ function addFaction() {
 		getRandomInt(256) + "," +
 		getRandomInt(256) + ")";
 
-	// Create the HTML string
-	var faction = factionToHtml(factionCount, "Faction " + factionCount, color);
+	var newFactionName = $(".newFactionName").val();
+	if (newFactionName == undefined || newFactionName == "")
+		newFactionName =  "Faction " + factionCount;
 
+	$(".newFactionName").val("");
+
+	// Create the HTML string
+	var faction = factionToHtml(factionCount, newFactionName, color);
+	
 	// Add the faction to the list of factions
 	$(".factions").append(faction);
 
@@ -67,14 +73,14 @@ function addFactions(factions) {
 	}
 };
 
-function factionToHtml(id, name, color) {
+function factionToHtml(id, name, color, newFactionName) {
 	factions.push({ id, name, color });
 
 	var faction =
 		'<div class="faction gimmeFullSpace">' +
 		'<input type="text" class="factionBox factionStyling" style="background-color: ' + color + '" id="faction' + id + '"/>' +
 		'<input type="text" class="factionName factionStyling gimmeOtherSpace" data-factionId="' + id + '" value="' + name + '" />' +
-		'<i class="icon icon-delete-cross delete" onclick="deleteFaction(' + id + ')"/>'
+		'<i class="icon-delete-cross delete" onclick="deleteFaction(' + id + ')"/>'
 		'</div>';
 
 	return faction;

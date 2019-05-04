@@ -76,6 +76,7 @@ https://drive.google.com/file/d/0B2d5Rs815f8bOU80T1ZsUkUtZm8/view http://kingmak
 ## Known Bugs : 
 - Change color when faction color change <= is that a bug ?
 - Edit color don't put the color on the test zone
+- Explore context menu icon override the text 
 
 ## Missing icons
 - Add element button (top right menu)

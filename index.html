@@ -64,12 +64,12 @@
     <!-- Open / Create a map -->
     <div class="openOrCreateMap hide menu hideableMenu">
         <div class="newMap iconContainer" onclick="createNew()">
-            <div class="file gimmeSpace icon  icon-map-new bigIcon newMap" title="Create a new map"></div>
+            <div class="file gimmeSpace icon-map-new bigIcon newMap" title="Create a new map"></div>
             <input id="createNew" class="hide" type="file" value="data/empty.map" />
         </div>
 
         <div class="openMap iconContainer">
-            <div class="file gimmeSpace icon icon-map-load bigIcon openMap" title="Load existing map" onclick="loadFile()"></div>
+            <div class="file gimmeSpace icon-map-load bigIcon openMap" title="Load existing map" onclick="loadFile()"></div>
             <input id="openData" class="hide" type="file" />
         </div>
     </div>
@@ -142,7 +142,7 @@
                 <label>Save map</label>
             </div>
             <div class="saveMap iconContainer">
-                <div class="file gimmeSpace icon icon-map-save bigIcon" title="Save current map" onclick="saveFile()"></div>
+                <div class="file gimmeSpace icon-map-save bigIcon" title="Save current map" onclick="saveFile()"></div>
                 <input id="saveData" class="hide" />
             </div>
         </div>
@@ -190,9 +190,17 @@
                 <label>Factions</label>
             </div>
         
+            <!-- This will contains the factions information -->
             <div class="factions"></div>
-            <div class="gimmeFullSpace">
-                <button onclick="addFaction()">Add faction</button>
+
+            <div>
+                <div>
+                    <i class="icon-add add" onclick="addFaction()"></i>
+                </div>
+                <div class="gimmeFullSpace">
+                    <input type="text" class="factionBox factionStyling" style="background-color:white" />
+                    <input type="text" class="factionName factionStyling correctPos newFactionName" />
+                </div>
             </div>
         </div>
     </div>

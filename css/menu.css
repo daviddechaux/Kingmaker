@@ -7,13 +7,28 @@
     height: 20px;
     font-size: 20px;
     position: absolute;
-    right: 15px;
-    margin-top: 7px;
+    right: 20px;
+    margin-top: 6px;
     color: #666;
 }
 
+.add{
+    display: -webkit-inline-box;
+    height: 20px;
+    font-size: 20px;
+    position: absolute;
+    left: 15px;
+    bottom: 12px;
+    color: #666;
+}
+
+.add:hover,
 .delete:hover{
     cursor: pointer;
+}
+
+.correctPos{
+    margin-left: -2px;
 }
 
 .container{
@@ -30,7 +45,7 @@
 }
 
 .openOrCreateMap{
-    width: 270px;
+    width: 235px; /* Size of the icons + 2*padding */
     padding: 10px;
     margin: auto;
 }
@@ -59,7 +74,7 @@
     top: 1em;
     
     z-index: 100;
-    opacity: 0.5;
+    /* opacity: 0.5; */
 }
 
 .wrapper:hover{
@@ -77,6 +92,7 @@
 
 .bigIcon{
     font-size: 100px;
+    margin-right: 0 ! important; /*overload the font css*/
 }
 
 .iconContainer{
