@@ -56,7 +56,7 @@ Checkbox Styling : [Pretty-Checkbox](https://lokesh-coder.github.io/pretty-check
 - Add a favicon
 
 ## In progress :
-- Add icons to the contextmenu add put the ">" at the right of the menu
+
 
 ## Maybe : 
 - Load default file from web (currently data are store in js) : Cross domain origin issue
@@ -75,7 +75,6 @@ https://drive.google.com/file/d/0B2d5Rs815f8bOU80T1ZsUkUtZm8/view http://kingmak
 
 ## Known Bugs : 
 - Change color when faction color change <= is that a bug ?
-- Change the icons folder name it conflicts with the lame host one
 
 ## Missing icons
 - Save changes button (on edit element)
