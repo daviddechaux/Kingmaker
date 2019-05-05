@@ -106,8 +106,9 @@
 }
 
 .visibilityTitle{
-    width: 50px;
-    height: 40px;
+    width: 40px;
+    font-size: 20px;
+    margin-top: 10px
 }
 
 .factionTitle{
@@ -116,8 +117,4 @@
 
 .saveTitle{
     height: 30px;
-}
-
-.factionTitle:hover{
-    cursor: pointer;
 }

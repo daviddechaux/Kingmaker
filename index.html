@@ -22,12 +22,6 @@
 
     <link rel="stylesheet" type="text/css" href="plugin/farbtastic/farbtastic.css" />
     <script type="text/javascript" src="plugin/farbtastic/farbtastic.js"></script>
-    
-    <!-- <link rel="stylesheet" type="text/css" href="plugin/uikit/uikit.css" />
-    <script type="text/javascript" src="plugin/uikit/uikit.js"></script>
-    <script type="text/javascript" src="plugin/uikit/uikit-icons.js"></script>
-
-    <link rel="stylesheet" type="text/css" href="plugin/pretty-checkbox.css" /> -->
     <!-- Plugins -->
 
     <script type="text/javascript" src="js/jsExt.js"></script>
@@ -137,9 +131,9 @@
     <div class="menu wrapper wrapperLeft">
         <!-- Save Map -->
         <div>
-            <div class="title">
-                <img src="icons/download.svg" class="title saveTitle"/>
-                <label>Save map</label>
+            <div>
+                <i class="icon-download saveTitle"></i>
+                <label class="title">Save map</label>
             </div>
             <div class="saveMap iconContainer">
                 <div class="file gimmeSpace icon-map-save bigIcon" title="Save current map" onclick="saveFile()"></div>
@@ -151,9 +145,9 @@
 
         <!-- About -->
         <div class="gimmeFullSpace">
-            <div class="title askQuestion" onclick="displayQuestion();">
-                <img src="icons/question.svg" class="factionTitle"/>
-                <label class="factionTitle">About</label>
+            <div class="askQuestion" onclick="displayQuestion();">
+                <i class="icon-question factionTitle"></i>
+                <label class="title factionTitle">About</label>
             </div>
         </div>
     </div>
@@ -163,9 +157,9 @@
     <div class="menu wrapper wrapperRight">
         <!-- Checkbox displayer -->
         <div class="displayer">
-            <div class="title">
-                <img src="icons/visibility.svg" class="title visibilityTitle"/>
-                <label>Visibility</label>
+            <div>
+                <i class="icon-visibility visibilityTitle"></i>
+                <label class="title">Visibility</label>
             </div>
             <div class="gimmeFullSpace">
                 <input type="checkbox" id="building" class="checkbox" name="display-building" checked/>
@@ -185,9 +179,9 @@
 
         <!-- Factions -->
         <div>
-            <div class="title">
-                <img src="icons/faction.svg" class="title factionTitle"/>
-                <label>Factions</label>
+            <div>
+                <i class="icon-faction factionTitle"></i>
+                <label class="title">Factions</label>
             </div>
         
             <!-- This will contains the factions information -->
@@ -199,7 +193,7 @@
                 </div>
                 <div class="gimmeFullSpace">
                     <input type="text" class="factionBox factionStyling" style="background-color:white" disabled />
-                    <input type="text" class="factionName factionStyling correctPos newFactionName" />
+                    <input type="text" class="factionName factionStyling correctPos newFactionName" value="Add faction" />
                 </div>
             </div>
         </div>

@@ -47,10 +47,8 @@ function addFaction() {
 		getRandomInt(256) + ")";
 
 	var newFactionName = $(".newFactionName").val();
-	if (newFactionName == undefined || newFactionName == "")
+	if (newFactionName == undefined || newFactionName == "" || newFactionName == "Add faction")
 		newFactionName =  "Faction " + factionCount;
-
-	$(".newFactionName").val("");
 
 	// Create the HTML string
 	var faction = factionToHtml(factionCount, newFactionName, color);
