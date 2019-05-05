@@ -32,7 +32,7 @@ function createElement(imgId, picName, elementName, cssClass, visited, additiona
 
         var color = getFactionColorFromId(faction);
 
-        return '<div id="' + imgId + '" data-faction="' + faction + '" class="pics ' + fullClass + '" data-elementType="' + elementType + '" alt="' + title + '" title="' + title + '" style="top:' + top + 'px; left:' + left + 'px; color:' + color + '" />';
+        return '<div id="' + imgId + '" data-faction="' + faction + '" class="icon ' + fullClass + '" data-elementType="' + elementType + '" alt="' + title + '" title="' + title + '" style="top:' + top + 'px; left:' + left + 'px; color:' + color + '" />';
     }
 };
 

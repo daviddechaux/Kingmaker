@@ -7,10 +7,6 @@
     cursor: pointer;
 }
 
-.light {
-    opacity: 0.7;
-}
-
 .visited {
     opacity: 0;
 }
@@ -18,25 +14,21 @@
 .building {
     position: absolute;
     z-index: 10;
+    font-size: 40px;
 }
 
 .resources {
     position: absolute;
     display: none;
     z-index: 10;
+    font-size: 40px;
 }
 
 .misc{ 
     position: absolute; 
     display: none;
     z-index: 10;
-}
-
-.battle{
-    position: absolute;
-    display: none;
-    height: 70px;
-    z-index:10;
+    font-size: 40px;
 }
 
 .cabane { font-size: 40px; }
