@@ -50,6 +50,8 @@ function addFaction() {
 	if (newFactionName == undefined || newFactionName == "" || newFactionName == "Add faction")
 		newFactionName =  "Faction " + factionCount;
 
+	$(".newFactionName").val("Add faction");
+
 	// Create the HTML string
 	var faction = factionToHtml(factionCount, newFactionName, color);
 	

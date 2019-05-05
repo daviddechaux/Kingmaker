@@ -7,8 +7,8 @@
     height: 20px;
     font-size: 15px;
     position: absolute;
-    right: 15px;
-    margin-top: 9px;
+    right: 17px;
+    margin-top: 8px;
     color: #666;
     opacity: 0.7;
 }
@@ -19,7 +19,7 @@
     font-size: 20px;
     position: absolute;
     left: 15px;
-    bottom: 12px;
+    bottom: 10px;
     color: #666;
 }
 
@@ -98,6 +98,7 @@
 
 .iconContainer{
     width:100px;
+    margin-left: 25px;
 }
 
 .title{
@@ -106,9 +107,7 @@
 }
 
 .visibilityTitle{
-    width: 40px;
     font-size: 20px;
-    margin-top: 10px
 }
 
 .factionTitle{
@@ -117,4 +116,8 @@
 
 .saveTitle{
     height: 30px;
+}
+
+.centerSave{
+    margin-left: 20px;
 }

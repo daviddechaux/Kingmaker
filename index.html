@@ -9,6 +9,7 @@
     <link rel="stylesheet" type="text/css" href="css/fog.css">
     <link rel="stylesheet" type="text/css" href="css/border.css">
     <link rel="stylesheet" type="text/css" href="css/contextMenu.css">
+    <link rel="stylesheet" type="text/css" href="css/checkbox.css">
     <link rel="stylesheet" type="text/css" href="css/font.css">
     <link rel="stylesheet" type="text/css" href="css/pics.css"> <!-- Font -->
 
@@ -57,12 +58,12 @@
 
     <!-- Open / Create a map -->
     <div class="openOrCreateMap hide menu hideableMenu">
-        <div class="newMap iconContainer" onclick="createNew()">
+        <div class="newMap" onclick="createNew()">
             <div class="file gimmeSpace icon-map-new bigIcon newMap" title="Create a new map"></div>
             <input id="createNew" class="hide" type="file" value="data/empty.map" />
         </div>
 
-        <div class="openMap iconContainer">
+        <div class="openMap">
             <div class="file gimmeSpace icon-map-load bigIcon openMap" title="Load existing map" onclick="loadFile()"></div>
             <input id="openData" class="hide" type="file" />
         </div>
@@ -131,12 +132,12 @@
     <div class="menu wrapper wrapperLeft">
         <!-- Save Map -->
         <div>
-            <div>
+            <div class="gimmeFullSpace">
                 <i class="icon-download saveTitle"></i>
                 <label class="title">Save map</label>
             </div>
-            <div class="saveMap iconContainer">
-                <div class="file gimmeSpace icon-map-save bigIcon" title="Save current map" onclick="saveFile()"></div>
+            <div class="saveMap">
+                <div class="file centerSave icon-map-save bigIcon" title="Save current map" onclick="saveFile()"></div>
                 <input id="saveData" class="hide" />
             </div>
         </div>
@@ -146,7 +147,7 @@
         <!-- About -->
         <div class="gimmeFullSpace">
             <div class="askQuestion" onclick="displayQuestion();">
-                <i class="icon-question factionTitle"></i>
+                <i class="icon-question"></i>
                 <label class="title factionTitle">About</label>
             </div>
         </div>
@@ -157,21 +158,27 @@
     <div class="menu wrapper wrapperRight">
         <!-- Checkbox displayer -->
         <div class="displayer">
-            <div>
+            <div class="gimmeFullSpace">
                 <i class="icon-visibility visibilityTitle"></i>
                 <label class="title">Visibility</label>
             </div>
-            <div class="gimmeFullSpace">
-                <input type="checkbox" id="building" class="checkbox" name="display-building" checked/>
-                <label for="building" class="label">Buildings</label>
+            <div class="gimmeOtherSpace">
+                <label for="building" class="container">Buildings
+                    <input id="building" type="checkbox" name="display-building" checked="checked" />
+                    <span class="checkmark"></span>
+                </label>
             </div>
-            <div class="gimmeFullSpace">
-                <input type="checkbox" id="resources" class="checkbox" name="display-resources"/>
-                <label for="resources" class="label">Resources</label>
+            <div class="gimmeOtherSpace">
+                <label for="resources" class="container gimmeOtherSpace">Resources
+                    <input id="resources" type="checkbox"name="display-resources" />
+                    <span class="checkmark"></span>
+                </label>
             </div>
-            <div class="gimmeFullSpace">
-                <input type="checkbox" id="misc" class="checkbox" name="display-misc"/>
-                <label for="misc" class="label">Misc</label>
+            <div class="gimmeOtherSpace">
+                <label for="misc" class="container gimmeOtherSpace">Misc
+                    <input id="misc" type="checkbox" name="display-misc" />
+                    <span class="checkmark"></span>
+                </label>
             </div>
         </div>
 
@@ -179,8 +186,8 @@
 
         <!-- Factions -->
         <div>
-            <div>
-                <i class="icon-faction factionTitle"></i>
+            <div class="gimmeFullSpace">
+                <i class="icon-faction"></i>
                 <label class="title">Factions</label>
             </div>
         
@@ -191,7 +198,7 @@
                 <div>
                     <i class="icon-add add" onclick="addFaction()"></i>
                 </div>
-                <div class="gimmeFullSpace">
+                <div class="gimmeSpaceButTop">
                     <input type="text" class="factionBox factionStyling" style="background-color:white" disabled />
                     <input type="text" class="factionName factionStyling correctPos newFactionName" value="Add faction" />
                 </div>

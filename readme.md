@@ -75,8 +75,8 @@ https://drive.google.com/file/d/0B2d5Rs815f8bOU80T1ZsUkUtZm8/view http://kingmak
 
 ## Known Bugs : 
 - Change color when faction color change <= is that a bug ?
-- Explore context menu icon override the text 
 - Change the icons folder name it conflicts with the lame host one
+- Size icons is wierd, too small.
 
 ## Missing icons
 - Save changes button (on edit element)

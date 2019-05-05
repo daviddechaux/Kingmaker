@@ -37,6 +37,10 @@
     margin: 5px 5px 5px 5px;
 }
 
+.gimmeSpaceButTop {
+    margin: -5px 5px 5px 5px;
+}
+
 .file > input {
     display: none;
 }
@@ -64,12 +68,6 @@
 .field {
     display: block;
 }
-
-.pics {
-    font-family: "pics";
-    font-size: 50px;
-}
-
 
 .hexLabel {
     font-size: xx-large;
