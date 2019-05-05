@@ -246,29 +246,12 @@
 
         $(".editorBackground").show();
         $(".wrapper").hide();
+
+        // Contextmenu
+        bindMenu();
     });
 
-    //https://stackoverflow.com/a/20471268/11261984
-    $(document).bind("contextmenu", function (event) {
-        createPos = {x : event.clientX + document.body.scrollLeft, y: event.clientY + document.body.scrollTop};
 
-        event.preventDefault();
-
-        var contextMenu = $(".custom-menu");
-        var subContextMenu = $(".sub-custom-menu");
-
-        removeMenu(contextMenu);
-        removeMenu(subContextMenu);
-        addMenu(contextMenu, subContextMenu, $(event.target.closest(".hex")), createPos);
-        centerMenu(contextMenu);
-    });
-
-    $(document).bind("mousedown", function (e) {
-        // If the clicked element is not the menu
-        if (!$(e.target).parents(".custom-menu").length > 0) {
-            $(".custom-menu").hide();
-        }
-    });
 </script>
 
 </html>

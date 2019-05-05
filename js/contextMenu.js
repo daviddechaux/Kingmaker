@@ -1,3 +1,27 @@
+function bindMenu(){
+    //https://stackoverflow.com/a/20471268/11261984
+    $(document).bind("contextmenu", function (event) {
+        createPos = {x : event.clientX + document.body.scrollLeft, y: event.clientY + document.body.scrollTop};
+
+        event.preventDefault();
+
+        var contextMenu = $(".custom-menu");
+        var subContextMenu = $(".sub-custom-menu");
+
+        removeMenu(contextMenu);
+        removeMenu(subContextMenu);
+        addMenu(contextMenu, subContextMenu, $(event.target.closest(".hex")), createPos);
+        centerMenu(contextMenu);
+    });
+
+    $(document).bind("mousedown", function (e) {
+        // If the clicked element is not the menu
+        if (!$(e.target).parents(".custom-menu").length > 0) {
+            $(".custom-menu").hide();
+        }
+    });
+};
+
 function removeMenu(contextMenu){
     while (contextMenu.children().length > 0) {
         contextMenu.empty();
@@ -10,19 +34,23 @@ function addMenu(contextMenu, subContextMenu, hex, mousePos){
 
     // If visited
     if ($(hex.children("div.fog")[0].attributes["class"]).val().indexOf("visited") > -1)
-        contextMenu.append("<li data-action='unexplore'><i class='icon-visibility-off'></i><span>Un-explore</span></li>");
+        contextMenu.append("<li data-action='unexplore' onmouseover='hideSubMenu()'><i class='icon-visibility-off'></i><span>Un-explore</span></li>");
     else
-        contextMenu.append("<li data-action='explore'><i class='icon-visibility'></i><span>Explore</span></li>");
+        contextMenu.append("<li data-action='explore' onmouseover='hideSubMenu()'><i class='icon-visibility'></i><span>Explore</span></li>");
 
-    contextMenu.append("<li data-action='create'><i class='icon-add'></i><span>Add element</span></li>");
+    contextMenu.append("<li data-action='create' onmouseover='hideSubMenu()'><i class='icon-add'></i><span>Add element</span></li>");
 
     if (factions.length > 0){
-        contextMenu.append("<hr>");
+        contextMenu.append("<hr onmouseover='hideSubMenu()'>");
 
         if(hex.children("div.isBorder").length > 0)
-            contextMenu.append("<li data-action='unclaim'>Unclaim</li>");
+            contextMenu.append("<li data-action='unclaim' onmouseover='hideSubMenu()'>Unclaim</li>");
 
-        contextMenu.append('<li class="claim" onmouseover="displaySubMenu(' + mousePos.x + ', ' + mousePos.y + ')"><i class="icon-faction"></i><span>Claim</span> <i class="dockToRight icon-next"></i></li>');
+        contextMenu.append('<li class="claim" onmouseover="displaySubMenu(' + mousePos.x + ', ' + mousePos.y + ')" >' +
+                              '<i class="icon-faction"></i>' + 
+                              '<span>Claim</span>' +
+                              '<i class="dockToRight icon-next"></i>' +
+                            '</li>');
     }
 
     // Add claim actions
@@ -93,8 +121,12 @@ function centerMenu(contextMenu){
     });
 };
 
+function hideSubMenu(){
+    $(".sub-custom-menu").hide()
+};
+
 function displaySubMenu(x, y){
-    $(".sub-custom-menu").toggle().
+    $(".sub-custom-menu").show().
     css({
         top: parseInt(y) + parseInt($(".claim")[0].offsetTop) + "px",
         left: parseInt(x) + parseInt($(".custom-menu").width()) + "px"
