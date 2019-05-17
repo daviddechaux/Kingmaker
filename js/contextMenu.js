@@ -55,7 +55,7 @@ function addMenu(contextMenu, subContextMenu, hex, mousePos){
 
     // Add claim actions
     for(var i = 0; i < factions.length; i++){
-        subContextMenu.append("<li data-action='claim' data-faction='" + factions[i].id + "'>Claim " + factions[i].name + "</li>");
+        subContextMenu.append("<li data-action='claim' data-faction='" + factions[i].id + "'>" + factions[i].name + "</li>");
     }
 
     bindActions(hex, mousePos);
