@@ -8,10 +8,9 @@ You can either use the [site](http://kerchiefed-turnarou.000webhostapp.com/) or 
 The map has been done by [Jon Pintar](https://jonpintar.com/).
 
 ### Copyright
-I didn't look after them when I get the pics.  
+I didn't check for everything.
+However some pics comes from [Vectors Market](https://www.flaticon.com/authors/vectors-market).
 If you think the icons is your (it could be) and you don't want me to use it or you want to have your name on the app, please ask.
-  
-[Vectors Market](https://www.flaticon.com/authors/vectors-market)
 
 ### Tools
 [PngToSvg](https://picsvg.com/)  
@@ -21,16 +20,12 @@ If you think the icons is your (it could be) and you don't want me to use it or 
 New feature, icons, ... Please ask.  
 Just remember that the app is still in development.
 
-### Need help ?
-Well ... you can create icons... Please...
-
 ### Plugin
-[jQuery](https://jquery.com/)  
+JS Framework : [jQuery](https://jquery.com/)  
 Dropdownlist with pics : [ddSlick](http://designwithpc.com/Plugins/ddSlick)  
 Nice title display : [Tooltipster](http://iamceege.github.io/tooltipster/)  
 Interaction : [Interactjs](http://interactjs.io/)  
 Color Picker : [Farbtastic](http://acko.net/blog/farbtastic-jquery-color-picker-plug-in/)  
-Checkbox Styling : [Pretty-Checkbox](https://lokesh-coder.github.io/pretty-checkbox/) with [UIkit](https://getuikit.com/docs/introduction)
 
 > http://raphaeljs.com/    
 > Animating Clip Paths  
@@ -53,6 +48,7 @@ Checkbox Styling : [Pretty-Checkbox](https://lokesh-coder.github.io/pretty-check
 - Add a setting to change the opacity of menu / fog
 - Unzoom everything
 - Add a favicon
+- Move to ES6
 
 ## In progress :
 - Menu styling
