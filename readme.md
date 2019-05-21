@@ -2,10 +2,10 @@
 The app is an interactive map for the Kingmaker campaign.    
 It is **not** made for the [video game](https://owlcatgames.com/) but for the [paper version](https://paizo.com/kingmaker) (french version [here](https://www.black-book-editions.fr/catalogue.php?id=29)). 
 
-You can either use the [site](http://kerchiefed-turnarou.000webhostapp.com/) or copy everything in local.  
-> *Last update : 25/04/2019 14h00*
-
 The map has been done by [Jon Pintar](https://jonpintar.com/).
+You can either use the [site](http://kerchiefed-turnarou.000webhostapp.com/) or copy everything in local.  
+
+> *Last website update : 25/04/2019 14h00*
 
 ### Copyright
 I didn't check for everything.
