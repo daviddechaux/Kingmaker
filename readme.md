@@ -70,6 +70,7 @@ https://drive.google.com/file/d/0B2d5Rs815f8bOU80T1ZsUkUtZm8/view http://kingmak
 
 ## Known Bugs : 
 - Change color when faction color change <= is that a bug ?
+- New map don't center on player icon
 
 ## Missing icons
 - Save changes button (on edit element)
