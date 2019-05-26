@@ -33,7 +33,6 @@ function loadFile() {
 function createMapDecoration(data) {
     cleanMap();
 
-    addPlayerToMap(data.player);
     addFactions(data.factions);
 
     addElementToMap(data.fog, "fogOfWar");
@@ -46,6 +45,7 @@ function createMapDecoration(data) {
     tooltip();
     menuDisplayer();
     configureOption(data.options);
+    addPlayerToMap(data.player);
 
     isMapLoaded = true;
 };
@@ -84,6 +84,9 @@ function configureOption(options){
     $(".fog").css("opacity", options.fogOpacity);
     $(".menuOpacity").val(options.menuOpacity);
     $(".menu ").css("opacity", options.menuOpacity);
+
+    var token = '<img src="images/' + options.token + '.png" class="player draggable" />';
+    $("#player").append(token);
 };
 
 function addElementToMap(item, sectionName) {
