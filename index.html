@@ -95,16 +95,17 @@
     </div>
 
     <!-- Add element -->
-    <div class="addElement menu hide hideableMenu">
+    <div class="addElement menu rightClickMenu hide hideableMenu">
         <div class="field gimmeFullSpace">
-            <label for="addTitleMapDecoration">Name</label>
-            <input id="addTitleMapDecoration" />
+            <input id="addTitleMapDecoration" class="inputStyling elementName" placeholder="Element Name"/>
         </div>
 
-        <select id="decorationDdlFaction" class="decorationFaction decorationDdl gimmeSpace"></select>
+        <div class="factionCategories gimmeFullSpace select">
+            <select id="decorationDdlFaction" class="decorationFaction decorationDdl"></select>
+        </div>
 
-        <select id="decorationDdlType" class="decorationType decorationDdl gimmeSpace"></select>
-        <select id="decorationDdl" class="decorationDdl gimmeSpace"></select>
+        <select id="decorationDdlType" class="decorationType decorationDdl"></select>
+        <select id="decorationDdl" class="decorationDdl"></select>
 
         <input id="addClassMapDecoration" class="hide" value="tooltip tap-target draggable inFront" />
 
@@ -199,8 +200,8 @@
                     <i class="icon-add add" onclick="addFaction()"></i>
                 </div>
                 <div class="gimmeSpaceButTop">
-                    <input type="text" class="factionBox factionStyling" style="background-color:white" disabled />
-                    <input type="text" class="factionName factionStyling correctPos newFactionName" placeholder="Add faction" />
+                    <input type="text" class="factionBox inputStyling" style="background-color:white" disabled />
+                    <input type="text" class="factionName inputStyling correctPos newFactionName" placeholder="Add faction" />
                 </div>
             </div>
         </div>

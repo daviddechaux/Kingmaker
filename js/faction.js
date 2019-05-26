@@ -81,8 +81,8 @@ function factionToHtml(id, name, color, newFactionName) {
 
 	var faction =
 		'<div class="faction gimmeFullSpace">' +
-		'<input type="text" class="factionBox factionStyling" style="background-color: ' + color + '" id="faction' + id + '"/>' +
-		'<input type="text" class="factionName factionStyling gimmeOtherSpace" data-factionId="' + id + '" value="' + name + '" />' +
+		'<input type="text" class="factionBox inputStyling" style="background-color: ' + color + '" id="faction' + id + '"/>' +
+		'<input type="text" class="factionName inputStyling gimmeOtherSpace" data-factionId="' + id + '" value="' + name + '" />' +
 		'<i class="icon-delete-cross delete" onclick="deleteFaction(' + id + ')"/>'
 		'</div>';
 

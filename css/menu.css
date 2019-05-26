@@ -60,11 +60,57 @@
     position: absolute;
     border: 1px solid #C0B391;
     background-color : white;
+    
+}
+
+.inputStyling{
+    font-size: 0.7em;
+    border: 2px solid #dadada;
+    border-radius: 5px;
+    padding-left: 5px;
+}
+
+.inputStyling:focus { 
+    outline: none;
+    border-color: #9ecaed;
+    box-shadow: 0 0 10px #9ecaed;
+}
+
+.factionCategories{
+    background: #fff;
+    border: 2px solid #dadada;
+    border-radius: 6px;
+    position: relative;
+    overflow: hidden;
+}
+
+.factionCategories select{
+    border: 0;
+    border-radius: 0;
+    width: 100%;
+    font-size: 0.7em;
+}
+
+#decorationDdlType{
+    border: 2px solid #dadada;
+    width: 250px;
+}
+
+.dd-container{
+    width: 250px;
+}
+
+.rightClickMenu{
+    font-size: 30px;
 }
 
 .dd-selected-image, .dd-option-image{
     max-height: 30px !important;
     max-width: 30px !important;
+}
+
+.dd-container{
+    font-size: 0.6em;
 }
 
 .wrapper{

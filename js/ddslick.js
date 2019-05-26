@@ -1,28 +1,29 @@
 function displayNiceDropdownList() {
 	$("#decorationDdlType").ddslick({
 		data: ddElementType,
-		selectText: "Select element type"
+		selectText: "Select Element Type"
 	});
 	$("#decorationDdl").ddslick({
 		height: 300,
 		data: ddElement,
-		selectText: "Select an icon"
+		selectText: "Select Icon"
 	});
 
 	$("#editDecorationDdlType").ddslick({
 		data: ddElementType,
-		selectText: "Select element type"
+		selectText: "Select Element Type"
 	});
 	$("#editDecorationDdl").ddslick({
 		height: 300,
 		data: ddElement,
-		selectText: "Select an icon"
+		selectText: "Select Icon"
 	});
 };
 
 function displayDropDownFaction(select, selectedFaction) {
 	$(".option").remove();
 
+	select.append("<option class='option' selected hidden>Select Faction</option>");
 	select.append("<option class='option' value='0'>None</option>");
 
 	for (var i = 0; i < factions.length; i++) {
@@ -265,8 +266,8 @@ var ddElement = [
 		"value": 28,
 		"selected": false,
 		"description": "",
-		"userClass": "icon-souche",
-		"text": "Stump"
+		"userClass": "icon-strain",
+		"text": "Strain"
 	},
 	{
 		"value": 29,
