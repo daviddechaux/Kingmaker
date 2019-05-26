@@ -84,8 +84,9 @@ function createPlayerObject(){
 function createOptionObject(){
     var fogOpacity = $(".fogOpacity").val();
     var menuOpacity = $(".menuOpacity").val();
+    var hexNumber = $('input[name="hexNumber"]:checked')[0].value;
 
-    return {fogOpacity, menuOpacity};
+    return {fogOpacity, menuOpacity, hexNumber};
 };
 
 function getSavingPos(initialPos, currentPos){

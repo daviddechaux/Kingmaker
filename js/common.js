@@ -12,7 +12,7 @@ function getIconNameFromElement(element) {
     return getIconName(classes);
 };
 
-function createElement(imgId, picName, elementName, cssClass, visited, additionalClass, top, left, title, elementType, faction) {
+function createElement(imgId, picName, elementName, cssClass, visited, additionalClass, top, left, title, elementType, faction, isCapital) {
     if (faction == undefined || faction == "") {
         faction = "None";
     }
@@ -32,6 +32,7 @@ function createElement(imgId, picName, elementName, cssClass, visited, additiona
 
         var color = getFactionColorFromId(faction);
 
+        //isCapital
         return '<div id="' + imgId + '" data-faction="' + faction + '" class="icon ' + fullClass + '" data-elementType="' + elementType + '" alt="' + title + '" title="' + title + '" style="top:' + top + 'px; left:' + left + 'px; color:' + color + '" />';
     }
 };
@@ -42,9 +43,9 @@ function displayAreaCode(hexName, top, left) {
     var row = hexName.substring(0, 1);
     var column = parseInt(hexName.substring(1, 3)) - 14;
 
-    //return "<label class='hexLabel' style='top:" + newTop + "px; left:" + newLeft + "px;'>" + hexName + "</label>";
+    var hexNumber = "<label class='hexLabel allHex hide' style='top:" + newTop + "px; left:" + newLeft + "px;'>" + hexName + "</label>";
     if (0 < column && column < 8)
-        return "<label class='hexLabel' style='top:" + newTop + "px; left:" + newLeft + "px;'>" + row + column + "</label>";
+        hexNumber += "<label class='hexLabel narlHex' style='top:" + newTop + "px; left:" + newLeft + "px;'>" + row + column + "</label>";
 
-    return "";
+    return hexNumber;
 };

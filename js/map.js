@@ -25,3 +25,16 @@ function changeMenuOpacity(){
     var menuOpacity = $(".menuOpacity").val();
     $(".menu ").css("opacity", menuOpacity);
 };
+
+function displayHexNumber(area){
+    switch(area){
+        case "narl" : 
+            $(".narlHex").removeClass("hide");
+            $(".allHex").addClass("hide");
+            break;
+        case "all" : 
+            $(".narlHex").addClass("hide");
+            $(".allHex").removeClass("hide");
+            break;
+    }
+};

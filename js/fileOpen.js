@@ -79,13 +79,16 @@ function addPlayerToMap(player) {
 };
 
 function configureOption(options){
-    console.log(options);
     $(".fogOpacity").val(options.fogOpacity);
     $(".fog").css("opacity", options.fogOpacity);
     $(".menuOpacity").val(options.menuOpacity);
     $(".menu ").css("opacity", options.menuOpacity);
 
-    var token = '<img src="images/' + options.token + '.png" class="player draggable" />';
+    var tokenName = "default";
+    if(options.token != undefined)
+        tokenName = options.token;
+
+    var token = '<img src="images/' + tokenName + '.png" class="player draggable" />';
     $("#player").append(token);
 };
 
@@ -102,6 +105,7 @@ function addElementToMap(item, sectionName) {
             var cssClass = obj.class ? obj.class : "";
             var title = obj.title ? obj.title.replace("'", "&#39;") : "";
             var faction = obj.faction ? obj.faction : "";
+            var isCapital = obj.isCapital ? obj.isCapital : false;
 
             var additionalClass = "";
             if (sectionName === "fogOfWar") {
@@ -111,7 +115,7 @@ function addElementToMap(item, sectionName) {
                 additionalClass = "tooltip tap-target";
             }
 
-            var img = createElement(idElement, obj.img, name, cssClass, visited, additionalClass, obj.top, obj.left, title, sectionName.replace("Section", ""), faction);
+            var img = createElement(idElement, obj.img, name, cssClass, visited, additionalClass, obj.top, obj.left, title, sectionName.replace("Section", ""), faction, isCapital);
             div.append(img);
 
             idElement++;

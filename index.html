@@ -12,7 +12,8 @@
     <link rel="stylesheet" type="text/css" href="css/checkbox.css">
     <link rel="stylesheet" type="text/css" href="css/font.css">
     <link rel="stylesheet" type="text/css" href="css/pics.css"> <!-- Font -->
-
+    <link rel="icon" type="image/png" sizes="96x96" href="font-icons/favicon.png"> <!-- Favicon -->
+    
     <!-- Plugins -->
     <script type="text/javascript" src="plugin/jquery.3.2.1.js"></script>
     <script type="text/javascript" src="plugin/jquery.ddslick.min.js"></script>
@@ -153,6 +154,15 @@
             <div class="slidecontainer">
                 <label class="subtitle">Menu opacity</label>
                 <input class="menuOpacity" type="range" min="0" max="1" step="0.01" value="0.80" onchange="changeMenuOpacity()">
+            </div>
+            <div>
+                <label class="subtitle">Hex number</label>
+                <div>
+                    <input type="radio" id="narl" name="hexNumber" value="narl" checked onclick="displayHexNumber('narl');">
+                    <label for="narl" class="subtitle">Narl</label>
+                    <input type="radio" id="all" name="hexNumber" value="all" onclick="displayHexNumber('all');">
+                    <label for="all" class="subtitle">All</label>
+                </div>
             </div>
         </div>
 

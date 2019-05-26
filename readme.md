@@ -5,7 +5,7 @@ It is **not** made for the [video game](https://owlcatgames.com/) but for the [p
 The map has been done by [Jon Pintar](https://jonpintar.com/).  
 You can either use the [site](http://kerchiefed-turnarou.000webhostapp.com/) or copy everything in local.  
 
-> *Last website update : 25/04/2019 14h00*
+> *Last website update : 26/05/2019 17h00*
 
 ### Copyright
 I didn't check for everything.
@@ -15,6 +15,7 @@ If you think the icons is your (it could be) and you don't want me to use it or 
 ### Tools
 [PngToSvg](https://picsvg.com/)  
 [SvgToFont](http://fontello.com/)  
+[Favicon](https://www.favicon-generator.org/)
 
 ### Want something ?
 New feature, icons, ... Please ask.  
@@ -42,15 +43,13 @@ Color Picker : [Farbtastic](http://acko.net/blog/farbtastic-jquery-color-picker-
 - Use Lucian POC for Javascript Object
 - Add a [crown](https://upload.wikimedia.org/wikipedia/commons/8/86/Meuble_h%C3%A9raldique_Couronnes_fran%C3%A7aises.svg) on the player token, and make this crown evolve with the size of the kingdom
 - Add army tokens (that must be factionnable)
-- Switch hex numerotation with radiobutton
 - Create Road
-- Remove faction
 - Unzoom everything
-- Add a favicon
 - Move to ES6
 
 ## In progress :
 - Menu styling
+
 
 ## Maybe : 
 - Load default file from web (currently data are store in js) : Cross domain origin issue
@@ -69,7 +68,9 @@ https://drive.google.com/file/d/0B2d5Rs815f8bOU80T1ZsUkUtZm8/view http://kingmak
 
 ## Known Bugs : 
 - Change color when faction color change <= is that a bug ?
-- New map don't center on player icon
+- New map don't center on player icon (new map)
+- Dropdown are too big
+- var pos = getEditMenuPosition($(".player"), false, true); <== ???? element.js p103
 
 ## Missing icons
 - Save changes button (on edit element)
@@ -98,3 +99,5 @@ https://drive.google.com/file/d/0B2d5Rs815f8bOU80T1ZsUkUtZm8/view http://kingmak
 - Create an element en right click, remove the button
 - Custom checkbox CSS
 - Add a setting to change the opacity of menu / fog
+- Add a favicon
+- Switch hex numerotation with radiobutton
