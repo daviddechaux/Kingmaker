@@ -167,3 +167,11 @@
 .centerSave{
     margin-left: 20px;
 }
+
+.slidecontainer {
+    width: 100%;
+}
+
+.subtitle {
+    font-size: 0.7em;
+}

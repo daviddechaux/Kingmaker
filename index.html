@@ -142,10 +142,24 @@
                 <input id="saveData" class="hide" />
             </div>
         </div>
-                
+
+        <!-- Config -->
         <hr>
+        <div class="gimmeFullSpace">
+            <i class="icon-gear"></i>
+            <label class="title factionTitle">Config</label>
+            <div class="slidecontainer">
+                <label class="subtitle">Fog opacity</label>
+                <input class="fogOpacity" type="range" min="0" max="1" step="0.01" value="0.90" onchange="changeFogOpacity()">
+            </div>
+            <div class="slidecontainer">
+                <label class="subtitle">Menu opacity</label>
+                <input class="menuOpacity" type="range" min="0" max="1" step="0.01" value="0.80" onchange="changeMenuOpacity()">
+            </div>
+        </div>
 
         <!-- About -->
+        <hr>
         <div class="gimmeFullSpace">
             <div class="askQuestion" onclick="displayQuestion();">
                 <i class="icon-question"></i>

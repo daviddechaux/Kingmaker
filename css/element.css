@@ -1,6 +1,6 @@
 .fog {
     position: absolute;
-    opacity: 0.9;
+    /* opacity: 0.9; */
 }
 
 .fog:hover {
@@ -8,7 +8,7 @@
 }
 
 .visited {
-    opacity: 0;
+    opacity: 0 !important;
 }
 
 .building {

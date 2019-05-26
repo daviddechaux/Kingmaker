@@ -45,6 +45,7 @@ function createMapDecoration(data) {
 
     tooltip();
     menuDisplayer();
+    configureOption(data.options);
 
     isMapLoaded = true;
 };
@@ -77,6 +78,13 @@ function addPlayerToMap(player) {
     $(".player")[0].style.top = player.y + "px";
 };
 
+function configureOption(options){
+    console.log(options);
+    $(".fogOpacity").val(options.fogOpacity);
+    $(".fog").css("opacity", options.fogOpacity);
+    $(".menuOpacity").val(options.menuOpacity);
+    $(".menu ").css("opacity", options.menuOpacity);
+};
 
 function addElementToMap(item, sectionName) {
     if (item) {

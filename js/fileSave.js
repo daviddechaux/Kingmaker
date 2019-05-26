@@ -48,7 +48,8 @@ function convertMapToObject() {
 
     var player = createPlayerObject();
     var factions = createFactionObject();
-    var map = { player, factions, building, resources, misc, fog };
+    var options = createOptionObject();
+    var map = { player, options, factions, building, resources, misc, fog };
 
     return JSON.stringify(map);
 };
@@ -78,6 +79,13 @@ function createPlayerObject(){
     y = getSavingPos(y1, y2);
 
     return {x, y};
+};
+
+function createOptionObject(){
+    var fogOpacity = $(".fogOpacity").val();
+    var menuOpacity = $(".menuOpacity").val();
+
+    return {fogOpacity, menuOpacity};
 };
 
 function getSavingPos(initialPos, currentPos){

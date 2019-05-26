@@ -45,7 +45,6 @@ Color Picker : [Farbtastic](http://acko.net/blog/farbtastic-jquery-color-picker-
 - Switch hex numerotation with radiobutton
 - Create Road
 - Remove faction
-- Add a setting to change the opacity of menu / fog
 - Unzoom everything
 - Add a favicon
 - Move to ES6
@@ -98,3 +97,4 @@ https://drive.google.com/file/d/0B2d5Rs815f8bOU80T1ZsUkUtZm8/view http://kingmak
 - RightClick tool 
 - Create an element en right click, remove the button
 - Custom checkbox CSS
+- Add a setting to change the opacity of menu / fog

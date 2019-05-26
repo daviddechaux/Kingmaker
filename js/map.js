@@ -16,3 +16,12 @@ function displayElement(name) {
     });
 };
 
+function changeFogOpacity(){
+    var fogOpacity = $(".fogOpacity").val();
+    $(".fog").css("opacity", fogOpacity);
+};
+
+function changeMenuOpacity(){
+    var menuOpacity = $(".menuOpacity").val();
+    $(".menu ").css("opacity", menuOpacity);
+};
