@@ -32,7 +32,10 @@ Color Picker : [Farbtastic](http://acko.net/blog/farbtastic-jquery-color-picker-
 > Animating Clip Paths  
 > https://d3js.org/
 
-## Todo : 
+### A lire 
+https://developer.mozilla.org/en-US/docs/Mozilla/Performance/Scroll-linked_effects
+
+## Todo 
 - Save before quit
 - Display save only when add / change stuff
 - Toggle menu
@@ -47,11 +50,11 @@ Color Picker : [Farbtastic](http://acko.net/blog/farbtastic-jquery-color-picker-
 - Unzoom everything
 - Move to ES6
 
-## In progress :
+## In progress
 - Menu styling
 
 
-## Maybe : 
+## Maybe 
 - Load default file from web (currently data are store in js) : Cross domain origin issue
 - Move the edit box while moving the element
 - Confirm delete element
