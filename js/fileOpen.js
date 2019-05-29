@@ -79,15 +79,24 @@ function addPlayerToMap(player) {
 };
 
 function configureOption(options){
-    $(".fogOpacity").val(options.fogOpacity);
-    $(".fog").css("opacity", options.fogOpacity);
-    $(".menuOpacity").val(options.menuOpacity);
-    $(".menu ").css("opacity", options.menuOpacity);
-
     var tokenName = "default";
-    if(options.token != undefined)
-        tokenName = options.token;
-
+    
+    if(options == undefined){
+        $(".fogOpacity").val(80);
+        $(".fog").css("opacity", 80);
+        $(".menuOpacity").val(80);
+        $(".menu ").css("opacity", 80);
+    }
+    else{
+        $(".fogOpacity").val(options.fogOpacity);
+        $(".fog").css("opacity", options.fogOpacity);
+        $(".menuOpacity").val(options.menuOpacity);
+        $(".menu ").css("opacity", options.menuOpacity);
+        
+        if(options.token != undefined)
+            tokenName = options.token;
+    }
+    
     var token = '<img src="images/' + tokenName + '.png" class="player draggable" />';
     $("#player").append(token);
 };
