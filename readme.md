@@ -75,6 +75,7 @@ https://drive.google.com/file/d/0B2d5Rs815f8bOU80T1ZsUkUtZm8/view http://kingmak
 - New map don't center on player icon (new map)
 - Dropdown are too big
 - var pos = getEditMenuPosition($(".player"), false, true); <== ???? element.js p103
+- Create element with faction doesn't work
 
 ## Missing icons
 - Save changes button (on edit element)
