@@ -68,6 +68,7 @@ https://developer.mozilla.org/en-US/docs/Mozilla/Performance/Scroll-linked_effec
 - Possibility to choose map (use the kingmaker video-game map ?) : No fog of war, No default map 
 https://drive.google.com/file/d/0B3tF_dcxI0LWMjNqNFY5clFsRjg/edit
 https://drive.google.com/file/d/0B2d5Rs815f8bOU80T1ZsUkUtZm8/view http://kingmaker.frozenstar.net/maps/Baseline_Kingmaker_Map.png
+- Moving to typescript 
 
 ## Known Bugs : 
 - Change color when faction color change <= is that a bug ?
