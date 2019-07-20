@@ -98,15 +98,15 @@ var ddElement = [
 		"value": 4,
 		"selected": false,
 		"description": "",
-		"userClass": "icon-cave",
-		"text": "Cave"
+		"userClass": "icon-candle",
+		"text": "Candle"
 	},
 	{
 		"value": 5,
 		"selected": false,
 		"description": "",
-		"userClass": "icon-cottage",
-		"text": "Cottage"
+		"userClass": "icon-cave",
+		"text": "Cave"
 	},
 	{
 		"value": 6,
@@ -119,186 +119,228 @@ var ddElement = [
 		"value": 7,
 		"selected": false,
 		"description": "",
+		"userClass": "icon-cottage",
+		"text": "Cottage"
+	},
+	{
+		"value": 8,
+		"selected": false,
+		"description": "",
+		"userClass": "icon-crow",
+		"text": "Crow"
+	},
+	{
+		"value": 9,
+		"selected": false,
+		"description": "",
 		"userClass": "icon-deadtree",
 		"text": "Deadtree"
 	},
 	{
-		"value": 8,
+		"value": 10,
 		"selected": false,
 		"description": "",
 		"userClass": "icon-dolmen",
 		"text": "Dolmen"
 	},
 	{
-		"value": 9,
+		"value": 11,
 		"selected": false,
 		"description": "",
 		"userClass": "icon-dragon",
 		"text": "Dragon"
 	},
 	{
-		"value": 10,
+		"value": 12,
 		"selected": false,
 		"description": "",
 		"userClass": "icon-elk",
 		"text": "Elk"
 	},
 	{
-		"value": 11,
+		"value": 13,
+		"selected": false,
+		"description": "",
+		"userClass": "icon-farm",
+		"text": "Farm"
+	},
+	{
+		"value": 14,
 		"selected": false,
 		"description": "",
 		"userClass": "icon-ferry",
 		"text": "Ferry"
 	},
 	{
-		"value": 12,
+		"value": 15,
+		"selected": false,
+		"description": "",
+		"userClass": "icon-flower",
+		"text": "Flower"
+	},
+	{
+		"value": 16,
 		"selected": false,
 		"description": "",
 		"userClass": "icon-hill",
 		"text": "Hill"
 	},
 	{
-		"value": 13,
+		"value": 17,
 		"selected": false,
 		"description": "",
 		"userClass": "icon-hive",
 		"text": "Hive"
 	},
 	{
-		"value": 14,
+		"value": 18,
 		"selected": false,
 		"description": "",
 		"userClass": "icon-house",
 		"text": "House"
 	},
 	{
-		"value": 15,
+		"value": 19,
+		"selected": false,
+		"description": "",
+		"userClass": "icon-inn",
+		"text": "Inn"
+	},
+	{
+		"value": 20,
 		"selected": false,
 		"description": "",
 		"userClass": "icon-lac",
-		"text": "Lac"
+		"text": "Lake"
 	},
 	{
-		"value": 16,
+		"value": 21,
 		"selected": false,
 		"description": "",
 		"userClass": "icon-lys",
 		"text": "Lily"
 	},
 	{
-		"value": 17,
+		"value": 22,
 		"selected": false,
 		"description": "",
 		"userClass": "icon-mine",
 		"text": "Mine"
 	},
 	{
-		"value": 18,
+		"value": 23,
+		"selected": false,
+		"description": "",
+		"userClass": "icon-mushroom",
+		"text": "Mushroom"
+	},
+	{
+		"value": 24,
 		"selected": false,
 		"description": "",
 		"userClass": "icon-raspberry",
 		"text": "Raspberry"
 	},
 	{
-		"value": 19,
+		"value": 25,
 		"selected": false,
 		"description": "",
 		"userClass": "icon-road",
 		"text": "Road"
 	},
 	{
-		"value": 20,
+		"value": 26,
 		"selected": false,
 		"description": "",
 		"userClass": "icon-rock",
 		"text": "Rock"
 	},
 	{
-		"value": 21,
+		"value": 27,
 		"selected": false,
 		"description": "",
 		"userClass": "icon-ruin",
 		"text": "Ruin"
 	},
 	{
-		"value": 22,
+		"value": 28,
 		"selected": false,
 		"description": "",
 		"userClass": "icon-ruin2",
 		"text": "Ruin"
 	},
 	{
-		"value": 23,
+		"value": 29,
 		"selected": false,
 		"description": "",
 		"userClass": "icon-sign",
 		"text": "Sign"
 	},
 	{
-		"value": 24,
+		"value": 30,
 		"selected": false,
 		"description": "",
 		"userClass": "icon-source",
 		"text": "Source"
 	},
 	{
-		"value": 25,
+		"value": 31,
 		"selected": false,
 		"description": "",
 		"userClass": "icon-spiderweb",
 		"text": "Spider-web"
 	},
 	{
-		"value": 26,
+		"value": 32,
 		"selected": false,
 		"description": "",
 		"userClass": "icon-stag",
 		"text": "Stag"
 	},
 	{
-		"value": 27,
+		"value": 33,
 		"selected": false,
 		"description": "",
 		"userClass": "icon-statue",
 		"text": "Statue"
 	},
 	{
-		"value": 28,
+		"value": 34,
 		"selected": false,
 		"description": "",
 		"userClass": "icon-strain",
 		"text": "Strain"
 	},
 	{
-		"value": 29,
+		"value": 35,
 		"selected": false,
 		"description": "",
 		"userClass": "icon-swamp",
 		"text": "Swamp"
 	},
 	{
-		"value": 30,
+		"value": 36,
 		"selected": false,
 		"description": "",
 		"userClass": "icon-toad",
 		"text": "Toad"
 	},
 	{
-		"value": 31,
+		"value": 37,
 		"selected": false,
 		"description": "",
 		"userClass": "icon-tomb",
 		"text": "Tomb"
 	},
 	{
-		"value": 32,
+		"value": 38,
 		"selected": false,
 		"description": "",
 		"userClass": "icon-village",
 		"text": "Village"
 	},
 	{
-		"value": 33,
+		"value": 39,
 		"selected": false,
 		"description": "",
 		"userClass": "icon-wheat",
