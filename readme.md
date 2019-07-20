@@ -76,6 +76,7 @@ https://drive.google.com/file/d/0B2d5Rs815f8bOU80T1ZsUkUtZm8/view http://kingmak
 - Dropdown are too big
 - var pos = getEditMenuPosition($(".player"), false, true); <== ???? element.js p103
 - Create element with faction doesn't work
+- When create an element it is on the first faction
 
 ## Missing icons
 - Save changes button (on edit element)
