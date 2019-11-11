@@ -198,6 +198,12 @@
                 </label>
             </div>
             <div class="gimmeOtherSpace">
+                <label for="armies" class="container gimmeOtherSpace elementType">Armies
+                    <input id="armies" type="checkbox" name="display-armies" checked="checked"/>
+                    <span class="checkmark"></span>
+                </label>
+            </div>
+            <div class="gimmeOtherSpace">
                 <label for="misc" class="container gimmeOtherSpace elementType">Misc
                     <input id="misc" type="checkbox" name="display-misc" />
                     <span class="checkmark"></span>
@@ -249,7 +255,7 @@
         idElement = 1;
         idSelectedElement = 0;
         isMapLoaded = false;
-        elementType = ["building", "resources", "misc"];
+        elementType = ["building", "resources", "misc", "armies"];
         factions = [];
         createPos = {x:0, y:0};
 
@@ -257,6 +263,7 @@
         displayElement("building");
         displayElement("resources");
         displayElement("misc");
+        displayElement("armies");
 
         // interactjs
         dragAndDrop();

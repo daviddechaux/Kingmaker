@@ -31,7 +31,9 @@ function convertMapToObject() {
     var mapContainer = $(".mapDecoration").find(".icon");
     var building = [];
     var resources = [];
+    var armies = [];
     var misc = [];
+    
     for (var i = 0; i < mapContainer.length; i++) {
         var newElement = htmlToObject(mapContainer[i]);
         
@@ -41,6 +43,8 @@ function convertMapToObject() {
                 break;
             case "resources": resources.push(newElement);
                 break;
+            case "armies": armies.push(newElement);
+                break;
             case "misc": misc.push(newElement);
                 break;
         }
@@ -49,7 +53,7 @@ function convertMapToObject() {
     var player = createPlayerObject();
     var factions = createFactionObject();
     var options = createOptionObject();
-    var map = { player, options, factions, building, resources, misc, fog };
+    var map = { player, options, factions, building, resources, misc, armies, fog };
 
     return JSON.stringify(map);
 };

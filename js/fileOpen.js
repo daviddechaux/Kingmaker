@@ -1,8 +1,8 @@
-
 function getElementType(className) {
     return className.includes("building") ? "building" :
         className.includes("resources") ? "resources" :
-            className.includes("misc") ? "misc" : "fog";
+            className.includes("armies") ? "armies" :
+                className.includes("misc") ? "misc" : "fog";
 };
 
 function createNew() {
@@ -38,6 +38,7 @@ function createMapDecoration(data) {
     addElementToMap(data.fog, "fogOfWar");
     addElementToMap(data.building, "buildingSection");
     addElementToMap(data.resources, "resourcesSection");
+    addElementToMap(data.armies, "armiesSection");
     addElementToMap(data.misc, "miscSection");
 
     simplifyBorders();

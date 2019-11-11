@@ -3,6 +3,7 @@ function cleanMap(){
     $(".buildingSection").remove();
     $(".resourcesSection").remove();
     $(".miscSection").remove();
+    $(".armiesSection").remove();
 };
 
 function displayElement(name) {

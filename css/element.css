@@ -1,6 +1,5 @@
 .fog {
     position: absolute;
-    /* opacity: 0.9; */
 }
 
 .fog:hover {
@@ -19,16 +18,21 @@
 
 .resources {
     position: absolute;
-    /* display: none; */
     z-index: 10;
     font-size: 40px;
 }
 
-.misc{ 
+.misc { 
     position: absolute; 
     display: none;
     z-index: 10;
     font-size: 40px;
+}
+
+
+.armies {
+    position: absolute;
+    z-index: 10;
 }
 
 .cabane { font-size: 40px; }
@@ -45,9 +49,15 @@
 
 .sign{ font-size: 65px; }
 .spider{ height: 70px; }
-.stag { font-size: 100px; }
+.stag { font-size: 70px; }
 .temple { font-size: 70px;}
 .tree{ font-size: 70px; }
 .village { font-size: 60px;}
-.wheat { font-size: 70px; }
+.wheat { font-size: 55px; }
+
+.footmen { font-size: 55px; }
+.horsemen { font-size: 55px; }
+.bowmen { font-size: 55px; }
+
+.castle { font-size: 60px; }
 

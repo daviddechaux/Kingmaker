@@ -2,7 +2,7 @@ function createDecoration() {
     var className = $("#decorationDdl").find("a.dd-selected").find("label").text().trim().toLowerCase() + " tooltip tap-target";
     var imgName = $("#decorationDdl").find("a.dd-selected").find("label")[0].className.replace("dd-selected-text", "").trim();
     var elementType = $("#decorationDdlType").find("a.dd-selected").find("label").text().trim().toLowerCase()
-    var faction = $("#decorationDdlFaction option:selected").index();
+    var faction = $("#decorationDdlFaction option:selected")[0].attributes[1].value;
 
     var img = createElement(idElement,
         imgName,
