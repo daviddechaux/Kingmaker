@@ -78,6 +78,7 @@ https://drive.google.com/file/d/0B2d5Rs815f8bOU80T1ZsUkUtZm8/view http://kingmak
 - var pos = getEditMenuPosition($(".player"), false, true); <== ???? element.js p103
 - Delete button is hidden by save buttton
 - Army mode may not works on existing map
+- Bug sur les factions (Enfants de l'ouest). D6 ne devrait pas etre selectionné
 
 ## Missing icons
 - Save changes button (on edit element)
