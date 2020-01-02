@@ -49,6 +49,8 @@ https://developer.mozilla.org/en-US/docs/Mozilla/Performance/Scroll-linked_effec
 - Unzoom everything
 - Move to ES6
 - Menu styling
+- Add Subfaction
+- Add Worldboss'
 
 ## In progress
 - Nothing, I'm lazy
