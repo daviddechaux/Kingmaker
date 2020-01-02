@@ -51,6 +51,7 @@ https://developer.mozilla.org/en-US/docs/Mozilla/Performance/Scroll-linked_effec
 - Menu styling
 - Add Subfaction
 - Add Worldboss'
+- Hide unclaim element
 
 ## In progress
 - Nothing, I'm lazy
