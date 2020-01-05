@@ -115,7 +115,7 @@ function factionToHtml(id, name, color, suzerainId, isVassal) {
 	var faction =
 		'<div class="faction gimmeFullSpace ' + vassalSpace + '">' +
 		'<input type="text" class="factionBox inputStyling" style="background-color: ' + color + '" data-suzerain="' + suzerainId + '" id="faction' + id + '"/>' +
-		'<input type="text" class="' + vassalSpace2 + ' inputStyling gimmeOtherSpace" data-suzerain="' + suzerainId + '" data-factionId="' + id + '" value="' + name + '" />' +
+		'<input type="text" class="factionDescription ' + vassalSpace2 + ' inputStyling gimmeOtherSpace" data-suzerain="' + suzerainId + '" data-factionId="' + id + '" value="' + name + '" />' +
 		'<i class="icon-delete-cross delete" onclick="deleteFaction(' + id + ')"/>'
 		'</div>';
 

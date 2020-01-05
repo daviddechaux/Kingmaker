@@ -49,7 +49,6 @@ https://developer.mozilla.org/en-US/docs/Mozilla/Performance/Scroll-linked_effec
 - Unzoom everything
 - Move to ES6
 - Menu styling
-- Add Subfaction
 - Add Worldboss'
 - Hide unclaim element
 
@@ -113,3 +112,4 @@ https://drive.google.com/file/d/0B2d5Rs815f8bOU80T1ZsUkUtZm8/view http://kingmak
 - Add a favicon
 - Switch hex numerotation with radiobutton
 - Add army tokens (that must be factionnable)
+- Add Subfaction

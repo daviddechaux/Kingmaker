@@ -111,9 +111,10 @@ function createFactionObject(){
         var currentFaction = factions[i];
 
         var faction = {
-            "id": $(currentFaction).find(".factionName").data("factionid"),
-            "name": $(currentFaction).find(".factionName").val(),
-            "color": $(currentFaction).find(".factionBox")[0].style["background-color"]
+            "id": $(currentFaction).find(".factionDescription").data("factionid"),
+            "name": $(currentFaction).find(".factionDescription").val(),
+            "color": $(currentFaction).find(".factionBox")[0].style["background-color"],
+            "suzerain": $(currentFaction).find(".factionDescription").data("suzerain")
         };
 
         factionList.push(faction);
