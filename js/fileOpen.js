@@ -22,6 +22,8 @@ function loadFile() {
         var reader = new FileReader();
         reader.onload = function (e) {
             var data = JSON.parse(e.target.result);
+
+            createFactions(data.factions);
             createMapDecoration(data);
             centerviewOnPlayerToken();
             displayColorPicker();
@@ -33,7 +35,7 @@ function loadFile() {
 function createMapDecoration(data) {
     cleanMap();
 
-    addFactions(data.factions);
+    addFactions(factions);
 
     addElementToMap(data.fog, "fogOfWar");
     addElementToMap(data.building, "buildingSection");

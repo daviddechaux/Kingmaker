@@ -20,19 +20,20 @@ function displayNiceDropdownList() {
 	});
 };
 
-function displayDropDownFaction(select, selectedFaction) {
+function displayDropDownFaction(select, selectedFaction, onlyMainFactions) {
 	$(".option").remove();
 
 	select.append("<option class='option' selected hidden>Select Faction</option>");
 	select.append("<option class='option' value='0'>None</option>");
 
-	for (var i = 0; i < factions.length; i++) {
-		var currentFaction = factions[i];
+	var browsableFactions = onlyMainFactions ? getMainFactions() : factions;
+	for (var i = 0; i < browsableFactions.length; i++) {
+		var currentFaction = browsableFactions[i];
 
 		var id = currentFaction.id;
 		var name = currentFaction.name;
 
-		var selected = selectedFaction === id ? "selected" : "";
+		var selected = selectedFaction == id ? "selected" : "";
 		var option = "<option class='option' value='" + id + "' " + selected + ">" + name + "</option>";
 
 		select.append(option);

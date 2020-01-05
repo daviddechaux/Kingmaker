@@ -37,7 +37,9 @@ function interactWithElement(event){
 
     var currentFaction = $(event.currentTarget).data("faction");
 
-    displayDropDownFaction($("#editDecorationDdlFaction"), currentFaction);
+    displayDropDownFaction($("#editDecorationDdlFaction"), 
+                            currentFaction,
+                            false);
 };
 
 function getEditMenuPosition(el, useOffset, useTranlate){

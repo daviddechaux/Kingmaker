@@ -9,6 +9,10 @@ function displayColorPicker() {
 
 		$("#factionName").text($(e.currentTarget)[0].id);
 
+		displayDropDownFaction($("#editFactionDdlFaction"), 
+								$(e.currentTarget)[0].dataset.suzerain,
+								true);
+
 		$("#colorPicker").farbtastic("#demoPicker");
 		$(".editorBackground").show();
 	});
@@ -61,28 +65,57 @@ function addFaction() {
 	displayColorPicker();
 };
 
+
+function createFactions(dataFactions){
+    if (dataFactions == undefined) return;
+    
+    for (var i = 0; i < dataFactions.length; i++) {
+        var currentFaction = dataFactions[i];
+        factions.push({ id: currentFaction.id, name : currentFaction.name, color : currentFaction.color, suzerain : currentFaction.suzerain });
+    }
+};
+
+function getMainFactions(){
+	return factions.filter(f => f.suzerain === f.id);
+};
+
 function addFactions(factions) {
 	if (factions == undefined) return;
 
 	$(".faction").remove();
 	var factionsDiv = $(".factions");
 
-	for (var i = 0; i < factions.length; i++) {
-		var currentFaction = factions[i];
-		// Create the HTML string
-		var faction = factionToHtml(currentFaction.id, currentFaction.name, currentFaction.color);
+	// Loop over list of main factions
+	var mainFactions = getMainFactions();
 
+	for (var i = 0; i < mainFactions.length; i++) {
+		var mainFaction = mainFactions[i];
+		var faction = factionToHtml(mainFaction.id, mainFaction.name, mainFaction.color, mainFaction.suzerain, false);
 		factionsDiv.append(faction);
+
+		// Loop over vassal
+		var vassal = factions.filter(f => f.suzerain === mainFaction.id && f.suzerain !== f.id).sort(function(a, b){
+			if(a.name < b.name) { return -1; }
+			if(a.name > b.name) { return 1; }
+			return 0;
+		});
+		
+		for (var j = 0; j < vassal.length; j++) {
+			var vassalFaction = vassal[j];
+			var vassalFactionHtml = factionToHtml(vassalFaction.id, vassalFaction.name, vassalFaction.color, vassalFaction.suzerain,true);
+			factionsDiv.append(vassalFactionHtml);
+		}
 	}
 };
 
-function factionToHtml(id, name, color, newFactionName) {
-	factions.push({ id, name, color });
+function factionToHtml(id, name, color, suzerainId, isVassal) {
+	var vassalSpace = isVassal ? "vassalSpace" : "";
+	var vassalSpace2 = isVassal ? "vassalFactionName" : "factionName";
 
 	var faction =
-		'<div class="faction gimmeFullSpace">' +
-		'<input type="text" class="factionBox inputStyling" style="background-color: ' + color + '" id="faction' + id + '"/>' +
-		'<input type="text" class="factionName inputStyling gimmeOtherSpace" data-factionId="' + id + '" value="' + name + '" />' +
+		'<div class="faction gimmeFullSpace ' + vassalSpace + '">' +
+		'<input type="text" class="factionBox inputStyling" style="background-color: ' + color + '" data-suzerain="' + suzerainId + '" id="faction' + id + '"/>' +
+		'<input type="text" class="' + vassalSpace2 + ' inputStyling gimmeOtherSpace" data-suzerain="' + suzerainId + '" data-factionId="' + id + '" value="' + name + '" />' +
 		'<i class="icon-delete-cross delete" onclick="deleteFaction(' + id + ')"/>'
 		'</div>';
 

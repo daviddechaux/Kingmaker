@@ -19,9 +19,17 @@
 }
 
 .factionName{
-    width: 220px;
+    width: 250px;
+}
+
+.vassalFactionName{
+    width: 235px;
 }
 
 .elementName{
     width: 100%;
+}
+
+.vassalSpace {
+    padding-left: 15px !important;
 }

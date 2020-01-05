@@ -110,7 +110,7 @@ function addMapDecoration(mousePos) {
     $("#addNameMapDecoration").val("");
     $("#addTitleMapDecoration").val("");
 
-    displayDropDownFaction($("#decorationDdlFaction"));
+    displayDropDownFaction($("#decorationDdlFaction"), null, false);
 };
 
 function getIconName(classes) {
