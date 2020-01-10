@@ -1,4 +1,5 @@
 function displayNiceDropdownList() {
+	setValueAndSort();
 	$("#decorationDdlType").ddslick({
 		data: ddElementType,
 		selectText: "Select Element Type"
@@ -40,6 +41,20 @@ function displayDropDownFaction(select, selectedFaction, onlyMainFactions) {
 	}
 };
 
+function setValueAndSort(){
+	ddElement.sort(function(a, b){
+		if(a.text < b.text) { return -1; }
+		if(a.text > b.text) { return 1; }
+		return 0;
+	});
+
+	for (var i = 0; i < ddElement.length; i++) {
+		ddElement[i]["value"] = i;
+		ddElement[i]["text"] = ddElement[i]["text"].replace("army-", "");
+		ddElement[i]["userClass"] = "icon-" + ddElement[i]["text"].toLowerCase();
+	}
+};
+
 // Dropdown element type
 var ddElementType = [
 	{
@@ -67,223 +82,162 @@ var ddElementType = [
 // Dropdown element
 var ddElement = [
 	{
-		"value": 0,
-		"userClass": "icon-bridge",
 		"text": "Bridge"
 	},
 	{
-		"value": 1,
-		"userClass": "icon-cabane",
 		"text": "Cabane"
 	},
 	{
-		"value": 2,
-		"userClass": "icon-cairn",
 		"text": "Cairn"
 	},
 	{
-		"value": 3,
-		"userClass": "icon-camp",
 		"text": "Camp"
 	},
 	{
-		"value": 4,
-		"userClass": "icon-candle",
 		"text": "Candle"
 	},
 	{
-		"value": 5,
-		"userClass": "icon-cave",
 		"text": "Cave"
 	},
 	{
-		"value": 6,
-		"userClass": "icon-clay",
 		"text": "Clay"
 	},
 	{
-		"value": 7,
-		"userClass": "icon-cottage",
 		"text": "Cottage"
 	},
 	{
-		"value": 8,
-		"userClass": "icon-crow",
 		"text": "Crow"
 	},
 	{
-		"value": 9,
-		"userClass": "icon-deadtree",
 		"text": "Deadtree"
 	},
 	{
-		"value": 10,
-		"userClass": "icon-dolmen",
 		"text": "Dolmen"
 	},
 	{
-		"value": 11,
-		"userClass": "icon-dragon",
 		"text": "Dragon"
 	},
 	{
-		"value": 12,
-		"userClass": "icon-elk",
 		"text": "Elk"
 	},
 	{
-		"value": 13,
-		"userClass": "icon-farm",
 		"text": "Farm"
 	},
 	{
-		"value": 14,
-		"userClass": "icon-ferry",
 		"text": "Ferry"
 	},
 	{
-		"value": 15,
-		"userClass": "icon-flower",
 		"text": "Flower"
 	},
 	{
-		"value": 16,
-		"userClass": "icon-hill",
 		"text": "Hill"
 	},
 	{
-		"value": 17,
-		"userClass": "icon-hive",
 		"text": "Hive"
 	},
 	{
-		"value": 18,
-		"userClass": "icon-house",
 		"text": "House"
 	},
 	{
-		"value": 19,
-		"userClass": "icon-inn",
 		"text": "Inn"
 	},
 	{
-		"value": 20,
-		"userClass": "icon-lake",
 		"text": "Lake"
 	},
 	{
-		"value": 21,
-		"userClass": "icon-lys",
-		"text": "Lily"
+		"text": "Lys"
 	},
 	{
-		"value": 22,
-		"userClass": "icon-mine",
 		"text": "Mine"
 	},
 	{
-		"value": 23,
-		"userClass": "icon-mushroom",
 		"text": "Mushroom"
 	},
 	{
-		"value": 24,
-		"userClass": "icon-raspberry",
 		"text": "Raspberry"
 	},
 	{
-		"value": 25,
-		"userClass": "icon-road",
 		"text": "Road"
 	},
 	{
-		"value": 26,
-		"userClass": "icon-rock",
 		"text": "Rock"
 	},
 	{
-		"value": 27,
-		"userClass": "icon-ruin",
 		"text": "Ruin"
 	},
 	{
-		"value": 28,
-		"userClass": "icon-ruin2",
-		"text": "Ruin"
+		"text": "Ruin2"
 	},
 	{
-		"value": 29,
-		"userClass": "icon-sign",
 		"text": "Sign"
 	},
 	{
-		"value": 30,
-		"userClass": "icon-source",
 		"text": "Source"
 	},
 	{
-		"value": 31,
-		"userClass": "icon-spiderweb",
-		"text": "Spider-web"
+		"text": "Spiderweb"
 	},
 	{
-		"value": 32,
-		"userClass": "icon-stag",
 		"text": "Stag"
 	},
 	{
-		"value": 33,
-		"userClass": "icon-statue",
 		"text": "Statue"
 	},
 	{
-		"value": 34,
-		"userClass": "icon-strain",
 		"text": "Strain"
 	},
 	{
-		"value": 35,
-		"userClass": "icon-swamp",
 		"text": "Swamp"
 	},
 	{
-		"value": 36,
-		"userClass": "icon-toad",
 		"text": "Toad"
 	},
 	{
-		"value": 37,
-		"userClass": "icon-tomb",
 		"text": "Tomb"
 	},
 	{
-		"value": 38,
-		"userClass": "icon-village",
 		"text": "Village"
 	},
 	{
-		"value": 39,
-		"userClass": "icon-wheat",
 		"text": "Wheat"
 	},
 	{
-		"value": 40,
-		"userClass": "icon-footmen",
-		"text": "Footmen"
-	},
-	{
-		"value": 41,
-		"userClass": "icon-horsemen",
-		"text": "Horsemen"
-	},
-	{
-		"value": 42,
-		"userClass": "icon-bowmen",
-		"text": "Bowmen"
-	},
-	{
-		"value": 43,
-		"userClass": "icon-castle",
 		"text": "Castle"
+	},
+	{
+		"text": "Tree"
+	},
+	{
+		"text": "Sunflower"
+	},
+	{
+		"text": "Tumulus"
+	},
+	{
+		"text": "Lizard"
+	},
+	{
+		"text": "Grove"
+	},
+	{
+		"text": "Watchtower"
+	},
+	{
+		"text": "Castle2"
+	},
+	{
+		"text": "Fortin"
+	},
+	{
+		"text": "Griffon"
+	},
+	{
+		"text": "army-Footmen"
+	},
+	{
+		"text": "army-Horsemen"
+	},
+	{
+		"text": "army-Bowmen"
 	}
 ];

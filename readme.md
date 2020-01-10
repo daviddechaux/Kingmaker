@@ -40,11 +40,9 @@ https://developer.mozilla.org/en-US/docs/Mozilla/Performance/Scroll-linked_effec
 - Save before quit
 - Toggle menu
 - Adjust CSS to have all icon on the same size (more or less)
-- Use data instead of crappy css class method like I did
 - Add a hint on fields (title) : disable some characteres on names (' for example)
 - Create capital
 - "Garnison mode" for troups
-- Use Lucian POC for Javascript Object
 - Create Road
 - Unzoom everything
 - Move to ES6
@@ -53,7 +51,7 @@ https://developer.mozilla.org/en-US/docs/Mozilla/Performance/Scroll-linked_effec
 - Hide unclaim element
 
 ## In progress
-- Nothing, I'm lazy
+- Subfactions
 
 ## Maybe 
 - Load default file from web (currently data are store in js) : Cross domain origin issue
@@ -74,13 +72,14 @@ https://drive.google.com/file/d/0B2d5Rs815f8bOU80T1ZsUkUtZm8/view http://kingmak
 - Display save only when add / change stuff
 
 ## Known Bugs : 
-- Change color when faction color change <= is that a bug ?
+- Change color when faction color change <= is that a bug ? <= need to reload map
 - New map don't center on player icon (new map)
 - Dropdown are too big
 - var pos = getEditMenuPosition($(".player"), false, true); <== ???? element.js p103
 - Delete button is hidden by save buttton
 - Army mode may not works on existing map
 - Bug sur les factions (Enfants de l'ouest). D6 ne devrait pas etre selectionné
+- Faction name on save
 
 ## Missing icons
 - Save changes button (on edit element)
@@ -113,3 +112,4 @@ https://drive.google.com/file/d/0B2d5Rs815f8bOU80T1ZsUkUtZm8/view http://kingmak
 - Switch hex numerotation with radiobutton
 - Add army tokens (that must be factionnable)
 - Add Subfaction
+- Use data instead of crappy css class method like I did
