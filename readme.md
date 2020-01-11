@@ -43,8 +43,8 @@ https://developer.mozilla.org/en-US/docs/Mozilla/Performance/Scroll-linked_effec
 - Add a hint on fields (title) : disable some characteres on names (' for example)
 - Create capital
 - "Garnison mode" for troups
-- Create Road
-- Unzoom everything
+- Create Road <= carcasonne style ?
+- Unzoom everything1
 - Move to ES6
 - Menu styling
 - Add Worldboss'

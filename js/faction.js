@@ -109,14 +109,20 @@ function addFactions(factions) {
 };
 
 function factionToHtml(id, name, color, suzerainId, isVassal) {
-	var vassalSpace = isVassal ? "vassalSpace" : "";
-	var vassalSpace2 = isVassal ? "vassalFactionName" : "factionName";
+	var vassalIcon = "";
+	var factionName = "factionName";
+
+	if (isVassal){
+		vassalIcon = '<i class="icon-inheritance" class="inheritance" />';
+		factionName = "vassalFactionName";
+	}
 
 	var faction =
-		'<div class="faction gimmeFullSpace ' + vassalSpace + '">' +
-		'<input type="text" class="factionBox inputStyling" style="background-color: ' + color + '" data-suzerain="' + suzerainId + '" id="faction' + id + '"/>' +
-		'<input type="text" class="factionDescription ' + vassalSpace2 + ' inputStyling gimmeOtherSpace" data-suzerain="' + suzerainId + '" data-factionId="' + id + '" value="' + name + '" />' +
-		'<i class="icon-delete-cross delete" onclick="deleteFaction(' + id + ')"/>'
+		'<div class="faction gimmeFullSpace">' +
+			'<div style="display:flex"> ' + vassalIcon + '<input type="text" class="factionBox inputStyling" style="background-color: ' + color + '" data-suzerain="' + suzerainId + '" id="faction' + id + '"/>' +
+			'<input type="text" class="factionDescription ' + factionName + ' inputStyling gimmeOtherSpace" data-suzerain="' + suzerainId + '" data-factionId="' + id + '" value="' + name + '" />' +
+			'<i class="icon-delete-cross delete" onclick="deleteFaction(' + id + ')"/>' +
+			'</div> ' +
 		'</div>';
 
 	return faction;
