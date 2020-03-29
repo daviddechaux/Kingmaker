@@ -80,6 +80,7 @@ https://drive.google.com/file/d/0B2d5Rs815f8bOU80T1ZsUkUtZm8/view http://kingmak
 - Army mode may not works on existing map
 - Bug sur les factions (Enfants de l'ouest). D6 ne devrait pas etre selectionné
 - Faction name on save
+- Create and edit faction is buggy
 
 ## Missing icons
 - Save changes button (on edit element)
