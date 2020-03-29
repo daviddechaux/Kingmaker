@@ -108,16 +108,18 @@ function createFactionObject(){
 
     var factionList = [];
     for (var i = 0; i < factions.length; i++) {
+        // If we delete a faction
         var currentFaction = factions[i];
-
-        var faction = {
-            "id": $(currentFaction).find(".factionDescription").data("factionid"),
-            "name": $(currentFaction).find(".factionDescription").val(),
-            "color": $(currentFaction).find(".factionBox")[0].style["background-color"],
-            "suzerain": $(currentFaction).find(".factionDescription").data("suzerain")
-        };
-
-        factionList.push(faction);
+        if ($(currentFaction).find(".factionBox").length > 0){
+            var faction = {
+                "id": $(currentFaction).find(".factionDescription").data("factionid"),
+                "name": $(currentFaction).find(".factionDescription").val(),
+                "color": $(currentFaction).find(".factionBox")[0].style["background-color"],
+                "suzerain": $(currentFaction).find(".factionDescription").data("suzerain")
+            };
+    
+            factionList.push(faction);
+        }
     }
 
     return factionList;
