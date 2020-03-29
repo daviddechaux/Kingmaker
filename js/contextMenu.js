@@ -105,6 +105,7 @@ function claim(hex, factionId){
 };
 
 function unclaim(hex){
+    hex.attr("data-faction", "None");
     var border = hex.children("div.isBorder");
     border.remove();
 

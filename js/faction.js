@@ -129,6 +129,17 @@ function factionToHtml(id, name, color, suzerainId, isVassal) {
 };
 
 function deleteFaction(factionId) {
+	var listOfHex = $(".hex [data-faction=" + factionId + "]");
+	for(var i = 0; i < listOfHex.length; i++){
+		unclaim($(listOfHex[i]).parent() );	
+	}
+
+	var listOfElement = ($("div [data-faction=" + factionId + "]"));
+	for(var i = 0; i < listOfElement.length; i++){
+		$(listOfElement[i]).attr("data-faction", "None");
+		$(listOfElement[i])[0].style["color"] = "rgb(0, 0, 0)";
+	}
+
 	$("#faction" + factionId).parent().remove();
 };
 
