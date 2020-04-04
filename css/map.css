@@ -2,6 +2,10 @@
     display: none;
 }
 
+.displayContent {
+    display:content !important;
+}
+
 .editorBackground {
     z-index: 999;
     position: absolute;
@@ -67,6 +71,7 @@
 
 .field {
     display: block;
+    font-size: 25px;
 }
 
 .hexLabel {

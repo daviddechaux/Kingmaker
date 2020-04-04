@@ -35,24 +35,27 @@
     z-index: 10;
 }
 
+.castle2 { font-size: 60px; }
 .cabane { font-size: 40px; }
 .camp { font-size: 40px; }
-.dolmen{ height: 60px; }
+.dolmen{ font-size: 60px; }
+.elk{ font-size: 60px; }
 
 .ferry { font-size: 30px; }
-.hill{ height: 60px; }
-.house { font-size: 60px; }
+.hill{ font-size: 60px; }
+.house { font-size: 50px; }
 
-.mine { height: 70px; }
+.mine { font-size: 40px; }
 .pont { font-size: 40px; }
 .ruine{ font-size: 65px; }
+.mushroom { font-size: 30px; }
 
 .sign{ font-size: 65px; }
-.spider{ height: 70px; }
+.spider{ font-size: 70px; }
 .stag { font-size: 70px; }
 .temple { font-size: 70px;}
 .tree{ font-size: 70px; }
-.village { font-size: 60px;}
+.village { font-size: 50px;}
 .wheat { font-size: 55px; }
 
 .footmen { font-size: 55px; }

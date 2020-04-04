@@ -43,13 +43,13 @@
 </head>
 <body>
     <div class="img">
-        <img src="images/map.jpg" class="background" />
+        <img src="images/map.png" class="background" />
     </div>
 
     <div id="player"></div>
 
     <!-- layer on the map when we do stuff -->
-    <div class="editorBackground"></div>
+    <div class="editorBackground"></div> 
 
     <!-- Right click menu -->
     <ul class='custom-menu menu contextMenu'></ul>
@@ -69,42 +69,47 @@
     </div>
 
     <!-- Edit element -->
-    <div class="editMapDecoration menu hide inFront hideableMenu">
+    <div class="editMapDecoration menu mapMenu hide inFront hideableMenu">
+        <input id="decorationToChange" style="display:none" />
+
         <select id="editDecorationDdlType" class="decorationType decorationDdl gimmeSpace"></select>
         <select id="editDecorationDdl" class="decorationDdl gimmeSpace"></select>
 
         <div class="field gimmeFullSpace">
-            <input id="decorationToChange" style="display:none" />
-        </div>
-
-        <div class="field gimmeFullSpace">
-            <label for="titleMapDecoration" title="Title">Title</label>
             <input id="titleMapDecoration" />
         </div>
 
-        <div class="gimmeFullSpace">
-            <div class="icon icon-delete delete" onclick="deleteElement()"></div>
-
-            <div class="fr">
-                <input type="button" class="save" value="Save changes" onclick="editElement()" />
-            </div>
+        <div class="field gimmeFullSpace">
+            <i class="icon-faction"></i>
+            <select id="editDecorationDdlFaction" class="decorationFaction decorationDdl gimmeSpace"></select>
         </div>
 
-        <select id="editDecorationDdlFaction" class="decorationFaction decorationDdl gimmeSpace"></select>
+        <div class="gimmeFullSpace fr">
+            <input type="button" class="save" value="Save changes" onclick="editElement()" />
+        </div>
+
+        <div class="gimmeFullSpace">
+            <i class="icon icon-delete deleteDecoration" onclick="deleteElement()"></i>
+        </div>
     </div>
 
     <!-- Add element -->
-    <div class="addElement menu rightClickMenu hide hideableMenu">
+    <div class="addElement menu mapMenu hide hideableMenu">
+        <select id="decorationDdlType" class="decorationType decorationDdl"></select>
+        <select id="decorationDdl" class="decorationDdl"></select>
+
         <div class="field gimmeFullSpace">
             <input id="addTitleMapDecoration" class="inputStyling elementName" placeholder="Element Name"/>
         </div>
 
+        <div class="field gimmeFullSpace">
+            <i class="icon-faction"></i>
+            <select id="decorationDdlFaction" class="decorationFaction decorationDdl gimmeSpace"></select>
+        </div>
+<!-- 
         <div class="factionCategories gimmeFullSpace select">
             <select id="decorationDdlFaction" class="decorationFaction decorationDdl"></select>
-        </div>
-
-        <select id="decorationDdlType" class="decorationType decorationDdl"></select>
-        <select id="decorationDdl" class="decorationDdl"></select>
+        </div> -->
 
         <input id="addClassMapDecoration" class="hide" value="tooltip tap-target draggable inFront" />
 

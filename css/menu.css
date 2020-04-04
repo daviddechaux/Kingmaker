@@ -1,5 +1,23 @@
+/* .decorationFaction{
+    width: 100%;
+} */
+
+
 .save{
     margin-top:10px;
+}
+
+.deleteDecoration{
+    display: -webkit-inline-box;
+    height: 20px;
+    font-size: 25px;
+    position: absolute;
+    right: 17px;
+    margin-top: 8px;
+    color: #000;
+    opacity: 0.7;
+    bottom: 20px;
+    left: 5px;
 }
 
 .delete{
@@ -13,6 +31,7 @@
     opacity: 0.7;
 }
 
+
 .add{
     display: -webkit-inline-box;
     height: 20px;
@@ -24,7 +43,8 @@
 }
 
 .add:hover,
-.delete:hover{
+.delete:hover,
+.icon{
     cursor: pointer;
 }
 
@@ -63,14 +83,29 @@
     
 }
 
-.inputStyling{
+.mapMenu{
+    display: block;
+    flex-direction: column;
+}
+
+input,
+select{
     font-size: 0.7em;
     border: 2px solid #dadada;
     border-radius: 5px;
     padding-left: 5px;
 }
 
-.inputStyling:focus { 
+input{
+    width: 100%;
+}
+
+select{
+    width: 87%;
+}
+
+input:focus,
+select:focus { 
     outline: none;
     border-color: #9ecaed;
     box-shadow: 0 0 10px #9ecaed;
@@ -98,10 +133,6 @@
 
 .dd-container{
     width: 250px;
-}
-
-.rightClickMenu{
-    font-size: 30px;
 }
 
 .dd-selected-image, .dd-option-image{
