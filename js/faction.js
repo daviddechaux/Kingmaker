@@ -4,26 +4,40 @@ function displayColorPicker() {
 		menu.show();
 		centerThis(menu);
 
-		var villageColor = $(e.currentTarget)[0].style["background-color"];
-		$(".villagePicker").css("color", villageColor);
+		var currentFaction = $(e.currentTarget)[0];
 
-		$("#factionName").text($(e.currentTarget)[0].id);
+		var demoColor = currentFaction.style["background-color"];
+		applyColorToDemo(demoColor);
+		
+		$("#factionName").text(currentFaction.id);
+		console.log(currentFaction.id);
 
 		displayDropDownFaction($("#editFactionDdlFaction"), 
-								$(e.currentTarget)[0].dataset.suzerain,
+								currentFaction.dataset.suzerain,
 								true);
+
+		console.log(currentFaction.dataset.suzerain);
 
 		$("#colorPicker").farbtastic("#demoPicker");
 		$(".editorBackground").show();
 	});
 
 	$("#demoPicker").bind('style', function (e) {
-		var color = inputColorToElementColor($("#demoPicker"));
-		$(".villagePicker").css("color", color);
+		var color = getColorFromColorPicker($("#demoPicker"));
+		applyColorToDemo(color);
 	});
 };
 
-function inputColorToElementColor(input) {
+function applyColorToDemo(color){
+	$(".demoVillage").css("color", color);
+	var borders = $(".demoBorder");
+	for(var i = 0; i < borders.length; i++){
+		$(borders[i]).css("fill", color);
+	}
+}
+
+
+function getColorFromColorPicker(input) {
 	var style = input[0].style;
 	if (style != undefined) {
 		return style["background-color"];
@@ -35,7 +49,7 @@ function inputColorToElementColor(input) {
 
 function saveColor() {
 	var factionName = $("#factionName").text();
-	var color = inputColorToElementColor($("#demoPicker"));
+	var color = getColorFromColorPicker($("#demoPicker"));
 	$("#" + factionName).css("background-color", color);
 
 	closeMenuDecoration();

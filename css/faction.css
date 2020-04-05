@@ -1,17 +1,17 @@
 .testBkg{
-    background-image: url("../images/test-background.png");
-    height: 200px;
-    width: 200px;
+    background-image: url("../images/faction-background.png");
+    height: 279px;
+    width: 260px;
     text-align: center;
     vertical-align: middle;
-    line-height: 200px;
+    line-height: 270px;
 }
 
 .villagePicker{
+    position: absolute;
     font-family: "pics";
     font-size: 70px;
-    position: absolute;
-    left: 50px;
+    left: 80px;
 }
 
 .factionBox{

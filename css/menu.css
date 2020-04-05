@@ -103,7 +103,7 @@ input{
 select{
     width: 87%;
 }
-
+/*  */
 input:focus,
 select:focus { 
     outline: none;

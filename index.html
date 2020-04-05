@@ -69,7 +69,7 @@
     </div>
 
     <!-- Edit element -->
-    <div class="editMapDecoration menu mapMenu hide inFront hideableMenu">
+    <div class="editMapDecoration menu hide inFront hideableMenu">
         <input id="decorationToChange" style="display:none" />
 
         <select id="editDecorationDdlType" class="decorationType decorationDdl gimmeSpace"></select>
@@ -94,7 +94,7 @@
     </div>
 
     <!-- Add element -->
-    <div class="addElement menu mapMenu hide hideableMenu">
+    <div class="addElement menu hide hideableMenu">
         <select id="decorationDdlType" class="decorationType decorationDdl"></select>
         <select id="decorationDdl" class="decorationDdl"></select>
 
@@ -106,10 +106,6 @@
             <i class="icon-faction"></i>
             <select id="decorationDdlFaction" class="decorationFaction decorationDdl gimmeSpace"></select>
         </div>
-<!-- 
-        <div class="factionCategories gimmeFullSpace select">
-            <select id="decorationDdlFaction" class="decorationFaction decorationDdl"></select>
-        </div> -->
 
         <input id="addClassMapDecoration" class="hide" value="tooltip tap-target draggable inFront" />
 
@@ -121,14 +117,37 @@
     <!-- Color Picker -->
     <div class="colorPicker hide menu hideableMenu">
         <div class="testBkg">
-            <div class="villagePicker icon-village"></div>
+            <div class="villagePicker icon-village demoVillage"></div>
+
+            <svg class="border ne" style="top:6px; left:15px">
+                <polygon class="demoBorder" points="115,1 229,67 229,69 113,2" style="fill:rgb(89, 26, 234)" /></polygon>
+            </svg>
+            <svg class="border e" style="top:6px; left:15px">
+                <polygon class="demoBorder" points="229,67 229,200 227,201 227,66" style="fill:rgb(89, 26, 234)"></polygon>
+            </svg>
+            <svg class="border se" style="top:6px; left:15px">
+                <polygon class="demoBorder" points="229,200 115,264 113,263 229,198" style="fill:rgb(89, 26, 234)"></polygon>
+            </svg>
+            <svg class="border sw" style="top:6px; left:15px">
+                <polygon class="demoBorder" points="115,264 1,200 1,198 117,263" style="fill:rgb(89, 26, 234)"></polygon>
+            </svg>
+            <svg class="border w" style="top:6px; left:15px">
+                <polygon class="demoBorder" points="1,200 1,67 3,66 3,201" style="fill:rgb(89, 26, 234)"></polygon>
+            </svg>
+            <svg class="border nw" style="top:6px; left:15px">
+                <polygon class="demoBorder" points="1,67 115,1 117,2 1,69" style="fill:rgb(89, 26, 234)"></polygon>
+            </svg>
         </div>
+
         <input id="demoPicker" class="hide" />
         <div id="colorPicker"></div>
 
         <label id="factionName" class="hide"></label>
 
-        <select id="editFactionDdlFaction" class="decorationFaction decorationDdl gimmeSpace"></select>
+        <div class="field gimmeFullSpace">
+            <i class="icon-faction"></i>
+            <select id="editFactionDdlFaction" class="decorationFaction decorationDdl gimmeSpace"></select>
+        </div>
 
         <div class="gimmeFullSpace">
             <button onclick="saveColor()">Save color</button>
