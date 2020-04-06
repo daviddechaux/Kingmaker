@@ -5,7 +5,7 @@ It is **not** made for the [video game](https://owlcatgames.com/) but for the [p
 The map has been done by [Jon Pintar](https://jonpintar.com/).  
 You can either use the [site](http://kerchiefed-turnarou.000webhostapp.com/) or copy everything in local.  
 
-> *Last website update : 06/04/2020 17h00*
+> *Last website update : 06/04/2020 22h00*
 
 ### Copyright
 Blablabla copyright [Paizo](https://paizo.com/pathfinder) and [Black-book Edition](https://www.black-book-editions.fr/catalogue.php?id=5) for the french version.  
