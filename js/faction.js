@@ -7,19 +7,19 @@ function displayColorPicker() {
 		var currentFaction = $(e.currentTarget)[0];
 
 		var demoColor = currentFaction.style["background-color"];
-		applyColorToDemo(demoColor);
-		
+
 		$("#factionName").text(currentFaction.id);
-		console.log(currentFaction.id);
 
 		displayDropDownFaction($("#editFactionDdlFaction"), 
 								currentFaction.dataset.suzerain,
 								true);
 
-		console.log(currentFaction.dataset.suzerain);
-
-		$("#colorPicker").farbtastic("#demoPicker");
+		$("#demoPicker").val(rgbColorToHex(demoColor));
+		$("#demoPicker").css('background-color', demoColor);
+		$("#colorPicker").farbtastic(demoPicker);
 		$(".editorBackground").show();
+
+		applyColorToDemo(demoColor);
 	});
 
 	$("#demoPicker").bind('style', function (e) {
@@ -36,7 +36,6 @@ function applyColorToDemo(color){
 	}
 }
 
-
 function getColorFromColorPicker(input) {
 	var style = input[0].style;
 	if (style != undefined) {
@@ -49,20 +48,51 @@ function getColorFromColorPicker(input) {
 
 function saveColor() {
 	var factionName = $("#factionName").text();
+	
 	var color = getColorFromColorPicker($("#demoPicker"));
 	$("#" + factionName).css("background-color", color);
+	$("#" + factionName).css("color", color);
 
 	closeMenuDecoration();
+	updateFactionElement(factionName.replace("faction", ""), color);
+
 };
+
+function updateFactionElement(factionId, color){
+	var listOfHex = selectHexFromFactionId(factionId);
+	for(var i = 0; i < listOfHex.length; i++){
+		//debugger;
+
+		for(var j = 0; j < listOfHex[i].children.length; j++) {
+			$(listOfHex[i].children[j].children[0]).css("fill", color);
+		}
+	}
+
+	var listOfElement = selectElementFromFactionId(factionId);
+	for(var i = 0; i < listOfElement.length; i++){
+		$(listOfElement[i]).css("color", color);
+	}
+};
+
+function selectHexFromFactionId(factionId){
+	return $(".hex [data-faction=" + factionId + "]");
+}
+
+function selectElementFromFactionId(factionId){
+	return $("div [data-faction=" + factionId + "]");
+}
 
 function addFaction() {
 	// Get the count of factions
 	var factionCount = $(".faction").length + 1;
 
 	// Generate a random color
-	var color = "rgb(" + getRandomInt(256) + "," +
-		getRandomInt(256) + "," +
-		getRandomInt(256) + ")";
+	var red = getRandomInt(256);
+	var green = getRandomInt(256);
+	var blue = getRandomInt(256);
+
+	var color = "rgb(" + red + "," + green + "," + blue + ")";
+	var coloreHex = "#" + rgbColorToHex(color);
 
 	var newFactionName = $(".newFactionName").val();
 	if (newFactionName == undefined || newFactionName == "")
@@ -71,7 +101,7 @@ function addFaction() {
 	$(".newFactionName").val("");
 
 	// Create the HTML string
-	var faction = factionToHtml(factionCount, newFactionName, color);
+	var faction = factionToHtml(factionCount, newFactionName, color, coloreHex);
 	
 	// Add the faction to the list of factions
 	$(".factions").append(faction);
@@ -79,6 +109,22 @@ function addFaction() {
 	displayColorPicker();
 };
 
+function rgbColorToHex(rgb) { 
+	var color = rgb.substring(rgb.lastIndexOf("(") + 1, rgb.lastIndexOf(")")).split(",");
+	var hexColor =  "#" + decimalToHex(color[0]) + decimalToHex(color[1]) + decimalToHex(color[2]);
+
+	return hexColor;
+};
+
+function decimalToHex(decimal){
+	//https://campushippo.com/lessons/how-to-convert-rgb-colors-to-hexadecimal-with-javascript-78219fdb
+	var hex = Number(decimal).toString(16);
+	if (hex.length < 2) {
+		 hex = "0" + hex;
+	}
+
+	return hex;
+}
 
 function createFactions(dataFactions){
     if (dataFactions == undefined) return;
@@ -104,7 +150,7 @@ function addFactions(factions) {
 
 	for (var i = 0; i < mainFactions.length; i++) {
 		var mainFaction = mainFactions[i];
-		var faction = factionToHtml(mainFaction.id, mainFaction.name, mainFaction.color, mainFaction.suzerain, false);
+		var faction = factionToHtml(mainFaction.id, mainFaction.name, mainFaction.color, rgbColorToHex(mainFaction.color), mainFaction.suzerain, false);
 		factionsDiv.append(faction);
 
 		// Loop over vassal
@@ -116,13 +162,13 @@ function addFactions(factions) {
 		
 		for (var j = 0; j < vassal.length; j++) {
 			var vassalFaction = vassal[j];
-			var vassalFactionHtml = factionToHtml(vassalFaction.id, vassalFaction.name, vassalFaction.color, vassalFaction.suzerain,true);
+			var vassalFactionHtml = factionToHtml(vassalFaction.id, vassalFaction.name, vassalFaction.color, rgbColorToHex(mainFaction.color), vassalFaction.suzerain,true);
 			factionsDiv.append(vassalFactionHtml);
 		}
 	}
 };
 
-function factionToHtml(id, name, color, suzerainId, isVassal) {
+function factionToHtml(id, name, color, coloreHex, suzerainId, isVassal) {
 	var vassalIcon = "";
 	var factionName = "factionName";
 
@@ -133,7 +179,7 @@ function factionToHtml(id, name, color, suzerainId, isVassal) {
 
 	var faction =
 		'<div class="faction gimmeFullSpace">' +
-			'<div style="display:flex"> ' + vassalIcon + '<input type="text" class="factionBox inputStyling" style="background-color: ' + color + '" data-suzerain="' + suzerainId + '" id="faction' + id + '"/>' +
+			'<div style="display:flex"> ' + vassalIcon + '<input type="text" class="factionBox inputStyling" style="background-color: ' + color + ';color: '+ color + '" data-suzerain="' + suzerainId + '" id="faction' + id + '" value="' + coloreHex + '"/>' +
 			'<input type="text" class="factionDescription ' + factionName + ' inputStyling gimmeOtherSpace" data-suzerain="' + suzerainId + '" data-factionId="' + id + '" value="' + name + '" />' +
 			'<i class="icon-delete-cross delete" onclick="deleteFaction(' + id + ')"/>' +
 			'</div> ' +
@@ -143,7 +189,7 @@ function factionToHtml(id, name, color, suzerainId, isVassal) {
 };
 
 function deleteFaction(factionId) {
-	var listOfHex = $(".hex [data-faction=" + factionId + "]");
+	var listOfHex = selectHexFromFactionId(factionId);
 	for(var i = 0; i < listOfHex.length; i++){
 		unclaim($(listOfHex[i]).parent() );	
 	}
@@ -151,7 +197,7 @@ function deleteFaction(factionId) {
 	var listOfElement = ($("div [data-faction=" + factionId + "]"));
 	for(var i = 0; i < listOfElement.length; i++){
 		$(listOfElement[i]).attr("data-faction", "None");
-		$(listOfElement[i])[0].style["color"] = "rgb(0, 0, 0)";
+		$(listOfElement[i]).css("color", "rgb(0, 0, 0)");
 	}
 
 	$("#faction" + factionId).parent().remove();
@@ -255,7 +301,6 @@ function getHexNameCloseTo(hexName) {
 
 	return { nw, ne, w, e, sw, se };
 };
-
 
 function nextRow(row) {
 	if (row === "j")

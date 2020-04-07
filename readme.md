@@ -44,11 +44,10 @@ https://developer.mozilla.org/en-US/docs/Mozilla/Performance/Scroll-linked_effec
 - Create capital
 - "Garnison mode" for troups
 - Create Road <= carcasonne style ?
-- Unzoom everything1
+- Unzoom everything
 - Move to ES6
 - Menu styling
 - Add Worldboss'
-- Hide unclaim element
 
 ## In progress
 - Subfactions
@@ -72,15 +71,11 @@ https://drive.google.com/file/d/0B2d5Rs815f8bOU80T1ZsUkUtZm8/view http://kingmak
 - Display save only when add / change stuff
 
 ## Known Bugs : 
-- Change color when faction color change <= is that a bug ? <= need to reload map
 - New map don't center on player icon (new map)
 - Dropdown are too big
-- var pos = getEditMenuPosition($(".player"), false, true); <== ???? element.js p103
-- Delete button is hidden by save buttton
 - Army mode may not works on existing map
-- Bug sur les factions (Enfants de l'ouest). D6 ne devrait pas etre selectionné
-- Faction name on save
 - Create and edit faction is buggy
+- SaveMap with Misc, on reload Misc is check but don't appear
 
 ## Missing icons
 - Save changes button (on edit element)
