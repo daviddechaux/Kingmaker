@@ -178,29 +178,55 @@ function factionToHtml(id, name, color, coloreHex, suzerainId, isVassal) {
 	}
 
 	var faction =
-		'<div class="faction gimmeFullSpace">' +
-			'<div style="display:flex"> ' + vassalIcon + '<input type="text" class="factionBox inputStyling" style="background-color: ' + color + ';color: '+ color + '" data-suzerain="' + suzerainId + '" id="faction' + id + '" value="' + coloreHex + '"/>' +
+		'<div class="faction gimmeFullSpace" data-suzerain="' + suzerainId + '" data-factionName="' + name + '" style="display:flex">' +
+			vassalIcon + '<input type="text" class="factionBox inputStyling" style="background-color: ' + color + '; color: '+ color + '" data-suzerain="' + suzerainId + '" id="faction' + id + '" value="' + coloreHex + '"/>' +
 			'<input type="text" class="factionDescription ' + factionName + ' inputStyling gimmeOtherSpace" data-suzerain="' + suzerainId + '" data-factionId="' + id + '" value="' + name + '" />' +
-			'<i class="icon-delete-cross delete" onclick="deleteFaction(' + id + ')"/>' +
-			'</div> ' +
+			'<i class="icon-delete-cross delete" onclick="deleteFaction(' + id + ', \'' + name + '\')"/>' +
 		'</div>';
 
 	return faction;
 };
 
-function deleteFaction(factionId) {
+function deleteFaction(factionId, factionName) {
+	$('div[data-factionname="' + factionName + '"]').remove();
+
+	unClaimHex(factionId);
+	unClaimElement(factionId);
+	removeSuzerain(factionId, factionName);
+};
+
+function removeSuzerain(factionId, factionName){
+	var factionDiv = $('div[data-suzerain="' + factionId + '"][data-factionName != "' + factionName + '"]');
+
+	var factionsDiv = $(".factions");
+	for(var i = 0; i < factionDiv.length; i++){
+		var currentFactionMain = factionDiv[i];
+
+		var currentFaction = $(currentFactionMain).children("input.factionDescription");
+		var currentFactionId = currentFaction.data("factionid");
+		var currentFactionName = currentFaction.val();
+
+		var currentFactionColor = $(currentFactionMain).children("input.factionBox").css( "background-color" );
+		
+		var faction = factionToHtml(currentFactionId, currentFactionName, currentFactionColor, rgbColorToHex(currentFactionColor), currentFactionId, false);
+		$(currentFactionMain).after(faction);
+		$(currentFactionMain).remove();
+	}
+};
+
+function unClaimHex(factionId){
 	var listOfHex = selectHexFromFactionId(factionId);
 	for(var i = 0; i < listOfHex.length; i++){
 		unclaim($(listOfHex[i]).parent() );	
 	}
+};
 
+function unClaimElement(factionId){
 	var listOfElement = ($("div [data-faction=" + factionId + "]"));
 	for(var i = 0; i < listOfElement.length; i++){
 		$(listOfElement[i]).attr("data-faction", "None");
 		$(listOfElement[i]).css("color", "rgb(0, 0, 0)");
 	}
-
-	$("#faction" + factionId).parent().remove();
 };
 
 function getFactionColorFromId(factionId) {
