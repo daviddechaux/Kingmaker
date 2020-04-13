@@ -43,6 +43,8 @@
     <script type="text/javascript" src="js/element.js"></script>
 </head>
 <body>
+    <ul id="filelist"></ul>
+
     <div class="img">
         <img src="images/map.png" class="background" />
     </div>
@@ -276,6 +278,8 @@
 
     <div class="mapDecoration">
     </div>
+
+    <input id='file-input' type='file' multiple>
 </body>
 <script>
     $(document).ready(function () {
@@ -314,7 +318,6 @@
         // Contextmenu
         bindMenu();
     });
-
 
 </script>
 

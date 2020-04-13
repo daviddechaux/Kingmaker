@@ -1,11 +1,6 @@
 @font-face {
   font-family: 'pics';
-  src: url('../font/pics.eot?74572287');
-  src: url('../font/pics.eot?74572287#iefix') format('embedded-opentype'),
-       url('../font/pics.woff2?74572287') format('woff2'),
-       url('../font/pics.woff?74572287') format('woff'),
-       url('../font/pics.ttf?74572287') format('truetype'),
-       url('../font/pics.svg?74572287#pics') format('svg');
+  src: url('../font/pics.woff?') format('woff');
   font-weight: normal;
   font-style: normal;
 }

@@ -81,163 +81,64 @@ var ddElementType = [
 
 // Dropdown element
 var ddElement = [
-	{
-		"text": "Bridge"
-	},
-	{
-		"text": "Cabane"
-	},
-	{
-		"text": "Cairn"
-	},
-	{
-		"text": "Camp"
-	},
-	{
-		"text": "Candle"
-	},
-	{
-		"text": "Cave"
-	},
-	{
-		"text": "Clay"
-	},
-	{
-		"text": "Cottage"
-	},
-	{
-		"text": "Crow"
-	},
-	{
-		"text": "Deadtree"
-	},
-	{
-		"text": "Dolmen"
-	},
-	{
-		"text": "Dragon"
-	},
-	{
-		"text": "Elk"
-	},
-	{
-		"text": "Farm"
-	},
-	{
-		"text": "Ferry"
-	},
-	{
-		"text": "Flower"
-	},
-	{
-		"text": "Hill"
-	},
-	{
-		"text": "Hive"
-	},
-	{
-		"text": "House"
-	},
-	{
-		"text": "Inn"
-	},
-	{
-		"text": "Lake"
-	},
-	{
-		"text": "Lys"
-	},
-	{
-		"text": "Mine"
-	},
-	{
-		"text": "Mushroom"
-	},
-	{
-		"text": "Raspberry"
-	},
-	{
-		"text": "Road"
-	},
-	{
-		"text": "Rock"
-	},
-	{
-		"text": "Ruin"
-	},
-	{
-		"text": "Ruin2"
-	},
-	{
-		"text": "Sign"
-	},
-	{
-		"text": "Source"
-	},
-	{
-		"text": "Spiderweb"
-	},
-	{
-		"text": "Stag"
-	},
-	{
-		"text": "Statue"
-	},
-	{
-		"text": "Strain"
-	},
-	{
-		"text": "Swamp"
-	},
-	{
-		"text": "Toad"
-	},
-	{
-		"text": "Tomb"
-	},
-	{
-		"text": "Village"
-	},
-	{
-		"text": "Wheat"
-	},
-	{
-		"text": "Castle"
-	},
-	{
-		"text": "Tree"
-	},
-	{
-		"text": "Sunflower"
-	},
-	{
-		"text": "Tumulus"
-	},
-	{
-		"text": "Lizard"
-	},
-	{
-		"text": "Grove"
-	},
-	{
-		"text": "Watchtower"
-	},
-	{
-		"text": "Castle2"
-	},
-	{
-		"text": "Fortin"
-	},
-	{
-		"text": "Griffon"
-	},
-	{
-		"text": "army-Footmen"
-	},
-	{
-		"text": "army-Horsemen"
-	},
-	{
-		"text": "army-Bowmen"
-	}
+	{ "text": "Bridge" },
+	{ "text": "Cabane" },
+	{ "text": "Cairn" },
+	{ "text": "Camp" },
+	{ "text": "Candle" },
+	{ "text": "Cave" },
+	{ "text": "Clay" },
+	{ "text": "Cottage" },
+	{ "text": "Crow" },
+	{ "text": "Deadtree" },
+	{ "text": "Dolmen" },
+	{ "text": "Dragon" },
+	{ "text": "Elk" },
+	{ "text": "Farm" },
+	{ "text": "Ferry" },
+	{ "text": "Flower" },
+	{ "text": "Hill" },
+	{ "text": "Hive" },
+	{ "text": "House" },
+	{ "text": "Inn" },
+	{ "text": "Lake" },
+	{ "text": "Lys" },
+	{ "text": "Mine" },
+	{ "text": "Mushroom" },
+	{ "text": "Raspberry" },
+	{ "text": "Road" },
+	{ "text": "Rock" },
+	{ "text": "Ruin" },
+	{ "text": "Ruin2" },
+	{ "text": "Sign" },
+	{ "text": "Source" },
+	{ "text": "Spiderweb" },
+	{ "text": "Stag" },
+	{ "text": "Statue" },
+	{ "text": "Strain" },
+	{ "text": "Swamp" },
+	{ "text": "Toad" },
+	{ "text": "Tomb" },
+	{ "text": "Village" },
+	{ "text": "Wheat" },
+	{ "text": "Castle" },
+	{ "text": "Tree" },
+	{ "text": "Sunflower" },
+	{ "text": "Tumulus" },
+	{ "text": "Lizard" },
+	{ "text": "Grove" },
+	{ "text": "Watchtower" },
+	{ "text": "Castle2" },
+	{ "text": "Fortin" },
+	{ "text": "Griffon" },
+	{ "text": "army-Footmen" },
+	{ "text": "army-Horsemen" },
+	{ "text": "army-Bowmen" },
+	{ "text": "Feather" },
+	{ "text": "Nest" },
+	{ "text": "Owlbear" },
+	{ "text": "Bird" },
+	{ "text": "Horse" },
+	{ "text": "Battle" },
+	{ "text": "Village2" }
 ];

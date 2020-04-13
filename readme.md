@@ -16,7 +16,8 @@ If you think an icon is your (it could be) and you don't want me to use it or yo
 ### Tools
 [PngToSvg](https://picsvg.com/)  
 [SvgToFont](http://fontello.com/)  
-[Favicon](https://www.favicon-generator.org/)
+[Favicon](https://www.favicon-generator.org/)  
+[Font infomations](https://creativemarket.com/blog/the-missing-guide-to-font-formats)
 
 ### Want something ?
 New feature, icons, ... Please ask.  
